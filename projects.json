@@ -1,0 +1,31 @@
+[
+{
+   "id": "project-one",
+   "title": "Project One",
+   "description": "An innovative website redesign focused on performance and usability.",
+   "client": "Demo Client A",
+   "type": "Website",
+   "iframeSrc": "./index.html",
+   "thumbnailSrc": "./assets/img/Demo 1.jpg",
+   "detailsPage": "portfolio-view.html?id=project-one"
+},
+{
+   "id": "project-two",
+   "title": "Project Two",
+   "description": "A sleek and responsive landing page for a SaaS product.",
+   "client": "Demo Client B",
+   "type": "Landing Page",
+   "iframeSrc": "./demo-sites/project-two/index.html",
+   "thumbnailSrc": "./assets/img/Demo 1.jpg",
+   "detailsPage": "portfolio-view.html?id=project-two"
+},
+{
+   "id": "project-three",
+   "title": "Project Three",
+   "description": "E-commerce store with smooth animations and seamless checkout flow.",
+   "client": "Demo Client C",
+   "type": "E-commerce",
+   "iframeSrc": "./demo-sites/project-three/index.html",
+   "thumbnailSrc": "./assets/img/Demo 1.jpg",
+   "detailsPage": "portfolio-view.html?id=project-three"
+}]

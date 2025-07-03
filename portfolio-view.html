@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- 1. Character Encoding & Viewport (Always First) -->
+   <meta charset="UTF-8"> <!-- Defines character encoding -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Improves IE compatibility -->
+   
+   <!-- 2. SEO Meta Tags -->
+   <title>Sri Lanka's Leading Digital Services Agency | Ceylon Digital</title> <!-- Page title (Shown in browser tab & search results) -->
+   <meta name="description" content="At Ceylon Digital, we're passionate about helping businesses thrive in the digital landscape. With expertise in web development, digital marketing, and more, we deliver tailored solutions that drive real results. Let's elevate your brand and achieve your goals together."> <!-- Important for SEO -->
+   <meta name="keywords" content="keyword1, keyword2, keyword3"> <!-- Optional for SEO -->
+   <meta name="author" content="your name or brand"> <!-- Author information -->
+   <meta name="robots" content="index, follow"> <!-- Controls search engine crawling -->
+   <meta name="googlebot" content="index, follow"> <!-- Google-specific crawling instructions -->
+   <meta name="bingbot" content="index, follow"> <!-- Bing-specific crawling instructions -->
+   <meta name="yandexbot" content="index, follow"> <!-- Yandex-specific crawling instructions -->
+   <meta name="baiduspider" content="index, follow"> <!-- Baidu-specific crawling instructions -->
+   <meta name="duckduckbot" content="index, follow"> <!-- DuckDuckGo-specific crawling instructions -->
+   <meta name="naverbot" content="index, follow"> <!-- Naver-specific crawling instructions -->
+   <link rel="canonical" href="https://yourwebsite.com/your-page-url"> <!-- Helps prevent duplicate content issues -->
+   
+   <!-- 3. Verification Meta Tags (For Google, Bing, Yandex, etc.) -->
+   <meta name="google-site-verification" content="your_google_verification_code">
+   <meta name="msvalidate.01" content="your_bing_verification_code">
+   <meta name="yandex-verification" content="your_yandex_verification_code">
+   <meta name="baidu-site-verification" content="your_baidu_verification_code">
+   <meta name="naver-site-verification" content="your_naver_verification_code">
+   
+   <!-- 4. Social Media Meta Tags (Open Graph & Twitter Cards) -->
+   <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+   <meta property="og:title" content="your page title">
+   <meta property="og:description" content="your meta description">
+   <meta property="og:image" content="https://yourwebsite.com/your-og-image.jpg">
+   <meta property="og:url" content="https://yourwebsite.com/your-page-url">
+   <meta property="og:type" content="website">
+   <meta property="og:site_name" content="your website name">
+   
+   <!-- Twitter Cards -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="your page title">
+   <meta name="twitter:description" content="your meta description">
+   <meta name="twitter:image" content="https://yourwebsite.com/your-twitter-image.jpg">
+   <meta name="twitter:site" content="@your_twitter_handle">
+   
+   <!-- 5. Performance Optimization Meta Tags -->
+   <!-- Sets theme color for mobile browsers -->
+   <meta name="theme-color" content="#222222"> <!-- Default (dark mode) -->
+   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> <!-- Light mode -->
+   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"> <!-- Dark mode -->
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- iOS Safari styling -->
+   <!-- Prevents iOS from linking phone numbers automatically -->
+   <meta name="format-detection" content="telephone=no">
+   
+   <!-- 6. Favicon & Icons -->
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/favicon-192x192.png">
+   <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+   
+   <!-- SVG Favicon (for modern browsers) -->
+   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+   
+   <!-- Apple Touch Icons (for iOS home screen shortcut) -->
+   <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-touch-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-touch-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-touch-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-touch-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-touch-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-touch-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-touch-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon-180x180.png">
+   
+   <!-- Android Chrome Icons -->
+   <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-chrome-192x192.png">
+   <link rel="icon" type="image/png" sizes="512x512" href="./assets/icons/android-chrome-512x512.png">
+   
+   <!-- Alternative favicon (optional, for legacy browsers) -->
+   <link rel="shortcut icon" href="./assets/icons/favicon.ico">
+   
+   <!-- Microsoft Tiles (For Windows 10/Edge) -->
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="./assets/icons/mstile-144x144.png">
+   
+   <!-- 7. Mobile App Indexing (Google Play & Apple App Store) -->
+   <meta name="google-play-app" content="app-id=com.example.app">
+   <meta name="apple-itunes-app" content="app-id=123456789">
+   
+   <!-- 8. Security & Privacy Meta Tags -->
+   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;"> -->
+   <meta name="referrer" content="strict-origin-when-cross-origin"> <!-- More balanced referrer policy -->
+   
+   <!-- 9. HTTP-Equiv Meta Tags -->
+   <!-- <meta http-equiv="refresh" content="5; url=https://yourwebsite.com"> -->
+   <!-- <meta http-equiv="cache-control" content="no-cache"> -->
+   <!-- <meta http-equiv="pragma" content="no-cache"> -->
+   <!-- <meta http-equiv="expires" content="Wed, 21 Oct 2025 07:28:00 GMT"> -->
+   
+   <!-- 10. Preconnect for Faster External Resource Loading -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://cdn.jsdelivr.net">
+   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+   <link rel="preload" href="./assets/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+   
+   <!-- 11. External CSS Stylesheets -->
+   <!-- AOS Scroll Animation Library -->
+   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+   <!-- Swiper JS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> <!-- Swiper (For sliders) -->
+   
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.7.2-web/css/all.min.css">
+   <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="./assets/package/swiper-bundle.min.css">
+   <link rel="stylesheet" href="./assets/aos-master/dist/aos.css">
+   <link rel="stylesheet" href="./assets/css/typography.css">
+   <link rel="stylesheet" href="./assets/css/variables.css">
+   <link rel="stylesheet" href="./assets/css/utils.css">
+   <link rel="stylesheet" href="./assets/css/base.css">
+   <link rel="stylesheet" href="./assets/css/navbar.css">
+   <link rel="stylesheet" href="./assets/css/preloader.css">
+   <link rel="stylesheet" href="./assets/css/footer.css">
+   <link rel="stylesheet" href="./assets/css/portfolio-view.css">
+   
+   <!-- 12. Critical Inline CSS -->
+   <style>
+      /* Add critical inline CSS here */
+   </style>
+   
+   <!-- 13. JavaScript Files (Use async or defer) -->
+   <script defer src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   <!-- Pin to minor version (3.x) -->
+   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+   <!-- Or pin to exact 3.13.0 -->
+   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+   <!-- VanillaTilt JS -->
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
+   
+   <script defer src="./gsap.min.js"></script>
+   <script defer src="./assets/fontawesome-free-6.7.2-web/js/all.min.js"></script>
+   <script defer src="./assets/package/swiper-bundle.min.js"></script>
+   <script defer src="./assets/aos-master/dist/aos.js"></script>
+   <script defer src="./assets/js/common.js"></script>
+   <script defer src="./assets/js/portfolio.js"></script>
+</head>
+
+<body>
+   <div id="tsparticles"></div>
+   
+   <div class="preloader">
+      <div class="loader">
+         <a href="index.html" class="brand-logo">
+            <i class="fas fa-globe fa-bounce icon"></i>
+         </a>
+      </div>
+   </div>
+   
+   <!-- Navbar -->
+   <nav class="navbar">
+      <div class="container">
+         <a class="navbar-brand" href="./index.html"><i class="fas fa-globe icon"></i> Ceylon Digital</a>
+         <input type="checkbox" id="menu-toggle" class="nav-toggle" />
+         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+         <ul class="nav-links">
+            <li class="nav-item active"><a href="#hero">Home</a></li>
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item dropdown" aria-haspopup="true" aria-expanded="false">
+               <a href="#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
+               <ul class="dropdown-menu">
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Digital Marketing <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Paid Advertising</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Content Marketing</a></li>
+                        <li><a href="#">CRO</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Development Services <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">App Development</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Design & Branding <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Video & Motion</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a href="#promotions">Promotions</a></li>
+            <li class="nav-item"><a href="#">Blog</a></li>
+            <li class="nav-item">
+               <button id="theme-toggle" aria-label="Toggle Theme"><i class="bi bi-moon"></i></button>
+            </li>
+            <li class="nav-item"><a href="#contact" class="nav-btn">Contact</a></li>
+         </ul>
+      </div>
+   </nav>
+   
+   
+   <div class="project-container">
+      <iframe id="projectIframe"></iframe>
+      <button id="exitFullViewBtn" class="full-view-btn"><i class="fas fa-arrow-left"></i> Exit Full View</button>
+      
+      
+   </div>
+   <div class="controls">
+      <div class="control-group">
+         <label for="widthSlider">Width: <span id="widthValue"></span>px</label>
+         <input type="range" id="widthSlider" min="320" max="1300" value="500" />
+      </div>
+      <div class="control-group">
+         <label for="heightSlider">Height: <span id="heightValue"></span>px</label>
+         <input type="range" id="heightSlider" min="300" max="1200" value="500" />
+      </div>
+      <div class="control-group">
+         <label>Window Size</label>
+         <div class="window-size" id="windowSize"></div>
+      </div>
+   </div>
+   
+   <div class="project-details">
+      <h2 id="projectTitle"></h2>
+      <p id="projectDescription"></p>
+      <p><strong>Client:</strong> <span id="projectClient"></span></p>
+      <button id="toggleViewBtn" class="view-btn"><i class="fas fa-search"></i> Full View</button>
+      <a href="./portfolio/index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+   </div>
+   
+   <!-- Footer -->
+   <footer class="footer">
+      <div class="footer-container">
+         <div class="footer-top">
+            <!-- Branding -->
+            <div class="footer-branding">
+               <a href="./index.html"><i class="fas fa-globe icon"></i> Ceylon Digital</a>
+               <p>We design, develop, and deliver digital solutions that drive business growth and excellence in Sri Lanka and beyond.</p>
+            </div>
+            
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+               <h4>Stay Updated</h4>
+               <p>Subscribe to our newsletter to receive the latest news and insights.</p>
+               <form class="newsletter-form">
+                  <input type="email" placeholder="Your email" required />
+                  <button type="submit" class="cta">Subscribe</button>
+               </form>
+            </div>
+         </div>
+         
+         <div class="footer-middle">
+            <!-- Services -->
+            <div class="footer-col">
+               <h5>Our services</h5>
+               <ul>
+                  <li><a href="#">SEO</a></li>
+                  <li><a href="#">Paid Advertising</a></li>
+                  <li><a href="#">Social Media Marketing</a></li>
+                  <li><a href="#">Web Development</a></li>
+                  <li><a href="#">App Development</a></li>
+                  <li><a href="#">UI/UX Design</a></li>
+                  <li><a href="#">Content Marketing</a></li>
+                  <li><a href="#">CRO</a></li>
+                  <li><a href="#">Branding</a></li>
+                  <li><a href="#">Video & Motion</a></li>
+               </ul>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-col">
+               <h5>Quick Links</h5>
+               <ul>
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./about/index.html">About us</a></li>
+                  <li><a href="./services/index.html">Services</a></li>
+                  <li><a href="./portfolio/index.html">Portfolio</a></li>
+                  <li><a href="./blog/index.html">Blog</a></li>
+                  <li><a href="./promotions/index.html">Promotions</a></li>
+               </ul>
+            </div>
+            
+            <!-- Page Sections -->
+            <div class="footer-col">
+               <h5>On This Page</h5>
+               <ul>
+                  <li><a href="#preview">Preview</a></li>
+               </ul>
+            </div>
+            
+            <!-- Contact -->
+            <div class="footer-col">
+               <h5>Contact</h5>
+               <ul>
+                  <li><a href="mailto:hello@ceylondigital.com">hello@ceylondigital.com</a></li>
+                  <li><a href="tel:+947647258206">+94 76 472 8206</a></li>
+                  <li><span>123 Innovation St,<br>New York, NY 10001</span></li>
+               </ul>
+            </div>
+            
+            <!-- Social -->
+            <div class="footer-col">
+               <h5>Connect</h5>
+               <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Twitter/X</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                  <li><a href="#">TikTok</a></li>
+                  <li><a href="#">Dribbble</a></li>
+               </ul>
+            </div>
+         </div>
+         
+         <div class="footer-bottom">
+            <p>&copy; <script>
+                  document.write(new Date().getFullYear());
+               </script> Ceylon Digital. All rights reserved.</p>
+            <button onclick="scrollToTop()" class="back-to-top cta">↑ Back to Top</button>
+         </div>
+      </div>
+   </footer>
+   
+   <!-- Back to Top Script -->
+   <script>
+      function scrollToTop() {
+         window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+   </script>
+   <script src="./assets/js/portfolio-view.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
