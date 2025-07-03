@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap'); */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@font-face {
+   font-family: Poppins;
+   src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+   font-family: Montserrat;
+   src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+   font-family: Roboto;
+   src: url("../fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+   font-family: Prompt;
+   src: url("../fonts/Prompt/Prompt-Regular.ttf");
+}
+
+@font-face {
+   font-family: PlayFair;
+   src: url("../fonts/PlayFair/Playfair-VariableFont_opsz,wdth,wght.ttf");
+}
+
+@font-face {
+   font-family: Outfit;
+   src: url("../fonts/Outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+   font-family: Source Sans 3;
+   src: url("../fonts/Source Sans 3/SourceSans3-VariableFont_wght.ttf");
+}
+
+@font-face {
+   font-family: Open Sans;
+   src: url("../fonts/Open Sans/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+   font-family: Inter;
+   src: url("../fonts/Inter/Inter-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+   font-family: DM Sans;
+   src: url("../fonts/DM Sans/DMSans-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+   font-family: Manrope;
+   src: url("../fonts/Manrope/Manrope-VariableFont_wght.ttf");
+}
+
+@font-face {
+   font-family: "bootstrap-icons";
+   src: url("../fonts/bootstrap-icons.woff2") format("woff2"),
+      url("../fonts/bootstrap-icons.woff") format("woff");
+   font-weight: normal;
+   font-style: normal;
+}

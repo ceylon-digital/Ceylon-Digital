@@ -1,0 +1,301 @@
+/* ========================================================
+   DESIGN SYSTEM - CSS Boilerplate
+   Includes: Typography, Colors, Spacing, Layouts, Utilities, Responsive, Animations
+======================================================== */
+
+/* =============================
+   USAGE NOTES:
+   - Font usage:
+     - --font-primary: General body text, paragraphs, and UI elements
+     - --font-secondary: Headings, blockquotes, featured sections
+     - --font-display: Large banners, hero sections, standout headlines
+     - --font-accent: For buttons, CTAs, badges, and emphasis elements
+     - --font-mono: For <pre>, <code>, and inline code requiring monospace
+   - Major Third scale: Best for content-heavy sites, blogs, dashboards
+   - Perfect Fourth scale: Best for landing pages, portfolios, storytelling
+   - Color system auto-supports dark mode (media query based)
+   - Color variables use descriptive names: text, backgrounds, buttons, links
+   - Spacing based on 8px scale for consistent rhythm
+   - Utility classes: flex, grid, spacing, shadows, border-radius
+   - Customize primary color, extend grid as needed
+   - Add `.dark` class or use JS toggle for manual dark mode
+   - Pre-built z-index layers and simple animation utilities
+   - Optimize performance: minify CSS, defer JS, lazy load images
+============================= */
+
+
+/* ===============================
+   GLOBAL RESET, BOX-SIZING AND BASE HTML STYLING
+================================= */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   line-height: 1.6;
+   letter-spacing: 0.01em;
+}
+
+html {
+   font-size: 16px;
+   /* Base font size for rem scaling */
+   text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   scroll-behavior: smooth;
+   /* Smooth scrolling */
+}
+
+
+/* =============================
+   1. FONT FAMILY SYSTEM
+============================= */
+:root {
+  /* Base font stacks */
+  --font-sans: 'Manrope', sans-serif;
+  /* --font-serif: 'Source Sans 3', serif; */
+  --font-serif: 'Montserrat', serif;
+
+  /* Semantic font roles in logical order with descriptions */
+  --font-primary: var(--font-sans);      /* For body text and general UI */
+  --font-secondary: var(--font-serif);   /* For headings, blockquotes, featured sections */
+  --font-display: 'Montserrat', sans-serif; /* For large banners, hero sections, standout headlines */
+  --font-accent: 'Montserrat', sans-serif;  /* For buttons, CTAs, and emphasis elements */
+  --font-mono: 'Fira Code', monospace;   /* For <pre>, <code> blocks and inline code */
+}
+
+
+
+/* =============================
+   TYPOGRAPHY SCALE OPTIONS
+   - Default: Major Third (1.25)
+   - Optional: Perfect Fourth (1.333)
+   - New Smaller Scale: Minor Second (1.118)
+============================= */
+
+/* MINOR SECOND SCALE (Recommended for very subtle, understated designs) */
+/* :root {
+   --h1-size: clamp(1.125rem, 3vw, 1.75rem);
+   --h2-size: clamp(1rem, 2.8vw, 1.5rem);
+   --h3-size: clamp(0.875rem, 2.5vw, 1.25rem);
+   --h4-size: clamp(0.75rem, 2vw, 1rem);
+   --h5-size: clamp(0.625rem, 1.8vw, 0.875rem);
+   --h6-size: clamp(0.5rem, 1.5vw, 0.75rem);
+   --p-size: clamp(0.625rem, 1.8vw, 0.875rem);
+} */
+
+/* MINOR THIRD SCALE (Recommended for more subtle, restrained designs) */
+:root {
+   --h1-size: clamp(1.25rem, 4vw, 2rem);
+   --h2-size: clamp(1.125rem, 3.5vw, 1.75rem);
+   --h3-size: clamp(1rem, 3vw, 1.5rem);
+   --h4-size: clamp(0.875rem, 2.5vw, 1.25rem);
+   --h5-size: clamp(0.75rem, 2vw, 1rem);
+   --h6-size: clamp(0.625rem, 1.5vw, 0.875rem);
+   --p-size: clamp(0.75rem, 2vw, 1rem);
+
+   --h1-size: clamp(1.8rem, calc(1.766vw + 1.225rem), 2.75rem);
+   --h2-size: clamp(1.6rem, 2.25vw, 2.5rem);
+   --h3-size: clamp(1.25rem, 1.75vw, 1.5rem);
+   --h4-size: clamp(1.2rem, 1.4vw, 1.4rem);
+   --h5-size: clamp(1rem, 1.1vw, 1.3rem);
+   --h6-size: clamp(0.9rem, 1vw, 1rem);
+   --p-size: clamp(0.9rem, 1vw, 1rem);
+   
+   --h1-size: clamp(1.9rem, 3.5vw, 3rem);
+   --h2-size: clamp(1.6rem, 3vw, 2.5rem);
+   --h3-size: clamp(1.25rem, 2.5vw, 1.5rem);
+   --h4-size: clamp(1.2rem, 2vw, 1.4rem);
+   --h5-size: clamp(1rem, 1.5vw, 1.3rem);
+   --h6-size: clamp(0.9rem, 1.2vw, 1rem);
+   --p-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+/* MAJOR THIRD SCALE (Recommended for content-heavy sites, blogs, dashboards) */
+/* :root {
+   --h1-size: clamp(1.5rem, 4vw, 2.5rem);
+   --h2-size: clamp(1.25rem, 3.5vw, 2rem);
+   --h3-size: clamp(1.125rem, 3vw, 1.5rem);
+   --h4-size: clamp(1rem, 2.5vw, 1.25rem);
+   --h5-size: clamp(0.875rem, 2vw, 1.125rem);
+   --h6-size: clamp(0.75rem, 1.5vw, 1rem);
+   --p-size: clamp(0.875rem, 2vw, 1rem);
+} */
+
+/* PERFECT FOURTH SCALE (Recommended for landing pages, portfolios, storytelling) */
+/* :root {
+   --h1-size: clamp(2rem, 5vw, 3rem);
+   --h2-size: clamp(1.75rem, 4.5vw, 2.5rem);
+   --h3-size: clamp(1.5rem, 4vw, 2rem);
+   --h4-size: clamp(1.25rem, 3.5vw, 1.5rem);
+   --h5-size: clamp(1rem, 3vw, 1.25rem);
+   --h6-size: clamp(0.875rem, 2.5vw, 1rem);
+   --p-size: clamp(1rem, 2.5vw, 1.125rem);
+} */
+
+/* BOOTSTRAP SCALE (Recommended for general-purpose websites) */
+/* :root {
+   --h1-size: clamp(2.25rem, 5vw, 3.5rem);
+   --h2-size: clamp(1.75rem, 4.5vw, 2.5rem);
+   --h3-size: clamp(1.5rem, 4vw, 2rem);
+   --h4-size: clamp(1.25rem, 3.5vw, 1.5rem);
+   --h5-size: clamp(1rem, 3vw, 1.25rem);
+   --h6-size: clamp(0.875rem, 2.5vw, 1rem);
+   --p-size: clamp(1rem, 2.5vw, 1.125rem);
+} */
+
+/* PERFECT FIFTH SCALE (Recommended for bold typographic statements, creative sites) */
+/* :root {
+   --h1-size: clamp(2.25rem, 5.5vw, 3.5rem);
+   --h2-size: clamp(1.75rem, 4.5vw, 2.5rem);
+   --h3-size: clamp(1.5rem, 4vw, 2rem);
+   --h4-size: clamp(1.25rem, 3.5vw, 1.5rem);
+   --h5-size: clamp(1rem, 3vw, 1.25rem);
+   --h6-size: clamp(0.875rem, 2.5vw, 1rem);
+   --p-size: clamp(1rem, 2.5vw, 1.125rem);
+} */
+
+
+
+/* =============================
+   3. COLOR SYSTEM + DARK MODE
+============================= */
+:root {
+  /* Text Colors */
+  --text-primary: #2C2C2C;         /* General readable body text */
+  --text-heading: #1A1A1A;         /* Strong headings */
+  --text-subheading: #4A4A4A;      /* Subheadings, captions, metadata */
+  --text-muted: #6B7280;           /* Muted/dim text for less emphasis */
+  --text-light: #FFFFFF;     /* Text color for primary buttons */
+
+  /* Background Colors */
+  --bg-body: #FFFFFF;              /* Page background */
+  --bg-surface: #F7F9FC;           /* Cards and containers (matches dark theme's surface) */
+  --bg-navbar: #FFFFFF;            /* Navbar background */
+  --bg-alt: #E6ECF5;               /* Alternative background surface for contrast */
+  --bg-transparent: rgba(255, 255, 255, 0.3);
+  
+  /* Interactive Colors */
+  --btn-primary-bg: #003ACC;       /* Vivid blue for call-to-actions */
+  --btn-primary-bg: linear-gradient(135deg, #4f46e5, #3b82f6);       /* Vivid blue for call-to-actions */
+  --btn-hover-bg: #002B99;         /* Slightly darker on hover */
+  --border-default: #D0D7E2;       /* Subtle border */
+  --focus-outline: #60A5FA;        /* Soft blue for focus indication (matching dark theme tone) */
+
+  /* Accent & Links */
+  --color-accent: #00AEEF;         /* Bright cyan to match dark theme accent but accessible on light bg */
+  --link-color: #003ACC;           /* Standard link color */
+  --link-hover-color: #002B99;     /* Darker hover state for links */
+
+  /* Shadows & Effects */
+  --shadow-elevation: 0 4px 12px rgba(0, 0, 0, 0.05);  /* Light mode shadow */
+
+  --hero-bg: url('../icons/wave-light-mode.svg') no-repeat bottom / cover;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body: #111827;
+    --bg-surface-light: #1f2937;
+    --text-primary: #e5e7eb;
+    --border-default: #374151;
+  }
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  /* Text Colors */
+  --text-primary: #E4E8F0;           /* Softer white with a bluish tint */
+  --text-heading: #FFFFFF;           /* Clean white for strong emphasis */
+  --text-subheading: #94A3B8;        /* Cool light gray-blue */
+  --text-muted: #64748B;             /* Muted slate for de-emphasis */
+  --text-light: #FFFFFF;
+
+  /* Background Colors */
+  --bg-body: #0A0E1C;                /* Slightly deeper, cooler black */
+  --bg-surface: #121826;             /* Dark slate for cards/containers */
+  --bg-navbar: #0C111F;              /* Mid-dark tone for nav */
+  --bg-alt: #1A2135;                 /* Cool navy-alt for contrast sections */
+  --bg-transparent: rgba(0, 0, 0, 0.3);
+
+  /* Interactive Colors */
+  --btn-primary-bg: #3B82F6;         /* Vivid hero-blue for CTA */
+  --btn-primary-bg: linear-gradient(135deg, #4338ca, #2563eb);       /* Vivid blue for call-to-actions */
+  --btn-hover-bg: #2563EB;           /* Darker blue on hover */
+  --border-default: #2F3548;         /* Softer navy-gray border */
+  --focus-outline: #4FC3F7;          /* Cyan-blue for keyboard focus ring */
+
+  /* Accent & Links */
+  --color-accent: #22D3EE;           /* Bright cyan from floating elements */
+  --link-color: #60A5FA;             /* Base hero-blue */
+  --link-hover-color: #93C5FD;       /* Lighter blue for hover effect */
+
+  /* Shadows & Effects */
+  --shadow-elevation: 0 4px 14px rgba(0, 0, 0, 0.45);  /* More lift and depth */
+
+  --hero-bg: url('../icons/wave-dark-mode.svg') no-repeat bottom / cover;
+}
+
+
+/* =============================
+   OPTIONAL DARK MODE TOGGLE JS SNIPPET
+============================= */
+/*
+document.querySelector('#darkToggle').addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+});
+*/
+
+
+
+/* =============================
+   4. SPACING SYSTEM (8px scale)
+============================= */
+:root {
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 3rem;
+}
+
+/* =============================
+   5. RESPONSIVE BREAKPOINTS
+============================= */
+:root {
+  --break-sm: 480px;
+  --break-md: 768px;
+  --break-lg: 1024px;
+  --break-xl: 1280px;
+}
+
+/* Example Usage: 
+@media (min-width: var(--break-md)) { ... }
+*/
+
+/* =============================
+   6. Z-INDEX LAYERS
+============================= */
+:root {
+  --z-base: 1;
+  --z-dropdown: 10;
+  --z-sticky: 50;
+  --z-modal: 100;
+  --z-toast: 200;
+}
+
+/* =============================
+   7. SHADOWS & BORDER RADIUS
+============================= */
+:root {
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-rounded: 1000px;
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.05);
+}

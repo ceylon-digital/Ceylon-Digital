@@ -1,0 +1,190 @@
+/* ============================================
+   BASE STYLING FOR BODY ELEMENT
+============================================ */
+body {
+   font-family: var(--font-primary);
+   /* Default font */
+   font-size: var(--p-size);
+   /* Default font size */
+   color: var(--text-primary);
+   /* Base text color */
+   background-color: var(--bg-body);
+   /* Page background */
+   min-height: 100vh;
+   /* Full viewport height */
+   transition: 0.3s ease;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-rendering: optimizeLegibility;
+}
+
+/* ============================================
+   TYPOGRAPHY: HEADINGS, PARAGRAPHS, AND TEXT
+============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  line-height: 1.2;
+  /* Tighter spacing for headings */
+  margin: 0;
+  /* Reset margin */
+  color: var(--text-heading);
+}
+
+h1, h2 {
+  letter-spacing: 1px;
+}
+
+h1 { font-size: var(--h1-size); }
+h2 { font-size: var(--h2-size); }
+h3 { font-size: var(--h3-size); }
+h4 { font-size: var(--h4-size); }
+h5 { font-size: var(--h5-size); }
+h6 { font-size: var(--h6-size); }
+
+p {
+  /* margin-bottom: var(--space-md); */
+  letter-spacing: 0.02em;
+  max-width: 70ch;
+  color: var(--text-primary);
+}
+
+/* Optional serif style */
+/* h1, h2, h3, h4 { font-family: var(--font-secondary); } */
+
+/* ============================================
+   STYLING FOR LISTS AND LINKS
+============================================ */
+ul,
+ol {
+   list-style: none;
+   /* Remove default list styles */
+}
+
+a,
+ins {
+   text-decoration: none;
+   /* Remove default link underlines */
+   color: var(--link-color);
+   /* Optional link color */
+   transition: 0.3s ease;
+   /* Smooth color transition */
+}
+
+a {
+   user-select: none;
+}
+
+a:hover,
+a:focus {
+   color: var(--link-hover-color);
+}
+
+del {
+   text-decoration: line-through;
+   /* Consistent strikethrough */
+}
+
+/* ============================================
+   STYLING FOR FORMS AND FORM ELEMENTS
+============================================ */
+button,
+input,
+textarea,
+select {
+   font-family: inherit;
+   /* Inherit font styles */
+   color: inherit;
+   /* Inherit text color */
+   background: transparent;
+   /* Remove default background */
+   border: none;
+   /* Remove default borders */
+   outline: none;
+   /* Remove default focus outlines */
+   appearance: none;
+   /* Normalize appearance across browsers */
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+   cursor: pointer;
+   /* Pointer cursor for buttons */
+   background-color: var(--btn-primary-bg);
+   /* Button background color */
+   color: var(--color-accent);
+   /* Button text color */
+   padding: 0.5em 1em;
+   /* Consistent padding */
+   border-radius: 4px;
+   /* Slightly rounded corners */
+   user-select: none;
+   /* No user selection */
+   transition: 0.3s ease;
+   /* Smooth transitions */
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+   background-color: var(--btn-hover-bg);
+   /* Button hover background */
+}
+
+input, textarea, select {
+  padding: var(--space-sm);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface-light);
+  font-family: var(--font-accent);
+  color: var(--text-primary);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+   padding: 10px;
+}
+
+input::placeholder,
+textarea::placeholder{
+   color: var(--text-muted);
+}
+
+
+/* ============================================
+   ACCESSIBILITY AND FOCUS STATES
+============================================ */
+button[type="submit"]:focus,
+button[type="reset"]:focus,
+input:focus,
+select:focus {
+   outline: 1px solid var(--focus-outline);
+   /* Visible focus outline */
+   /* outline-offset: 2px; */
+   /* Space between element and outline */
+}
+
+/* Hover state color for interactive elements */
+button:hover,
+select:hover {
+   color: var(--btn-hover-bg);
+}
+
+/* ============================================
+   IMAGES, AND BLOCKQUOTE STYLING
+============================================ */
+blockquote {
+  border-left: 4px solid var(--border-default);
+  padding-left: var(--space-md);
+  color: var(--text-subheading);
+  font-style: italic;
+  font-family: var(--font-primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+}

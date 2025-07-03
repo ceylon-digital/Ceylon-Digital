@@ -1,0 +1,85 @@
+@import url('./base.css');
+@import url('./navbar.css');
+@import url('./preloader.css');
+@import url('./footer.css');
+
+:root {
+  --text-primary: #E4E8F0;
+  --text-heading: #FFFFFF;
+  --text-subheading: #94A3B8;
+  --text-muted: #64748B;
+  --text-light: #FFFFFF;
+  
+  --bg-body: #0A0E1C;
+  --bg-surface: #121826;
+  --bg-navbar: #0C111F;
+  --bg-alt: #1A2135;
+  
+  --btn-primary-bg: #3B82F6;
+  --btn-hover-bg: #2563EB;
+  --border-default: #2F3548;
+  --focus-outline: #4FC3F7;
+  
+  --color-accent: #22D3EE;
+  --link-color: #60A5FA;
+  --link-hover-color: #93C5FD;
+  
+  --shadow-elevation: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+h1,
+h2 {
+  color: var(--text-heading);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-section {
+  background-color: var(--bg-surface);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--color-accent);
+  box-shadow: var(--shadow-elevation);
+}
+
+.service-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--text-subheading);
+}
+
+.service-section ul li {
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+}
