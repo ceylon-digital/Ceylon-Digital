@@ -1,53 +1,74 @@
 const canvas = document.querySelector('.blob-canvas');
 const ctx = canvas.getContext('2d');
 
+let time = 0;
+let blobs = []; // Define before calling resizeCanvas()
+
+// Define colors with theme and transparency
+const themeColors = [
+   'rgba(0, 58, 204, 0.3)',
+   'rgba(79, 70, 229, 0.3)',
+   'rgba(59, 130, 246, 0.3)',
+   'rgba(0, 174, 239, 0.3)',
+   'rgba(230, 236, 245, 0.35)',
+   'rgba(208, 215, 226, 0.25)'
+];
+
+// Resize canvas to match display size
 function resizeCanvas() {
    canvas.width = canvas.offsetWidth;
    canvas.height = canvas.offsetHeight;
+   generateBlobs(); // Refresh blobs on resize
 }
 
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
+// Generate dynamic blobs
+function generateBlobs() {
+   blobs = [];
+   const count = Math.floor(canvas.width / 150);
+   for (let i = 0; i < count; i++) {
+      blobs.push({
+         x: Math.random() * canvas.width,
+         y: Math.random() * canvas.height,
+         baseRadius: 80 + Math.random() * 70,
+         color: themeColors[i % themeColors.length],
+         freq: 0.15 + Math.random() * 0.2,
+         amp: 10 + Math.random() * 20,
+         phase: Math.random() * Math.PI * 2
+      });
+   }
+}
 
-let time = 0;
-
-// Define 5 blobs with different properties
-const blobs = [
-   { x: 150, y: 100, radius: 100, color: 'rgba(0, 188, 212, 0.35)', freq: 0.2, amp: 20, phase: 0 },
-   { x: 600, y: 200, radius: 80, color: 'rgba(255, 64, 129, 0.25)', freq: 0.3, amp: 15, phase: 1 },
-   { x: 900, y: 100, radius: 60, color: 'rgba(126, 87, 194, 0.3)', freq: 0.25, amp: 18, phase: 2 },
-   { x: 300, y: 350, radius: 90, color: 'rgba(255, 193, 7, 0.3)', freq: 0.15, amp: 12, phase: 3 },
-   { x: 750, y: 400, radius: 70, color: 'rgba(76, 175, 80, 0.25)', freq: 0.35, amp: 10, phase: 4 },
-];
-
+// Draw individual blob
 function drawBlob(blob, t) {
-   const points = 60;
+   const points = 120; // More points for smoother curve
+   const pulse = Math.sin(t + blob.phase) * 2; // Smaller pulse
    ctx.beginPath();
    for (let i = 0; i <= points; i++) {
       const angle = (Math.PI * 2 / points) * i;
       const offset = Math.sin(angle * blob.freq + t + blob.phase) * blob.amp;
-      const r = blob.radius + offset;
+      const r = blob.baseRadius + offset + pulse;
       const x = blob.x + Math.cos(angle) * r;
       const y = blob.y + Math.sin(angle) * r;
-      
-      if (i === 0) {
-         ctx.moveTo(x, y);
-      } else {
-         ctx.lineTo(x, y);
-      }
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
    }
    ctx.closePath();
    ctx.fillStyle = blob.color;
    ctx.fill();
 }
 
+// Animation loop
 function animate() {
    ctx.clearRect(0, 0, canvas.width, canvas.height);
+   ctx.globalCompositeOperation = 'lighter';
    blobs.forEach(blob => drawBlob(blob, time));
-   time += 0.015;
+   time += 0.01;
    requestAnimationFrame(animate);
 }
 
+// Initialize
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas(); // Safe now that `blobs` is defined
 animate();
 
 
@@ -141,7 +162,7 @@ steps.forEach(step => {
 
 
 
-
+/*
 const currencySwitch = document.getElementById("currencySwitch");
 const amountEls = document.querySelectorAll(".pricing__amount");
 let exchangeRate = 0.0033; // fallback exchange rate (1 LKR ≈ 0.0033 USD)
@@ -173,7 +194,7 @@ function updatePrices(currency) {
          const usd = lkr * exchangeRate;
          el.textContent = `USD ${formatUSD(usd)}`;
       } else {
-         el.textContent = `LKR ${lkr.toLocaleString()}+`;
+         el.textContent = `Rs.${lkr.toLocaleString()}+`;
       }
    });
 }
@@ -187,6 +208,7 @@ currencySwitch.addEventListener("change", () => {
 fetchExchangeRate().then(() => {
    updatePrices(currencySwitch.value);
 });
+*/
 
 
 
