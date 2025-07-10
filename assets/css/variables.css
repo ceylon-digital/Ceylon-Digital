@@ -108,7 +108,7 @@ html {
    --h4-size: clamp(1.2rem, 2vw, 1.4rem);
    --h5-size: clamp(1rem, 1.5vw, 1.3rem);
    --h6-size: clamp(0.9rem, 1.2vw, 1rem);
-   --p-size: clamp(0.9rem, 1vw, 1rem);
+   --p-size: clamp(0.8rem, 1vw, 0.9rem);
 }
 
 /* MAJOR THIRD SCALE (Recommended for content-heavy sites, blogs, dashboards) */
@@ -190,17 +190,20 @@ html {
   /* Shadows & Effects */
   --shadow-elevation: 0 4px 12px rgba(0, 0, 0, 0.05);  /* Light mode shadow */
 
+  --logo-default: grayscale(100%) brightness(60%);
+  --logo-hover: grayscale(0%) brightness(100%);
+ 
   --hero-bg: url('../icons/wave-light-mode.svg') no-repeat bottom / cover;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --bg-body: #111827;
-    --bg-surface-light: #1f2937;
+    --bg-surface: #1f2937;
     --text-primary: #e5e7eb;
     --border-default: #374151;
   }
-}
+} */
 
 /* Dark Theme */
 [data-theme="dark"] {
