@@ -22,6 +22,139 @@
    }
 }
 
+
+
+
+
+
+
+/* Blob Animations */
+.blob {
+   animation: blob-turn var(--time, 30s) linear infinite;
+   fill: var(--fill, #7600f8);
+   position: relative;
+   transform-origin: center
+}
+
+.blob svg {
+   animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
+   transform-origin: center
+}
+
+.blob svg path {
+   animation: blob-scale calc(var(--time, 30s) * 0.5) ease-in-out 0s infinite;
+   transform-origin: center
+}
+
+@keyframes blob-turn {
+   0% {
+      transform: rotate(0deg)
+   }
+   
+   100% {
+      transform: rotate(360deg)
+   }
+}
+
+@keyframes blob-skew {
+   0% {
+      transform: skewY(0deg)
+   }
+   
+   13% {
+      transform: skewY(calc((1.8deg) * var(--amount, 2)))
+   }
+   
+   18% {
+      transform: skewY(calc((2.2deg) * var(--amount, 2)))
+   }
+   
+   24% {
+      transform: skewY(calc((2.48deg) * var(--amount, 2)))
+   }
+   
+   25% {
+      transform: skewY(calc((2.5deg) * var(--amount, 2)))
+   }
+   
+   26% {
+      transform: skewY(calc((2.48deg) * var(--amount, 2)))
+   }
+   
+   32% {
+      transform: skewY(calc((2.2deg) * var(--amount, 2)))
+   }
+   
+   37% {
+      transform: skewY(calc((1.8deg) * var(--amount, 2)))
+   }
+   
+   50% {
+      transform: skewY(0deg)
+   }
+   
+   63% {
+      transform: skewY(calc((-1.8deg) * var(--amount, 2)))
+   }
+   
+   68% {
+      transform: skewY(calc((-2.2deg) * var(--amount, 2)))
+   }
+   
+   74% {
+      transform: skewY(calc((-2.48deg) * var(--amount, 2)))
+   }
+   
+   75% {
+      transform: skewY(calc((-2.5deg) * var(--amount, 2)))
+   }
+   
+   76% {
+      transform: skewY(calc((-2.48deg) * var(--amount, 2)))
+   }
+   
+   82% {
+      transform: skewY(calc((-2.2deg) * var(--amount, 2)))
+   }
+   
+   87% {
+      transform: skewY(calc((-1.8deg) * var(--amount, 2)))
+   }
+   
+   100% {
+      transform: skewY(0deg)
+   }
+}
+
+@keyframes blob-scale {
+   0% {
+      transform: scaleX(.9) scaleY(1)
+   }
+   
+   25% {
+      transform: scaleX(.9) scaleY(.9)
+   }
+   
+   50% {
+      transform: scaleX(1) scaleY(.9)
+   }
+   
+   75% {
+      transform: scaleX(.9) scaleY(.9)
+   }
+   
+   100% {
+      transform: scaleX(.9) scaleY(1)
+   }
+}
+
+
+
+
+
+
+
+
 /* Convert to normal CSS before deployment 
 in order to ensure older browser support as well */
 
@@ -75,48 +208,6 @@ section {
    }
 }
 
-/* body {
-   position: relative;
-   background: url('../icons/polygon-scatter-haikei(0).svg') repeat bottom / cover;
-} */
-
-/* body::before {
-   content: '';
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-   backdrop-filter: blur(150px);
-   z-index: -1;
-} */
-
-body {
-   position: relative;
-}
-
-/* body::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      
-      backdrop-filter: blur(20px);
-      Apply blur effect
-      background-color: var(--bg-transparent);
-      Optional semi-transparent bg
-      -webkit-backdrop-filter: blur(50px);
-      For Safari
-   } */
-
-
-
-
-
-
 .hero {
    position: relative;
    transition: 0.3s ease;
@@ -133,10 +224,10 @@ body {
       
       backdrop-filter: blur(20px);
       /* Apply blur effect */
-      background-color: var(--bg-transparent);
-      /* Optional semi-transparent bg */
       -webkit-backdrop-filter: blur(20px);
       /* For Safari */
+      background-color: var(--bg-transparent);
+      /* Optional semi-transparent bg */
    }
    
    canvas.blob-canvas {
@@ -333,7 +424,9 @@ main {}
    }
    
    .accent-highlight {
-      color: var(--link-color);
+      color: transparent;
+      background: var(--text-gradient);
+      background-clip: text;
       font-size: var(--h6-size);
       font-weight: bold;
       font-family: var(--font-secondary);
@@ -823,8 +916,6 @@ main {}
 }
 
 
-
-
 .services-section {
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 100px;
@@ -845,6 +936,13 @@ main {}
       margin-bottom: 40px;
    }
    
+   img {
+      width: 100%;
+      height: 300px;
+      border-radius: var(--radius-lg);
+      margin-bottom: 30px;
+   }
+   
    .services-cards {
       display: flex;
       flex-wrap: wrap;
@@ -854,8 +952,9 @@ main {}
    
    .service-card {
       background-color: var(--bg-surface);
+      background: url('../../assets/icons/bg.svg');
       border-radius: var(--radius-md);
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-elevation);
       text-align: left;
       padding: 30px;
       /* width: calc(33.33% - 20px); */
@@ -866,11 +965,11 @@ main {}
    
    .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: var(--shadow-elevation);
+      /* box-shadow: var(--shadow-elevation); */
    }
    
    .service-icon {
-      background: var(--bg-body);
+      background: var(--bg-surface);
       border-radius: var(--radius-rounded);
       width: 60px;
       height: 60px;
@@ -1224,7 +1323,6 @@ main {}
    text-align: center;
    margin: auto;
    margin-top: 3rem;
-   font-size: 1rem;
    color: var(--text-subheading);
 }
 
@@ -1561,13 +1659,67 @@ main {}
    
    .form-agree {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       color: var(--text-muted);
       gap: 10px;
       margin-bottom: 20px;
    }
    
-   .form-agree input {}
+   .form-agree input {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      padding: 0;
+   }
+   
+   .form-agree input:focus {
+      outline: none;
+   }
+   
+   .form-agree input:checked {
+      background: #3B82F6;
+      border-color: #3B82F6;
+   }
+   
+   .form-agree input:checked::after {
+      content: '✓';
+      position: absolute;
+      color: var(--text-light);
+      font-size: 0.65rem;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   }
+   
+   
+   /* input {
+      appearance: auto;
+      -webkit-appearance: auto;
+      for Safari
+      -moz-appearance: auto;
+      for Firefox
+   } */
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   .form-agree a {
+      text-decoration: underline;
+   }
    
    .btn.cta {
       background: var(--btn-primary-bg);
@@ -1587,7 +1739,7 @@ main {}
    
    .form-msg {
       margin-top: 20px;
-      color: var(--color-accent);
+      color: var(--link-color);
       display: none;
    }
    
