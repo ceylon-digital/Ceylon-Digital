@@ -167,6 +167,7 @@ html {
   --text-subheading: #4A4A4A;      /* Subheadings, captions, metadata */
   --text-muted: #6B7280;           /* Muted/dim text for less emphasis */
   --text-light: #FFFFFF;     /* Text color for primary buttons */
+  --text-gradient: linear-gradient(135deg, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
 
   /* Background Colors */
   --bg-body: #FFFFFF;              /* Page background */
