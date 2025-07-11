@@ -1,0 +1,15 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+      <linearGradient id="gradient1" x1="0" y1="0" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+         <stop offset="0%" stop-color="#2563eb" />
+         <stop offset="100%" stop-color="#4338ca" />
+      </linearGradient>
+      <filter id="blurFilter" x="-50%" y="-50%" width="200%" height="200%">
+         <feGaussianBlur in="SourceGraphic" stdDeviation="60" />
+      </filter>
+   </defs>
+   
+   <g filter="url(#blurFilter)">
+      <path d="M150,200 C150,100 300,50 400,150 C500,250 350,350 250,300 C150,250 150,300 150,200 Z" fill="url(#gradient1)" />
+   </g>
+</svg>

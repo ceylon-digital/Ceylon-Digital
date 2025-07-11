@@ -1,0 +1,11 @@
+<svg width="85" height="85" xmlns="http://www.w3.org/2000/svg">
+   <title>Layer 1</title>
+   <g id="svg_1">
+      <!-- Rotated outer circular C shape with gradient fill -->
+      <g transform="rotate(90 57.5 27.5)" id="svg_2">
+         <path d="m72.50001,2.49999a40,40 0 1 1 -40,40l15,0a25,25 0 1 0 25,-25l0,-15z" fill="#ffffff" id="svg_3" />
+      </g>
+      <!-- Detached square block with 90° gradient -->
+      <rect x="60.50001" y="10.49999" width="15" height="15" fill="#ffffff" id="svg_4" />
+   </g>
+</svg>
