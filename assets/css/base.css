@@ -72,6 +72,7 @@ ins {
 }
 
 a {
+   font-family: var(--font-secondary);
    user-select: none;
 }
 
@@ -90,8 +91,7 @@ del {
 ============================================ */
 button,
 input,
-textarea,
-select {
+textarea {
    font-family: inherit;
    /* Inherit font styles */
    color: inherit;
@@ -136,9 +136,16 @@ input, textarea, select {
   padding: var(--space-sm);
   border: 1px solid var(--border-default);
   border-radius: var(--radius-sm);
-  background-color: var(--bg-surface-light);
+  background-color: transparent;
   font-family: var(--font-accent);
   color: var(--text-primary);
+}
+
+select {
+   border: none;
+   outline: none;
+   padding: 0;
+   font-weight: 500;
 }
 
 input[type="checkbox"],
