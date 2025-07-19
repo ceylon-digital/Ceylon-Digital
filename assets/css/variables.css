@@ -178,7 +178,7 @@ html {
   
   /* Interactive Colors */
   --btn-primary-bg: #003ACC;       /* Vivid blue for call-to-actions */
-  --btn-primary-bg: linear-gradient(135deg, #4f46e5, #3b82f6);       /* Vivid blue for call-to-actions */
+  /* --btn-primary-bg: linear-gradient(135deg, #4f46e5, #3b82f6); */       /* Vivid blue for call-to-actions */
   --btn-hover-bg: #002B99;         /* Slightly darker on hover */
   --border-default: #D0D7E2;       /* Subtle border */
   --focus-outline: #60A5FA;        /* Soft blue for focus indication (matching dark theme tone) */
