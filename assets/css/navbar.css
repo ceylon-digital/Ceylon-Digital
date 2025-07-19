@@ -1,15 +1,19 @@
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  background: var(--bg-navbar);
+  left: 0;
+  width: 100%;
+  /* background: var(--bg-navbar); */
   padding: 1.3rem clamp(1.5rem, 5vw, 3rem);
-  box-shadow: var(--shadow-md);
+  /* box-shadow: var(--shadow-md); */
   transition: inherit;
   z-index: 1000;
 }
 
-.navbar:hover,
-.navbar.fixed {}
+.navbar.fixed {
+  background: var(--bg-navbar);
+  box-shadow: var(--shadow-elevation);
+}
 
 .navbar .container {
   max-width: 1440px;
@@ -24,7 +28,9 @@
   font-size: 1rem;
   font-weight: bold;
   font-family: var(--font-accent);
-  color: var(--link-color);
+  color: transparent;
+  background: var(--text-gradient);
+  background-clip: text;
   display: flex;
   align-items: center;
 }
@@ -44,7 +50,6 @@
 .nav-links li a {
   color: var(--link-color);
   font-weight: 600;
-  border-radius: var(--radius-rounded);
   transition: 0.3s ease;
 }
 
