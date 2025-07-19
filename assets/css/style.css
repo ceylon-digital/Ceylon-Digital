@@ -405,7 +405,7 @@ main {}
 
 .container {
    width: 100%;
-   max-width: 1440px;
+   max-width: 1200px;
    margin: 0 auto;
    
    .section-title {
@@ -555,7 +555,7 @@ main {}
    overflow-x: hidden;
    
    .container {
-      max-width: 1440px;
+      max-width: 1200px;
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
@@ -669,7 +669,7 @@ main {}
    scroll-margin-top: 0;
    
    .why-us-container {
-      max-width: 1440px;
+      max-width: 1200px;
       margin: 0 auto;
       text-align: center;
    }
@@ -916,12 +916,14 @@ main {}
 }
 
 
+
+
 .services-section {
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 100px;
    
    .container {
-      max-width: 1440px;
+      max-width: 1200px;
       margin: 0 auto;
       text-align: center;
    }
@@ -953,6 +955,7 @@ main {}
    .service-card {
       background-color: var(--bg-surface);
       background: url('../../assets/icons/bg.svg');
+      background: url('https://assets.website-files.com/63f3c83933b2e96042f898cc/64075dc7506bb74b5c83c4ba_services-card-bg-1.svg') no-repeat center / cover;
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-elevation);
       text-align: left;
@@ -1148,6 +1151,7 @@ main {}
    }
    
    .portfolio-card {
+      max-width: 380px;
       background: var(--bg-surface);
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-sm);
@@ -1193,6 +1197,11 @@ main {}
       border-radius: var(--radius-sm);
    }
    
+   @media (max-width: 700px) {
+      width: 100%;
+      max-width: none;
+   }
+   
    @media (max-width: 600px) {
       .section-title {
          text-align: center;
@@ -1201,7 +1210,6 @@ main {}
       .section-description {
          text-align: center;
       }
-      
       
       .actionBar {
          display: block;
@@ -1451,7 +1459,7 @@ main {}
    overflow: hidden;
    
    .container {
-      max-width: 1440px;
+      max-width: 1200px;
       margin: auto;
    }
    
@@ -1709,14 +1717,6 @@ main {}
    
    
    
-   
-   
-   
-   
-   
-   
-   
-   
    .form-agree a {
       text-decoration: underline;
    }
@@ -1735,6 +1735,10 @@ main {}
    
    .btn.cta:hover {
       background: var(--btn-hover-bg);
+   }
+   
+   .btn.cta:focus {
+      outline: none;
    }
    
    .form-msg {
