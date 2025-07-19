@@ -98,13 +98,13 @@ gsap.timeline()
    .from(".tagline", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" })
    .from(".headline", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" })
    .from(".subheadline", { y: 20, opacity: 0, duration: 0.4, ease: "power2.out" }, "-=0.3")
-   .from(".cta-buttons a", {
+   /*.from(".cta-buttons a", {
       opacity: 0,
       y: 20,
       stagger: 0.2,
       duration: 0.4,
       ease: "back.out(1.4)"
-   }, "-=0.3")
+   }, "-=0.3")*/
    .from(".illustration", { x: 100, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.4");
 
 
@@ -162,7 +162,7 @@ steps.forEach(step => {
 
 
 
-
+/*
 const currencySwitch = document.getElementById("currencySwitch");
 const amountEls = document.querySelectorAll(".pricing__amount");
 let exchangeRate = 0.0033; // fallback exchange rate (1 LKR ≈ 0.0033 USD)
@@ -208,7 +208,7 @@ currencySwitch.addEventListener("change", () => {
 fetchExchangeRate().then(() => {
    updatePrices(currencySwitch.value);
 });
-
+*/
 
 
 
