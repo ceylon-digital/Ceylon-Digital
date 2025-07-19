@@ -9,8 +9,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap'); */
 
-
-
 @font-face {
    font-family: Montserrat;
    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
@@ -20,52 +18,6 @@
    font-family: Manrope;
    src: url("../fonts/Manrope/Manrope-VariableFont_wght.ttf");
 }
-
-/* @font-face {
-   font-family: Poppins;
-   src: url("../fonts/Poppins/Poppins-Regular.ttf");
-} */
-
-/* @font-face {
-   font-family: Roboto;
-   src: url("../fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf");
-} */
-
-/* @font-face {
-   font-family: Prompt;
-   src: url("../fonts/Prompt/Prompt-Regular.ttf");
-} */
-
-/* @font-face {
-   font-family: PlayFair;
-   src: url("../fonts/PlayFair/Playfair-VariableFont_opsz,wdth,wght.ttf");
-} */
-
-/* @font-face {
-   font-family: Outfit;
-   src: url("../fonts/Outfit/Outfit-VariableFont_wght.ttf");
-} */
-
-/* @font-face {
-   font-family: Source Sans 3;
-   src: url("../fonts/Source Sans 3/SourceSans3-VariableFont_wght.ttf");
-} */
-
-/* @font-face {
-   font-family: Open Sans;
-   src: url("../fonts/Open Sans/OpenSans-VariableFont_wdth,wght.ttf");
-} */
-
-/* @font-face {
-   font-family: Inter;
-   src: url("../fonts/Inter/Inter-VariableFont_opsz,wght.ttf");
-} */
-
-/* @font-face {
-   font-family: DM Sans;
-   src: url("../fonts/DM Sans/DMSans-VariableFont_opsz,wght.ttf");
-} */
-
 
 @font-face {
    font-family: "bootstrap-icons";
