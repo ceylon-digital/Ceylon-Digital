@@ -162,7 +162,7 @@ steps.forEach(step => {
 
 
 
-/*
+
 const currencySwitch = document.getElementById("currencySwitch");
 const amountEls = document.querySelectorAll(".pricing__amount");
 let exchangeRate = 0.0033; // fallback exchange rate (1 LKR ≈ 0.0033 USD)
@@ -208,7 +208,7 @@ currencySwitch.addEventListener("change", () => {
 fetchExchangeRate().then(() => {
    updatePrices(currencySwitch.value);
 });
-*/
+
 
 
 
