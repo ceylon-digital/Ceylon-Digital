@@ -551,6 +551,7 @@ main {}
 
 
 .about-section {
+   background: var(--bg-surface);
    padding: 150px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 0;
    overflow-x: hidden;
@@ -629,6 +630,7 @@ main {}
       background: var(--bg-body);
       box-shadow: var(--shadow-md);
       padding: 20px;
+      margin-bottom: 20px;
       overflow: hidden;
       transition: 0.3s ease;
    }
@@ -652,9 +654,14 @@ main {}
       background: rgba(0, 150, 255, 0.5);
    }
    
-   .quote i {
-      display: inline-block;
-      margin-top: 10px;
+   .quote .text {
+      font-style: italic;
+   }
+   
+   .quote .author {
+      color: var(--text-primary);
+      display: block;
+      margin: 0;
    }
 }
 
