@@ -184,7 +184,7 @@ html {
   --focus-outline: #60A5FA;        /* Soft blue for focus indication (matching dark theme tone) */
 
   /* Accent & Links */
-  --color-accent: #00AEEF;         /* Bright cyan to match dark theme accent but accessible on light bg */
+  --color-accent: #002B99;         /* Bright cyan to match dark theme accent but accessible on light bg */
   --link-color: #003ACC;           /* Standard link color */
   --link-hover-color: #002B99;     /* Darker hover state for links */
 
@@ -227,10 +227,10 @@ html {
   --btn-primary-bg: linear-gradient(135deg, #4338ca, #2563eb);       /* Vivid blue for call-to-actions */
   --btn-hover-bg: #2563EB;           /* Darker blue on hover */
   --border-default: #2F3548;         /* Softer navy-gray border */
-  --focus-outline: #4FC3F7;          /* Cyan-blue for keyboard focus ring */
+  --focus-outline: #60A5FA;          /* Cyan-blue for keyboard focus ring */
 
   /* Accent & Links */
-  --color-accent: #22D3EE;           /* Bright cyan from floating elements */
+  --color-accent: #2563EB;           /* Bright cyan from floating elements */
   --link-color: #60A5FA;             /* Base hero-blue */
   --link-hover-color: #93C5FD;       /* Lighter blue for hover effect */
 
