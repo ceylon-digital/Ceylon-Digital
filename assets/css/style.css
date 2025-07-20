@@ -256,6 +256,7 @@ section {
       min-height: 100vh;
       margin: 0 auto;
       padding: clamp(6rem, 12vw, 11rem) clamp(1.5rem, 5vw, 3rem);
+      padding-top: clamp(8rem, 15vw, 13rem);
       display: flex;
       gap: 20px;
       flex-wrap: wrap-reverse;
