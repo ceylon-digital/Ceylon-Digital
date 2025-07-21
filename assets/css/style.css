@@ -807,7 +807,7 @@ main {}
 
 
 .process-section {
-   background: var(--bg-body);
+   background: var(--bg-surface);
    padding: 75px clamp(1.5rem, 5vw, 3rem);
    
    .container {
@@ -885,11 +885,10 @@ main {}
    }
    
    .timeline-content {
-      background: var(--bg-surface);
+      background: var(--bg-body);
       padding: 24px;
       border-radius: var(--radius-lg);
       border: 1px solid var(--border-default);
-      border: 1px solid var(--btn-hover-bg);
       box-shadow: var(--shadow-md);
       max-width: 400px;
       transition: 0.3s ease;
