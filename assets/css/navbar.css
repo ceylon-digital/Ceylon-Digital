@@ -35,6 +35,10 @@
   align-items: center;
 }
 
+.navbar-brand img {
+  height: 55px;
+}
+
 .navbar-brand .icon {
   font-size: 1.5rem;
   margin-right: 10px;
