@@ -77,7 +77,7 @@ animate();
 
 
 
-/*
+
 // console.log(typeof gsap);
 gsap.timeline()
    .from(".logo", { x: -50, opacity: 0, duration: 0.6, ease: "power2.out" })
@@ -106,7 +106,7 @@ gsap.timeline()
       ease: "back.out(1.4)"
    }, "-=0.3")
    .from(".illustration", { x: 100, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.4");
-*/
+
 
 
 
