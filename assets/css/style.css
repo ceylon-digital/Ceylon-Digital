@@ -1366,7 +1366,7 @@ main {}
    background: var(--btn-primary-bg);
    color: var(--text-light);
    padding: 75px clamp(1.5rem, 5vw, 3rem);
-   scroll-margin-top: 79px;
+   scroll-margin-top: 97px;
    
    .section-title {
       text-align: center;
