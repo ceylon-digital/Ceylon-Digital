@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://ceylon-digital.github.io/Ceylon-Digital/sitemap.xml
