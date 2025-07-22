@@ -795,12 +795,6 @@ main {}
    .cta {
       overflow: hidden;
    }
-   
-   @media (max-width: 600px) {
-      .why-us-container {
-         text-align: left;
-      }
-   }
 }
 
 
@@ -1041,13 +1035,6 @@ main {}
          width: calc(50% - 20px);
       }
    }
-   
-   @media (max-width: 600px) {
-      .container {
-         text-align: left;
-      }
-   }
-   
    
    @media (max-width: 480px) {
       .service-card {
