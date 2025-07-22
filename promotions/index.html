@@ -1,1 +1,346 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+   <!-- 1. Character Encoding & Viewport (Always First) -->
+   <meta charset="UTF-8"> <!-- Defines character encoding -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Improves IE compatibility -->
+   
+   <!-- 2. SEO Meta Tags -->
+   <title>Sri Lanka's Leading Digital Services Agency | Ceylon Digital</title> <!-- Page title (Shown in browser tab & search results) -->
+   <meta name="description" content="At Ceylon Digital, we're passionate about helping businesses thrive in the digital landscape. With expertise in web development, digital marketing, and more, we deliver tailored solutions that drive real results. Let's elevate your brand and achieve your goals together."> <!-- Important for SEO -->
+   <meta name="keywords" content="keyword1, keyword2, keyword3"> <!-- Optional for SEO -->
+   <meta name="author" content="your name or brand"> <!-- Author information -->
+   <meta name="robots" content="index, follow"> <!-- Controls search engine crawling -->
+   <meta name="googlebot" content="index, follow"> <!-- Google-specific crawling instructions -->
+   <meta name="bingbot" content="index, follow"> <!-- Bing-specific crawling instructions -->
+   <meta name="yandexbot" content="index, follow"> <!-- Yandex-specific crawling instructions -->
+   <meta name="baiduspider" content="index, follow"> <!-- Baidu-specific crawling instructions -->
+   <meta name="duckduckbot" content="index, follow"> <!-- DuckDuckGo-specific crawling instructions -->
+   <meta name="naverbot" content="index, follow"> <!-- Naver-specific crawling instructions -->
+   <link rel="canonical" href="https://yourwebsite.com/your-page-url"> <!-- Helps prevent duplicate content issues -->
+   
+   <!-- 3. Verification Meta Tags (For Google, Bing, Yandex, etc.) -->
+   <meta name="google-site-verification" content="your_google_verification_code">
+   <meta name="msvalidate.01" content="your_bing_verification_code">
+   <meta name="yandex-verification" content="your_yandex_verification_code">
+   <meta name="baidu-site-verification" content="your_baidu_verification_code">
+   <meta name="naver-site-verification" content="your_naver_verification_code">
+   
+   <!-- 4. Social Media Meta Tags (Open Graph & Twitter Cards) -->
+   <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+   <meta property="og:title" content="your page title">
+   <meta property="og:description" content="your meta description">
+   <meta property="og:image" content="https://yourwebsite.com/your-og-image.jpg">
+   <meta property="og:url" content="https://yourwebsite.com/your-page-url">
+   <meta property="og:type" content="website">
+   <meta property="og:site_name" content="your website name">
+   
+   <!-- Twitter Cards -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="your page title">
+   <meta name="twitter:description" content="your meta description">
+   <meta name="twitter:image" content="https://yourwebsite.com/your-twitter-image.jpg">
+   <meta name="twitter:site" content="@your_twitter_handle">
+   
+   <!-- 5. Performance Optimization Meta Tags -->
+   <!-- Sets theme color for mobile browsers -->
+   <meta name="theme-color" content="#222222"> <!-- Default (dark mode) -->
+   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> <!-- Light mode -->
+   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"> <!-- Dark mode -->
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- iOS Safari styling -->
+   <!-- Prevents iOS from linking phone numbers automatically -->
+   <meta name="format-detection" content="telephone=no">
+   
+   <!-- 6. Favicon & Icons -->
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/favicon-192x192.png">
+   <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+   
+   <!-- SVG Favicon (for modern browsers) -->
+   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+   
+   <!-- Apple Touch Icons (for iOS home screen shortcut) -->
+   <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-touch-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-touch-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-touch-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-touch-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-touch-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-touch-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-touch-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon-180x180.png">
+   
+   <!-- Android Chrome Icons -->
+   <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-chrome-192x192.png">
+   <link rel="icon" type="image/png" sizes="512x512" href="./assets/icons/android-chrome-512x512.png">
+   
+   <!-- Alternative favicon (optional, for legacy browsers) -->
+   <link rel="shortcut icon" href="./assets/icons/favicon.ico">
+   
+   <!-- Microsoft Tiles (For Windows 10/Edge) -->
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="./assets/icons/mstile-144x144.png">
+   
+   <!-- 7. Mobile App Indexing (Google Play & Apple App Store) -->
+   <meta name="google-play-app" content="app-id=com.example.app">
+   <meta name="apple-itunes-app" content="app-id=123456789">
+   
+   <!-- 8. Security & Privacy Meta Tags -->
+   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;"> -->
+   <meta name="referrer" content="strict-origin-when-cross-origin"> <!-- More balanced referrer policy -->
+   
+   <!-- 9. HTTP-Equiv Meta Tags -->
+   <!-- <meta http-equiv="refresh" content="5; url=https://yourwebsite.com"> -->
+   <!-- <meta http-equiv="cache-control" content="no-cache"> -->
+   <!-- <meta http-equiv="pragma" content="no-cache"> -->
+   <!-- <meta http-equiv="expires" content="Wed, 21 Oct 2025 07:28:00 GMT"> -->
+   
+   <!-- 10. Preconnect for Faster External Resource Loading -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://cdn.jsdelivr.net">
+   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+   <link rel="preload" href="../assets/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+   
+   <!-- 11. External CSS Stylesheets -->
+   <!-- AOS Scroll Animation Library -->
+   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+   <!-- Swiper JS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> <!-- Swiper (For sliders) -->
+   
+   <link rel="stylesheet" href="../assets/fontawesome-free-6.7.2-web/css/all.min.css">
+   <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="../assets/package/swiper-bundle.min.css">
+   <link rel="stylesheet" href="../assets/aos-master/dist/aos.css">
+   <link rel="stylesheet" href="../assets/css/typography.css">
+   <link rel="stylesheet" href="../assets/css/variables.css">
+   <link rel="stylesheet" href="../assets/css/utils.css">
+   <link rel="stylesheet" href="../assets/css/base.css">
+   <link rel="stylesheet" href="../assets/css/navbar.css">
+   <link rel="stylesheet" href="../assets/css/preloader.css">
+   <link rel="stylesheet" href="../assets/css/footer.css">
+   <link rel="stylesheet" href="../assets/css/promotions.css">
+   
+   <!-- 12. Critical Inline CSS -->
+   <style>
+      /* Add critical inline CSS here */
+   </style>
+   
+   <!-- 13. JavaScript Files (Use async or defer) -->
+   <script defer src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   <!-- Pin to minor version (3.x) -->
+   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+   <!-- Or pin to exact 3.13.0 -->
+   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+   <!-- VanillaTilt JS -->
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
+   
+   <script defer src="../gsap.min.js"></script>
+   <script defer src="../assets/fontawesome-free-6.7.2-web/js/all.min.js"></script>
+   <script defer src="../assets/package/swiper-bundle.min.js"></script>
+   <script defer src="../assets/aos-master/dist/aos.js"></script>
+   <script defer src="../assets/js/common.js"></script>
+</head>
+
+<body>
+   <div class="preloader">
+      <div class="loader">
+         <a href="index.html" class="brand-logo">
+            <i class="fas fa-globe fa-bounce icon"></i>
+         </a>
+      </div>
+   </div>
+   
+   <!-- Navbar -->
+   <nav class="navbar">
+      <div class="container">
+         <a class="navbar-brand" href="../index.html"><i class="fas fa-globe icon"></i> Ceylon Digital</a>
+         <input type="checkbox" id="menu-toggle" class="nav-toggle" />
+         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+         <ul class="nav-links">
+            <li class="nav-item"><a href="../index.html">Home</a></li>
+            <li class="nav-item"><a href="../about/index.html">About</a></li>
+            <li class="nav-item dropdown" aria-haspopup="true" aria-expanded="false">
+               <a href="../services/index.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
+               <ul class="dropdown-menu">
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Digital Strategy & Consulting <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">Digital transformation consulting</a></li>
+                        <li><a href="#">Customer journey mapping</a></li>
+                        <li><a href="#">Market and competitor analysis</a></li>
+                        <li><a href="#">Technology stack consulting</a></li>
+                        <li><a href="#">Brand strategy and positioning</a></li>
+                        <li><a href="#">Analytics and KPI definition</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Web Design & Development <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">UI/UX design</a></li>
+                        <li><a href="#">Front-end development</a></li>
+                        <li><a href="#">Back-end development</a></li>
+                        <li><a href="#">CMS integration (WordPress, Webflow)</a></li>
+                        <li><a href="#">E-commerce development</a></li>
+                        <li><a href="#">Maintenance and optimization</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Mobile App Development <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">Native and cross-platform apps</a></li>
+                        <li><a href="#">Mobile UI/UX design</a></li>
+                        <li><a href="#">App testing and QA</a></li>
+                        <li><a href="#">App store deployment</a></li>
+                        <li><a href="#">Maintenance and updates</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Digital Marketing <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">PPC Advertising</a></li>
+                        <li><a href="#">Social media marketing</a></li>
+                        <li><a href="#">Content marketing</a></li>
+                        <li><a href="#">Email marketing</a></li>
+                        <li><a href="#">Conversion Rate Optimization</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Branding & Creative Services <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">Logo and identity design</a></li>
+                        <li><a href="#">Brand guidelines</a></li>
+                        <li><a href="#">Video production & animation</a></li>
+                        <li><a href="#">Graphic design</a></li>
+                        <li><a href="#">Illustration</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">UI/UX Design <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">User research & personas</a></li>
+                        <li><a href="#">Wireframing & prototyping</a></li>
+                        <li><a href="#">Usability testing</a></li>
+                        <li><a href="#">Interaction design</a></li>
+                        <li><a href="#">Design systems</a></li>
+                        <li><a href="#">Accessibility compliance</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Software & Product Development <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">SaaS development</a></li>
+                        <li><a href="#">API development</a></li>
+                        <li><a href="#">CRM/ERP solutions</a></li>
+                        <li><a href="#">DevOps and cloud services</a></li>
+                        <li><a href="#">Quality Assurance</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">E-Commerce Solutions <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">Custom storefront design</a></li>
+                        <li><a href="#">Shopping cart integration</a></li>
+                        <li><a href="#">Payment gateways</a></li>
+                        <li><a href="#">Inventory management</a></li>
+                        <li><a href="#">Subscriptions and memberships</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Analytics & Data Services <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">Analytics setup</a></li>
+                        <li><a href="#">Data visualization & dashboards</a></li>
+                        <li><a href="#">A/B testing</a></li>
+                        <li><a href="#">Customer segmentation</a></li>
+                        <li><a href="#">Attribution modeling</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown-2">
+                     <a href="#" class="submenu-toggle">Support & Maintenance <i class="fas fa-chevron-down arrow"></i></a>
+                     <ul class="submenu">
+                        <li><a href="#">Monitoring & uptime checks</a></li>
+                        <li><a href="#">Security and bug fixes</a></li>
+                        <li><a href="#">Backups & recovery</a></li>
+                        <li><a href="#">Technical support</a></li>
+                        <li><a href="#">Hosting and domain services</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li class="nav-item"><a href="../portfolio/index.html">Portfolio</a></li>
+            <li class="nav-item active"><a href="./index.html">Promotions</a></li>
+            <li class="nav-item"><a href="../blog/index.html">Blog</a></li>
+            <li class="nav-item"><button id="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button></li>
+            <li class="nav-item"><a href="./index.html?#contact" class="nav-btn">Contact</a></li>
+         </ul>
+      </div>
+   </nav>
+   
+   
+   <!-- Hero Section -->
+   <header class="hero" id="hero">
+      <div class="container">
+         <h1 class="title">Exclusive Promotions & Discounts</h1>
+         <p class="tagline">Stay ahead of the competition with our limited-time offers!</p>
+         <p class="subtitle">We're excited to share exclusive promotions and discounts on our digital services. Whether you're looking to launch a new project or enhance your existing online presence, our promotions can help you achieve your goals while saving you money.</p>
+      </div>
+   </header>
+   
+   
+   <!-- Discounted Packages Section -->
+   <section class="current-offers" id="services">
+      <div class="container">
+         <h2 class="section-title">Discounted Packages</h2>
+         <p class="section-subtitle">Get 60% off our popular service packages for a limited time.</p>
+         
+         <div class="offers-grid">
+            <div class="offer-card">
+               <h3>Website Design</h3>
+               <p>Modern, responsive websites built for conversions and brand impact.</p>
+               <span class="price">$480 <del>$1200</del></span>
+               <a class="cta-btn small" href="#contact">Claim Offer</a>
+            </div>
+            <div class="offer-card">
+               <h3>SEO Boost</h3>
+               <p>Rank faster on Google with optimized content, backlinks, and audits.</p>
+               <span class="price">$240 <del>$600</del></span>
+               <a class="cta-btn small" href="#contact">Claim Offer</a>
+            </div>
+            <div class="offer-card">
+               <h3>Branding Kit</h3>
+               <p>Professional logo, color palette, and visual identity to stand out.</p>
+               <span class="price">$400 <del>$1000</del></span>
+               <a class="cta-btn small" href="#contact">Claim Offer</a>
+            </div>
+         </div>
+      </div>
+   </section>
+   
+   
+   <!-- Free Consultation Section -->
+   <section class="consultation-banner">
+      <div class="container">
+         <h2 class="section-title">Free Consultation</h2>
+         <p class="section-description">Schedule a complimentary consultation with our experts to discuss your project and receive personalized recommendations.</p>
+      </div>
+   </section>
+   
+   
+   <!-- Bundle Deals Section -->
+   <section class="bundle-deals">
+      <div class="container">
+         <h2 class="section-title">Bundle Deals</h2>
+         <p class="section-description">Combine multiple services and receive a discounted rate.</p>
+      </div>
+   </section>
+   
+   <section class="benefits">
+      <div class="container">
+         <h2 class="section-title">Benefits</h2>
+         
+         <ul class="benefits-list">
