@@ -36,6 +36,10 @@
    margin-bottom: 10px;
 }
 
+.footer-branding a img {
+   height: 65px;
+}
+
 .footer-branding a .icon {
    font-size: 2rem;
    margin-right: 10px;
