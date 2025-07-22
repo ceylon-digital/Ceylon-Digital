@@ -98,6 +98,7 @@ gsap.timeline()
    .from(".tagline", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" })
    .from(".headline", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" })
    .from(".subheadline", { y: 20, opacity: 0, duration: 0.4, ease: "power2.out" }, "-=0.3")
+/*
    .from(".cta-buttons a", {
       opacity: 0,
       y: 20,
@@ -105,6 +106,7 @@ gsap.timeline()
       duration: 0.4,
       ease: "back.out(1.4)"
    }, "-=0.3")
+*/
    .from(".illustration", { x: 100, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.4");
 
 
