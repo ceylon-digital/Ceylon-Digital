@@ -10,8 +10,6 @@
    z-index: 10000;
 }
 
-.preloader .brand-logo .icon {
-   color: var(--link-color);
-   font-size: 3rem;
-   margin: 0;
+.preloader .brand-logo img {
+   height: 70px;
 }
