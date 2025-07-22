@@ -177,7 +177,7 @@
   .nav-links {
     flex-direction: column;
     position: absolute;
-    top: 79px;
+    top: 97px;
     left: 0;
     right: 0;
     height: calc(100vh - 79px);
