@@ -344,4 +344,100 @@
          </div>
          
          <div class="footer-middle">
-    
+            <!-- Services -->
+            <div class="footer-col">
+               <h5>Our services</h5>
+               <ul>
+                  <li><a href="#">SEO</a></li>
+                  <li><a href="#">Paid Advertising</a></li>
+                  <li><a href="#">Social Media Marketing</a></li>
+                  <li><a href="#">Web Development</a></li>
+                  <li><a href="#">App Development</a></li>
+                  <li><a href="#">UI/UX Design</a></li>
+                  <li><a href="#">Content Marketing</a></li>
+                  <li><a href="#">CRO</a></li>
+                  <li><a href="#">Branding</a></li>
+                  <li><a href="#">Video & Motion</a></li>
+               </ul>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-col">
+               <h5>Quick Links</h5>
+               <ul>
+                  <li><a href="../services/index.html">Services</a></li>
+                  <li><a href="../portfolio/index.html">Portfolio</a></li>
+                  <li><a href="../promotions/index.html">Promotions</a></li>
+                  <li><a href="../blog/index.html">Blog</a></li>
+                  <li><a href="../index.html?#faqs">FAQs</a></li>
+                  <li><a href="../index.html?#contact">Contact</a></li>
+               </ul>
+            </div>
+            
+            <!-- Page Sections -->
+            <div class="footer-col">
+               <h5>On This Page</h5>
+               <ul>
+                  <li><a href="#">Who we are</a></li>
+               </ul>
+            </div>
+            
+            <!-- Contact -->
+            <div class="footer-col">
+               <h5>Contact</h5>
+               <ul>
+                  <li><a href="mailto:hello@ceylondigital.com">hello@ceylondigital.com</a></li>
+                  <li><a href="tel:+947647258206">+94 76 472 8206</a></li>
+                  <li><span>123 Innovation St,<br>New York, NY 10001</span></li>
+               </ul>
+            </div>
+            
+            <!-- Social -->
+            <div class="footer-col">
+               <h5>Connect</h5>
+               <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Twitter/X</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                  <li><a href="#">TikTok</a></li>
+                  <li><a href="#">Dribbble</a></li>
+               </ul>
+            </div>
+         </div>
+         
+         <div class="footer-bottom">
+            <p>&copy; <script>
+                  document.write(new Date().getFullYear());
+               </script> Ceylon Digital. All rights reserved.</p>
+            <button onclick="scrollToTop()" class="back-to-top cta">↑ Back to Top</button>
+         </div>
+      </div>
+   </footer>
+   
+   <!-- Back to Top Script -->
+   <script>
+      function scrollToTop() {
+         window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+   </script>
+   
+   <script>
+      // Optional: fade in section when it comes into view
+      document.addEventListener('DOMContentLoaded', () => {
+         const section = document.querySelector('.about-section');
+         const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                  section.classList.add('visible');
+                  observer.unobserve(section);
+               }
+            });
+         }, { threshold: 0.3 });
+         
+         observer.observe(section);
+      });
+   </script>
+</body>
+
+</html>
