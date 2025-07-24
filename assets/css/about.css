@@ -1,60 +1,6 @@
-section {
-   transition: 0.3s ease;
-}
-
-.cta {
-   position: relative;
-   overflow: hidden;
-   background: var(--btn-primary-bg);
-   color: var(--text-light);
-   padding: 14px 2rem;
-   font-weight: 600;
-   border-radius: var(--radius-md);
-   box-shadow: var(--shadow-md);
-   user-select: none;
-   transition: background 0.3s ease, transform 0.1s ease;
-   /* For smooth background and scale transitions */
-}
-
-.cta i {
-   margin-right: 5px;
-}
-
-/* Hover brightens the background */
-.cta:hover {
-   box-shadow: var(--shadow-elevation);
-   background: var(--btn-hover-bg);
-}
-
-/* Pressed state: slightly scale down */
-.cta:active {
-   transform: scale(0.96);
-}
-
-.ripple {
-   position: absolute;
-   border-radius: 50%;
-   transform: scale(0);
-   animation: ripple 0.8s ease-out;
-   pointer-events: none;
-   opacity: 0.75;
-   box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-   /* Add subtle glow to ripple */
-}
-
-@keyframes ripple {
-   to {
-      transform: scale(2.5);
-      opacity: 0;
-   }
-}
-
-
-
-
-
 .about-section {
-   padding: 97px clamp(1.5rem, 5vw, 3rem) 60px clamp(1.5rem, 5vw, 3rem);
+   margin-top: 97px;
+   padding: 60px clamp(1.5rem, 5vw, 3rem);
    opacity: 0;
    transform: translateY(30px);
    transition: opacity 0.6s ease, transform 0.6s ease;
@@ -102,7 +48,7 @@ section {
 
 .about-section .content ul li::before {
    content: '✓';
-   color: #3B82F6;
+   color: var(--color-accent);
    position: absolute;
    left: 0;
 }
