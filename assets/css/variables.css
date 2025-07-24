@@ -108,7 +108,7 @@ html {
    --h4-size: clamp(1.2rem, 2vw, 1.4rem);
    --h5-size: clamp(1rem, 1.5vw, 1.3rem);
    --h6-size: clamp(0.9rem, 1.2vw, 1rem);
-   --p-size: clamp(0.8rem, 1vw, 0.9rem);
+   --p-size: 0.9rem;
 }
 
 /* MAJOR THIRD SCALE (Recommended for content-heavy sites, blogs, dashboards) */
@@ -171,7 +171,7 @@ html {
 
   /* Background Colors */
   --bg-body: #FFFFFF;              /* Page background */
-  --bg-surface: #FAFAFA;           /* Cards and containers (matches dark theme's surface) */
+  --bg-surface: #F7F9FC;           /* Cards and containers (matches dark theme's surface) */
   --bg-surface-dark: #4A4A4A;
   --bg-navbar: #FFFFFF;            /* Navbar background */
   --bg-alt: #E6ECF5;               /* Alternative background surface for contrast */
@@ -297,10 +297,10 @@ document.querySelector('#darkToggle').addEventListener('click', () => {
   --radius-rounded: 9999px;
    
   /* Shadows & Effects */
-  --shadow-sm: 2px 2px 5px rgba(0, 0, 0, 0.05);
-  --shadow-md: 4px 4px 10px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 8px 8px 15px rgba(0, 0, 0, 0.05);
-  --shadow-elevation: 8px 8px 20px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.05);
+  --shadow-elevation: 0 4px 12px rgba(0, 0, 0, 0.05);
 
   /* Add inner shadow or glassmorphism effects if needed */
   --shadow-inner: inset 0 1px 2px rgba(0, 0, 0, 0.06);
