@@ -167,7 +167,7 @@ html {
   --text-subheading: #1A1A1A;      /* Subheadings, captions, metadata */
   --text-muted: #6B7280;           /* Muted/dim text for less emphasis */
   --text-light: #FFFFFF;     /* Text color for primary buttons */
-  --text-gradient: linear-gradient(135deg, #4f46e5, #3b82f6);       /* Vivid blue for call-to-actions */
+  --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
 
   /* Background Colors */
   --bg-body: #FFFFFF;              /* Page background */
@@ -179,7 +179,7 @@ html {
   
   /* Interactive Colors */
   --btn-primary-bg: #003ACC;       /* Vivid blue for call-to-actions */
-  --btn-primary-bg: linear-gradient(135deg, #4f46e5, #3b82f6);       /* Vivid blue for call-to-actions */
+  --btn-primary-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
   --btn-hover-bg: #002B99;         /* Slightly darker on hover */
   --border-default: #D0D7E2;       /* Subtle border */
   --focus-outline: #60A5FA;        /* Soft blue for focus indication (matching dark theme tone) */
@@ -191,8 +191,6 @@ html {
 
   --logo-default: grayscale(100%) brightness(60%);
   --logo-hover: grayscale(0%) brightness(100%);
- 
-  --hero-bg: url('../icons/wave-light-mode.svg') no-repeat bottom / cover;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -212,6 +210,7 @@ html {
   --text-subheading: #94A3B8;        /* Cool light gray-blue */
   --text-muted: #64748B;             /* Muted slate for de-emphasis */
   --text-light: #FFFFFF;
+  --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
 
   /* Background Colors */
   --bg-body: #0A0E1C;                /* Slightly deeper, cooler black */
@@ -223,7 +222,7 @@ html {
 
   /* Interactive Colors */
   --btn-primary-bg: #3B82F6;         /* Vivid hero-blue for CTA */
-  --btn-primary-bg: linear-gradient(135deg, #4338ca, #2563eb);       /* Vivid blue for call-to-actions */
+  --btn-primary-bg: linear-gradient(135deg, #002B99, #003ACC, #2563eb);       /* Vivid blue for call-to-actions */
   --btn-hover-bg: #2563EB;           /* Darker blue on hover */
   --border-default: #2F3548;         /* Softer navy-gray border */
   --focus-outline: #60A5FA;          /* Cyan-blue for keyboard focus ring */
@@ -232,8 +231,6 @@ html {
   --color-accent: #2563EB;           /* Bright cyan from floating elements */
   --link-color: #60A5FA;             /* Base hero-blue */
   --link-hover-color: #93C5FD;       /* Lighter blue for hover effect */
-
-  --hero-bg: url('../icons/wave-dark-mode.svg') no-repeat bottom / cover;
 }
 
 
