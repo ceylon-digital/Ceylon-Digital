@@ -111,7 +111,7 @@ gsap.timeline()
 
 
 
-/*
+
 const marquee = document.getElementById('marquee-content');
 
 // Duplicate the cards for seamless scroll
@@ -134,7 +134,7 @@ const marqueeTween = gsap.to(marquee, {
 // Pause on hover
 marquee.addEventListener('mouseenter', () => marqueeTween.pause());
 marquee.addEventListener('mouseleave', () => marqueeTween.resume());
-*/
+
 
 
 
