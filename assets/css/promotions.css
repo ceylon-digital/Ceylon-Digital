@@ -53,9 +53,10 @@ section {
 
 .hero {
    text-align: center;
-   padding: 97px clamp(1.5rem, 5vw, 3rem) 60px clamp(1.5rem, 5vw, 3rem);
-   scroll-margin-top: 79px;
-   background: #004aad;
+   padding: 60px clamp(1.5rem, 5vw, 3rem);
+   /* scroll-margin-top: 97px; */
+   margin-top: 97px;
+   background: var(--btn-primary-bg);
 }
 
 .hero .title {
@@ -66,7 +67,7 @@ section {
 }
 
 .hero .tagline {
-   font-size: var(--h4-size);
+   font-size: var(--h5-size);
    margin-bottom: 20px;
    color: var(--text-light);
 }
@@ -77,9 +78,7 @@ section {
 }
 
 @media (max-width: 600px) {
-   .hero {
-      text-align: left;
-   }
+   .hero {}
 }
 
 
@@ -97,7 +96,7 @@ section {
 
 .current-offers .section-subtitle {
    text-align: center;
-   font-size: var(--h4-size);
+   margin-bottom: 20px;
 }
 
 .offers-grid {
@@ -112,7 +111,7 @@ section {
    padding: 30px;
    border-radius: var(--radius-md);
    text-align: center;
-   width: 350px;
+   max-width: 400px;
 }
 
 .offer-card:hover {
@@ -120,32 +119,34 @@ section {
 }
 
 .offer-card h3 {
+   color: var(--text-subheading);
    margin-bottom: 10px;
 }
 
 .offer-card p {
    margin-bottom: 20px;
-   color: var(--text-primary);
+   color: var(--text-muted);
 }
 
 .price {
    font-size: 1.2em;
    font-weight: bold;
-   color: var(--btn-hover-bg);
+   color: var(--color-accent);
    margin-bottom: 10px;
    display: block;
 }
 
 .price del {
+   font-weight: normal;
    color: var(--text-muted);
    margin-left: 8px;
 }
 
 .cta-btn.small {
-   background: #004aad;
-   color: white;
+   background: var(--btn-primary-bg);
+   color: var(--text-light);
    padding: 10px 20px;
-   border-radius: 6px;
+   border-radius: var(--radius-sm);
    text-decoration: none;
    font-size: 0.9em;
    font-weight: bold;
@@ -158,8 +159,7 @@ section {
    padding: 60px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
    color: var(--text-heading);
-   box-shadow: var(--shadow-elevation);
-   border-radius: var(--radius-md);
+   border-radius: var(--radius-lg);
 }
 
 /* ==== Bundle Deals Section ==== */
@@ -167,7 +167,8 @@ section {
    background: var(--bg-surface);
    padding: 60px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
-   color: var(--text-primary);
+   color: var(--text-heading);
+   border-radius: var(--radius-lg);
 }
 
 .bundle-deals .section-description {
@@ -178,9 +179,12 @@ section {
 
 /* ==== Benefits Section ==== */
 .benefits {
-   background: var(--bg-body);
    padding: 60px clamp(1.5rem, 5vw, 3rem);
-   color: var(--text-primary);
+   text-align: center;
+}
+
+.benefits h2 {
+   margin-bottom: 20px;
 }
 
 .benefits-list {
@@ -197,19 +201,18 @@ section {
    padding: 30px;
    border-radius: var(--radius-md);
    text-align: center;
-   max-width: 320px;
-   box-shadow: var(--shadow-elevation);
+   max-width: 400px;
+   box-shadow: var(--shadow-md);
    transition: transform 0.3s ease;
 }
 
 .benefit-item:hover {
-   transform: translateY(-5px);
+   transform: translateY(-10px);
+   box-shadow: var(--shadow-elevation);
 }
 
 .benefit-item .title {
-   font-size: 1.2rem;
-   font-weight: bold;
-   color: var(--text-heading);
+   color: var(--text-subheading);
    margin-bottom: 10px;
 }
 
