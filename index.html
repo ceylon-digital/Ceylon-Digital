@@ -1225,6 +1225,41 @@
       });
    </script> -->
    
+
+   <script>
+      const currencySwitch = document.getElementById("currencySwitch");
+      const amountEls = document.querySelectorAll(".pricing__amount");
+      let exchangeRate = 0.0033;
+      
+      async function fetchExchangeRate() {
+         try {
+            const res = await fetch("https://api.exchangerate.host/latest?base=LKR&symbols=USD");
+            const data = await res.json();
+            if (data?.rates?.USD) exchangeRate = data.rates.USD;
+         } catch {
+            console.warn("Using fallback exchange rate.");
+         }
+      }
+      
+      function formatUSD(num) {
+         return num >= 1000 ? `$${(num / 1000).toFixed(1)}k+` : `$${Math.round(num)}+`;
+      }
+      
+      function updatePrices(currency) {
+         amountEls.forEach(el => {
+            const lkr = parseFloat(el.getAttribute("data-lkr"));
+            el.textContent = currency === "USD" ?
+               `USD ${formatUSD(lkr * exchangeRate)}` :
+               `LKR ${lkr.toLocaleString()}+`;
+         });
+      }
+      
+      currencySwitch.addEventListener("change", () => {
+         updatePrices(currencySwitch.value);
+      });
+      
+      fetchExchangeRate().then(() => updatePrices(currencySwitch.value));
+   </script>
    
    <!-- JavaScript: Countdown + Testimonials -->
    <script>
