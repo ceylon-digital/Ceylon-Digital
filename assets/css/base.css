@@ -45,7 +45,7 @@ h6 { font-size: var(--h6-size); }
 p {
   /* margin-bottom: var(--space-md); */
   letter-spacing: 0.02em;
-  max-width: 70ch;
+  /* max-width: 70ch; */
   color: var(--text-primary);
 }
 
@@ -194,4 +194,43 @@ img {
   height: auto;
   display: block;
   border-radius: var(--radius-sm);
+}
+
+
+
+
+
+
+
+section {
+   transition: 0.3s ease;
+}
+
+.cta {
+   position: relative;
+   overflow: hidden;
+   background: var(--btn-primary-bg);
+   color: var(--text-light);
+   padding: 0.8rem 2rem;
+   font-weight: 600;
+   border-radius: var(--radius-md);
+   box-shadow: var(--shadow-md);
+   text-transform: capitalize;
+   transition: background 0.3s ease, transform 0.1s ease;
+   /* For smooth background and scale transitions */
+}
+
+.cta i {
+   margin-right: 5px;
+}
+
+/* Hover brightens the background */
+.cta:hover {
+   box-shadow: var(--shadow-elevation);
+   background-color: var(--btn-hover-bg);
+}
+
+/* Pressed state: slightly scale down */
+.cta:active {
+   transform: scale(0.96);
 }
