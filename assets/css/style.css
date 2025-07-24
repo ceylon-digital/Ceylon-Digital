@@ -1266,7 +1266,7 @@ section {
 
 .pricing__amount {
    font-size: var(--h2-size);
-   font-weight: 600;
+   font-weight: bold;
    color: var(--text-subheading);
    margin-bottom: 1rem;
 }
