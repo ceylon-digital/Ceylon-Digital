@@ -52,7 +52,7 @@ html {
 ============================= */
 :root {
   /* Base font stacks */
-  --font-sans: 'Manrope', sans-serif;
+  --font-sans: 'Montserrat', sans-serif;
   /* --font-serif: 'Source Sans 3', serif; */
   --font-serif: 'Montserrat', serif;
 
@@ -102,13 +102,13 @@ html {
    --h6-size: clamp(0.9rem, 1vw, 1rem);
    --p-size: clamp(0.9rem, 1vw, 1rem);
    
-   --h1-size: clamp(1.9rem, 3.5vw, 3rem);
-   --h2-size: clamp(1.6rem, 3vw, 2.5rem);
+   --h1-size: clamp(1.9rem, 3vw, 2.5rem);
+   --h2-size: clamp(1.6rem, 2.5vw, 2rem);
    --h3-size: clamp(1.25rem, 2.5vw, 1.5rem);
    --h4-size: clamp(1.2rem, 2vw, 1.4rem);
    --h5-size: clamp(1rem, 1.5vw, 1.3rem);
    --h6-size: clamp(0.9rem, 1.2vw, 1rem);
-   --p-size: clamp(0.9rem, 1vw, 1rem);
+   --p-size: clamp(0.8rem, 1vw, 0.9rem);
 }
 
 /* MAJOR THIRD SCALE (Recommended for content-heavy sites, blogs, dashboards) */
@@ -162,16 +162,17 @@ html {
 ============================= */
 :root {
   /* Text Colors */
-  --text-primary: #2C2C2C;         /* General readable body text */
-  --text-heading: #1A1A1A;         /* Strong headings */
-  --text-subheading: #4A4A4A;      /* Subheadings, captions, metadata */
+  --text-primary: #1C1C1C;         /* General readable body text */
+  --text-heading: #000000;         /* Strong headings */
+  --text-subheading: #1A1A1A;      /* Subheadings, captions, metadata */
   --text-muted: #6B7280;           /* Muted/dim text for less emphasis */
   --text-light: #FFFFFF;     /* Text color for primary buttons */
   --text-gradient: linear-gradient(135deg, #4f46e5, #3b82f6);       /* Vivid blue for call-to-actions */
 
   /* Background Colors */
   --bg-body: #FFFFFF;              /* Page background */
-  --bg-surface: #F7F9FC;           /* Cards and containers (matches dark theme's surface) */
+  --bg-surface: #FAFAFA;           /* Cards and containers (matches dark theme's surface) */
+  --bg-surface-dark: #4A4A4A;
   --bg-navbar: #FFFFFF;            /* Navbar background */
   --bg-alt: #E6ECF5;               /* Alternative background surface for contrast */
   --bg-transparent: rgba(255, 255, 255, 0.3);
@@ -187,9 +188,6 @@ html {
   --color-accent: #002B99;         /* Bright cyan to match dark theme accent but accessible on light bg */
   --link-color: #003ACC;           /* Standard link color */
   --link-hover-color: #002B99;     /* Darker hover state for links */
-
-  /* Shadows & Effects */
-  --shadow-elevation: 0 4px 12px rgba(0, 0, 0, 0.05);  /* Light mode shadow */
 
   --logo-default: grayscale(100%) brightness(60%);
   --logo-hover: grayscale(0%) brightness(100%);
@@ -218,6 +216,7 @@ html {
   /* Background Colors */
   --bg-body: #0A0E1C;                /* Slightly deeper, cooler black */
   --bg-surface: #121826;             /* Dark slate for cards/containers */
+  --bg-surface-dark: #121826;
   --bg-navbar: #0C111F;              /* Mid-dark tone for nav */
   --bg-alt: #1A2135;                 /* Cool navy-alt for contrast sections */
   --bg-transparent: rgba(0, 0, 0, 0.3);
@@ -233,9 +232,6 @@ html {
   --color-accent: #2563EB;           /* Bright cyan from floating elements */
   --link-color: #60A5FA;             /* Base hero-blue */
   --link-hover-color: #93C5FD;       /* Lighter blue for hover effect */
-
-  /* Shadows & Effects */
-  --shadow-elevation: 0 4px 14px rgba(0, 0, 0, 0.45);  /* More lift and depth */
 
   --hero-bg: url('../icons/wave-dark-mode.svg') no-repeat bottom / cover;
 }
@@ -294,12 +290,19 @@ document.querySelector('#darkToggle').addEventListener('click', () => {
    7. SHADOWS & BORDER RADIUS
 ============================= */
 :root {
+  /* Border Radius */
   --radius-sm: 4px;
   --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-rounded: 1000px;
-  
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.03);
-  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.05);
+  --radius-lg: 12px;
+  --radius-rounded: 9999px;
+   
+  /* Shadows & Effects */
+  --shadow-sm: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  --shadow-md: 4px 4px 10px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 8px 8px 15px rgba(0, 0, 0, 0.05);
+  --shadow-elevation: 8px 8px 20px rgba(0, 0, 0, 0.05);
+
+  /* Add inner shadow or glassmorphism effects if needed */
+  --shadow-inner: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --blur-glass: backdrop-filter: blur(10px);
 }
