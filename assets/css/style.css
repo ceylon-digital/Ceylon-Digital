@@ -465,7 +465,7 @@ section {
 
 
 
-/* .marquee-section {
+.marquee-section {
    padding: 20px 0;
    overflow: hidden;
    
@@ -507,7 +507,7 @@ section {
       color: var(--text-heading);
       font-weight: 600;
    }
-} */
+}
 
 
 
