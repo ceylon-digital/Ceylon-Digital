@@ -1,208 +1,5 @@
-/* Blob Animations */
-.blob {
-   animation: blob-turn var(--time, 30s) linear infinite;
-   fill: var(--fill, #7600f8);
-   position: relative;
-   transform-origin: center
-}
-
-.blob svg {
-   animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
-   transform-origin: center
-}
-
-.blob svg path {
-   animation: blob-scale calc(var(--time, 30s) * 0.5) ease-in-out 0s infinite;
-   transform-origin: center
-}
-
-@keyframes blob-turn {
-   0% {
-      transform: rotate(0deg)
-   }
-   
-   100% {
-      transform: rotate(360deg)
-   }
-}
-
-@keyframes blob-skew {
-   0% {
-      transform: skewY(0deg)
-   }
-   
-   13% {
-      transform: skewY(calc((1.8deg) * var(--amount, 2)))
-   }
-   
-   18% {
-      transform: skewY(calc((2.2deg) * var(--amount, 2)))
-   }
-   
-   24% {
-      transform: skewY(calc((2.48deg) * var(--amount, 2)))
-   }
-   
-   25% {
-      transform: skewY(calc((2.5deg) * var(--amount, 2)))
-   }
-   
-   26% {
-      transform: skewY(calc((2.48deg) * var(--amount, 2)))
-   }
-   
-   32% {
-      transform: skewY(calc((2.2deg) * var(--amount, 2)))
-   }
-   
-   37% {
-      transform: skewY(calc((1.8deg) * var(--amount, 2)))
-   }
-   
-   50% {
-      transform: skewY(0deg)
-   }
-   
-   63% {
-      transform: skewY(calc((-1.8deg) * var(--amount, 2)))
-   }
-   
-   68% {
-      transform: skewY(calc((-2.2deg) * var(--amount, 2)))
-   }
-   
-   74% {
-      transform: skewY(calc((-2.48deg) * var(--amount, 2)))
-   }
-   
-   75% {
-      transform: skewY(calc((-2.5deg) * var(--amount, 2)))
-   }
-   
-   76% {
-      transform: skewY(calc((-2.48deg) * var(--amount, 2)))
-   }
-   
-   82% {
-      transform: skewY(calc((-2.2deg) * var(--amount, 2)))
-   }
-   
-   87% {
-      transform: skewY(calc((-1.8deg) * var(--amount, 2)))
-   }
-   
-   100% {
-      transform: skewY(0deg)
-   }
-}
-
-@keyframes blob-scale {
-   0% {
-      transform: scaleX(.9) scaleY(1)
-   }
-   
-   25% {
-      transform: scaleX(.9) scaleY(.9)
-   }
-   
-   50% {
-      transform: scaleX(1) scaleY(.9)
-   }
-   
-   75% {
-      transform: scaleX(.9) scaleY(.9)
-   }
-   
-   100% {
-      transform: scaleX(.9) scaleY(1)
-   }
-}
-
-
-
-
-
-
-
-
 /* Convert to normal CSS before deployment 
 in order to ensure older browser support as well */
-@keyframes bounce {
-   
-   0%,
-   100% {
-      transform: translateY(0);
-   }
-   
-   50% {
-      transform: translateY(-10px);
-   }
-}
-
-@keyframes beat {
-   
-   0%,
-   100% {
-      transform: scale(1);
-   }
-   
-   50% {
-      transform: scale(1.02);
-   }
-}
-
-.ripple {
-   position: absolute;
-   border-radius: 50%;
-   transform: scale(0);
-   animation: ripple 0.8s ease-out;
-   pointer-events: none;
-   opacity: 0.75;
-   box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-   /* Add subtle glow to ripple */
-}
-
-@keyframes ripple {
-   to {
-      transform: scale(2.5);
-      opacity: 0;
-   }
-}
-
-section {
-   transition: 0.3s ease;
-}
-
-.cta {
-   position: relative;
-   overflow: hidden;
-   background: var(--btn-primary-bg);
-   color: var(--text-light);
-   padding: 0.8rem 2rem;
-   font-weight: 600;
-   border-radius: var(--radius-md);
-   box-shadow: var(--shadow-md);
-   text-transform: capitalize;
-   transition: background 0.3s ease, transform 0.1s ease;
-   /* For smooth background and scale transitions */
-}
-
-.cta i {
-   margin-right: 5px;
-}
-
-/* Hover brightens the background */
-.cta:hover {
-   box-shadow: var(--shadow-elevation);
-   background-color: var(--btn-hover-bg);
-}
-
-/* Pressed state: slightly scale down */
-.cta:active {
-   transform: scale(0.96);
-}
-
-
 .hero {
    position: relative;
    transition: 0.3s ease;
@@ -927,11 +724,16 @@ section {
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-md);
       text-align: left;
-      padding: 30px;
       /* width: calc(33.33% - 20px); */
       max-width: 400px;
       transition: 0.3s ease-in-out;
       overflow: hidden;
+   }
+   
+   .service-card a {
+      display: block;
+      color: inherit;
+      padding: 30px;
    }
    
    .service-card:hover {
@@ -939,7 +741,7 @@ section {
       box-shadow: var(--shadow-elevation);
    }
    
-   .service-icon {
+   .service-card .icon {
       background: var(--bg-body);
       border-radius: var(--radius-rounded);
       width: 60px;
@@ -951,35 +753,39 @@ section {
       transition: 0.3s ease;
    }
    
-   .service-icon i {
+   .service-card .icon i {
       font-size: 24px;
       color: var(--color-accent);
    }
    
-   .service-title {
+   .service-card h3 {
       font-weight: bold;
       color: var(--text-subheading);
       margin-bottom: 10px;
    }
    
-   .service-description {
+   .service-card p {
       color: var(--text-muted);
       margin-bottom: 20px;
    }
    
-   .service-link {
+   .service-card .fake-link {
       color: var(--link-color);
       font-weight: 600;
       transition: 0.3s ease-in-out;
    }
    
-   .service-link i {
+   .service-card .fake-link i {
       margin-left: 0.5rem;
    }
    
-   .service-link:hover {
+   .service-card .fake-link:hover {
       color: var(--color-accent);
       text-decoration: underline;
+   }
+   
+   .service-card .fake-link[aria-hidden="true"] {
+      /* ensures screen readers ignore it */
    }
    
    .cta {
