@@ -263,6 +263,7 @@ in order to ensure older browser support as well */
 
 
 .marquee-section {
+   background: var(--bg-surface);
    padding: 20px 0;
    overflow: hidden;
    
@@ -279,7 +280,7 @@ in order to ensure older browser support as well */
    .marquee-item {
       flex: 0 0 auto;
       padding: 20px;
-      background: var(--bg-surface);
+      background: var(--bg-body);
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-md);
       min-width: 200px;
@@ -296,12 +297,12 @@ in order to ensure older browser support as well */
    
    .icon {
       font-size: 1.5rem;
-      color: var(--text-heading);
+      color: var(--text-muted);
       margin-bottom: 8px;
    }
    
    .label {
-      color: var(--text-heading);
+      color: var(--text-muted);
       font-weight: 600;
    }
 }
@@ -550,6 +551,41 @@ in order to ensure older browser support as well */
    .cta {
       overflow: hidden;
    }
+}
+
+
+
+
+
+.insight {
+   background: var(--btn-primary-bg);
+   padding: 80px 20px;
+   text-align: center;
+}
+
+.insight .container {
+   max-width: 1440px;
+   margin: 0 auto;
+}
+
+.insight .accent-highlight {
+   color: var(--text-light);
+   font-weight: 600;
+   margin-bottom: 10px;
+   display: inline-block;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+.insight .section-title {
+   font-weight: 700;
+   color: var(--text-light);
+   margin-bottom: 10px;
+}
+.insight p{
+   max-width: 800px;
+   color: var(--text-light);
+   margin: auto;
 }
 
 
