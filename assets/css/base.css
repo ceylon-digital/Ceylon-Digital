@@ -262,7 +262,7 @@ section {
 }
 
 .cta-primary-light:hover{
-   background: var(--bg-body);
+   background: var(--text-light);
    color: var(--btn-hover-bg);
 }
 
