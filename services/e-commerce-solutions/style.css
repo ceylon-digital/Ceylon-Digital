@@ -1,5 +1,5 @@
 .header {
-   background-color: var(--bg-navbar);
+   background: var(--btn-primary-bg);
    margin-top: 97px;
    padding: 150px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
@@ -11,12 +11,12 @@
 }
 
 .header h1 {
-   color: var(--text-heading);
+   color: var(--text-light);
    margin-bottom: 0.5rem;
 }
 
 .header p {
-   color: var(--text-subheading);
+   color: var(--text-light);
    font-size: var(--h4-size);
 }
 
@@ -108,21 +108,21 @@
 
 
 
-.cta {
+.cta-section {
    background: var(--btn-primary-bg);
    text-align: center;
    padding: 60px clamp(1.5rem, 5vw, 3rem);
 }
 
-.cta .container {
+.cta-section .container {
    max-width: 1440px;
 }
 
-.cta h2 {
+.cta-section h2 {
    color: var(--text-light);
 }
 
-.cta .btn {
+.cta-section .btn {
    display: inline-block;
    margin: 0.5rem;
    padding: 0.75rem 1.5rem;
@@ -134,17 +134,17 @@
    transition: background-color 0.3s ease;
 }
 
-.cta .btn:hover {
+.cta-section .btn:hover {
    background-color: var(--btn-hover-bg);
 }
 
-.cta .btn.secondary {
+.cta-section .btn.secondary {
    background: transparent;
    border: 2px solid var(--text-light);
    color: var(--text-light);
 }
 
-.cta .btn.secondary:hover {
+.cta-section .btn.secondary:hover {
    background-color: var(--text-light);
    color: var(--color-accent);
 }
