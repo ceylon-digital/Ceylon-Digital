@@ -1,26 +1,27 @@
 .hero {
    text-align: center;
-   padding: 60px clamp(1.5rem, 5vw, 3rem);
+   padding: 150px clamp(1.5rem, 5vw, 3rem);
    /* scroll-margin-top: 97px; */
    margin-top: 97px;
    background: var(--btn-primary-bg);
 }
 
 .hero .title {
-   max-width: 700px;
+   max-width: 650px;
    margin: auto;
    margin-bottom: 20px;
    color: var(--text-light);
 }
 
-.hero .tagline {
+/* .hero .tagline {
    font-size: var(--h5-size);
    margin-bottom: 20px;
    color: var(--text-light);
-}
+} */
 
 .hero .subtitle {
    margin: auto;
+   font-size: var(--h5-size);
    color: var(--text-light);
 }
 
@@ -167,36 +168,6 @@
    color: var(--text-subheading);
 }
 
-/* ==== Terms & Conditions Section ==== */
-.terms-section {
-   background: var(--bg-surface);
-   padding: 60px clamp(1.5rem, 5vw, 3rem);
-   color: var(--text-primary);
-}
-
-.terms-list {
-   list-style: none;
-   padding: 0;
-   margin-top: 20px;
-   max-width: 800px;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-.term-item {
-   background: var(--bg-alt);
-   padding: 20px;
-   margin-bottom: 15px;
-   border-radius: var(--radius-md);
-   box-shadow: var(--shadow-elevation);
-}
-
-.term-item h3.body {
-   margin: 0;
-   font-size: 1rem;
-   color: var(--text-subheading);
-}
-
 /* ==== Responsive Layout Fixes ==== */
 @media (max-width: 768px) {
    .benefits-list {
@@ -209,7 +180,7 @@
 
 /* Testimonials */
 .testimonials {
-   background: var(--bg-body);
+   background: var(--bg-surface);
    padding: 60px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 79px;
    
@@ -234,7 +205,7 @@
 .testimonial-box {
    max-width: 600px;
    margin: auto;
-   background: var(--bg-surface);
+   background: var(--bg-body);
    padding: 30px;
    border-radius: var(--radius-md);
    box-shadow: var(--shadow-md);
@@ -254,7 +225,39 @@
 }
 
 
+/* ==== Terms & Conditions Section ==== */
+.terms-section {
+   background: var(--bg-body);
+   padding: 60px clamp(1.5rem, 5vw, 3rem);
+   color: var(--text-primary);
+}
 
+.terms-section .section-title {
+   text-align: center;
+}
+
+.terms-list {
+   list-style: none;
+   padding: 0;
+   margin-top: 20px;
+   max-width: 1280px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.term-item {
+   background: var(--bg-surface);
+   padding: 20px;
+   margin-bottom: 1.5rem;
+   border-radius: var(--radius-md);
+   box-shadow: var(--shadow-elevation);
+}
+
+.term-item h3.body {
+   margin: 0;
+   font-size: 1rem;
+   color: var(--text-subheading);
+}
 
 
 
@@ -293,23 +296,9 @@
    resize: none;
 }
 
-.discount-form button {
-   padding: 14px 28px;
-   font-size: var(--h6-size);
-   font-weight: 600;
-   letter-spacing: .5px;
-   text-transform: capitalize;
-   border-radius: var(--radius-md);
-   transition: 0.3s ease;
-   background: var(--btn-primary-bg);
-   color: var(--text-light);
-   /* animation: beat 1s infinite; */
-}
+.discount-form button {}
 
-.discount-form button:hover {
-   background: var(--btn-hover-bg);
-   color: var(--text-light);
-}
+.discount-form button:hover {}
 
 @media (max-width: 768px) {
    .services-grid {
