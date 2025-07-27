@@ -140,7 +140,6 @@ function addRippleEffect(selector) {
 addRippleEffect('.cta, .btn, .card, .quote');
 
 
-
 // Scrollspy
 const sections = document.querySelectorAll('.main-section');
 const navLinks = document.querySelectorAll('.nav-item>a');
