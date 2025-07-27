@@ -20,7 +20,7 @@
    <meta name="duckduckbot" content="index, follow"> <!-- DuckDuckGo-specific crawling instructions -->
    <meta name="naverbot" content="index, follow"> <!-- Naver-specific crawling instructions -->
    <link rel="canonical" href="https://ceylon-digital.github.io/Ceylon-Digital/services/ui-ux-design/"> <!-- Helps prevent duplicate content issues -->
-
+   
    <!-- 3. Verification Meta Tags (For Google, Bing, Yandex, etc.) -->
    <meta name="google-site-verification" content="w0qz5BEexoc0bX7_JfubNzFi7rrsQnqSGiLdpxNucfY" />
    <meta name="msvalidate.01" content="your_bing_verification_code">
@@ -165,17 +165,6 @@
    <script defer src="../../assets/aos-master/dist/aos.js"></script>
    <script defer src="../../assets/js/common.js"></script>
    <script defer src="./script.js"></script>
-   
-   <!-- Register Service Worker -->
-   <script>
-      if ('serviceWorker' in navigator) {
-         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-               .then(reg => console.log('✅ Service Worker registered:', reg.scope))
-               .catch(err => console.error('❌ Service Worker registration failed:', err));
-         });
-      }
-   </script>
 </head>
 
 <body>
@@ -197,10 +186,10 @@
          <input type="checkbox" id="menu-toggle" class="nav-toggle" />
          <label for="menu-toggle" class="menu-icon action-item"><i class="fas fa-bars"></i></label>
          <ul class="nav-links">
-            <li class="nav-item active"><a href="#hero">Home</a></li>
+            <li class="nav-item"><a href="../../index.html">Home</a></li>
             <li class="nav-item"><a href="../../about/index.html">About</a></li>
             <li class="nav-item dropdown" aria-haspopup="true" aria-expanded="false">
-               <a href="#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
+               <a href="../../services/index.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
                <ul class="dropdown-menu">
                   <li class="dropdown-2">
                      <a href="#" class="submenu-toggle">Digital Strategy & Consulting <i class="fas fa-chevron-down arrow"></i></a>
@@ -319,47 +308,49 @@
    
    <header class="header">
       <div class="container">
-         <h1>UI/UX Design</h1>
-         <p>Crafting Exceptional Digital Experiences That Delight Users</p>
+         <h1 data-aos="fade-up">UI/UX Design</h1>
+         <p data-aos="fade-up" data-aos-delay="250">Crafting Exceptional Digital Experiences That Delight Users</p>
       </div>
    </header>
    
-   <section class="intro container">
-      <p>
-         At <strong>Ceylon Digital</strong>, we blend design thinking with user empathy to create interfaces that are intuitive, accessible, and conversion-focused. Our UI/UX services are built on research, creativity, and technical insight.
-      </p>
+   <section class="intro">
+      <div class="container">
+         <p data-aos="fade-up">
+            <strong>At Ceylon Digital</strong>, our UI/UX design services focus on creating intuitive, user-centered digital experiences. We handle everything from user research and prototyping to accessibility and design systems—ensuring your products are not only beautiful, but also functional and inclusive.
+         </p>
+      </div>
    </section>
    
    <section class="services container">
-      <h2>Our UI/UX Design Services</h2>
+      <h2 data-aos="fade-up">What we offer</h2>
       <div class="cards">
          
-         <a href="#" class="card">
+         <a data-aos="fade-up" href="#" class="card" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-user-friends"></i> User Research & Personas</h3>
             <p>Understand your users’ goals and pain points through research, surveys, and interviews.</p>
          </a>
          
-         <a href="#" class="card">
+         <a data-aos="fade-up" href="#" class="card" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-project-diagram"></i> Wireframing & Prototyping</h3>
             <p>Visualize user flows with interactive wireframes and prototypes to validate ideas early.</p>
          </a>
          
-         <a href="#" class="card">
+         <a data-aos="fade-up" href="#" class="card" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-vial"></i> Usability Testing</h3>
             <p>Test designs with real users to uncover friction points and improve experience quality.</p>
          </a>
          
-         <a href="#" class="card">
+         <a data-aos="fade-up" href="#" class="card" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-vector-square"></i> Interaction Design</h3>
             <p>Design delightful, intuitive interactions that guide users through digital journeys.</p>
          </a>
          
-         <a href="#" class="card">
+         <a data-aos="fade-up" href="#" class="card" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-layer-group"></i> Design Systems</h3>
             <p>Maintain consistency and efficiency with reusable UI components and style guides.</p>
          </a>
          
-         <a href="#" class="card">
+         <a data-aos="fade-up" href="#" class="card" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-universal-access"></i> Accessibility Compliance</h3>
             <p>Ensure your product is usable by all users, including those with disabilities (WCAG/ADA).</p>
          </a>
@@ -367,13 +358,27 @@
       </div>
    </section>
    
-   <section class="cta-section container">
-      <h2>Let's Build Something Beautiful</h2>
-      <a href="../contact/index.html" class="btn">Talk to a UX Specialist</a>
+   <section class="why-us">
+      <div class="container">
+         <h2 data-aos="fade-up">Why Choose Us for UI/UX Design?</h2>
+         <ul>
+            <li data-aos="fade-up"><strong>User-First Thinking:</strong> We dig deep into user behavior to create meaningful experiences.</li>
+            <li data-aos="fade-up"><strong>Prototypes with Purpose:</strong> Rapid wireframes and prototypes to validate fast.</li>
+            <li data-aos="fade-up"><strong>Accessible by Design:</strong> We prioritize inclusion with WCAG-compliant interfaces.</li>
+            <li data-aos="fade-up"><strong>Consistent & Scalable:</strong> Design systems that grow with your product.</li>
+         </ul>
+      </div>
+   </section>
+   
+   <section class="cta-section">
+      <div class="container">
+         <h2 data-aos="fade-up">Let's Build Something Beautiful</h2>
+         <a data-aos="fade-up" href="../contact/index.html" class="btn">Talk to a UX Specialist</a>
+      </div>
    </section>
    
    <!-- Footer -->
-   <footer data-aos="slide-up" class="footer">
+   <footer class="footer">
       <div class="footer-container">
          <div data-aos="fade-in" class="footer-top">
             <!-- Branding -->
@@ -390,7 +395,7 @@
                <p>Subscribe to our newsletter to receive the latest news and insights.</p>
                <form class="newsletter-form">
                   <input type="email" placeholder="Your email" required />
-                  <button type="submit" class="cta">Subscribe</button>
+                  <button type="submit" class="cta cta-primary">Subscribe</button>
                </form>
             </div>
          </div>
@@ -466,7 +471,7 @@
             <p>&copy; <script>
                   document.write(new Date().getFullYear());
                </script> Ceylon Digital. All rights reserved.</p>
-            <button onclick="scrollToTop()" class="back-to-top cta"><i class="bi bi-arrow-up"></i> Back to Top</button>
+            <button onclick="scrollToTop()" class="back-to-top cta cta-primary"><i class="bi bi-arrow-up"></i> Back to Top</button>
          </div>
       </div>
    </footer>
