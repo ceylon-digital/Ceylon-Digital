@@ -261,7 +261,7 @@ section {
    color: var(--btn-hover-bg);
 }
 
-.cta-primary-light:hover{
+.cta-primary-light:hover {
    background: var(--text-light);
    color: var(--btn-hover-bg);
 }
