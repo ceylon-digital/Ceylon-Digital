@@ -12,6 +12,7 @@ function renderProjects(projects) {
             const card = document.createElement('a');
             card.href = project.detailsPage;
             card.className = 'portfolio-card';
+            card.setAttribute('data-aos', 'fade-up');
             card.innerHTML = `
           <!-- <div class="iframe-container">
                   <iframe src="${project.iframeSrc}"></iframe>
@@ -22,7 +23,7 @@ function renderProjects(projects) {
                <div class="card-content">
                   <h3 class="project-title">${project.title}</h3>
                   <p class="project-description">${project.description}</p>
-                  <div class="view-more-btn cta">View Live Site <i class="fas fa-external-link-alt"></i></div>
+                  <div class="view-more-btn cta cta-primary">View Live Site <i class="fas fa-external-link-alt"></i></div>
                </div>
             `;
             container.appendChild(card);
