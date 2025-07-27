@@ -1,3 +1,7 @@
+body {
+   background: var(--bg-surface);
+}
+
 .header {
    background: var(--btn-primary-bg);
    margin-top: 97px;
@@ -8,6 +12,7 @@
 
 .header .container {
    max-width: 1440px;
+   margin: auto;
 }
 
 .header h1 {
@@ -20,18 +25,23 @@
    font-size: var(--h4-size);
 }
 
+
+
 .intro {
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   padding-bottom: 0;
 }
 
 .intro .container {
    max-width: 1440px;
+   margin: auto;
 }
 
 .intro p {
    color: var(--text-primary);
-   margin-bottom: 2rem;
 }
+
+
 
 .services h2,
 .why-us h2,
@@ -43,10 +53,12 @@
 
 .services {
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   padding-bottom: 0;
 }
 
 .services .container {
    max-width: 1440px;
+   margin: auto;
 }
 
 .cards {
@@ -56,13 +68,14 @@
 }
 
 .card {
-   background-color: var(--bg-surface);
+   background-color: var(--bg-body);
    padding: 1.5rem;
    border-radius: var(--radius-md);
    color: var(--text-primary);
    box-shadow: var(--shadow-elevation);
-   border: 1px solid var(--border-default);
+   border: 1px solid var(--color-accent);
    transition: transform 0.2s ease, box-shadow 0.2s ease;
+   overflow: hidden;
 }
 
 .card:hover {
@@ -92,11 +105,7 @@
 
 .why-us .container {
    max-width: 1440px;
-}
-
-.why-us ul {
-   list-style-type: disc;
-   padding-left: 1.5rem;
+   margin: auto;
 }
 
 .why-us li {
@@ -116,9 +125,16 @@
 
 .cta-section .container {
    max-width: 1440px;
+   margin: auto;
 }
 
 .cta-section h2 {
+   color: var(--text-light);
+   margin-bottom: 20px;
+}
+
+.cta-section p {
+   margin-bottom: 20px;
    color: var(--text-light);
 }
 
@@ -134,9 +150,7 @@
    transition: background-color 0.3s ease;
 }
 
-.cta-section .btn:hover {
-   background-color: var(--btn-hover-bg);
-}
+.cta-section .btn:hover {}
 
 .cta-section .btn.secondary {
    background: transparent;
