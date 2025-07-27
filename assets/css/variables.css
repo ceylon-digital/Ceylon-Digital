@@ -107,7 +107,7 @@ html {
    --h3-size: clamp(1.25rem, 2.5vw, 1.5rem);
    --h4-size: clamp(1.2rem, 2vw, 1.4rem);
    --h5-size: clamp(1rem, 1.5vw, 1.3rem);
-   --h6-size: clamp(0.9rem, 1.2vw, 1rem);
+   --h6-size: clamp(1.1rem, 1.5vw, 1.2rem);
    --p-size: 0.9rem;
 }
 
@@ -171,7 +171,7 @@ html {
 
   /* Background Colors */
   --bg-body: #FFFFFF;              /* Page background */
-  --bg-surface: #F7F9FC;           /* Cards and containers (matches dark theme's surface) */
+  --bg-surface: #F6F8FB;           /* Cards and containers (matches dark theme's surface) */
   --bg-surface-dark: #4A4A4A;
   --bg-navbar: #FFFFFF;            /* Navbar background */
   --bg-alt: #E6ECF5;               /* Alternative background surface for contrast */
