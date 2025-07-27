@@ -167,7 +167,7 @@ in order to ensure older browser support as well */
       color: transparent;
       background: var(--text-gradient);
       background-clip: text;
-      font-size: var(--h6-size);
+      font-size: var(--p-size);
       margin: 0 auto;
       font-weight: bold;
       font-family: var(--font-secondary);
@@ -816,18 +816,9 @@ in order to ensure older browser support as well */
    margin-bottom: 30px;
 }
 
-.cta-section a {
-   background: var(--text-light);
-   color: var(--btn-hover-bg);
-   padding: 12px 24px;
-   font-weight: bold;
-   border-radius: var(--radius-md);
-   transition: 0.3s ease;
-}
+.cta-section a {}
 
-.cta-section a:hover {
-   background: #e2e8f0;
-}
+.cta-section a:hover {}
 
 
 
