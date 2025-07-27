@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Improves IE compatibility -->
   
   <!-- 2. SEO Meta Tags -->
-  <title>Our Core Services | Ceylon Digital</title> <!-- Page title (Shown in browser tab & search results) -->
+  <title>All Our Core Services | Ceylon Digital</title> <!-- Page title (Shown in browser tab & search results) -->
   <meta name="description" content="Explore our 10 core digital services from strategy to support, tailored to help your business grow."> <!-- Important for SEO -->
   <meta name="keywords" content="keyword1, keyword2, keyword3"> <!-- Optional for SEO -->
   <meta name="author" content="your name or brand"> <!-- Author information -->
@@ -165,17 +165,6 @@
   <script defer src="../assets/aos-master/dist/aos.js"></script>
   <script defer src="../assets/js/common.js"></script>
   <script defer src="../assets/js/services.js"></script>
-  
-  <!-- Register Service Worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(reg => console.log('✅ Service Worker registered:', reg.scope))
-          .catch(err => console.error('❌ Service Worker registration failed:', err));
-      });
-    }
-  </script>
 </head>
 
 <body>
@@ -197,10 +186,10 @@
       <input type="checkbox" id="menu-toggle" class="nav-toggle" />
       <label for="menu-toggle" class="menu-icon action-item"><i class="fas fa-bars"></i></label>
       <ul class="nav-links">
-        <li class="nav-item active"><a href="../index.html">Home</a></li>
+        <li class="nav-item"><a href="../index.html">Home</a></li>
         <li class="nav-item"><a href="../about/index.html">About</a></li>
-        <li class="nav-item dropdown" aria-haspopup="true" aria-expanded="false">
-          <a href="#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
+        <li class="nav-item active dropdown" aria-haspopup="true" aria-expanded="false">
+          <a href="./index.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
           <ul class="dropdown-menu">
             <li class="dropdown-2">
               <a href="#" class="submenu-toggle">Digital Strategy & Consulting <i class="fas fa-chevron-down arrow"></i></a>
@@ -440,7 +429,7 @@
           <li>Customer segmentation</li>
           <li>Attribution modeling</li>
         </ul>
-        <a href="./analytics/index.html">Learn More »</a>
+        <a href="./analytics-and-data-services/index.html">Learn More »</a>
       </article>
       
       <article data-aos="fade-up" data-aos-delay="500" class="service-card">
@@ -462,7 +451,7 @@
   <section data-aos="fade-in" class="cta-section">
     <h2 data-aos="fade-up">Need a custom strategy?</h2>
     <p data-aos="fade-up" data-aos-delay="250">Let’s chat about how we can help you scale your business with the right digital services.</p>
-    <a data-aos="fade-up" data-aos-delay="500" href="../contact/index.html">Book a Free Consultation</a>
+    <a data-aos="fade-up" data-aos-delay="250" href="../contact/index.html" class="cta cta-primary-light">Book a Free Consultation</a>
   </section>
   
   
@@ -470,7 +459,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-      <div class="footer-top">
+      <div data-aos="fade-in" class="footer-top">
         <!-- Branding -->
         <div class="footer-branding">
           <a href="../index.html">
@@ -485,14 +474,14 @@
           <p>Subscribe to our newsletter to receive the latest news and insights.</p>
           <form class="newsletter-form">
             <input type="email" placeholder="Your email" required />
-            <button type="submit" class="cta">Subscribe</button>
+            <button type="submit" class="cta cta-primary">Subscribe</button>
           </form>
         </div>
       </div>
       
       <div class="footer-middle">
         <!-- Services -->
-        <div class="footer-col">
+        <div data-aos="fade-in" class="footer-col">
           <h5>Our services</h5>
           <ul>
             <li><a href="#">SEO</a></li>
@@ -509,7 +498,7 @@
         </div>
         
         <!-- Quick Links -->
-        <div class="footer-col">
+        <div data-aos="fade-in" class="footer-col">
           <h5>Quick Links</h5>
           <ul>
             <li><a href="../services/index.html">Services</a></li>
@@ -522,7 +511,7 @@
         </div>
         
         <!-- Page Sections -->
-        <div class="footer-col">
+        <div data-aos="fade-in" class="footer-col">
           <h5>On This Page</h5>
           <ul>
             <li><a href="#">Who we are</a></li>
@@ -530,7 +519,7 @@
         </div>
         
         <!-- Contact -->
-        <div class="footer-col">
+        <div data-aos="fade-in" class="footer-col">
           <h5>Contact</h5>
           <ul>
             <li><a href="mailto:hello@ceylondigital.com">hello@ceylondigital.com</a></li>
@@ -540,7 +529,7 @@
         </div>
         
         <!-- Social -->
-        <div class="footer-col">
+        <div data-aos="fade-in" class="footer-col">
           <h5>Connect</h5>
           <ul>
             <li><a href="#">Facebook</a></li>
@@ -557,7 +546,7 @@
         <p>&copy; <script>
             document.write(new Date().getFullYear());
           </script> Ceylon Digital. All rights reserved.</p>
-        <button onclick="scrollToTop()" class="back-to-top cta"><i class="bi bi-arrow-up"></i> Back to Top</button>
+        <button onclick="scrollToTop()" class="back-to-top cta cta-primary"><i class="bi bi-arrow-up"></i> Back to Top</button>
       </div>
     </div>
   </footer>
