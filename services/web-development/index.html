@@ -20,7 +20,7 @@
    <meta name="duckduckbot" content="index, follow"> <!-- DuckDuckGo-specific crawling instructions -->
    <meta name="naverbot" content="index, follow"> <!-- Naver-specific crawling instructions -->
    <link rel="canonical" href="https://ceylon-digital.github.io/Ceylon-Digital/services/web-development/"> <!-- Helps prevent duplicate content issues -->
-
+   
    <!-- 3. Verification Meta Tags (For Google, Bing, Yandex, etc.) -->
    <meta name="google-site-verification" content="w0qz5BEexoc0bX7_JfubNzFi7rrsQnqSGiLdpxNucfY" />
    <meta name="msvalidate.01" content="your_bing_verification_code">
@@ -165,17 +165,6 @@
    <script defer src="../../assets/aos-master/dist/aos.js"></script>
    <script defer src="../../assets/js/common.js"></script>
    <script defer src="./script.js"></script>
-   
-   <!-- Register Service Worker -->
-   <script>
-      if ('serviceWorker' in navigator) {
-         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-               .then(reg => console.log('✅ Service Worker registered:', reg.scope))
-               .catch(err => console.error('❌ Service Worker registration failed:', err));
-         });
-      }
-   </script>
 </head>
 
 <body>
@@ -198,10 +187,10 @@
          <input type="checkbox" id="menu-toggle" class="nav-toggle" />
          <label for="menu-toggle" class="menu-icon action-item"><i class="fas fa-bars"></i></label>
          <ul class="nav-links">
-            <li class="nav-item active"><a href="#hero">Home</a></li>
+            <li class="nav-item"><a href="../../index.html">Home</a></li>
             <li class="nav-item"><a href="../../about/index.html">About</a></li>
             <li class="nav-item dropdown" aria-haspopup="true" aria-expanded="false">
-               <a href="#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
+               <a href="../../services/index.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
                <ul class="dropdown-menu">
                   <li class="dropdown-2">
                      <a href="#" class="submenu-toggle">Digital Strategy & Consulting <i class="fas fa-chevron-down arrow"></i></a>
@@ -321,47 +310,49 @@
    
    <header class="header">
       <div class="container">
-         <h1>Web Design & Development</h1>
-         <p>Designing Digital Experiences That Perform and Inspire</p>
+         <h1 data-aos="fade-up">Web Design & Development</h1>
+         <p data-aos="fade-up" data-aos-delay="250">Designing Digital Experiences That Perform and Inspire</p>
       </div>
    </header>
    
-   <section class="intro container">
-      <p>
-         At <strong>Ceylon Digital</strong>, we craft intuitive, scalable, and high-performing digital experiences. From beautiful UI/UX design to robust back-end architecture, our web development services are built to drive engagement and elevate your brand.
-      </p>
+   <section class="intro">
+      <div class="container">
+         <p data-aos="fade-up">
+            <strong>Ceylon Digital</strong> builds high-performance websites that blend design, usability, and technical excellence. Our web design and development services cover UI/UX, front-end and back-end development, CMS integration (like WordPress and Webflow), and ongoing optimization to ensure your site performs at its best.
+         </p>
+      </div>
    </section>
    
    <section class="services container">
-      <h2>What We Offer</h2>
+      <h2 data-aos="fade-up">What We Offer</h2>
       <div class="cards">
          
-         <a class="card" href="#">
+         <a data-aos="fade-up" class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-pencil-ruler"></i> UI/UX Design</h3>
             <p>Design visually appealing and user-friendly interfaces focused on seamless user journeys and brand identity.</p>
          </a>
          
-         <a class="card" href="#">
+         <a data-aos="fade-up" class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-code"></i> Front-End Development</h3>
             <p>Transform designs into responsive and accessible websites using modern frameworks and clean code.</p>
          </a>
          
-         <a class="card" href="#">
+         <a data-aos="fade-up" class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-server"></i> Back-End Development</h3>
             <p>Build scalable server-side applications, APIs, and database integrations to power your digital platforms.</p>
          </a>
          
-         <a class="card" href="#">
+         <a data-aos="fade-up" class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-cogs"></i> CMS Integration</h3>
             <p>Seamlessly manage content with powerful CMS platforms like WordPress and Webflow tailored to your workflow.</p>
          </a>
          
-         <a class="card" href="#">
+         <a data-aos="fade-up" class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-shopping-cart"></i> E-commerce Development</h3>
             <p>Create robust online stores with secure checkout, product management, and integrations to grow your business.</p>
          </a>
          
-         <a class="card" href="#">
+         <a data-aos="fade-up" class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-tools"></i> Maintenance & Optimization</h3>
             <p>Ensure peak performance with regular updates, bug fixes, speed enhancements, and security checks.</p>
          </a>
@@ -369,24 +360,28 @@
       </div>
    </section>
    
-   <section class="why-us container">
-      <h2>Why Choose Ceylon Digital?</h2>
-      <ul>
-         <li><strong>User-Centered Design:</strong> We build with your users in mind from day one.</li>
-         <li><strong>Custom Solutions:</strong> No templates—just unique solutions tailored to your goals.</li>
-         <li><strong>Modern Tech Stack:</strong> From React to Node.js and beyond, we use tools that scale.</li>
-         <li><strong>Ongoing Support:</strong> We stay with you long after launch for updates and improvements.</li>
-      </ul>
+   <section class="why-us">
+      <div class="container">
+         <h2 data-aos="fade-up">Why Choose Us for Web Design & Development?</h2>
+         <ul>
+            <li data-aos="fade-up"><strong>User-Centered Design:</strong> Every pixel serves a purpose—your audience comes first.</li>
+            <li data-aos="fade-up"><strong>Custom Builds:</strong> No cookie-cutter templates. We craft tailored solutions to fit your brand.</li>
+            <li data-aos="fade-up"><strong>Full-Stack Expertise:</strong> From slick front-ends to robust back-ends, we’ve got it covered.</li>
+            <li data-aos="fade-up"><strong>Built to Scale:</strong> Whether WordPress, Webflow, or custom code—we future-proof your site.</li>
+         </ul>
+      </div>
    </section>
    
-   <section class="cta-section container">
-      <h2>Ready to Build Something Great?</h2>
-      <a href="../contact/index.html" class="btn">Get a Free Project Estimate</a>
-      <a href="../portfolio/index.html" class="btn secondary">View Our Work</a>
+   <section class="cta-section">
+      <div class="container">
+         <h2 data-aos="fade-up">Ready to Build Something Great?</h2>
+         <a data-aos="fade-up" href="../contact/index.html" class="btn">Get a Free Project Estimate</a>
+         <a data-aos="fade-up" href="../portfolio/index.html" class="btn secondary">View Our Work</a>
+      </div>
    </section>
    
    <!-- Footer -->
-   <footer data-aos="slide-up" class="footer">
+   <footer class="footer">
       <div class="footer-container">
          <div data-aos="fade-in" class="footer-top">
             <!-- Branding -->
@@ -403,7 +398,7 @@
                <p>Subscribe to our newsletter to receive the latest news and insights.</p>
                <form class="newsletter-form">
                   <input type="email" placeholder="Your email" required />
-                  <button type="submit" class="cta">Subscribe</button>
+                  <button type="submit" class="cta cta-primary">Subscribe</button>
                </form>
             </div>
          </div>
@@ -479,7 +474,7 @@
             <p>&copy; <script>
                   document.write(new Date().getFullYear());
                </script> Ceylon Digital. All rights reserved.</p>
-            <button onclick="scrollToTop()" class="back-to-top cta"><i class="bi bi-arrow-up"></i> Back to Top</button>
+            <button onclick="scrollToTop()" class="back-to-top cta cta-primary"><i class="bi bi-arrow-up"></i> Back to Top</button>
          </div>
       </div>
    </footer>
