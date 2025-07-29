@@ -29,6 +29,7 @@ main {
 .about-section {
    background: var(--bg-body);
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
    opacity: 0;
    transform: translateY(30px);
    transition: opacity 0.6s ease, transform 0.6s ease;
@@ -57,10 +58,11 @@ main {
 
 .mission {
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
 }
 
 .mission .container {
-   max-width: 1440px;
+   max-width: 1100px;
    margin: auto;
 }
 
@@ -75,10 +77,11 @@ main {
 .vision {
    background: var(--bg-body);
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
 }
 
 .vision .container {
-   max-width: 1440px;
+   max-width: 1100px;
    margin: auto;
 }
 
@@ -92,10 +95,11 @@ main {
 
 .values {
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
 }
 
 .values .container {
-   max-width: 1440px;
+   max-width: 1100px;
    margin: auto;
 }
 
@@ -132,10 +136,11 @@ main {
 .services-overview {
    background: var(--bg-body);
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
 }
 
 .services-overview .container {
-   max-width: 1440px;
+   max-width: 1100px;
    margin: auto;
 }
 
@@ -153,10 +158,11 @@ main {
 
 .team {
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
 }
 
 .team .container {
-   max-width: 1440px;
+   max-width: 1100px;
    margin: auto;
 }
 
@@ -220,10 +226,11 @@ main {
 .case-studies {
    background: var(--bg-body);
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
 }
 
 .case-studies .container {
-   max-width: 1440px;
+   max-width: 1100px;
    margin: auto;
 }
 
@@ -236,10 +243,11 @@ main {
 
 .testimonials {
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
 }
 
 .testimonials .container {
-   max-width: 1440px;
+   max-width: 1100px;
    margin: auto;
 }
 
@@ -259,10 +267,11 @@ main {
 .partners {
    background: var(--bg-body);
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
 }
 
 .partners .container {
-   max-width: 1440px;
+   max-width: 1100px;
    margin: auto;
 }
 
@@ -275,10 +284,11 @@ main {
 
 .contact {
    padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
 }
 
 .contact .container {
-   max-width: 1440px;
+   max-width: 1100px;
    margin: auto;
 }
 
