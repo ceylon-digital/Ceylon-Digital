@@ -76,7 +76,6 @@ animate();
 
 
 
-
 /*
 // console.log(typeof gsap);
 gsap.timeline()
@@ -106,8 +105,7 @@ gsap.timeline()
       ease: "back.out(1.4)"
    }, "-=0.3")
    .from(".illustration", { x: 100, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.4");
-*/
-
+   */
 
 
 
@@ -140,7 +138,6 @@ marquee.addEventListener('mouseleave', () => marqueeTween.resume());
 
 
 
-
 // Scroll animation using Intersection Observer
 const steps = document.querySelectorAll('.timeline-step');
 
@@ -162,55 +159,116 @@ steps.forEach(step => {
 
 
 
+const currencySwitch = document.getElementById('currencySwitch');
+const prices = document.querySelectorAll('.pricing__amount');
 
-const currencySwitch = document.getElementById("currencySwitch");
-const amountEls = document.querySelectorAll(".pricing__amount");
-let exchangeRate = 0.0033; // fallback exchange rate (1 LKR ≈ 0.0033 USD)
+const EXCHANGE_API = 'https://api.exchangerate.host/latest?base=LKR&symbols=USD';
+let exchangeRate = 0.0029; // fallback value
+
+const originalPrices = document.querySelectorAll('.pricing__original');
+const discountedPrices = document.querySelectorAll('.pricing__discounted');
+
+// Set discount (0.6 = 60% off)
+const discountRate = 0.6;
 
 async function fetchExchangeRate() {
    try {
-      const res = await fetch("https://api.exchangerate.host/latest?base=LKR&symbols=USD");
-      const data = await res.json();
-      if (data && data.rates && data.rates.USD) {
-         exchangeRate = data.rates.USD;
-      }
+      const response = await fetch(EXCHANGE_API);
+      const data = await response.json();
+      exchangeRate = data.rates.USD;
+      console.log("Live USD rate:", exchangeRate);
    } catch (err) {
-      console.warn("Using fallback exchange rate. API failed.");
-   }
-}
-
-function formatUSD(num) {
-   if (num >= 1000) {
-      return `$${(num / 1000).toFixed(1)}k+`;
-   } else {
-      return `$${Math.round(num)}+`;
+      console.warn('Failed to fetch live exchange rate. Using fallback.', err);
    }
 }
 
 function updatePrices(currency) {
-   amountEls.forEach(el => {
-      const lkr = parseFloat(el.getAttribute("data-lkr"));
-      if (currency === "USD") {
-         const usd = lkr * exchangeRate;
-         el.textContent = `USD ${formatUSD(usd)}`;
+   prices.forEach(priceEl => {
+      const lkrValue = parseFloat(priceEl.dataset.lkr);
+      if (currency === 'USD') {
+         const converted = (lkrValue * exchangeRate).toFixed(2);
+         priceEl.textContent = `USD ${formatNumber(converted)}+`;
       } else {
-         el.textContent = `Rs.${lkr.toLocaleString()}+`;
+         priceEl.textContent = `LKR ${formatNumber(lkrValue)}+`;
       }
    });
 }
 
-currencySwitch.addEventListener("change", () => {
-   const selectedCurrency = currencySwitch.value;
-   updatePrices(selectedCurrency);
+function formatNumber(num) {
+   return new Intl.NumberFormat().format(num);
+}
+
+function saveCurrencyPreference(currency) {
+   localStorage.setItem('preferredCurrency', currency);
+}
+
+function loadCurrencyPreference() {
+   return localStorage.getItem('preferredCurrency') || 'LKR';
+}
+
+currencySwitch.addEventListener('change', async (e) => {
+   const selected = e.target.value;
+   saveCurrencyPreference(selected);
+   if (selected === 'USD') await fetchExchangeRate();
+   updatePrices(selected);
 });
 
-// Initial fetch and update
-fetchExchangeRate().then(() => {
-   updatePrices(currencySwitch.value);
+document.addEventListener('DOMContentLoaded', async () => {
+   const preferred = loadCurrencyPreference();
+   currencySwitch.value = preferred;
+   if (preferred === 'USD') await fetchExchangeRate();
+   updatePrices(preferred);
+   startCountdown(); // Start countdown on load
 });
 
+function applyDiscounts(currency) {
+   originalPrices.forEach((origEl, index) => {
+      const lkrOriginal = parseFloat(origEl.dataset.lkrOriginal);
+      const discountedEl = discountedPrices[index];
+      const discountedLKR = Math.round(lkrOriginal * (1 - discountRate));
+      discountedEl.dataset.lkr = discountedLKR;
+      
+      if (currency === 'USD') {
+         const originalUSD = (lkrOriginal * exchangeRate).toFixed(2);
+         const discountedUSD = (discountedLKR * exchangeRate).toFixed(2);
+         origEl.textContent = `USD ${formatNumber(originalUSD)}+`;
+         discountedEl.textContent = `USD ${formatNumber(discountedUSD)}+`;
+      } else {
+         origEl.textContent = `LKR ${formatNumber(lkrOriginal)}+`;
+         discountedEl.textContent = `LKR ${formatNumber(discountedLKR)}+`;
+      }
+   });
+}
 
+function updatePrices(currency) {
+   applyDiscounts(currency);
+}
 
+function startCountdown() {
+   const countdownEl = document.getElementById('countdown');
+   const endDate = new Date();
+   endDate.setDate(endDate.getDate() + 5); // 5 days from now
+   
+   function updateTimer() {
+      const now = new Date().getTime();
+      const distance = endDate - now;
+      
+      if (distance < 0) {
+         countdownEl.textContent = "Expired";
+         return;
+      }
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+   }
+   
+   updateTimer(); // initial
+   setInterval(updateTimer, 1000);
+}
 
 
 
