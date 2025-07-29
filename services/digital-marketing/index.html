@@ -20,13 +20,8 @@
    <meta name="duckduckbot" content="index, follow"> <!-- DuckDuckGo-specific crawling instructions -->
    <meta name="naverbot" content="index, follow"> <!-- Naver-specific crawling instructions -->
    <link rel="canonical" href="https://ceylon-digital.github.io/Ceylon-Digital/services/digital-marketing/"> <!-- Helps prevent duplicate content issues -->
-
+   
    <!-- 3. Verification Meta Tags (For Google, Bing, Yandex, etc.) -->
-   <meta name="google-site-verification" content="w0qz5BEexoc0bX7_JfubNzFi7rrsQnqSGiLdpxNucfY" />
-   <meta name="msvalidate.01" content="your_bing_verification_code">
-   <meta name="yandex-verification" content="your_yandex_verification_code">
-   <meta name="baidu-site-verification" content="your_baidu_verification_code">
-   <meta name="naver-site-verification" content="your_naver_verification_code">
    
    <!-- 4. Social Media Meta Tags (Open Graph & Twitter Cards) -->
    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
@@ -127,28 +122,6 @@
       /* Add critical inline CSS here */
    </style>
    
-   <!-- JSON-LD Structured Data -->
-   <script type="application/ld+json">
-      {
-         "@context": "https://schema.org",
-         "@type": "Commercial",
-         "name": "Ceylon Digital",
-         "url": "https://yourwebsite.com",
-         "logo": "https://yourwebsite.com/assets/icons/favicon-32x32.png",
-         "sameAs": [
-            "https://www.facebook.com/ceylondigital",
-            "https://twitter.com/CeylonDigital",
-            "https://www.linkedin.com/company/ceylondigital"
-         ],
-         "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+94-123-456-789",
-            "contactType": "customer service",
-            "email": "contact@yourwebsite.com"
-         }
-      }
-   </script>
-   
    <!-- 13. JavaScript Files (Use async or defer) -->
    <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
    <script defer src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
@@ -161,21 +134,10 @@
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
    
    <script defer src="../../gsap.min.js"></script>
-   <script defer src="../../assets/package/swiper-bundle.min.js"></script>
+   <script src="../../assets/package/swiper-bundle.min.js"></script>
    <script defer src="../../assets/aos-master/dist/aos.js"></script>
    <script defer src="../../assets/js/common.js"></script>
    <script defer src="./script.js"></script>
-   
-   <!-- Register Service Worker -->
-   <script>
-      if ('serviceWorker' in navigator) {
-         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-               .then(reg => console.log('✅ Service Worker registered:', reg.scope))
-               .catch(err => console.error('❌ Service Worker registration failed:', err));
-         });
-      }
-   </script>
 </head>
 
 <body>
@@ -197,10 +159,10 @@
          <input type="checkbox" id="menu-toggle" class="nav-toggle" />
          <label for="menu-toggle" class="menu-icon action-item"><i class="fas fa-bars"></i></label>
          <ul class="nav-links">
-            <li class="nav-item active"><a href="#hero">Home</a></li>
+            <li class="nav-item"><a href="../../index.html">Home</a></li>
             <li class="nav-item"><a href="../../about/index.html">About</a></li>
             <li class="nav-item dropdown" aria-haspopup="true" aria-expanded="false">
-               <a href="#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
+               <a href="../../services/index.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
                <ul class="dropdown-menu">
                   <li class="dropdown-2">
                      <a href="#" class="submenu-toggle">Digital Strategy & Consulting <i class="fas fa-chevron-down arrow"></i></a>
@@ -322,47 +284,49 @@
    
    <header class="header">
       <div class="container">
-         <h1>Digital Marketing Services</h1>
-         <p>Amplify Your Brand, Drive Growth, and Convert Better</p>
+         <h1 data-aos="fade-up">Digital Marketing</h1>
+         <p data-aos="fade-up" data-aos-delay="250">Amplify Your Brand, Drive Growth, and Convert Better</p>
       </div>
    </header>
    
-   <section class="intro container">
-      <p>
-         At <strong>Ceylon Digital</strong>, our digital marketing services are crafted to help businesses like yours reach ideal customers, generate qualified leads, and scale with confidence across all major platforms.
-      </p>
+   <section class="intro">
+      <div class="container">
+         <p data-aos="fade-up">
+            <strong>Drive traffic and grow revenue with digital marketing strategies from Ceylon Digital.</strong> We specialize in SEO, PPC advertising, social media marketing, content strategy, and email campaigns—all aimed at improving your online visibility and boosting conversion rates.
+         </p>
+      </div>
    </section>
    
    <section class="services container">
       <h2>What We Offer</h2>
       <div class="cards">
          
-         <a class="card" href="./seo/index.html">
+         <a class="card" href="./seo/index.html" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-search"></i> Search Engine Optimization (SEO)</h3>
             <p>Improve your visibility on Google through expert keyword targeting, backlink strategies, and technical optimization.</p>
          </a>
          
-         <a class="card" href="./pay-per-click-advertising/index.html">
+         <a class="card" href="./pay-per-click-advertising/index.html" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-mouse-pointer"></i> PPC Advertising</h3>
             <p>Run high-converting ads on Google, Bing, and display networks with real-time reporting and budget control.</p>
          </a>
          
-         <a class="card" href="./social-media-marketing/index.html">
+         <a class="card" href="./social-media-marketing/index.html" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-share-alt"></i> Social Media Marketing</h3>
             <p>Build a loyal community on Facebook, Instagram, LinkedIn and more with organic and paid strategies.</p>
          </a>
          
-         <a class="card" href="./content-marketing/index.html">
+         <a class="card" href="./content-marketing/index.html" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-file-alt"></i> Content Marketing</h3>
             <p>Create high-impact blogs, videos, and whitepapers to build trust, authority, and attract organic leads.</p>
          </a>
          
-         <a class="card" href="./email-marketing/index.html">
+         <a class="card" href="./email-marketing/index.html" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-envelope"></i> Email Marketing</h3>
             <p>Drive conversions with automated workflows, targeted campaigns, and personalized messaging.</p>
          </a>
          
-         <a class="card" href="./conversion-rate-optimization/index.html">
+         <a class="card" href="./conversion-rate-optimization/index.html" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-chart-line"></i> Conversion Rate Optimization (CRO)</h3>
             <p>Maximize your existing traffic by optimizing landing pages, user journeys, and calls to action.</p>
          </a>
@@ -370,24 +334,29 @@
       </div>
    </section>
    
-   <section class="why-us container">
-      <h2>Why Choose Us?</h2>
-      <ul>
-         <li><strong>Data-Driven:</strong> Every decision backed by real performance metrics.</li>
-         <li><strong>Specialized Experts:</strong> Teams dedicated to each marketing channel.</li>
-         <li><strong>Scalable:</strong> Our services grow with your business.</li>
-         <li><strong>Transparent Reporting:</strong> Know exactly where your investment is going.</li>
-      </ul>
+   <section class="why-us">
+      <div class="container">
+         <h2 data-aos="fade-up">Why Choose Us for Digital Marketing?</h2>
+         <ul>
+            <li data-aos="fade-up"><strong>SEO that Works:</strong> Climb search rankings with strategies that deliver long-term results.</li>
+            <li data-aos="fade-up"><strong>Performance Marketing:</strong> From PPC to CRO, we turn clicks into conversions.</li>
+            <li data-aos="fade-up"><strong>Content that Connects:</strong> We create and promote content that builds trust and authority.</li>
+            <li data-aos="fade-up"><strong>Omnichannel Execution:</strong> We unify your brand voice across search, social, email, and more.</li>
+         </ul>
+      </div>
    </section>
    
-   <section class="cta-section container">
-      <h2>Let’s Talk Results</h2>
-      <a href="../contact/index.html" class="btn">Book a Free Consultation</a>
-      <a href="../case-studies/index.html" class="btn secondary">View Case Studies</a>
+   <section class="cta-section">
+      <div class="container">
+         <h2>Let’s Talk Results</h2>
+         <p>Book a free consultation or see our case studies</p>
+         <a href="../contact/index.html" class="btn">Book a Free Consultation</a>
+         <a href="../case-studies/index.html" class="btn secondary">View Case Studies</a>
+      </div>
    </section>
    
    <!-- Footer -->
-   <footer data-aos="slide-up" class="footer">
+   <footer class="footer">
       <div class="footer-container">
          <div data-aos="fade-in" class="footer-top">
             <!-- Branding -->
@@ -404,7 +373,7 @@
                <p>Subscribe to our newsletter to receive the latest news and insights.</p>
                <form class="newsletter-form">
                   <input type="email" placeholder="Your email" required />
-                  <button type="submit" class="cta">Subscribe</button>
+                  <button type="submit" class="cta cta-primary">Subscribe</button>
                </form>
             </div>
          </div>
@@ -412,24 +381,23 @@
          <div class="footer-middle">
             <!-- Services -->
             <div data-aos="fade-in" class="footer-col">
-               <h5>Our services</h5>
+               <h5>Other services</h5>
                <ul>
-                  <li><a href="#">Digital Strategy & Consulting</a></li>
-                  <li><a href="#">Web Design & Development</a></li>
-                  <li><a href="#">Mobile App Development</a></li>
-                  <li><a href="#">Digital Marketing</a></li>
-                  <li><a href="#">Branding & Creative Services</a></li>
-                  <li><a href="#">UI/UX Design</a></li>
-                  <li><a href="#">Software & Product Development</a></li>
-                  <li><a href="#">E-Commerce Solutions</a></li>
-                  <li><a href="#">Analytics & Data Services</a></li>
-                  <li><a href="#">Support & Maintenance</a></li>
+                  <li><a href="../digital-strategy-consulting/index.html">Digital Strategy & Consulting</a></li>
+                  <li><a href="../web-development/index.html">Web Design & Development</a></li>
+                  <li><a href="../app-development/index.html">Mobile App Development</a></li>
+                  <li><a href="../branding-and-creative-services/index.html">Branding & Creative Services</a></li>
+                  <li><a href="../ui-ux-design/index.html">UI/UX Design</a></li>
+                  <li><a href="../software-and-product-development/index.html">Software & Product Development</a></li>
+                  <li><a href="../e-commerce-solutions/index.html">E-Commerce Solutions</a></li>
+                  <li><a href="../analytics-and-data-services/index.html">Analytics & Data Services</a></li>
+                  <li><a href="../support-and-maintenance/index.html">Support & Maintenance</a></li>
                </ul>
             </div>
             
             <!-- Quick Links -->
             <div data-aos="fade-in" class="footer-col">
-               <h5>Quick Links</h5>
+               <h5>Quick links</h5>
                <ul>
                   <li><a href="./about/index.html">About us</a></li>
                   <li><a href="./services/index.html">Services</a></li>
@@ -441,7 +409,7 @@
             
             <!-- Page Sections -->
             <div data-aos="fade-in" class="footer-col">
-               <h5>On This Page</h5>
+               <h5>On this page</h5>
                <ul>
                   <li><a href="#about">About us</a></li>
                   <li><a href="#why-us">Why choose us</a></li>
@@ -480,7 +448,7 @@
             <p>&copy; <script>
                   document.write(new Date().getFullYear());
                </script> Ceylon Digital. All rights reserved.</p>
-            <button onclick="scrollToTop()" class="back-to-top cta"><i class="bi bi-arrow-up"></i> Back to Top</button>
+            <button onclick="scrollToTop()" class="back-to-top cta cta-primary"><i class="bi bi-arrow-up"></i> Back to Top</button>
          </div>
       </div>
    </footer>
