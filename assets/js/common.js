@@ -11,11 +11,21 @@ AOS.init({
 // Navbar toggling
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-links');
+const navItems = navMenu.querySelectorAll('.nav-item');
 
 navToggle.addEventListener('click', () => {
    navToggle.classList.toggle('active');
    navMenu.classList.toggle('active');
 });
+
+navItems.forEach(item => {
+   item.addEventListener('click', () => {
+      setTimeout(() => {
+         navToggle.checked = false;
+      }, 300);
+   });
+});
+
 
 
 
