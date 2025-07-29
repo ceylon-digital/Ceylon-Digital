@@ -181,7 +181,7 @@
     left: 0;
     right: 0;
     height: calc(100vh - 79px);
-    background-color: var(--bg-body);
+    background: var(--bg-navbar);
     display: none;
     align-items: start;
     padding: 1.3rem clamp(1.5rem, 5vw, 3rem);
@@ -190,9 +190,19 @@
     z-index: 1000;
   }
   
+  .nav-links li a {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-default);
+  }
+  
   .nav-links li,
   .nav-links li a {
+    width: 100%;
     display: block;
+  }
+  
+  .nav-btn {
+    text-align: center;
   }
   
   .submenu-toggle {
