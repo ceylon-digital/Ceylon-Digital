@@ -20,13 +20,8 @@
    <meta name="duckduckbot" content="index, follow"> <!-- DuckDuckGo-specific crawling instructions -->
    <meta name="naverbot" content="index, follow"> <!-- Naver-specific crawling instructions -->
    <link rel="canonical" href="https://ceylon-digital.github.io/Ceylon-Digital/services/e-commerce-solutions/"> <!-- Helps prevent duplicate content issues -->
-
+   
    <!-- 3. Verification Meta Tags (For Google, Bing, Yandex, etc.) -->
-   <meta name="google-site-verification" content="w0qz5BEexoc0bX7_JfubNzFi7rrsQnqSGiLdpxNucfY" />
-   <meta name="msvalidate.01" content="your_bing_verification_code">
-   <meta name="yandex-verification" content="your_yandex_verification_code">
-   <meta name="baidu-site-verification" content="your_baidu_verification_code">
-   <meta name="naver-site-verification" content="your_naver_verification_code">
    
    <!-- 4. Social Media Meta Tags (Open Graph & Twitter Cards) -->
    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
@@ -127,28 +122,6 @@
       /* Add critical inline CSS here */
    </style>
    
-   <!-- JSON-LD Structured Data -->
-   <script type="application/ld+json">
-      {
-         "@context": "https://schema.org",
-         "@type": "Commercial",
-         "name": "Ceylon Digital",
-         "url": "https://yourwebsite.com",
-         "logo": "https://yourwebsite.com/assets/icons/favicon-32x32.png",
-         "sameAs": [
-            "https://www.facebook.com/ceylondigital",
-            "https://twitter.com/CeylonDigital",
-            "https://www.linkedin.com/company/ceylondigital"
-         ],
-         "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+94-123-456-789",
-            "contactType": "customer service",
-            "email": "contact@yourwebsite.com"
-         }
-      }
-   </script>
-   
    <!-- 13. JavaScript Files (Use async or defer) -->
    <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
    <script defer src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
@@ -161,21 +134,10 @@
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
    
    <script defer src="../../gsap.min.js"></script>
-   <script defer src="../../assets/package/swiper-bundle.min.js"></script>
+   <script src="../../assets/package/swiper-bundle.min.js"></script>
    <script defer src="../../assets/aos-master/dist/aos.js"></script>
    <script defer src="../../assets/js/common.js"></script>
    <script defer src="./script.js"></script>
-   
-   <!-- Register Service Worker -->
-   <script>
-      if ('serviceWorker' in navigator) {
-         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-               .then(reg => console.log('✅ Service Worker registered:', reg.scope))
-               .catch(err => console.error('❌ Service Worker registration failed:', err));
-         });
-      }
-   </script>
 </head>
 
 <body>
@@ -197,10 +159,10 @@
          <input type="checkbox" id="menu-toggle" class="nav-toggle" />
          <label for="menu-toggle" class="menu-icon action-item"><i class="fas fa-bars"></i></label>
          <ul class="nav-links">
-            <li class="nav-item active"><a href="#hero">Home</a></li>
+            <li class="nav-item"><a href="../../index.html">Home</a></li>
             <li class="nav-item"><a href="../../about/index.html">About</a></li>
             <li class="nav-item dropdown" aria-haspopup="true" aria-expanded="false">
-               <a href="#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
+               <a href="../../services/index.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down arrow"></i></a>
                <ul class="dropdown-menu">
                   <li class="dropdown-2">
                      <a href="#" class="submenu-toggle">Digital Strategy & Consulting <i class="fas fa-chevron-down arrow"></i></a>
@@ -320,42 +282,44 @@
    
    <header class="header">
       <div class="container">
-         <h1>E-Commerce Solutions</h1>
-         <p>Building Powerful Online Stores That Convert</p>
+         <h1 data-aos="fade-up">E-Commerce Solutions</h1>
+         <p data-aos="fade-up" data-aos-delay="250">Building Powerful Online Stores That Convert</p>
       </div>
    </header>
    
-   <section class="intro container">
-      <p>
-         <strong>Ceylon Digital</strong> empowers brands to sell smarter with scalable and secure e-commerce platforms. We design, develop, and optimize online stores that meet your business needs and customer expectations.
-      </p>
+   <section class="intro">
+      <div class="container">
+         <p data-aos="fade-up">
+            <strong>Launch and scale your online store with Ceylon Digital’s custom e-commerce solutions.</strong> We design and build secure, conversion-optimized storefronts with shopping cart functionality, payment gateways, inventory tools, and support for subscriptions and memberships.
+         </p>
+      </div>
    </section>
    
    <section class="services container">
-      <h2>Our E-Commerce Services</h2>
+      <h2>What we offer</h2>
       <div class="cards">
          
-         <a class="card" href="#">
+         <a class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-store"></i> Custom Storefront Design</h3>
             <p>Create a unique, on-brand shopping experience optimized for engagement and conversions.</p>
          </a>
          
-         <a class="card" href="#">
+         <a class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-shopping-cart"></i> Shopping Cart Integration</h3>
             <p>Enable smooth, secure checkout experiences with modern cart functionalities.</p>
          </a>
          
-         <a class="card" href="#">
+         <a class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-credit-card"></i> Payment Gateways</h3>
             <p>Integrate with trusted gateways like Stripe, PayPal, and local providers.</p>
          </a>
          
-         <a class="card" href="#">
+         <a class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-boxes"></i> Inventory Management</h3>
             <p>Track products, manage stock, and receive alerts with smart inventory systems.</p>
          </a>
          
-         <a class="card" href="#">
+         <a class="card" href="#" data-ripple-color="rgba(0, 150, 255, 0.5)">
             <h3><i class="fas fa-repeat"></i> Subscriptions & Memberships</h3>
             <p>Build recurring revenue models with automated subscription and member access tools.</p>
          </a>
@@ -363,13 +327,27 @@
       </div>
    </section>
    
-   <section class="cta-section container">
-      <h2>Launch Your Online Store with Confidence</h2>
-      <a href="../contact/index.html" class="btn">Request a Free E-Commerce Consultation</a>
+   <section class="why-us">
+      <div class="container">
+         <h2 data-aos="fade-up">Why Choose Us for E-Commerce Solutions?</h2>
+         <ul>
+            <li data-aos="fade-up"><strong>Custom Storefronts:</strong> Stand out with a shopping experience that fits your brand.</li>
+            <li data-aos="fade-up"><strong>Seamless Checkout:</strong> Cart and payment flows optimized for conversions.</li>
+            <li data-aos="fade-up"><strong>Back-End Efficiency:</strong> Manage inventory, subscriptions, and more with ease.</li>
+            <li data-aos="fade-up"><strong>Secure & Scalable:</strong> PCI-compliant solutions built to handle growth.</li>
+         </ul>
+      </div>
+   </section>
+   
+   <section class="cta-section">
+      <div class="container">
+         <h2>Launch Your Online Store with Confidence</h2>
+         <a href="../contact/index.html" class="btn">Request a Free E-Commerce Consultation</a>
+      </div>
    </section>
    
    <!-- Footer -->
-   <footer data-aos="slide-up" class="footer">
+   <footer class="footer">
       <div class="footer-container">
          <div data-aos="fade-in" class="footer-top">
             <!-- Branding -->
@@ -386,7 +364,7 @@
                <p>Subscribe to our newsletter to receive the latest news and insights.</p>
                <form class="newsletter-form">
                   <input type="email" placeholder="Your email" required />
-                  <button type="submit" class="cta">Subscribe</button>
+                  <button type="submit" class="cta cta-primary">Subscribe</button>
                </form>
             </div>
          </div>
@@ -394,24 +372,23 @@
          <div class="footer-middle">
             <!-- Services -->
             <div data-aos="fade-in" class="footer-col">
-               <h5>Our services</h5>
+               <h5>Other services</h5>
                <ul>
-                  <li><a href="#">Digital Strategy & Consulting</a></li>
-                  <li><a href="#">Web Design & Development</a></li>
-                  <li><a href="#">Mobile App Development</a></li>
-                  <li><a href="#">Digital Marketing</a></li>
-                  <li><a href="#">Branding & Creative Services</a></li>
-                  <li><a href="#">UI/UX Design</a></li>
-                  <li><a href="#">Software & Product Development</a></li>
-                  <li><a href="#">E-Commerce Solutions</a></li>
-                  <li><a href="#">Analytics & Data Services</a></li>
-                  <li><a href="#">Support & Maintenance</a></li>
+                  <li><a href="../digital-strategy-consulting/index.html">Digital Strategy & Consulting</a></li>
+                  <li><a href="../web-development/index.html">Web Design & Development</a></li>
+                  <li><a href="../app-development/index.html">Mobile App Development</a></li>
+                  <li><a href="../digital-marketing/index.html">Digital Marketing</a></li>
+                  <li><a href="../branding-and-creative-services/index.html">Branding & Creative Services</a></li>
+                  <li><a href="../ui-ux-design/index.html">UI/UX Design</a></li>
+                  <li><a href="../software-and-product-development/index.html">Software & Product Development</a></li>
+                  <li><a href="../analytics-and-data-services/index.html">Analytics & Data Services</a></li>
+                  <li><a href="../support-and-maintenance/index.html">Support & Maintenance</a></li>
                </ul>
             </div>
             
             <!-- Quick Links -->
             <div data-aos="fade-in" class="footer-col">
-               <h5>Quick Links</h5>
+               <h5>Quick links</h5>
                <ul>
                   <li><a href="./about/index.html">About us</a></li>
                   <li><a href="./services/index.html">Services</a></li>
@@ -423,7 +400,7 @@
             
             <!-- Page Sections -->
             <div data-aos="fade-in" class="footer-col">
-               <h5>On This Page</h5>
+               <h5>On this page</h5>
                <ul>
                   <li><a href="#about">About us</a></li>
                   <li><a href="#why-us">Why choose us</a></li>
@@ -462,7 +439,7 @@
             <p>&copy; <script>
                   document.write(new Date().getFullYear());
                </script> Ceylon Digital. All rights reserved.</p>
-            <button onclick="scrollToTop()" class="back-to-top cta"><i class="bi bi-arrow-up"></i> Back to Top</button>
+            <button onclick="scrollToTop()" class="back-to-top cta cta-primary"><i class="bi bi-arrow-up"></i> Back to Top</button>
          </div>
       </div>
    </footer>
