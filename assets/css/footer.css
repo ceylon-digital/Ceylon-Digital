@@ -25,14 +25,7 @@
 }
 
 .footer-branding a {
-   font-size: 1.5rem;
-   font-weight: bold;
-   font-family: var(--font-accent);
-   color: transparent;
-   background: var(--text-gradient);
-   background-clip: text;
-   display: flex;
-   align-items: center;
+   display: inline-block;
    margin-bottom: 10px;
 }
 
@@ -99,8 +92,9 @@
 }
 
 .footer-col h5 {
-   margin-bottom: 10px;
    color: var(--text-subheading);
+   text-transform: capitalize;
+   margin-bottom: 10px;
 }
 
 .footer-col ul {
