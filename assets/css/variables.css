@@ -205,9 +205,9 @@ html {
 /* Dark Theme */
 [data-theme="dark"] {
   /* Text Colors */
-  --text-primary: #E4E8F0;           /* Softer white with a bluish tint */
+  --text-primary: #94A3B8;           /* Softer white with a bluish tint */
   --text-heading: #FFFFFF;           /* Clean white for strong emphasis */
-  --text-subheading: #94A3B8;        /* Cool light gray-blue */
+  --text-subheading: #E4E8F0;        /* Cool light gray-blue */
   --text-muted: #64748B;             /* Muted slate for de-emphasis */
   --text-light: #FFFFFF;
   --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
