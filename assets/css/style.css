@@ -155,7 +155,7 @@ in order to ensure older browser support as well */
    margin-bottom: 20px;
 }
 
-.container .section-description {
+.container .section-subtitle {
    color: var(--text-primary);
    font-size: var(--h5-size);
    text-align: center;
@@ -394,7 +394,7 @@ in order to ensure older browser support as well */
       margin-bottom: 10px;
    }
    
-   .section-description {
+   .section-subtitle {
       color: var(--text-primary);
       margin-bottom: 30px;
    }
@@ -563,7 +563,7 @@ in order to ensure older browser support as well */
       margin-bottom: 10px;
    }
    
-   .section-description {
+   .section-subtitle {
       color: var(--text-primary);
       margin-bottom: 50px;
    }
@@ -696,7 +696,7 @@ in order to ensure older browser support as well */
       letter-spacing: 1px;
    }
    
-   .section-description {
+   .section-subtitle {
       color: var(--text-primary);
       margin-bottom: 40px;
    }
@@ -847,7 +847,7 @@ in order to ensure older browser support as well */
       margin-bottom: 10px;
    }
    
-   .section-description {
+   .section-subtitle {
       color: var(--text-primary);
       margin-bottom: 30px;
    }
@@ -962,7 +962,7 @@ in order to ensure older browser support as well */
          text-align: center;
       }
       
-      .section-description {
+      .section-subtitle {
          text-align: center;
       }
       
@@ -975,6 +975,159 @@ in order to ensure older browser support as well */
 }
 
 
+
+
+
+.portfolio-section {
+   padding: 60px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
+}
+
+.portfolio-section .container {
+   max-width: 1240px;
+   margin: auto;
+}
+
+.portfolio-section .section-title {
+   text-align: center;
+   color: var(--text-heading);
+   margin-bottom: 10px;
+}
+
+.portfolio-section .section-subtitle {
+   text-align: center;
+   font-size: var(--h5-size);
+   color: var(--text-subheading);
+   margin-bottom: 50px;
+}
+
+
+.actionBar {
+   display: flex;
+   gap: 20px;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+
+.searchBar {}
+
+.searchBar #searchInput {
+   padding: 8px 16px;
+   width: 100%;
+   border: 1px solid var(--border-default);
+   border-radius: var(--radius-md);
+   background: var(--bg-surface);
+   transition: 0.3s ease;
+}
+
+.filterBar {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 10px;
+   margin: 10px 0;
+}
+
+.filter-btn {
+   padding: 8px 16px;
+   background: var(--bg-surface);
+   color: var(--text-muted);
+   font-weight: 500;
+   border: 1px solid var(--border-default);
+   border-radius: var(--radius-md);
+   
+   transition: 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+   color: var(--text-light);
+   background-color: var(--btn-hover-bg);
+   border-color: var(--border-default);
+}
+
+
+
+.portfolio-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 30px;
+   margin-top: 20px;
+}
+
+.portfolio-card {
+   font-size: var(--p-size);
+   background: var(--bg-surface);
+   border-radius: var(--radius-md);
+   overflow: hidden;
+   box-shadow: var(--shadow-md);
+   transition:  0.3s ease;
+}
+
+.portfolio-card:hover {
+   transform: translateY(-10px);
+   box-shadow: var(--shadow-elevation);
+}
+
+.project-image {
+   width: 100%;
+   height: auto;
+}
+
+.card-content {
+   padding: 20px;
+}
+
+.card-content h3 {
+   font-size: 1.4em;
+   margin-bottom: 10px;
+}
+
+.card-content p {
+   font-size: 1em;
+   color: var(--text-muted);
+   margin-bottom: 15px;
+}
+
+.tags {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+   margin-bottom: 15px;
+}
+
+.tags li {
+   background: var(--bg-body);
+   padding: 6px 12px;
+   font-size: 0.8em;
+   border-radius: var(--radius-sm);
+   color: var(--text-muted);
+}
+
+.view-case {
+   text-decoration: none;
+   color: var(--color-accent);
+   font-weight: bold;
+   font-size: 0.9em;
+}
+
+.view-case:hover {
+   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+   .portfolio-grid {
+      flex-direction: column;
+      align-items: center;
+   }
+   
+   .portfolio-grid .portfolio-card {
+      width: 100%;
+      max-width: 100%;
+   }
+}
 
 
 
@@ -1242,12 +1395,16 @@ in order to ensure older browser support as well */
    background: var(--bg-body);
    color: var(--text-primary);
    text-align: center;
+   text-transform: capitalize;
    padding: 15px clamp(1.5rem, 5vw, 3rem);
    z-index: 999;
    
    a {
-      margin-left: 15px;
       padding: 10px 20px;
+   }
+   
+   @media (max-width: 600px) {
+      font-size: 13px;
    }
 }
 
@@ -1276,7 +1433,7 @@ in order to ensure older browser support as well */
       margin-bottom: 10px;
    }
    
-   .section-description {
+   .section-subtitle {
       color: var(--text-primary);
       text-align: start;
       margin: 0;
