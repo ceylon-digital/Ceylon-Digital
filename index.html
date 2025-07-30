@@ -998,7 +998,7 @@
             <p data-aos="fade-up" class="accent-highlight">Our work</p>
             <h2 data-aos="fade-up" class="section-title">Portfolio</h2>
             <p data-aos="fade-in" class="section-subtitle">Explore some of our recent digital solutions</p>
-
+            
             <div data-aos="slide-up" class="actionBar">
                <div id="searchBar" class="searchBar">
                   <input type="text" id="searchInput" placeholder="Search projects..." />
@@ -1172,81 +1172,26 @@
       </section>
       
       
-      <!-- Promotions Section -->
-      <section data-aos="slide-up" id="promotions" class="promo-section">
-         <div class="container">
-            <h2 data-aos="fade-in" class="section-title">Unlock Your Brand’s Full Potential</h2>
-            <p data-aos="fade-in" class="subheadline">Get Professional Digital Services at Just <strong>40% of the Price</strong></p>
-            <div data-aos="fade-in" class="badge">🔥 Upto 60% OFF • Ends Soon</div>
-            <div data-aos="fade-in" class="timer" id="countdown">Offer ends in: --d --h --m --s</div>
-            <a data-aos="fade-in" href="./promotions/index.html" class="cta cta-primary-light">Claim My Discount</a>
-            <!-- <p data-aos="fade-up" class="trust">Trusted by 150+ Startups & Small Businesses</p> -->
-         </div>
-      </section>
-      
-      
-      
       <!-- Universal Promotions Banner -->
       <section id="promotions-banner" class="promo-banner-section">
          <div class="container">
             <div class="promo-content">
-               <h2 class="promo-title" data-aos="fade-up">Discover Offers That Elevate Your Brand</h2>
-               <p class="promo-subtitle" data-aos="fade-up" data-aos-delay="100">
+               <h2 data-aos="fade-up" class="promo-title" data-aos="fade-up">Discover Offers That Elevate Your Brand</h2>
+               <p data-aos="fade-up" class="promo-subtitle" data-aos="fade-up" data-aos-delay="100">
                   From design to digital strategy — explore exclusive deals on services crafted to grow your business.
                </p>
                <ul class="promo-highlights" data-aos="fade-up" data-aos-delay="200">
-                  <li>✅ Up to 60% Off Select Services</li>
-                  <li>✅ Bundle & Save on Web + SEO Packages</li>
-                  <li>✅ Free Strategy Call with Every New Project</li>
-                  <li>✅ Special Offers for Startups & Nonprofits</li>
+                  <li data-aos="fade-up">✅ Up to 60% Off Select Services</li>
+                  <li data-aos="fade-up">✅ Bundle & Save on Web + SEO Packages</li>
+                  <li data-aos="fade-up">✅ Free Strategy Call with Every New Project</li>
+                  <li data-aos="fade-up">✅ Special Offers for Startups & Nonprofits</li>
                </ul>
-               <a href="./promotions/index.html" class="cta cta-primary" data-aos="fade-up" data-aos-delay="300">
+               <a data-aos="fade-up" href="./promotions/index.html" class="cta cta-primary" data-aos="fade-up" data-aos-delay="300">
                   View All Current Promotions
                </a>
             </div>
          </div>
       </section>
-      
-      <style>
-         .promo-banner-section {
-            padding: 50px clamp(1.5rem, 5vw, 3rem);
-            background: var(--btn-primary-bg);
-            text-align: center;
-         }
-         
-         .promo-title {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-light);
-         }
-         
-         .promo-subtitle {
-            font-size: var(--h5-size);
-            margin-bottom: 2rem;
-            color: var(--text-light);
-         }
-         
-         .promo-highlights {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 2.5rem;
-         }
-         
-         .promo-highlights li {
-            margin: 0.5rem 0;
-            color: var(--text-light);
-         }
-         
-         .promo-banner-section .cta-primary {
-            padding: 0.75rem 1.5rem;
-            background: var(--bg-body);
-            color: var(--color-accent);
-            border-radius: var(--radius-sm);
-            font-weight: 600;
-         }
-      </style>
-      
-      
       
       
       <!-- Sticky CTA -->
@@ -1724,34 +1669,6 @@
          retina_detect: true
       });
    </script> -->
-   
-   
-   <!-- JavaScript: Countdown + Testimonials -->
-   <!--
-   <script>
-      // Countdown Timer
-      const countdown = document.getElementById('countdown');
-      const offerEnd = new Date();
-      offerEnd.setDate(offerEnd.getDate() + 3); // 3 days from now
-      
-      function updateCountdown() {
-         const now = new Date().getTime();
-         const distance = offerEnd - now;
-         
-         const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-         const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-         const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-         const s = Math.floor((distance % (1000 * 60)) / 1000);
-         
-         if (distance < 0) {
-            countdown.innerHTML = "Offer expired";
-         } else {
-            countdown.innerHTML = `Offer ends in: ${d}d ${h}h ${m}m ${s}s`;
-         }
-      }
-      setInterval(updateCountdown, 1000);
-   </script>
-   -->
 </body>
 
 </html>
