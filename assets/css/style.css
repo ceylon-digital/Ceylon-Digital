@@ -979,7 +979,7 @@ in order to ensure older browser support as well */
 
 
 .portfolio-section {
-   padding: 60px clamp(1.5rem, 5vw, 3rem);
+   padding: 100px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 97px;
 }
 
@@ -998,7 +998,7 @@ in order to ensure older browser support as well */
    text-align: center;
    font-size: var(--h5-size);
    color: var(--text-subheading);
-   margin-bottom: 50px;
+   margin-bottom: 30px;
 }
 
 
@@ -1063,7 +1063,7 @@ in order to ensure older browser support as well */
    border-radius: var(--radius-md);
    overflow: hidden;
    box-shadow: var(--shadow-md);
-   transition:  0.3s ease;
+   transition: 0.3s ease;
 }
 
 .portfolio-card:hover {
@@ -1321,68 +1321,44 @@ in order to ensure older browser support as well */
 
 
 
-.promo-section {
-   position: relative;
-   text-align: center;
-   background: var(--btn-primary-bg);
-   color: var(--text-light);
+.promo-banner-section {
    padding: 75px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 97px;
-   
-   .section-title {
-      text-align: center;
-      color: var(--text-light);
-      margin-bottom: 10px;
-   }
-   
-   .section-title::after {
-      display: none;
-   }
-   
-   .subheadline {
-      font-size: var(--h5-size);
-      color: var(--text-light);
-      margin: auto;
-      margin-bottom: 20px;
-   }
-   
-   .badge {
-      display: inline-block;
-      margin-bottom: 10px;
-      background-color: #f5b301;
-      /* Golden yellow */
-      color: #000000;
-      padding: 14px 28px;
-      font-weight: 800;
-      border: none;
-      border-radius: var(--radius-rounded);
-      box-shadow: var(--shadow-sm) transition: background-color 0.3s ease, box-shadow 0.3s ease;
-   }
-   
-   .badge:hover {
-      background-color: #e0a800;
-      /* Slightly darker on hover */
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-   }
-   
-   .timer {
-      font-size: 1.1em;
-      color: var(--text-light);
-      margin-top: 10px;
-   }
-   
-   .cta {
-      display: inline-block;
-      margin-top: 20px;
-   }
-   
-   .trust {
-      margin: auto;
-      margin-top: 20px;
-      font-size: 0.9em;
-      color: var(--text-light);
-      opacity: 0.85;
-   }
+   background: var(--btn-primary-bg);
+   text-align: center;
+}
+
+.promo-title {
+   font-weight: 700;
+   margin-bottom: 1rem;
+   color: var(--text-light);
+}
+
+.promo-subtitle {
+   font-size: var(--h5-size);
+   max-width: 800px;
+   margin: auto;
+   margin-bottom: 2rem;
+   color: var(--text-light);
+}
+
+.promo-highlights {
+   list-style: none;
+   padding: 0;
+   margin-bottom: 2.5rem;
+}
+
+.promo-highlights li {
+   margin: 0.5rem 0;
+   color: var(--text-light);
+}
+
+.promo-banner-section .cta-primary {
+   padding: 0.75rem 1.5rem;
+   background: var(--bg-body);
+   color: var(--color-accent);
+   border-radius: var(--radius-sm);
+   font-weight: 600;
 }
 
 
