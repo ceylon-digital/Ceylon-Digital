@@ -9,23 +9,22 @@ function renderProjects(projects) {
       }
       
       projects.forEach(project => {
-            const card = document.createElement('a');
-            card.href = project.detailsPage;
+            const card = document.createElement('div');
             card.className = 'portfolio-card';
             card.setAttribute('data-aos', 'fade-up');
-            card.innerHTML = `
-          <!-- <div class="iframe-container">
-                  <iframe src="${project.iframeSrc}"></iframe>
-               </div> -->
-               <div class="thumbnail-container">
-                  <img class="thumbnail" src="${project.thumbnailSrc}">
-               </div>
-               <div class="card-content">
-                  <h3 class="project-title">${project.title}</h3>
-                  <p class="project-description">${project.description}</p>
-                  <div class="view-more-btn cta cta-primary">View Live Site <i class="fas fa-external-link-alt"></i></div>
-               </div>
-            `;
+            card.innerHTML = `<div class="portfolio-card">
+                  <img src="${project.thumbnailSrc}" alt="Project 1" class="project-image" />
+                  <div class="card-content">
+                     <h3>${project.title}</h3>
+                     <p>${project.description}</p>
+                     <ul class="tags">
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>UI/UX</li>
+                     </ul>
+                     <a href="${project.detailsPage}" class="view-case">View case study <i class="fas fa-external-link-alt"></i></a>
+                  </div>
+               </div>`;
             container.appendChild(card);
       });
 }
