@@ -38,6 +38,10 @@ const widthSlider = document.getElementById('widthSlider');
 const heightSlider = document.getElementById('heightSlider');
 const widthValue = document.getElementById('widthValue');
 const heightValue = document.getElementById('heightValue');
+const project_container = document.getElementById('project-container');
+
+widthSlider.value = innerWidth;
+heightSlider.value = innerHeight;
 
 function updateIframeSize() {
    iframe.style.width = `${widthSlider.value}px`;
