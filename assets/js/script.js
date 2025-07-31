@@ -244,6 +244,7 @@ function updatePrices(currency) {
    applyDiscounts(currency);
 }
 
+/*
 function startCountdown() {
    const countdownEl = document.getElementById('countdown');
    const endDate = new Date();
@@ -269,7 +270,37 @@ function startCountdown() {
    updateTimer(); // initial
    setInterval(updateTimer, 1000);
 }
+*/
 
+
+// Replace `'2025-01-01T00:00:00'` with your desired target date in the format `YYYY-MM-DDTHH:MM:SS`.
+function startCountdown() {
+   const countdownEl = document.getElementById('countdown');
+   const targetDate = new Date('2025-09-01T00:00:00'); // Set your target date here
+   
+   function updateTimer() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      
+      if (distance < 0) {
+         countdownEl.textContent = "Expired";
+         clearInterval(intervalId); // stop interval
+         return;
+      }
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+   }
+   
+   updateTimer(); // initial
+   const intervalId = setInterval(updateTimer, 1000);
+}
+
+startCountdown();
 
 
 
