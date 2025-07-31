@@ -1127,7 +1127,8 @@ canvas.blob-canvas {
 
 .discount-timer {
    margin-top: 1rem;
-   font-size: var(--h5-size);
+   font-weight: 500;
+   font-size: var(--h4-size);
    color: var(--color-accent);
    text-align: center;
 }
@@ -1208,8 +1209,14 @@ canvas.blob-canvas {
 
 .pricing__original {
    text-decoration: line-through;
-   color: #999;
-   font-size: 0.9rem;
+   color: var(--text-muted);
+   font-size: 1rem;
+}
+
+.discounted__percentage {
+   font-weight: bold;
+   font-size: 0.9em;
+   color: var(--color-accent);
 }
 
 .pricing__discounted {
