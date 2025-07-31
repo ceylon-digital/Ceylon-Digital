@@ -17,7 +17,7 @@ header h1 {
 
 header p {
   color: var(--text-light);
-  font-size: var(--h5-size);
+  font-size: var(--h4-size);
   max-width: 800px;
   margin: 0 auto;
   
@@ -35,6 +35,7 @@ main {
   padding: 50px clamp(1.5rem, 5vw, 3rem);
   max-width: 1440px;
   margin: auto;
+  scroll-margin-top: 97px;
 }
 
 .services-grid {
