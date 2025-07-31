@@ -215,13 +215,14 @@ main {
 
 .team-card h3 {
    font-size: 1.4em;
+   font-weight: 600;
    margin: 0.5rem 0;
 }
 
 .team-card .role {
-   font-size: 1.4em;
+   font-size: 1.2em;
    font-weight: bold;
-   color: var(--color-accent);
+   color: var(--text-muted);
    margin-bottom: 0.5rem;
 }
 
@@ -252,10 +253,6 @@ main {
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
-   .team-section {
-      padding: 3rem 1rem;
-   }
-   
    .team-card {
       padding: 1.5rem;
    }
