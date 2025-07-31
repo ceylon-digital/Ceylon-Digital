@@ -1,12 +1,10 @@
 /* Convert to normal CSS before deployment 
 in order to ensure older browser support as well */
-.header {
+.multi-wrapper {
    position: relative;
-   transition: 0.3s ease;
-   overflow-x: hidden;
 }
 
-.header::before {
+.multi-wrapper::before {
    content: "";
    position: absolute;
    width: 100%;
@@ -23,7 +21,7 @@ in order to ensure older browser support as well */
    /* Optional semi-transparent bg */
 }
 
-.header canvas.blob-canvas {
+canvas.blob-canvas {
    position: absolute;
    top: 0;
    left: 0;
@@ -31,6 +29,11 @@ in order to ensure older browser support as well */
    width: 100%;
    height: 100%;
    pointer-events: none;
+}
+
+.header {
+   transition: 0.3s ease;
+   overflow-x: hidden;
 }
 
 .hero {
@@ -102,6 +105,58 @@ in order to ensure older browser support as well */
    flex-wrap: wrap;
    gap: 10px;
 }
+
+
+
+.marquee-section {
+   padding: 20px 0;
+   overflow: hidden;
+   
+   .marquee-content {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: nowrap;
+   }
+   
+   .marquee-content::-webkit-scrollbar {
+      display: none;
+   }
+   
+   .marquee-item {
+      flex: 0 0 auto;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+      /* Apply blur effect */
+      -webkit-backdrop-filter: blur(5px);
+      /* For Safari */
+      background-color: var(--bg-transparent);
+      /* Optional semi-transparent bg */
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      min-width: 200px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: 0.3s ease;
+      flex-shrink: 0;
+   }
+   
+   .marquee-item:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-elevation);
+   }
+   
+   .icon {
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+   }
+   
+   .label {
+      color: var(--text-muted);
+      font-weight: 600;
+   }
+}
+
 
 @media (max-width: 900px) {
    .header {
@@ -179,103 +234,9 @@ in order to ensure older browser support as well */
 
 
 
-.technologies-section {
-   padding: 50px clamp(1.5rem, 5vw, 3rem);
-   scroll-margin-top: 0;
-   overflow-x: hidden;
-   
-   h2 {
-      text-align: center;
-      color: var(--text-heading);
-      margin-bottom: 2rem;
-   }
-   
-   .marquee {
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 1.5rem 0;
-      border-radius: var(--radius-md);
-   }
-   
-   .marquee-track {
-      display: flex;
-      /* animation: marquee 30s linear infinite; */
-   }
-   
-   .marquee img {
-      height: 40px;
-      margin: 0 40px;
-      /* filter: var(--logo-default); */
-      transition: filter 0.3s ease;
-   }
-   
-   .marquee img:hover {
-      /* filter: var(--logo-hover); */
-   }
-}
-
-@keyframes marquee {
-   0% {
-      transform: translateX(0);
-   }
-   
-   100% {
-      transform: translateX(-100%);
-   }
-}
-
-
-
-
-.marquee-section {
-   background: var(--bg-surface);
-   padding: 20px 0;
-   overflow: hidden;
-   
-   .marquee-content {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: nowrap;
-   }
-   
-   .marquee-content::-webkit-scrollbar {
-      display: none;
-   }
-   
-   .marquee-item {
-      flex: 0 0 auto;
-      padding: 20px;
-      background: var(--bg-body);
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-md);
-      min-width: 200px;
-      font-weight: 600;
-      white-space: nowrap;
-      transition: 0.3s ease;
-      flex-shrink: 0;
-   }
-   
-   .marquee-item:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-elevation);
-   }
-   
-   .icon {
-      font-size: 1.5rem;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-   }
-   
-   .label {
-      color: var(--text-muted);
-      font-weight: 600;
-   }
-}
-
 
 
 .about-section {
-   background: var(--bg-surface);
    padding: 150px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 97px;
    overflow-x: hidden;
@@ -304,7 +265,7 @@ in order to ensure older browser support as well */
    .about-image img {
       width: 100%;
       max-width: 500px;
-      margin: 0 auto;
+      margin: auto;
    }
    
    .about-text {
