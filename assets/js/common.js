@@ -32,7 +32,50 @@ navItems.forEach(item => {
 // Hide preloader
 onload = () => {
    const preloader = document.querySelector('.preloader');
-   setTimeout(() => preloader.style.display = 'none');
+   setTimeout(() => {
+      preloader.style.display = 'none';
+      var url = 'https://cdn.waplus.io/waplus-crm/settings/ossembed.js';
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = url;
+      var options = {
+         "enabled": true,
+         "chatButtonSetting": {
+            "backgroundColor": "#16BE45",
+            "ctaText": "",
+            "borderRadius": "8",
+            "marginLeft": "20",
+            "marginBottom": "20",
+            "marginRight": "20",
+            "position": "right",
+            "textColor": "#ffffff",
+            "phoneNumber": "94767855906",
+            "messageText": "Welcome to Ceylon Digital",
+            "trackClick": true
+         },
+         "brandSetting": {
+            "brandName": "Ceylon Digital",
+            "brandSubTitle": "Typically replies within an hour",
+            "headerTextColor": "#fff",
+            "brandImg": "https://scrm-data-us-oss.oss-us-west-1.aliyuncs.com/sender/whatsapp_replace_crisp/logo.png",
+            "welcomeText": "Hi,there!\nHow can I help you?",
+            "messageText": "Hello, I have a question about {{page_link}}",
+            "backgroundColor": "#0a5f54",
+            "ctaText": "Start Chat",
+            "borderRadius": "20",
+            "autoShow": false,
+            "btnColor": "#16BE45",
+            "phoneNumber": "94767855906",
+            "trackClick": true
+         }
+      }
+      s.onload = function() {
+         CreateWhatsappChatWidget(options);
+      };
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+   });
 };
 
 
@@ -166,6 +209,7 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => observer.observe(section));
 */
+
 const observer = new IntersectionObserver(entries => {
    let mostVisible = null;
    let maxRatio = 0;
@@ -189,63 +233,14 @@ sections.forEach(section => observer.observe(section));
 
 
 
-
-
-
-// Button one from some service
 /*
-var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "94767855906", "welcomeMessage": "Hello!", "zIndex": 999999, "btnColorScheme": "light" };
+var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "94767855906", "welcomeMessage": "Hello!", "zIndex": 999, "btnColorScheme": "light" };
 var wa_widgetSetting = { "title": "Ceylon Digital", "subTitle": "Typically replies within an hour", "headerBackgroundColor": "#16BE45", "headerColorScheme": "light", "greetingText": "Hi there! \nHow can I help you?", "ctaText": "Start Chat", "btnColor": "#16BE45", "cornerRadius": 40, "welcomeMessage": "Hello", "btnColorScheme": "light", "brandImage": "./assets/icons/logo.svg", "darkHeaderColorScheme": { "title": "#333333", "subTitle": "#4F4F4F" } };
 window.onload = () => {
    _waEmbed(wa_btnSetting, wa_widgetSetting);
 };
 */
 
-
-// Button two from a different service, choose what suits best
-/*
-var url = 'https://cdn.waplus.io/waplus-crm/settings/ossembed.js';
-var s = document.createElement('script');
-s.type = 'text/javascript';
-s.async = true;
-s.src = url;
-var options = {
-   "enabled": true,
-   "chatButtonSetting": {
-      "backgroundColor": "#16BE45",
-      "ctaText": "",
-      "borderRadius": "8",
-      "marginLeft": "20",
-      "marginBottom": "20",
-      "marginRight": "20",
-      "position": "right",
-      "textColor": "#ffffff",
-      "phoneNumber": "94767855906",
-      "messageText": "Welcome to Ceylon Digital",
-      "trackClick": true
-   },
-   "brandSetting": {
-      "brandName": "Ceylon Digital",
-      "brandSubTitle": "Typically replies within an hour",
-      "headerTextColor": "#fff",
-      "brandImg": "https://scrm-data-us-oss.oss-us-west-1.aliyuncs.com/sender/whatsapp_replace_crisp/logo.png",
-      "welcomeText": "Hi,there!\nHow can I help you?",
-      "messageText": "Hello, I have a question about {{page_link}}",
-      "backgroundColor": "#0a5f54",
-      "ctaText": "Start Chat",
-      "borderRadius": "20",
-      "autoShow": false,
-      "btnColor": "#16BE45",
-      "phoneNumber": "94767855906",
-      "trackClick": true
-   }
-}
-s.onload = function() {
-   CreateWhatsappChatWidget(options);
-};
-var x = document.getElementsByTagName('script')[0];
-x.parentNode.insertBefore(s, x);
-*/
 
 
 
