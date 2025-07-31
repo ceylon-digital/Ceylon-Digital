@@ -28,54 +28,53 @@ navItems.forEach(item => {
 
 
 
+const preloader = document.querySelector('.preloader');
 
 // Hide preloader
 onload = () => {
-   const preloader = document.querySelector('.preloader');
-   setTimeout(() => {
-      preloader.style.display = 'none';
-      var url = 'https://cdn.waplus.io/waplus-crm/settings/ossembed.js';
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = url;
-      var options = {
-         "enabled": true,
-         "chatButtonSetting": {
-            "backgroundColor": "#16BE45",
-            "ctaText": "",
-            "borderRadius": "8",
-            "marginLeft": "20",
-            "marginBottom": "20",
-            "marginRight": "20",
-            "position": "right",
-            "textColor": "#ffffff",
-            "phoneNumber": "94767855906",
-            "messageText": "Welcome to Ceylon Digital",
-            "trackClick": true
-         },
-         "brandSetting": {
-            "brandName": "Ceylon Digital",
-            "brandSubTitle": "Typically replies within an hour",
-            "headerTextColor": "#fff",
-            "brandImg": "https://scrm-data-us-oss.oss-us-west-1.aliyuncs.com/sender/whatsapp_replace_crisp/logo.png",
-            "welcomeText": "Hi,there!\nHow can I help you?",
-            "messageText": "Hello, I have a question about {{page_link}}",
-            "backgroundColor": "#0a5f54",
-            "ctaText": "Start Chat",
-            "borderRadius": "20",
-            "autoShow": false,
-            "btnColor": "#16BE45",
-            "phoneNumber": "94767855906",
-            "trackClick": true
-         }
+   preloader.style.display = 'none';
+   
+   var url = 'https://cdn.waplus.io/waplus-crm/settings/ossembed.js';
+   var s = document.createElement('script');
+   s.type = 'text/javascript';
+   s.async = true;
+   s.src = url;
+   var options = {
+      "enabled": true,
+      "chatButtonSetting": {
+         "backgroundColor": "#16BE45",
+         "ctaText": "",
+         "borderRadius": "8",
+         "marginLeft": "20",
+         "marginBottom": "20",
+         "marginRight": "20",
+         "position": "right",
+         "textColor": "#ffffff",
+         "phoneNumber": "94767855906",
+         "messageText": "Welcome to Ceylon Digital",
+         "trackClick": true
+      },
+      "brandSetting": {
+         "brandName": "Ceylon Digital",
+         "brandSubTitle": "Typically replies within an hour",
+         "headerTextColor": "#fff",
+         "brandImg": "https://scrm-data-us-oss.oss-us-west-1.aliyuncs.com/sender/whatsapp_replace_crisp/logo.png",
+         "welcomeText": "Hi,there!\nHow can I help you?",
+         "messageText": "Hello, I have a question about {{page_link}}",
+         "backgroundColor": "#0a5f54",
+         "ctaText": "Start Chat",
+         "borderRadius": "20",
+         "autoShow": false,
+         "btnColor": "#16BE45",
+         "phoneNumber": "94767855906",
+         "trackClick": true
       }
-      s.onload = function() {
-         CreateWhatsappChatWidget(options);
-      };
-      var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
-   });
+   }
+   s.onload = function() {
+      CreateWhatsappChatWidget(options);
+   };
+   var x = document.getElementsByTagName('script')[0];
+   x.parentNode.insertBefore(s, x);
 };
 
 
