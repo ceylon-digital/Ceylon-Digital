@@ -87,11 +87,10 @@ canvas.blob-canvas {
 }
 
 .hero .hero-left .headline {
-   font-weight: 750;
+   font-weight: 700;
    margin-bottom: 20px;
    color: var(--text-heading);
    letter-spacing: 1px;
-   text-transform: uppercase;
 }
 
 .hero .hero-left .subheading {
@@ -159,10 +158,6 @@ canvas.blob-canvas {
 
 
 @media (max-width: 900px) {
-   .header {
-      padding-top: 30px;
-   }
-   
    .hero {
       flex-direction: column-reverse;
       text-align: center;
