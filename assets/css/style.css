@@ -203,9 +203,8 @@ canvas.blob-canvas {
 
 .container .section-subtitle {
    color: var(--text-primary);
-   font-size: var(--h5-size);
    text-align: center;
-   max-width: 800px;
+   max-width: 70%;
    margin: auto;
    margin-bottom: 50px;
 }
@@ -388,7 +387,6 @@ canvas.blob-canvas {
       .card-left {
          transform: rotateY(15deg) scale(1.05);
          transform-origin: left center;
-         background: linear-gradient(90deg, #3B82F6, var(--bg-surface));
       }
       
       .card-middle {
@@ -399,7 +397,6 @@ canvas.blob-canvas {
       .card-right {
          transform: rotateY(-15deg) scale(1.05);
          transform-origin: right center;
-         background: linear-gradient(-90deg, #3B82F6, var(--bg-surface));
       }
       
       /* Hover Effects */
@@ -673,8 +670,7 @@ canvas.blob-canvas {
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-md);
       text-align: left;
-      /* width: calc(33.33% - 20px); */
-      max-width: 400px;
+      width: calc(33.33% - 20px);
       transition: 0.3s ease-in-out;
       overflow: hidden;
    }
