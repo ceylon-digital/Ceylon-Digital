@@ -86,7 +86,7 @@ canvas.blob-canvas {
    margin-bottom: 20px;
 }
 
-.hero .hero-left h1 {
+.hero .hero-left .headline {
    font-weight: 750;
    margin-bottom: 20px;
    color: var(--text-heading);
@@ -94,7 +94,7 @@ canvas.blob-canvas {
    text-transform: uppercase;
 }
 
-.hero .hero-left p {
+.hero .hero-left .subheading {
    color: var(--text-muted);
    font-size: var(--h6-size);
    margin-bottom: 30px;
@@ -180,10 +180,6 @@ canvas.blob-canvas {
    .hero .hero-right {
       flex: 1;
       display: none;
-   }
-   
-   .hero .hero-left .logo {
-      justify-content: center;
    }
    
    .hero .cta-buttons {
