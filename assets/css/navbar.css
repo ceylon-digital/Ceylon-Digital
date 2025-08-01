@@ -45,7 +45,7 @@
 
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   align-items: center;
 }
 
@@ -174,7 +174,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .menu-icon {
     display: block;
   }
