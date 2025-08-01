@@ -39,7 +39,7 @@ canvas.blob-canvas {
 .hero {
    max-width: 1440px;
    margin: 0 auto;
-   padding: clamp(8rem, 12vw, 11rem) clamp(1.5rem, 5vw, 3rem);
+   padding: 10rem clamp(1.5rem, 5vw, 3rem);
    display: flex;
    gap: 20px;
    flex-wrap: wrap-reverse;
@@ -91,6 +91,7 @@ canvas.blob-canvas {
    margin-bottom: 20px;
    color: var(--text-heading);
    letter-spacing: 1px;
+   word-spacing: 5px;
 }
 
 .hero .hero-left .subheading {
@@ -159,6 +160,8 @@ canvas.blob-canvas {
 
 @media (max-width: 900px) {
    .hero {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
       flex-direction: column-reverse;
       text-align: center;
    }
