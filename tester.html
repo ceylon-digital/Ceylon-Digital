@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Resizable Iframe</title>
+   <style>
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+      
+      body {
+         font-family: Arial, sans-serif;
+         background-color: #111;
+         color: #333;
+      }
+      
+      iframe {
+         display: block;
+         border: 1px solid #333;
+         margin: 0 auto;
+         background-color: #fff;
+         box-sizing: content-box;
+      }
+      
+      .slider-container {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 20px 0;
+      }
+      
+      input[type="range"] {
+         width: 600px;
+         margin: 0 20px;
+      }
+      
+      .output {
+         font-size: 1.2rem;
+         font-weight: bold;
+         min-width: 80px;
+         text-align: center;
+      }
+      
+      .controls {
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+         margin-top: 30px;
+      }
+      
+      .controls input[type="number"] {
+         width: 150px;
+         padding: 12px 15px;
+         font-size: 1rem;
+         font-weight: bold;
+         border: 2px solid #333;
+         border-radius: 50px;
+         outline: none;
+      }
+      
+      .submitBtn {
+         padding: 12px 30px;
+         font-size: 1rem;
+         font-weight: bold;
+         color: #fff;
+         background-color: #007bff;
+         border: none;
+         border-radius: 50px;
+         cursor: pointer;
+         transition: background-color 0.3s;
+      }
+      
+      .submitBtn:hover {
+         background-color: #0056b3;
+      }
+   </style>
+</head>
+
+<body>
+   
+   <iframe src="./index.html"></iframe>
+   <!-- <iframe src="https://inspirenix.com"></iframe> -->
+   
+   <!-- Width Slider -->
+   <div class="slider-container">
+      <span>Width:</span>
+      <input class="width-slider" type="range" min="300" max="1980" value="1550">
+      <div class="output w-output">1300px</div>
+   </div>
+   
+   <!-- Height Slider -->
+   <div class="slider-container">
+      <span>Height:</span>
+      <input class="height-slider" type="range" min="300" max="2500" value="900">
+      <div class="output h-output">700px</div>
+   </div>
+   
+   <!-- Manual Input Controls -->
+   <div class="controls">
+      <input type="number" id="width-input" placeholder="Width (px)">
+      <input type="number" id="height-input" placeholder="Height (px)">
+      <button class="submitBtn">Resize</button>
+   </div>
+   
+   <script>
+      const iframe = document.querySelector('iframe');
+      const sliderW = document.querySelector('.width-slider');
+      const outputW = document.querySelector('.w-output');
+      const sliderH = document.querySelector('.height-slider');
+      const outputH = document.querySelector('.h-output');
+      const inputWidth = document.getElementById('width-input');
+      const inputHeight = document.getElementById('height-input');
+      const submitBtn = document.querySelector('.submitBtn');
+      
+      // Initialize iframe size
+      function updateIframeSize(width, height) {
+         iframe.style.width = width + 'px';
+         iframe.style.height = height + 'px';
+         outputW.textContent = width + 'px';
+         outputH.textContent = height + 'px';
+      }
+      
+      updateIframeSize(sliderW.value, sliderH.value);
+      
+      // Slider event listeners
+      sliderW.addEventListener('input', () => {
+         updateIframeSize(sliderW.value, iframe.offsetHeight);
+      });
+      
+      sliderH.addEventListener('input', () => {
+         updateIframeSize(iframe.offsetWidth, sliderH.value);
+      });
+      
+      // Button click for manual input
+      submitBtn.addEventListener('click', () => {
+         const widthVal = parseInt(inputWidth.value);
+         const heightVal = parseInt(inputHeight.value);
+         
+         if (widthVal > 0) {
+            iframe.style.width = widthVal + 'px';
+            outputW.textContent = widthVal + 'px';
+            sliderW.value = widthVal;
+         }
+         
+         if (heightVal > 0) {
+            iframe.style.height = heightVal + 'px';
+            outputH.textContent = heightVal + 'px';
+            sliderH.value = heightVal;
+         }
+      });
+   </script>
+   
+</body>
+
+</html>
