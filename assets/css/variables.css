@@ -102,8 +102,8 @@ html {
    --h6-size: clamp(0.9rem, 1vw, 1rem);
    --p-size: clamp(0.9rem, 1vw, 1rem);
    
-   --h1-size: clamp(1.9rem, 3vw, 2.5rem);
-   --h2-size: clamp(1.6rem, 2.5vw, 2rem);
+   --h1-size: clamp(1.9rem, 3vw, 2.7rem);
+   --h2-size: clamp(1.6rem, 2.5vw, 2.2rem);
    --h3-size: clamp(1.25rem, 2.5vw, 1.5rem);
    --h4-size: clamp(1.2rem, 2vw, 1.4rem);
    --h5-size: clamp(1rem, 1.5vw, 1.3rem);
@@ -166,13 +166,15 @@ html {
   --text-heading: #000000;         /* Strong headings */
   --text-subheading: #1A1A1A;      /* Subheadings, captions, metadata */
   --text-muted: #6B7280;           /* Muted/dim text for less emphasis */
-  --text-light: #FFFFFF;     /* Text color for primary buttons */
+  --text-light: #FFFFFF;           /* Text color for light text */
+  --text-dark: #1C1C1C;            /* Text color for dark text */
   --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
 
   /* Background Colors */
   --bg-body: #FFFFFF;              /* Page background */
-  --bg-surface: #F6F8FB;           /* Cards and containers (matches dark theme's surface) */
-  --bg-surface-dark: #4A4A4A;
+  --bg-surface: #F1F4F8;           /* Cards and containers (matches dark theme's surface) */
+  --bg-surface-light: #F6F8FB;
+  --bg-surface-dark: #003ACC;
   --bg-navbar: #FFFFFF;            /* Navbar background */
   --bg-alt: #E6ECF5;               /* Alternative background surface for contrast */
   --bg-transparent: rgba(255, 255, 255, 0.3);
@@ -209,12 +211,14 @@ html {
   --text-heading: #FFFFFF;           /* Clean white for strong emphasis */
   --text-subheading: #E4E8F0;        /* Cool light gray-blue */
   --text-muted: #64748B;             /* Muted slate for de-emphasis */
-  --text-light: #FFFFFF;
+  --text-light: #FFFFFF;             /* Text color for light text */
+  --text-dark: #1C1C1C;              /* Text color for dark text */
   --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
 
   /* Background Colors */
   --bg-body: #0A0E1C;                /* Slightly deeper, cooler black */
   --bg-surface: #121826;             /* Dark slate for cards/containers */
+  --bg-surface-light: #F6F8FB;
   --bg-surface-dark: #121826;
   --bg-navbar: #0C111F;              /* Mid-dark tone for nav */
   --bg-alt: #1A2135;                 /* Cool navy-alt for contrast sections */
