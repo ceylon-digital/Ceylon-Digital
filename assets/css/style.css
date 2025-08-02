@@ -58,14 +58,14 @@ canvas.blob-canvas {
    flex-wrap: wrap-reverse;
    align-items: center;
    justify-content: space-between;
-   z-index: 10;
-
+   z-index: 2;
+   
    backdrop-filter: blur(20px);
-   Apply blur effect
+   /* Apply blur effect */
    -webkit-backdrop-filter: blur(20px);
-   For Safari
+   /* For Safari */
    background-color: var(--bg-transparent);
-   Optional semi-transparent bg
+   /* Optional semi-transparent bg */
 }
 
 
@@ -131,6 +131,13 @@ canvas.blob-canvas {
 .marquee-section {
    padding: 20px 0;
    overflow: hidden;
+   
+   backdrop-filter: blur(20px);
+   /* Apply blur effect */
+   -webkit-backdrop-filter: blur(20px);
+   /* For Safari */
+   background-color: var(--bg-transparent);
+   /* Optional semi-transparent bg */
 }
 
 .marquee-content {
