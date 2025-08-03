@@ -444,7 +444,7 @@ section {
    scroll-margin-top: 97px;
    
    .why-us-container {
-      max-width: 1440px;
+      max-width: 1200px;
       margin: 0 auto;
       text-align: center;
    }
@@ -576,7 +576,8 @@ section {
 
 .process-section {
    background: var(--bg-surface);
-   padding: 80px clamp(1.5rem, 5vw, 3rem);
+   padding: 100px clamp(1.5rem, 5vw, 3rem);
+   scroll-margin-top: 97px;
 }
 
 .process-section .container {
@@ -1018,7 +1019,7 @@ section {
 }
 
 .portfolio-section .container {
-   max-width: 1240px;
+   max-width: 1200px;
    margin: auto;
 }
 
@@ -1399,7 +1400,14 @@ section {
    color: var(--text-light);
 }
 
-.promo-banner-section .cta-primary {}
+.promo-banner-section .cta-primary {
+   border-radius: var(--radius-rounded) !important;
+}
+
+.promo-banner-section .cta-primary:hover {
+   background: var(--color-accent) !important;
+   color: var(--text-light) !important;
+}
 
 
 
@@ -1436,7 +1444,7 @@ section {
    scroll-margin-top: 97px;
    
    .container {
-      max-width: 1440px;
+      max-width: 1200px;
       margin: auto;
    }
    
