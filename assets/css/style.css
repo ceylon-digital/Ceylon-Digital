@@ -228,6 +228,8 @@ section {
    transition: background 0.3s ease;
 }
 
+
+
 .container {
    width: 100%;
    max-width: 1200px;
@@ -1749,5 +1751,12 @@ section {
       .container {
          text-align: left;
       }
+   }
+}
+
+@media (max-width: 768px) {
+   .main-section {
+      padding-top: 60px;
+      padding-bottom: 60px;
    }
 }
