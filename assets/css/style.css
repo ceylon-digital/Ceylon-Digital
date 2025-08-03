@@ -37,6 +37,13 @@ in order to ensure older browser support as well */
    top: 0;
    left: 0;
    z-index: -1;
+   
+   backdrop-filter: blur(20px);
+   /* Apply blur effect */
+   -webkit-backdrop-filter: blur(20px);
+   /* For Safari */
+   background-color: var(--bg-transparent);
+   /* Optional semi-transparent bg */
 }
 
 canvas.blob-canvas {
@@ -59,13 +66,6 @@ canvas.blob-canvas {
    align-items: center;
    justify-content: space-between;
    z-index: 2;
-   
-   backdrop-filter: blur(20px);
-   /* Apply blur effect */
-   -webkit-backdrop-filter: blur(20px);
-   /* For Safari */
-   background-color: var(--bg-transparent);
-   /* Optional semi-transparent bg */
 }
 
 
