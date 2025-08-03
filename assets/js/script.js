@@ -141,11 +141,11 @@ marquee.addEventListener('mouseleave', () => marqueeTween.resume());
 // Scroll animation using Intersection Observer
 const steps = document.querySelectorAll('.timeline-step');
 
-const observer_2 = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
    entries.forEach(entry => {
       if (entry.isIntersecting) {
          entry.target.classList.add('visible');
-         observer_2.unobserve(entry.target); // Animate only once
+         observer.unobserve(entry.target);
       }
    });
 }, {
@@ -153,9 +153,8 @@ const observer_2 = new IntersectionObserver((entries) => {
 });
 
 steps.forEach(step => {
-   observer_2.observe(step);
+   observer.observe(step);
 });
-
 
 
 
@@ -271,7 +270,6 @@ function startCountdown() {
    setInterval(updateTimer, 1000);
 }
 */
-
 
 // Replace `'2025-01-01T00:00:00'` with your desired target date in the format `YYYY-MM-DDTHH:MM:SS`.
 function startCountdown() {
