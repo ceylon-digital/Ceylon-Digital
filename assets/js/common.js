@@ -6,25 +6,29 @@ AOS.init({
    once: true, // Animation happens only once
 });
 
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-
-// Navbar toggling
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-links');
-const navItems = navMenu.querySelectorAll('.nav-item');
-
-navToggle.addEventListener('click', () => {
-   navToggle.classList.toggle('active');
-   navMenu.classList.toggle('active');
+hamburger.addEventListener('click', () => {
+   const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+   hamburger.setAttribute('aria-expanded', !expanded);
+   // hamburger.classList.toggle('active');
+   navLinks.classList.toggle('active');
 });
 
-navItems.forEach(item => {
-   item.addEventListener('click', () => {
-      setTimeout(() => {
-         navToggle.checked = false;
-      }, 300);
-   });
-});
+
+
+// Add "fixed" class to navbar on scroll
+const navbar = document.querySelector('.navbar');
+
+onscroll = () => {
+   if (pageYOffset > 0) {
+      navbar.classList.add('fixed');
+   }
+   else if (pageYOffset === 0) {
+      navbar.classList.remove('fixed');
+   }
+};
 
 
 
@@ -75,20 +79,6 @@ onload = () => {
    };
    var x = document.getElementsByTagName('script')[0];
    x.parentNode.insertBefore(s, x);
-};
-
-
-
-// Add "fixed" class to navbar on scroll
-const navbar = document.querySelector('.navbar');
-
-onscroll = () => {
-   if (pageYOffset > 0) {
-      navbar.classList.add('fixed');
-   }
-   else if (pageYOffset === 0) {
-      navbar.classList.remove('fixed');
-   }
 };
 
 
@@ -193,41 +183,28 @@ addRippleEffect('.cta, .btn, .card, .quote');
 
 
 // Scrollspy
-const sections = document.querySelectorAll('.main-section');
-const navLinks = document.querySelectorAll('.nav-item>a');
-/*
-const observer = new IntersectionObserver(entries => {
-   entries.forEach(entry => {
-      if (entry.isIntersecting) {
-         navLinks.forEach(link => link.classList.remove('active'));
-         const link = document.querySelector(`a[href="#${entry.target.id}"]`);
-         if (link) link.classList.add('active');
-      }
-   });
-}, { threshold: 0.5 });
+// const sections = document.querySelectorAll('.main-section');
+// const navLinks = document.querySelectorAll('.nav-item>a');
 
-sections.forEach(section => observer.observe(section));
-*/
+// const observer = new IntersectionObserver(entries => {
+//    let mostVisible = null;
+//    let maxRatio = 0;
 
-const observer = new IntersectionObserver(entries => {
-   let mostVisible = null;
-   let maxRatio = 0;
-   
-   entries.forEach(entry => {
-      if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
-         mostVisible = entry;
-         maxRatio = entry.intersectionRatio;
-      }
-   });
-   
-   if (mostVisible) {
-      navLinks.forEach(link => link.classList.remove('active'));
-      const link = document.querySelector(`a[href="#${mostVisible.target.id}"]`);
-      if (link) link.classList.add('active');
-   }
-}, { threshold: Array.from({ length: 101 }, (_, i) => i / 100) }); // granular thresholds
+//    entries.forEach(entry => {
+//       if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+//          mostVisible = entry;
+//          maxRatio = entry.intersectionRatio;
+//       }
+//    });
 
-sections.forEach(section => observer.observe(section));
+//    if (mostVisible) {
+//       navLinks.forEach(link => link.classList.remove('active'));
+//       const link = document.querySelector(`a[href="#${mostVisible.target.id}"]`);
+//       if (link) link.classList.add('active');
+//    }
+// }, { threshold: Array.from({ length: 101 }, (_, i) => i / 100) }); // granular thresholds
+
+// sections.forEach(section => observer.observe(section));
 
 
 
