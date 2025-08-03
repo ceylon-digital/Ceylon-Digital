@@ -81,11 +81,11 @@
   top: 150%;
   left: 0;
   background: var(--bg-navbar);
-  padding: 1.5rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-elevation);
   display: none;
   flex-direction: column;
-  min-width: 350px;
+  width: max-content;
   z-index: 999;
 }
 
@@ -94,7 +94,8 @@
 }
 
 .dropdown-menu a {
-  padding: 0.6rem 0;
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
   color: var(--link-color);
 }
 
