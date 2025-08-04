@@ -16,9 +16,9 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
-   gap: 30px;
    max-width: 1440px;
    margin: 0 auto 50px;
+   gap: 30px;
 }
 
 .footer-branding {
@@ -45,6 +45,7 @@
 }
 
 .footer-branding p {
+   font-weight: 500;
    color: var(--text-muted);
 }
 
@@ -58,6 +59,7 @@
 }
 
 .footer-newsletter p {
+   font-weight: 500;
    color: var(--text-muted);
 }
 
@@ -108,9 +110,15 @@
    margin-bottom: 8px;
 }
 
-.footer-col a {
-   text-transform: capitalize;
-   color: var(--text-muted);
+.footer-col li a,
+.footer-col li span {
+   letter-spacing: .5px;
+   font-weight: 500;
+   color: var(--text-primary);
+}
+
+.footer-col li span {
+   display: none;
 }
 
 .footer-col a:hover {
@@ -120,7 +128,7 @@
 .footer-bottom {
    position: relative;
    border-top: 1px solid var(--border-default);
-   padding-top: 20px;
+   padding-top: 40px;
    display: flex;
    gap: 10px;
    justify-content: space-between;
