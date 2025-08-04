@@ -24,6 +24,7 @@
 
 .navbar-container .action {
   display: flex;
+  gap: 10px;
   align-items: center;
 }
 
@@ -42,7 +43,6 @@
 .hamburger {
   display: none;
   font-size: 1.5rem;
-  margin-left: 10px;
   background: none;
   border: none;
   padding: 0;
@@ -107,6 +107,7 @@
 
 #theme-toggle {
   padding: 0;
+  margin-right: 20px;
   background: none;
   color: var(--link-color);
 }
