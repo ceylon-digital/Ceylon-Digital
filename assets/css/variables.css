@@ -94,20 +94,12 @@ html {
    --h6-size: clamp(0.625rem, 1.5vw, 0.875rem);
    --p-size: clamp(0.75rem, 2vw, 1rem);
 
-   --h1-size: clamp(1.8rem, calc(1.766vw + 1.225rem), 2.75rem);
-   --h2-size: clamp(1.6rem, 2.25vw, 2.5rem);
-   --h3-size: clamp(1.25rem, 1.75vw, 1.5rem);
-   --h4-size: clamp(1.2rem, 1.4vw, 1.4rem);
-   --h5-size: clamp(1rem, 1.1vw, 1.3rem);
-   --h6-size: clamp(0.9rem, 1vw, 1rem);
-   --p-size: clamp(0.9rem, 1vw, 1rem);
-   
    --h1-size: clamp(1.9rem, 3vw, 2.7rem);
    --h2-size: clamp(1.6rem, 2.5vw, 2.2rem);
-   --h3-size: clamp(1.25rem, 2.5vw, 1.5rem);
-   --h4-size: clamp(1.2rem, 2vw, 1.4rem);
-   --h5-size: clamp(1rem, 1.5vw, 1.3rem);
-   --h6-size: clamp(1.1rem, 1.5vw, 1.2rem);
+   --h3-size: clamp(1.3rem, 2vw, 1.8rem);
+   --h4-size: clamp(1.2rem, 1.8vw, 1.6rem);
+   --h5-size: clamp(1.05rem, 1.5vw, 1.3rem);
+   --h6-size: clamp(1rem, 1.2vw, 1.2rem);
    --p-size: 1rem;
 }
 
@@ -174,7 +166,7 @@ html {
   --bg-body: #FFFFFF;              /* Page background */
   --bg-surface: #F1F4F8;           /* Cards and containers (matches dark theme's surface) */
   --bg-surface-light: #F6F8FB;
-  --bg-surface-dark: #003ACC;
+  --bg-surface-dark: #121826;
   --bg-navbar: #FFFFFF;            /* Navbar background */
   --bg-alt: #E6ECF5;               /* Alternative background surface for contrast */
   --bg-transparent: rgba(255, 255, 255, 0.3);
@@ -234,7 +226,7 @@ html {
   /* Accent & Links */
   --color-accent: #2563EB;           /* Bright cyan from floating elements */
   --link-color: #60A5FA;             /* Base hero-blue */
-  --link-hover-color: #93C5FD;       /* Lighter blue for hover effect */
+  --link-hover-color: #2563EB;       /* Lighter blue for hover effect */
 }
 
 
