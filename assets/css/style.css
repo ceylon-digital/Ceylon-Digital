@@ -1208,10 +1208,14 @@ section {
 
 .discount-timer {
    margin-top: 1rem;
-   font-weight: 500;
-   font-size: var(--h4-size);
+   font-weight: 600;
+   font-size: var(--h5-size);
    color: var(--color-accent);
    text-align: center;
+}
+
+.discount-timer strong {
+   font-weight: 600;
 }
 
 /* .pricing__grid {
