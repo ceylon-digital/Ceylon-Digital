@@ -6,15 +6,106 @@ AOS.init({
    once: true, // Animation happens only once
 });
 
+/*
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
    hamburger.setAttribute('aria-expanded', !expanded);
-   // hamburger.classList.toggle('active');
+   hamburger.classList.toggle('active');
    navLinks.classList.toggle('active');
 });
+*/
+
+
+
+
+
+const menuToggle = document.getElementById('menu-toggle');
+const closeSidebar = document.getElementById('close-sidebar');
+const sidebar = document.querySelector('.sidebar');
+const overlay = document.getElementById('overlay');
+const dropdowns = document.querySelectorAll('.dropdown > a');
+const themeSelect = document.getElementById('theme-select');
+
+// === SIDEBAR TOGGLE ===
+menuToggle.addEventListener('click', () => {
+   const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+   menuToggle.setAttribute('aria-expanded', !expanded);
+   sidebar.classList.add('open');
+   overlay.classList.add('active');
+});
+
+closeSidebar.addEventListener('click', () => {
+   const expanded = menuToggle.getAttribute('aria-expanded') === 'false';
+   menuToggle.setAttribute('aria-expanded', !expanded);
+   sidebar.classList.remove('open');
+   overlay.classList.remove('active');
+});
+
+overlay.addEventListener('click', () => {
+   sidebar.classList.remove('open');
+   overlay.classList.remove('active');
+});
+
+// === DROPDOWN TOGGLES ===
+dropdowns.forEach(link => {
+   link.addEventListener('click', () => {
+      const submenu = link.nextElementSibling;
+      submenu.classList.toggle('open');
+   });
+});
+
+// === THEME MANAGEMENT ===
+
+const setTheme = (mode) => {
+   if (mode === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+   } else if (mode === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+   } else {
+      // Auto mode based on system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+   }
+};
+
+const saveThemePreference = (mode) => {
+   localStorage.setItem('theme', mode);
+};
+
+const loadThemePreference = () => {
+   const saved = localStorage.getItem('theme');
+   const theme = saved || 'auto';
+   themeSelect.value = theme;
+   setTheme(theme);
+};
+
+// Apply theme when user changes it
+themeSelect.addEventListener('change', (e) => {
+   const selected = e.target.value;
+   saveThemePreference(selected);
+   setTheme(selected);
+});
+
+// System theme changes (only applies when in Auto mode)
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+   if (themeSelect.value === 'auto') {
+      setTheme('auto');
+   }
+});
+
+// Init on page load
+loadThemePreference();
+
+
+
+
+
+
+
+
 
 
 
