@@ -174,7 +174,7 @@ canvas.blob-canvas {
 
 .marquee-item:hover {
    transform: translateY(-10px);
-   color: var(--color-accent);
+   color: var(--accent);
    box-shadow: var(--shadow-elevation);
 }
 
@@ -190,8 +190,8 @@ canvas.blob-canvas {
 
 @media (max-width: 900px) {
    .hero {
-      padding-top: 8rem;
-      padding-bottom: 8rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
       flex-direction: column-reverse;
       text-align: center;
    }
@@ -243,7 +243,7 @@ section {
 }
 
 .container .section-subtitle {
-   color: var(--text-primary);
+   color: var(--text-body);
    text-align: center;
    max-width: 1100px;
    margin: auto;
@@ -297,11 +297,11 @@ section {
 }
 
 .about-intro h2 span {
-   color: var(--color-accent);
+   color: var(--accent);
 }
 
 .about-intro p {
-   color: var(--text-primary);
+   color: var(--text-body);
 }
 
 
@@ -324,7 +324,7 @@ section {
 }
 
 .feature-card:hover {
-   background: #ffffff;
+   background: var(--bg-alt);
    border-color: #0066ff33;
    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
    transform: translateY(-5px);
@@ -332,14 +332,14 @@ section {
 
 .feature-card i {
    font-size: 2em;
-   color: var(--color-accent);
+   color: var(--accent);
    margin-bottom: 15px;
 }
 
 .feature-card h4 {
    font-size: 1.2em;
    margin-bottom: 10px;
-   color: var(--text-primary);
+   color: var(--text-body);
 }
 
 .feature-card p {
@@ -363,7 +363,7 @@ section {
 
 
 .insight {
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
 }
@@ -411,10 +411,11 @@ section {
 .founder-quote {
    position: relative;
    font-style: italic;
+   font-size: var(--h4-size);
    background: var(--bg-body);
    color: var(--text-muted);
-   padding: 20px;
-   max-width: 800px;
+   padding: 30px;
+   max-width: 1200px;
    margin: 0 auto 30px;
    overflow: hidden;
 }
@@ -434,7 +435,7 @@ section {
 }
 
 .founder-name {
-   color: var(--text-primary);
+   color: var(--text-body);
 }
 
 
@@ -457,7 +458,7 @@ section {
    }
    
    .section-subtitle {
-      color: var(--text-primary);
+      color: var(--text-body);
       margin-bottom: 30px;
    }
    
@@ -551,7 +552,7 @@ section {
    
    .why-us-icon i {
       font-size: 24px;
-      color: var(--color-accent);
+      color: var(--accent);
    }
    
    .why-us-card h3 {
@@ -629,7 +630,7 @@ section {
 .timeline-icon {
    width: 50px;
    height: 50px;
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
    color: var(--text-light);
    font-weight: 700;
    font-size: 1.125rem;
@@ -711,7 +712,7 @@ section {
    }
    
    .section-subtitle {
-      color: var(--text-primary);
+      color: var(--text-body);
       margin-bottom: 40px;
    }
    
@@ -731,7 +732,7 @@ section {
    
    .service-card {
       font-size: var(--p-size);
-      background-color: var(--bg-surface);
+      background: var(--bg-alt);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-md);
       text-align: left;
@@ -744,6 +745,7 @@ section {
       display: block;
       color: inherit;
       padding: 30px;
+      user-select: auto;
    }
    
    .service-card:hover {
@@ -765,7 +767,7 @@ section {
    
    .service-card .icon i {
       font-size: 24px;
-      color: var(--color-accent);
+      color: var(--accent);
    }
    
    .service-card h3 {
@@ -792,7 +794,7 @@ section {
    }
    
    .service-card .fake-link:hover {
-      color: var(--color-accent);
+      color: var(--accent);
       text-decoration: underline;
    }
    
@@ -831,7 +833,7 @@ section {
 
 /* CTA Section */
 .cta-section {
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
    padding: 75px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
 }
@@ -857,14 +859,14 @@ section {
    display: inline-block;
    padding: 12px 30px;
    background: var(--text-light);
-   color: var(--color-accent);
+   color: var(--accent);
    font-weight: 600;
    border-radius: var(--radius-rounded);
    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cta-wrapper .cta-button:hover {
-   background: var(--color-accent);
+   background: var(--accent);
    color: var(--text-light);
 }
 
@@ -885,7 +887,7 @@ section {
    }
    
    .section-subtitle {
-      color: var(--text-primary);
+      color: var(--text-body);
       margin-bottom: 30px;
    }
    
@@ -1144,7 +1146,7 @@ section {
 }
 
 .view-case {
-   color: var(--color-accent);
+   color: var(--accent);
    font-weight: 600;
    font-size: 1em;
    text-transform: capitalize;
@@ -1210,7 +1212,7 @@ section {
    margin-top: 1rem;
    font-weight: 600;
    font-size: var(--h5-size);
-   color: var(--color-accent);
+   color: var(--accent);
    text-align: center;
 }
 
@@ -1235,7 +1237,7 @@ section {
 /* Swiper navigation */
 .pricing-slider .swiper-button-prev,
 .pricing-slider .swiper-button-next {
-   color: var(--color-accent);
+   color: var(--accent);
    transform: scale(0.5);
 }
 
@@ -1267,7 +1269,7 @@ section {
    position: absolute;
    top: 10px;
    right: 10px;
-   background: var(--color-accent);
+   background: var(--accent);
    color: var(--text-light);
    padding: 5px 10px;
    font-size: 0.8rem;
@@ -1301,7 +1303,7 @@ section {
 .discounted__percentage {
    font-weight: bold;
    font-size: 0.9em;
-   color: var(--color-accent);
+   color: var(--accent);
 }
 
 .pricing__discounted {
@@ -1317,7 +1319,7 @@ section {
 
 .pricing__features {
    margin-bottom: 1.5rem;
-   color: var(--text-primary);
+   color: var(--text-body);
 }
 
 .pricing__features li {
@@ -1326,14 +1328,14 @@ section {
 
 .pricing__features li::before {
    content: "✓";
-   color: var(--color-accent);
+   color: var(--accent);
    margin-right: 0.5em;
 }
 
 
 
 .pricing__button {
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
    color: var(--text-light);
    padding: 0.8rem 2rem;
    border-radius: var(--radius-md);
@@ -1377,7 +1379,7 @@ section {
 .promo-banner-section {
    padding: 75px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 97px;
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
    text-align: center;
 }
 
@@ -1406,13 +1408,19 @@ section {
    color: var(--text-light);
 }
 
-.promo-banner-section .cta-primary {
-   border-radius: var(--radius-rounded) !important;
+.promo-banner-section .cta-primary-light {
+   display: inline-block;
+   padding: 12px 30px;
+   background: var(--text-light);
+   color: var(--accent);
+   font-weight: 600;
+   border-radius: var(--radius-rounded);
+   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.promo-banner-section .cta-primary:hover {
-   background: var(--color-accent) !important;
-   color: var(--text-light) !important;
+.promo-banner-section .cta-primary-light:hover {
+   background: var(--accent);
+   color: var(--text-light);
 }
 
 
@@ -1423,7 +1431,7 @@ section {
    left: 0;
    right: 0;
    background: var(--bg-body);
-   color: var(--text-primary);
+   color: var(--text-body);
    text-align: center;
    text-transform: capitalize;
    padding: 15px clamp(1.5rem, 5vw, 3rem);
@@ -1431,8 +1439,8 @@ section {
    transition: background 0.3s ease;
 }
 
-.sticky-cta a {
-   padding: 10px 20px;
+.sticky-cta .btn {
+   padding: 10px 30px;
 }
 
 @media (max-width: 600px) {
@@ -1467,7 +1475,7 @@ section {
    }
    
    .section-subtitle {
-      color: var(--text-primary);
+      color: var(--text-body);
       text-align: start;
       margin: 0;
       margin-bottom: 50px;
@@ -1492,7 +1500,7 @@ section {
    }
    
    .faq-tabs .active {
-      background: var(--btn-primary-bg);
+      background: var(--btn-pri-bg);
       color: var(--text-light);
    }
    
@@ -1507,7 +1515,7 @@ section {
    
    .faq {
       background: var(--bg-surface);
-      border-left: 4px solid var(--color-accent);
+      border-left: 4px solid var(--accent);
       border-radius: var(--radius-md);
       margin-bottom: 15px;
       overflow: hidden;
@@ -1626,7 +1634,7 @@ section {
    }
    
    .contact-right p {
-      color: var(--text-primary);
+      color: var(--text-body);
       margin-bottom: 28px;
    }
    
@@ -1653,7 +1661,7 @@ section {
       width: 100%;
       padding: 0;
       border: none;
-      color: var(--text-primary);
+      color: var(--text-body);
       resize: none;
    }
    
@@ -1708,30 +1716,8 @@ section {
       for Firefox
    } */
    
-   
-   
-   
-   
-   
-   
    .form-agree a {
       text-decoration: underline;
-   }
-   
-   .btn.cta {
-      padding: 14px 24px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: 0.3s ease;
-   }
-   
-   .btn.cta:hover {
-      background: var(--btn-hover-bg);
-   }
-   
-   .btn.cta:focus {
-      outline: none;
    }
    
    .form-msg {
