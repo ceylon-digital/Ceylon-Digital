@@ -802,13 +802,13 @@ section {
       /* ensures screen readers ignore it */
    }
    
-   .cta {
+   .btn {
       display: inline-block;
       margin: auto;
       margin-top: 40px;
    }
    
-   .cta i {
+   .btn i {
       margin-right: 0;
       margin-left: 0.5rem;
    }
