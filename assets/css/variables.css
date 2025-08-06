@@ -154,7 +154,7 @@ html {
 ============================= */
 :root {
   /* Text Colors */
-  --text-primary: #1C1C1C;         /* General readable body text */
+  --text-body: #1C1C1C;         /* General readable body text */
   --text-heading: #000000;         /* Strong headings */
   --text-subheading: #1A1A1A;      /* Subheadings, captions, metadata */
   --text-muted: #6B7280;           /* Muted/dim text for less emphasis */
@@ -170,16 +170,31 @@ html {
   --bg-navbar: #FFFFFF;            /* Navbar background */
   --bg-alt: #E6ECF5;               /* Alternative background surface for contrast */
   --bg-transparent: rgba(255, 255, 255, 0.3);
-  
+  --bg-overlay: rgba(0, 0, 0, 0.4);
+
   /* Interactive Colors */
-  --btn-primary-bg: #003ACC;       /* Vivid blue for call-to-actions */
-  --btn-primary-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
+  --btn-pri-bg: #003ACC;       /* Vivid blue for call-to-actions */
+  --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
   --btn-hover-bg: #002B99;         /* Slightly darker on hover */
   --border-default: #D0D7E2;       /* Subtle border */
   --focus-outline: #60A5FA;        /* Soft blue for focus indication (matching dark theme tone) */
 
+
+  /* Button Colors */
+  --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+  --btn-pri-hover: #002B99;
+  --btn-pri-text: #FFFFFF;
+   
+  --btn-sec-bg: #E6ECF5;
+  --btn-sec-hover: #D0D7E2;
+  --btn-sec-text: #002B99;
+   
+  --btn-dis-bg: #F3F4F6;
+  --btn-dis-text: #9CA3AF;
+
+
   /* Accent & Links */
-  --color-accent: #002B99;         /* Bright cyan to match dark theme accent but accessible on light bg */
+  --accent: #002B99;         /* Bright cyan to match dark theme accent but accessible on light bg */
   --link-color: #003ACC;           /* Standard link color */
   --link-hover-color: #002B99;     /* Darker hover state for links */
 
@@ -187,19 +202,45 @@ html {
   --logo-hover: grayscale(0%) brightness(100%);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --bg-body: #111827;
-    --bg-surface: #1f2937;
-    --text-primary: #e5e7eb;
-    --border-default: #374151;
-  }
-} */
+@media (prefers-color-scheme: dark) {
+     :root {
+     /* Text Colors */
+     --text-body: #94A3B8;           /* Softer white with a bluish tint */
+     --text-heading: #FFFFFF;           /* Clean white for strong emphasis */
+     --text-subheading: #E4E8F0;        /* Cool light gray-blue */
+     --text-muted: #64748B;             /* Muted slate for de-emphasis */
+     --text-light: #FFFFFF;             /* Text color for light text */
+     --text-dark: #1C1C1C;              /* Text color for dark text */
+     --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
+   
+     /* Background Colors */
+     --bg-body: #0A0E1C;                /* Slightly deeper, cooler black */
+     --bg-surface: #121826;             /* Dark slate for cards/containers */
+     --bg-surface-light: #F6F8FB;
+     --bg-surface-dark: #121826;
+     --bg-navbar: #0C111F;              /* Mid-dark tone for nav */
+     --bg-alt: #1A2135;                 /* Cool navy-alt for contrast sections */
+     --bg-transparent: rgba(0, 0, 0, 0.3);
+     --bg-overlay: rgba(0, 0, 0, 0.4);
+   
+     /* Interactive Colors */
+     --btn-pri-bg: #3B82F6;         /* Vivid hero-blue for CTA */
+     --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #2563eb);       /* Vivid blue for call-to-actions */
+     --btn-hover-bg: #2563EB;           /* Darker blue on hover */
+     --border-default: #2F3548;         /* Softer navy-gray border */
+     --focus-outline: #60A5FA;          /* Cyan-blue for keyboard focus ring */
+   
+     /* Accent & Links */
+     --accent: #2563EB;           /* Bright cyan from floating elements */
+     --link-color: #60A5FA;             /* Base hero-blue */
+     --link-hover-color: #2563EB;       /* Lighter blue for hover effect */
+   }
+}
 
 /* Dark Theme */
 [data-theme="dark"] {
   /* Text Colors */
-  --text-primary: #94A3B8;           /* Softer white with a bluish tint */
+  --text-body: #94A3B8;           /* Softer white with a bluish tint */
   --text-heading: #FFFFFF;           /* Clean white for strong emphasis */
   --text-subheading: #E4E8F0;        /* Cool light gray-blue */
   --text-muted: #64748B;             /* Muted slate for de-emphasis */
@@ -215,16 +256,17 @@ html {
   --bg-navbar: #0C111F;              /* Mid-dark tone for nav */
   --bg-alt: #1A2135;                 /* Cool navy-alt for contrast sections */
   --bg-transparent: rgba(0, 0, 0, 0.3);
+  --bg-overlay: rgba(0, 0, 0, 0.4);
 
   /* Interactive Colors */
-  --btn-primary-bg: #3B82F6;         /* Vivid hero-blue for CTA */
-  --btn-primary-bg: linear-gradient(135deg, #002B99, #003ACC, #2563eb);       /* Vivid blue for call-to-actions */
+  --btn-pri-bg: #3B82F6;         /* Vivid hero-blue for CTA */
+  --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #2563eb);       /* Vivid blue for call-to-actions */
   --btn-hover-bg: #2563EB;           /* Darker blue on hover */
   --border-default: #2F3548;         /* Softer navy-gray border */
   --focus-outline: #60A5FA;          /* Cyan-blue for keyboard focus ring */
 
   /* Accent & Links */
-  --color-accent: #2563EB;           /* Bright cyan from floating elements */
+  --accent: #2563EB;           /* Bright cyan from floating elements */
   --link-color: #60A5FA;             /* Base hero-blue */
   --link-hover-color: #2563EB;       /* Lighter blue for hover effect */
 }
