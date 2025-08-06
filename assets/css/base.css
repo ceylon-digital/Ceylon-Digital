@@ -6,9 +6,9 @@ body {
    /* Default font */
    font-size: var(--p-size);
    /* Default font size */
-   color: var(--text-primary);
+   color: var(--text-body);
    /* Base text color */
-   background-color: var(--bg-body);
+   background: var(--bg-body);
    /* Page background */
    min-height: 100vh;
    /* Full viewport height */
@@ -21,32 +21,55 @@ body {
 /* ============================================
    TYPOGRAPHY: HEADINGS, PARAGRAPHS, AND TEXT
 ============================================ */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-secondary);
-  font-weight: 700;
-  line-height: 1.2;
-  /* Tighter spacing for headings */
-  margin: 0;
-  /* Reset margin */
-  color: var(--text-heading);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: var(--font-secondary);
+   font-weight: 700;
+   line-height: 1.2;
+   /* Tighter spacing for headings */
+   margin: 0;
+   /* Reset margin */
+   color: var(--text-heading);
 }
 
-h1, h2 {
-  letter-spacing: 1px;
+h1,
+h2 {
+   letter-spacing: 1px;
 }
 
-h1 { font-size: var(--h1-size); }
-h2 { font-size: var(--h2-size); }
-h3 { font-size: var(--h3-size); }
-h4 { font-size: var(--h4-size); }
-h5 { font-size: var(--h5-size); }
-h6 { font-size: var(--h6-size); }
+h1 {
+   font-size: var(--h1-size);
+}
+
+h2 {
+   font-size: var(--h2-size);
+}
+
+h3 {
+   font-size: var(--h3-size);
+}
+
+h4 {
+   font-size: var(--h4-size);
+}
+
+h5 {
+   font-size: var(--h5-size);
+}
+
+h6 {
+   font-size: var(--h6-size);
+}
 
 p {
-  /* margin-bottom: var(--space-md); */
-  letter-spacing: 0.02em;
-  /* max-width: 70ch; */
-  color: var(--text-primary);
+   /* margin-bottom: var(--space-md); */
+   letter-spacing: 0.02em;
+   /* max-width: 70ch; */
+   color: var(--text-body);
 }
 
 /* Optional serif style */
@@ -111,9 +134,9 @@ input[type="submit"],
 input[type="reset"] {
    cursor: pointer;
    /* Pointer cursor for buttons */
-   background-color: var(--btn-primary-bg);
+   background-color: var(--btn-pri-bg);
    /* Button background color */
-   color: var(--color-accent);
+   color: var(--accent);
    /* Button text color */
    padding: 0.5em 1em;
    /* Consistent padding */
@@ -132,13 +155,15 @@ input[type="reset"]:hover {
    /* Button hover background */
 }
 
-input, textarea, select {
-  padding: var(--space-sm);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-sm);
-  background-color: transparent;
-  font-family: var(--font-accent);
-  color: var(--text-primary);
+input,
+textarea,
+select {
+   padding: var(--space-sm);
+   border: 1px solid var(--border-default);
+   border-radius: var(--radius-sm);
+   background-color: transparent;
+   font-family: var(--font-accent);
+   color: var(--text-body);
 }
 
 select {
@@ -154,7 +179,7 @@ input[type="radio"] {
 }
 
 input::placeholder,
-textarea::placeholder{
+textarea::placeholder {
    color: var(--text-muted);
 }
 
@@ -182,18 +207,18 @@ select:hover {
    IMAGES, AND BLOCKQUOTE STYLING
 ============================================ */
 blockquote {
-  border-left: 4px solid var(--border-default);
-  padding-left: var(--space-md);
-  color: var(--text-subheading);
-  font-style: italic;
-  font-family: var(--font-primary);
+   border-left: 4px solid var(--border-default);
+   padding-left: var(--space-md);
+   color: var(--text-subheading);
+   font-style: italic;
+   font-family: var(--font-primary);
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--radius-sm);
+   max-width: 100%;
+   height: auto;
+   display: block;
+   border-radius: var(--radius-sm);
 }
 
 
@@ -208,10 +233,10 @@ section {
 
 
 
-/* Common cta styles */
+/* Common cta */
 .cta {
    position: relative;
-   padding: 0.8rem 2rem;
+   padding: 12px 30px;
    font-weight: 600;
    border-radius: var(--radius-md);
    box-shadow: var(--shadow-md);
@@ -242,9 +267,9 @@ section {
 
 
 
-/* Primary cta styles */
+/* Primary cta */
 .cta-primary {
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
    color: var(--text-light);
 }
 
@@ -255,7 +280,7 @@ section {
 
 
 
-/* Light color primary cta styles */
+/* Light color primary cta */
 .cta-primary-light {
    background: var(--text-light);
    color: var(--btn-hover-bg);
@@ -268,9 +293,9 @@ section {
 
 
 
-/* Pill shaped primary color cta styles */
+/* Pill shaped primary color cta */
 .cta-primary-pill {
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
    color: var(--text-light);
    border-radius: var(--radius-rounded);
 }
@@ -281,14 +306,181 @@ section {
 }
 
 
-/* Outline cta styles */
+/* Outline cta */
 .cta-secondary {
    background: none;
-   color: var(--color-accent);
-   border: 1.5px solid var(--color-accent);
+   color: var(--accent);
+   border: 1.5px solid var(--accent);
 }
 
 .cta-secondary:hover {
    background-color: var(--btn-hover-bg);
    color: var(--text-light);
+}
+
+
+
+
+/* =============================
+   Base Button Styles
+============================= */
+.btn {
+   position: relative;
+   padding: 12px 30px;
+   font-weight: 600;
+   border-radius: var(--radius-md);
+   box-shadow: var(--shadow-md);
+   text-transform: capitalize;
+   letter-spacing: 0.5px;
+   cursor: pointer;
+   transition: color 0.3s ease, background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+   overflow: hidden;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border: none;
+}
+
+.btn:hover {
+   box-shadow: var(--shadow-elevation);
+}
+
+.btn:active {
+   transform: scale(0.96);
+}
+
+.btn:focus {
+   outline: none;
+}
+
+.btn i {
+   margin-right: 6px;
+}
+
+
+/* =============================
+   Solid Buttons
+============================= */
+
+/* Primary Button */
+.btn-primary {
+   background: var(--btn-pri-bg);
+   color: var(--btn-pri-text);
+}
+
+.btn-primary:hover {
+   background: var(--btn-pri-hover);
+   color: var(--btn-pri-text);
+}
+
+/* Secondary */
+.btn-secondary {
+   background: var(--btn-sec-bg);
+   color: var(--btn-sec-text);
+}
+
+.btn-secondary:hover {
+   background: var(--btn-sec-hover);
+}
+
+
+/* =============================
+   Solid Pill (Rounded) Buttons
+============================= */
+
+/* Pill-Shaped Primary */
+.btn-primary-pill {
+   background: var(--btn-pri-bg);
+   color: var(--btn-pri-text);
+   border-radius: var(--radius-rounded);
+}
+
+.btn-primary-pill:hover {
+   background: var(--btn-pri-hover);
+   color: var(--btn-pri-text);
+}
+
+/* Pill-Shaped Primary Light */
+.btn-secondary-pill {
+   background: var(--btn-sec-bg);
+   color: var(--btn-sec-text);
+   border-radius: var(--radius-rounded);
+}
+
+.btn-secondary-pill:hover {
+   background: var(--btn-sec-hover);
+   color: var(--btn-sec-text);
+}
+
+/* =============================
+   Outline Buttons
+============================= */
+
+/* Primary Outline */
+.btn-outline-primary {
+   background: transparent;
+   color: var(--btn-pri-hover);
+   border: 1.5px solid var(--btn-pri-hover);
+}
+
+.btn-outline-primary:hover {
+   background: var(--btn-pri-hover);
+   color: var(--btn-pri-text);
+}
+
+/* Secondary Outline */
+.btn-outline-secondary {
+   background: transparent;
+   color: var(--btn-sec-hover);
+   border: 1.5px solid var(--btn-sec-hover);
+}
+
+.btn-outline-secondary:hover {
+   background: var(--btn-sec-hover);
+   color: var(--btn-sec-text);
+}
+
+
+/* =============================
+   Outline Pill (Rounded) Buttons
+============================= */
+
+/* Pill-Shaped Primary Outline */
+.btn-outline-primary-pill {
+   background: transparent;
+   color: var(--btn-pri-hover);
+   border: 1.5px solid var(--btn-pri-hover);
+   border-radius: var(--radius-rounded);
+}
+
+.btn-outline-primary-pill:hover {
+   background: var(--btn-pri-hover);
+   color: var(--btn-pri-text);
+}
+
+/* Pill-Shaped Secondary Outline */
+.btn-outline-secondary-pill {
+   background: transparent;
+   color: var(--btn-sec-hover);
+   border: 1.5px solid var(--btn-sec-hover);
+   border-radius: var(--radius-rounded);
+}
+
+.btn-outline-secondary-pill:hover {
+   background: var(--btn-sec-hover);
+   color: var(--btn-sec-text);
+}
+
+
+/* =============================
+   Elevation Utility (Optional)
+============================= */
+
+.btn-elevated {
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-elevated:hover {
+   transform: translateY(-2px);
+   box-shadow: var(--shadow-lg);
 }
