@@ -49,7 +49,7 @@
    border: none;
    font-size: 24px;
    cursor: pointer;
-   color: var(--color-accent);
+   color: var(--accent);
 }
 
 .sidebar .nav-links {
@@ -69,7 +69,7 @@
 }
 
 .sidebar .nav-links a:hover {
-   color: var(--color-accent);
+   color: var(--accent);
 }
 
 .sidebar .dropdown>a {
@@ -121,7 +121,7 @@
    outline: 2px solid var(--focus-outline);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1000px) {
    
    .sidebar,
    #menu-toggle,
