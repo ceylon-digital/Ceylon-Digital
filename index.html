@@ -124,7 +124,7 @@
    <!-- Bootstrap Icons -->
    
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
    
    <link rel="stylesheet" href="./assets/fontawesome-free-6.7.2-web/css/all.min.css">
    <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css">
@@ -517,11 +517,21 @@
 <body>
    <div id="tsparticles"></div>
    
-   <div class="preloader">
+   <!-- <div class="preloader">
       <div class="loader">
          <a href="index.html" class="brand-logo">
             <img src="./assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
          </a>
+      </div>
+   </div> -->
+   
+   <div class="preloader">
+      <div class="loader">
+         <div class="brand-logo">
+            <img src="./assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
+         </div>
+         <div class="greeting-text" id="greeting">Loading...</div>
+         <div class="spinner"></div>
       </div>
    </div>
    
@@ -592,7 +602,7 @@
             <li><a href="../../index.html">Home</a></li>
             
             <li class="dropdown">
-               <a>Services <i class="fas fa-chevron-down"></i></a>
+               <a href="javascript:void(0)">Services <i class="fas fa-chevron-down"></i></a>
                <ul class="dropdown-menu">
                   <li><a href="../digital-strategy-consulting/index.html">Strategy & Consulting</a></li>
                   <li><a href="../web-development/index.html">Web Development</a></li>
@@ -645,9 +655,9 @@
                <!-- <a href="https://dribbble.com" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a> -->
             </div>
             
-            <p class="tagline">Transforming Global Business Online</p>
-            <h1 class="headline">Premier Web Development & Digital Solutions in Sri lanka</h1>
-            <p class="subheading">Our expert web development team creates custom websites tailored to your goals. Plus, we offer SEO, branding, digital marketing and more to help you succeed online.</p>
+            <p class="tagline">Building Digital Success, Globally</p>
+            <h1 class="headline">Web Development, SEO & Digital Marketing Services – <span>Trusted in Sri Lanka & Worldwide</span></h1>
+            <p class="subheading">We build custom websites, eCommerce stores, digital brands, and offer a full suite of SEO and digital solutions to grow your business. Based in Sri Lanka, trusted by clients worldwide.</p>
             <div class="cta-buttons">
                <a href="./services/web-development/index.html" class="btn btn-primary" title="Start Your Web Development Project">
                   <i class="bi bi-code"></i> Build Your Website Today
@@ -753,27 +763,29 @@
    
    <main>
       <section id="about" class="about-ceylon main-section">
-         <div class="about-wrapper">
+         <div class="about-wrapper container">
             <div class="about-intro">
-               <h2>We Design <span>Digital Impact</span></h2>
-               <p>At <strong>Ceylon Digital</strong>, we build brands, craft experiences, and engineer strategies that move businesses forward — with a bold, minimalistic approach rooted in purpose and results.</p>
+               <h2 data-aos="fade-up" class="section-title">About us</h2>
+               <p data-aos="fade-up" class="section-creative-title">We Design <span>Digital Impact</span></p>
+               
+               <p data-aos="fade-up" class="about">At <strong>Ceylon Digital</strong>, we build brands, craft experiences, and engineer strategies that move businesses forward — with a bold, minimalistic approach rooted in purpose and results.</p>
                <!-- <p>At Ceylon Digital, a leading global digital agency rooted in Sri Lanka, we specialize in web development, SEO, paid advertising, social media marketing, and more. Our expert team delivers tailored digital solutions that drive real results, helping businesses worldwide grow and succeed online.</p> -->
                <!-- <p>At <strong>Ceylon Digital</strong>, we deliver high-performance digital solutions to businesses worldwide. Based in Sri Lanka, we specialize in web and mobile development, e-commerce, SEO, digital marketing, branding, and data analytics. Our team combines strategy, design, and technology to create scalable digital experiences that drive global growth and results.</p> -->
                <!-- <p>Ceylon Digital is a leading global digital agency with roots in Sri Lanka, specializing in web development, search engine optimization (SEO), paid advertising, social media marketing, and more. Our team of experts delivers customized digital solutions to help businesses thrive online, serving clients worldwide. With a passion for driving real results, we elevate brands and achieve goals through innovative digital strategies.</p> -->
             </div>
             
             <div class="about-features">
-               <div class="feature-card">
+               <div data-aos="fade-up" class="feature-card">
                   <i class="fas fa-lightbulb"></i>
                   <h4>Creative Strategy</h4>
                   <p>Smart, scalable ideas that connect with your audience across every digital touchpoint.</p>
                </div>
-               <div class="feature-card">
+               <div data-aos="fade-up" class="feature-card">
                   <i class="fas fa-code"></i>
                   <h4>Custom Development</h4>
                   <p>From web apps to e-commerce — clean code, pixel-perfect designs, and full-stack solutions.</p>
                </div>
-               <div class="feature-card">
+               <div data-aos="fade-up" class="feature-card">
                   <i class="fas fa-chart-line"></i>
                   <h4>Performance Driven</h4>
                   <p>We optimize for outcomes. Growth, traffic, conversions — powered by data & creativity.</p>
@@ -785,9 +797,9 @@
       <!-- Section: Why Digital Services Matter -->
       <section class="insight section">
          <div class="container">
-            <div class="accent-highlight">Insight</div>
-            <h2 class="section-title">Why Digital Services Matter</h2>
-            <p>
+            <h2 data-aos="fade-up" class="section-title">Insight</h2>
+            <p data-aos="fade-up" class="section-creative-title">Why Digital Services Matter</p>
+            <p data-aos="fade-up" class="body-text">
                In a world where attention is currency, digital presence isn't optional — it's essential.
                From branding to automation, digital services empower businesses to connect, grow, and compete
                in the modern economy.
@@ -797,15 +809,17 @@
       
       
       <section class="founder-section main-section">
-         <h2>Our Purpose</h2>
-         <blockquote class="founder-quote" data-ripple-color="rgba(0, 150, 255, 0.5)">
-            “This agency is more than a business—it's my passion turned into purpose. I created Ceylon Digital to give every dreamer, starter, and creator a fair chance to shine in the digital space.”
-            <span class="autoripple"></span>
-         </blockquote>
-         
-         <p class="founder-name">
-            <strong>— Madhushan Hemachandra</strong>, Founder & Software Engineer
-         </p>
+         <div class="container">
+            <h2 data-aos="fade-in" class="section-creative-title">Our Purpose</h2>
+            <blockquote data-aos="fade-in" class="founder-quote" data-ripple-color="rgba(0, 150, 255, 0.5)">
+               “This agency is more than a business—it's my passion turned into purpose. I created Ceylon Digital to give every dreamer, starter, and creator a fair chance to shine in the digital space.”
+               <span class="autoripple"></span>
+            </blockquote>
+            
+            <p data-aos="fade-in" class="founder-name">
+               <strong>— Madhushan Hemachandra</strong>, Founder & Software Engineer
+            </p>
+         </div>
       </section>
       
       
@@ -831,54 +845,15 @@
       -->
       
       
-      <!-- Why choose us Section -->
-      <!-- <section id="why-us" class="why-us-section why-choose-us main-section">
-         <div class="why-us-container container">
-            <p class="accent-highlight">We are special</p>
-            <h2 class="section-title">Why Choose Us?</h2>
-            <p class="section-subtitle">Where Innovation Meets Expertise, Delivering Exceptional Results</p>
-            
-            <div class="why-us-grid">
-               <div data-ripple-color="rgba(0, 150, 255, 0.5)" class="why-us-card card-left card">
-                  <div class="content">
-                     <div class="why-us-icon"><i class="bi bi-bar-chart"></i></div>
-                     <h3>Expertise You Can Trust</h3>
-                     <p>We blend creativity, strategy, and technology to deliver digital solutions that drive results.</p>
-                  </div>
-               </div>
-               
-               <div data-ripple-color="rgba(0, 150, 255, 0.5)" class="why-us-card card-middle card">
-                  <div class="content">
-                     <div class="why-us-icon"><i class="bi bi-brush"></i></div>
-                     <h3>Results-Driven Approach</h3>
-                     <p>We keep your goals front and center, delivering real value without wasting time or budget.</p>
-                  </div>
-               </div>
-               
-               <div data-ripple-color="rgba(0, 150, 255, 0.5)" class="why-us-card card-right card">
-                  <div class="content">
-                     <div class="why-us-icon"><i class="bi bi-people"></i></div>
-                     <h3>Personalized Service</h3>
-                     <p>We work with you, not just for you, to build solutions that meet your unique needs and goals.</p>
-                  </div>
-               </div>
-            </div>
-            
-            <a data-aos="fade-up" data-ripple-color="rgba(0, 150, 255, 0.5)" class="cta cta-primary" href="#"><i class="bi bi-phone"></i> Call Us Now</a>
-         </div>
-      </section> -->
-      
-      
       <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
          <path style="fill: var(--bg-surface)" fill="" d="M450 65H130l-10-10h320l10 10zM870 65H550l10-10h320l-10 10zM500 15l35 35-35 35-35-35zM440 45H70l10-10h370l-10 10zM930 45H560l-10-10h370l10 10z"></path>
       </svg> -->
       
-      
-      <section id="process" class="process-section main-section">
+      <section id="process" id="our-process" class="process-section main-section">
          <div class="container">
-            <p class="accent-highlight">How it works</p>
-            <h2 class="section-title">Our Process</h2>
-            <p class="section-subtitle">From concept to conversion — here's how we deliver real impact.</p>
+            <h2 class="section-title">Our process</h2>
+            <p class="section-creative-title">Lasting impact through smart moves</p>
+            <p class="section-subtitle">Our process is guided by data, driven by creativity, and focused on delivering lasting digital impact.</p>
             
             <div class="horizontal-timeline">
                <div class="timeline-step">
@@ -916,20 +891,12 @@
          </div>
       </section>
       
-      <!--
-Expert digital services: custom website design, mobile app development, and data-driven marketing solutions
-Transform your business with our digital services: web development, app design, and conversion-driven marketing strategies
-Unlock digital success with our services: website development, mobile apps, and results-focused marketing campaigns
-From sleek websites and powerful apps to conversion-focused marketing—we deliver digital services that drive real results.
--->
-      
       
       <section id="services" class="services-section main-section">
          <div class="container">
-            <p data-aos="fade-up" class="accent-highlight">What we do</p>
-            <h2 data-aos="fade-up" class="section-title">Our Services</h2>
-            <p data-aos="fade-up" class="section-subtitle">Transform your business with our digital services: web development, app design, and conversion-driven marketing strategies</p>
-            
+            <h2 data-aos="fade-up" class="section-title">Our services</h2>
+            <p data-aos="fade-up" class="section-creative-title">Design. Strategy. Growth-ready digital solutions.</p>
+            <p data-aos="fade-up" class="section-subtitle">From branding and websites to performance marketing, we create strategies that scale and deliver measurable results.</p>
             <!-- <img data-aos="fade-up" src="./assets/img/team.jpg" alt=""> -->
             
             <div class="services-cards">
@@ -1019,9 +986,9 @@ From sleek websites and powerful apps to conversion-focused marketing—we deliv
       <!-- CTA Section -->
       <section class="cta-section">
          <div class="cta-wrapper">
-            <h2>Ready to elevate your digital presence?</h2>
-            <p>Let's collaborate and turn your vision into a powerful digital experience.</p>
-            <a href="./contact/index.html" class="btn btn-secondary-pill">Get in Touch</a>
+            <h2 data-aos="fade-up">Ready to elevate your digital presence?</h2>
+            <p data-aos="fade-up">Let's collaborate and turn your vision into a powerful digital experience.</p>
+            <a data-aos="fade-up" href="./contact/index.html" class="btn btn-secondary-pill">Get in Touch</a>
          </div>
       </section>
       
@@ -1029,11 +996,11 @@ From sleek websites and powerful apps to conversion-focused marketing—we deliv
       <!-- Portfolio Section -->
       <section id="portfolio" class="portfolio-section main-section">
          <div class="container">
-            <p data-aos="fade-up" class="accent-highlight">Our work</p>
-            <h2 data-aos="fade-up" class="section-title">Portfolio</h2>
-            <p data-aos="fade-up" class="section-subtitle">Explore some of our recent digital solutions</p>
+            <h2 data-aos="fade-in" class="section-title">Our portfolio</h2>
+            <p data-aos="fade-in" class="section-creative-title">Real solutions. Real results. Real impact.</p>
+            <p data-aos="fade-in" class="section-subtitle">Take a look at the brands we’ve helped grow — from bold startups to established enterprises. Each project is a reflection of our strategic thinking and creative execution.</p>
             
-            <div data-aos="slide-up" class="actionBar">
+            <div data-aos="fade-up" class="actionBar">
                <div id="searchBar" class="searchBar">
                   <input type="text" id="searchInput" placeholder="Search projects..." />
                </div>
@@ -1054,9 +1021,9 @@ From sleek websites and powerful apps to conversion-focused marketing—we deliv
       <section id="pricing" class="pricing main-section">
          <div class="container">
             <header class="pricing__header">
-               <p data-aos="fade-up" class="accent-highlight">Prices</p>
-               <h2 data-aos="fade-up" class="pricing__title">Our Pricing Plans</h2>
-               <p data-aos="fade-up" class="pricing__subtitle">Affordable pricing for your business in Sri Lanka or abroad.</p>
+               <h2 data-aos="fade-up" class="section-title">Pricing Plans</h2>
+               <p data-aos="fade-up" class="pricing__title section-creative-title">Flexible solutions for every stage of growth.</p>
+               <p data-aos="fade-up" class="pricing__subtitle section-subtitle">From startups to enterprises, our pricing is designed to scale with your needs—no surprises, just results.</p>
                <div data-aos="fade-up" class="currency-toggle">
                   <label for="currencySwitch">Show prices in</label>
                   <select id="currencySwitch">
@@ -1253,9 +1220,9 @@ From sleek websites and powerful apps to conversion-focused marketing—we deliv
       <!-- FAQs -->
       <section id="faqs" class="faq-section main-section">
          <div class="container">
-            <p data-aos="fade-up" class="accent-highlight">Questions</p>
-            <h2 data-aos="fade-up" class="section-title">Frequently Asked Questions</h2>
-            <p data-aos="fade-up" class="section-subtitle"><strong>Need quick answers?</strong> Explore our frequently asked questions by category.</p>
+            <h2 data-aos="fade-up" class="section-title">Faqs</h2>
+            <p data-aos="fade-up" class="section-creative-title">You’ve got questions. We’ve got answers.</p>
+            <p data-aos="fade-up" class="section-subtitle">Explore the most common inquiries to learn more about how we work, what we offer, and how we can support your goals.</p>
             
             <div data-aos="fade-up" class="faq-tabs">
                <button data-aos="fade-up" class="tab-btn active" data-tab="strategy">Digital Strategy</button>
@@ -1512,9 +1479,9 @@ From sleek websites and powerful apps to conversion-focused marketing—we deliv
       <!-- Contact Section -->
       <section id="contact" class="contact-section main-section">
          <div class="container">
-            <p data-aos="fade-up" class="accent-highlight">Let's talk</p>
-            <h2 data-aos="fade-up" class="section-title">Contact Our Digital Experts</h2>
-            <p data-aos="fade-up" class="section-subtitle"><strong>Looking for a full-service digital partner?</strong> Whether you need web or mobile development, digital strategy, branding, or marketing — we’re here to help you plan, build, and grow. Let’s discuss your goals.</p>
+            <h2 data-aos="fade-up" class="section-title">Contact us</h2>
+            <p data-aos="fade-up" class="section-creative-title">Ready to grow smarter? We’d love to hear from you.</p>
+            <p data-aos="fade-up" class="section-subtitle">Whether you have a specific project in mind or just want to explore possibilities, our team is here to start the conversation.</p>
             <div>
                <div class="contact-left" data-aos="fade-right">
                   <img loading="lazy" src="./assets/img/contact.png" alt="Contact illustration" />
@@ -1535,7 +1502,7 @@ From sleek websites and powerful apps to conversion-focused marketing—we deliv
                      </div>
                      <div class="form-group">
                         <i class="bi bi-chat-dots"></i>
-                        <textarea rows="3" placeholder="Your Message" name="user-message" required></textarea>
+                        <textarea rows="3" placeholder="Write us what you are looking for" name="user-message" required></textarea>
                      </div>
                      <div class="form-agree">
                         <input type="checkbox" name="agree-terms" id="agree" required />
