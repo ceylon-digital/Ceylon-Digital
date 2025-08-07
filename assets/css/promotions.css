@@ -3,7 +3,7 @@
    padding: 150px clamp(1.5rem, 5vw, 3rem);
    /* scroll-margin-top: 97px; */
    margin-top: 97px;
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
 }
 
 .hero .title {
@@ -79,7 +79,7 @@
 .price {
    font-size: 1.2em;
    font-weight: bold;
-   color: var(--color-accent);
+   color: var(--accent);
    margin-bottom: 10px;
    display: block;
 }
@@ -91,7 +91,7 @@
 }
 
 .cta-btn.small {
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
    color: var(--text-light);
    padding: 10px 20px;
    border-radius: var(--radius-sm);
@@ -229,7 +229,7 @@
 .terms-section {
    background: var(--bg-body);
    padding: 60px clamp(1.5rem, 5vw, 3rem);
-   color: var(--text-primary);
+   color: var(--text-body);
 }
 
 .terms-section .section-title {
@@ -295,10 +295,6 @@
    border-radius: var(--radius-md);
    resize: none;
 }
-
-.discount-form button {}
-
-.discount-form button:hover {}
 
 @media (max-width: 768px) {
    .services-grid {
