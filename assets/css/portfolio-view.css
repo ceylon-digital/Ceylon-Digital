@@ -29,7 +29,7 @@ body {
 .device-choose button.active,
 .device-choose button:active,
 .device-choose button:hover {
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
    color: var(--text-light);
    border: none;
 }
