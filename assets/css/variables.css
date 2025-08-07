@@ -51,16 +51,21 @@ html {
    1. FONT FAMILY SYSTEM
 ============================= */
 :root {
-  /* Base font stacks */
-  --font-sans: 'Open Sans', sans-serif;
-  --font-serif: 'Montserrat', serif;
-
-  /* Semantic font roles in logical order with descriptions */
-  --font-primary: var(--font-sans);         /* For body text and general UI */
-  --font-secondary: var(--font-serif);      /* For headings, blockquotes, featured sections */
-  --font-display: 'Montserrat', sans-serif; /* For large banners, hero sections, standout headlines */
-  --font-accent: 'Montserrat', sans-serif;  /* For buttons, CTAs, and emphasis elements */
-  --font-mono: 'Fira Code', monospace;      /* For <pre>, <code> blocks and inline code */
+   /* Base font stacks */
+   --font-sans: 'Inter', sans-serif;
+   --font-serif: 'Montserrat', serif;
+   
+   /* Semantic font roles in logical order with descriptions */
+   --font-primary: var(--font-sans);
+   /* For body text and general UI */
+   --font-secondary: var(--font-serif);
+   /* For headings, blockquotes, featured sections */
+   --font-display: 'Montserrat', sans-serif;
+   /* For large banners, hero sections, standout headlines */
+   --font-accent: 'Montserrat', sans-serif;
+   /* For buttons, CTAs, and emphasis elements */
+   --font-mono: 'Fira Code', monospace;
+   /* For <pre>, <code> blocks and inline code */
 }
 
 
@@ -92,8 +97,8 @@ html {
    --h5-size: clamp(0.75rem, 2vw, 1rem);
    --h6-size: clamp(0.625rem, 1.5vw, 0.875rem);
    --p-size: clamp(0.75rem, 2vw, 1rem);
-
-   --h1-size: clamp(1.9rem, 3vw, 2.7rem);
+   
+   --h1-size: clamp(1.7rem, 3vw, 2.7rem);
    --h2-size: clamp(1.6rem, 2.5vw, 2.2rem);
    --h3-size: clamp(1.3rem, 2vw, 1.8rem);
    --h4-size: clamp(1.2rem, 1.8vw, 1.6rem);
@@ -152,135 +157,137 @@ html {
    3. COLOR SYSTEM + DARK MODE
 ============================= */
 :root {
-  /* Text Colors */
-  --text-body: #1C1C1C;         
-  --text-heading: #000000;         
-  --text-subheading: #1A1A1A;      
-  --text-muted: #6B7280;           
-  --text-light: #FFFFFF;           
-  --text-dark: #1C1C1C;            
-  --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
-
-  /* Background Colors */
-  --bg-body: #FFFFFF;             
-  --bg-surface: #F1F4F8;           
-  --bg-surface-light: #F6F8FB;
-  --bg-surface-dark: #121826;
-  --bg-navbar: #FFFFFF;            
-  --bg-alt: #E6ECF5;               
-  --bg-transparent: rgba(255, 255, 255, 0.3);
-  --bg-overlay: rgba(0, 0, 0, 0.4);
-
-  /* Button Colors */
-  --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
-  --btn-pri-hover: #002B99;
-  --btn-pri-text: #FFFFFF;
+   /* Text Colors */
+   --text-body: #1C1C1C;
+   --text-heading: #000000;
+   --text-subheading: #1A1A1A;
+   --text-muted: #6B7280;
+   --text-light: #FFFFFF;
+   --text-dark: #1C1C1C;
+   --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
    
-  --btn-sec-bg: #E6ECF5;
-  --btn-sec-hover: #D0D7E2;
-  --btn-sec-text: #002B99;
+   /* Background Colors */
+   --bg-body: #FFFFFF;
+   --bg-surface: #F1F4F8;
+   --bg-surface-light: #F6F8FB;
+   --bg-surface-dark: #121826;
+   --bg-navbar: #FFFFFF;
+   --bg-alt: #E6ECF5;
+   --bg-transparent: rgba(255, 255, 255, 0.3);
+   --bg-overlay: rgba(0, 0, 0, 0.4);
    
-  --btn-dis-bg: #F3F4F6;
-  --btn-dis-text: #9CA3AF;
-
-  /* Interactive Colors */
-  --border-default: #D0D7E2;
-  --focus-outline: #60A5FA;
-
-  /* Accent & Links */
-  --accent: #002B99;         
-  --link-color: #003ACC;          
-  --link-hover-color: #002B99;     
-
-  --logo-default: grayscale(100%) brightness(60%);
-  --logo-hover: grayscale(0%) brightness(100%);
+   /* Button Colors */
+   --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+   --btn-pri-hover: #002B99;
+   --btn-pri-text: #FFFFFF;
+   
+   --btn-sec-bg: #E6ECF5;
+   --btn-sec-hover: #D0D7E2;
+   --btn-sec-text: #002B99;
+   
+   --btn-dis-bg: #F3F4F6;
+   --btn-dis-text: #9CA3AF;
+   
+   /* Interactive Colors */
+   --border-default: #D0D7E2;
+   --focus-outline: #60A5FA;
+   
+   /* Accent & Links */
+   --accent: #002B99;
+   --link-color: #003ACC;
+   --link-hover-color: #002B99;
+   
+   --logo-default: grayscale(100%) brightness(60%);
+   --logo-hover: grayscale(0%) brightness(100%);
 }
 
 @media (prefers-color-scheme: dark) {
    :root {
-     /* Text Colors */
-     --text-body: #94A3B8;
-     --text-heading: #FFFFFF;
-     --text-subheading: #E4E8F0;        
-     --text-muted: #64748B;             
-     --text-light: #FFFFFF;            
-     --text-dark: #1C1C1C;             
-     --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
-   
-     /* Background Colors */
-     --bg-body: #0A0E1C;               
-     --bg-surface: #121826;             
-     --bg-surface-light: #F6F8FB;
-     --bg-surface-dark: #121826;
-     --bg-navbar: #0C111F;              
-     --bg-alt: #1A2135;                
-     --bg-transparent: rgba(0, 0, 0, 0.3);
-     --bg-overlay: rgba(0, 0, 0, 0.4);
-   
-     /* Button Colors */
-     --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
-     --btn-pri-hover: #002B99;
-     --btn-pri-text: #FFFFFF;
-        
-     --btn-sec-bg: #E6ECF5;
-     --btn-sec-hover: #D0D7E2;
-     --btn-sec-text: #002B99;
-        
-     --btn-dis-bg: #F3F4F6;
-     --btn-dis-text: #9CA3AF;
-   
-     /* Interactive Colors */
-     --border-default: #2F3548;        
-     --focus-outline: #60A5FA;      
-   
-     /* Accent & Links */
-     --accent: #2563EB;           
-     --link-color: #60A5FA;             
-     --link-hover-color: #2563EB;       
+      /* Text Colors */
+      --text-body: #94A3B8;
+      --text-heading: #FFFFFF;
+      --text-subheading: #E4E8F0;
+      --text-muted: #64748B;
+      --text-light: #FFFFFF;
+      --text-dark: #1C1C1C;
+      --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+      /* Vivid blue for call-to-actions */
+      
+      /* Background Colors */
+      --bg-body: #0A0E1C;
+      --bg-surface: #121826;
+      --bg-surface-light: #F6F8FB;
+      --bg-surface-dark: #121826;
+      --bg-navbar: #0C111F;
+      --bg-alt: #1A2135;
+      --bg-transparent: rgba(0, 0, 0, 0.3);
+      --bg-overlay: rgba(0, 0, 0, 0.4);
+      
+      /* Button Colors */
+      --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+      --btn-pri-hover: #002B99;
+      --btn-pri-text: #FFFFFF;
+      
+      --btn-sec-bg: #E6ECF5;
+      --btn-sec-hover: #D0D7E2;
+      --btn-sec-text: #002B99;
+      
+      --btn-dis-bg: #F3F4F6;
+      --btn-dis-text: #9CA3AF;
+      
+      /* Interactive Colors */
+      --border-default: #2F3548;
+      --focus-outline: #60A5FA;
+      
+      /* Accent & Links */
+      --accent: #2563EB;
+      --link-color: #60A5FA;
+      --link-hover-color: #2563EB;
    }
 }
 
 /* Dark Theme */
 [data-theme="dark"] {
-  /* Text Colors */
-  --text-body: #94A3B8;
-  --text-heading: #FFFFFF;
-  --text-subheading: #E4E8F0;        
-  --text-muted: #64748B;             
-  --text-light: #FFFFFF;            
-  --text-dark: #1C1C1C;             
-  --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);       /* Vivid blue for call-to-actions */
-
-  /* Background Colors */
-  --bg-body: #0A0E1C;               
-  --bg-surface: #121826;             
-  --bg-surface-light: #F6F8FB;
-  --bg-surface-dark: #121826;
-  --bg-navbar: #0C111F;              
-  --bg-alt: #1A2135;                
-  --bg-transparent: rgba(0, 0, 0, 0.3);
-  --bg-overlay: rgba(0, 0, 0, 0.4);
-
-  /* Button Colors */
-  --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
-  --btn-pri-hover: #002B99;
-  --btn-pri-text: #FFFFFF;
-     
-  --btn-sec-bg: #E6ECF5;
-  --btn-sec-hover: #D0D7E2;
-  --btn-sec-text: #002B99;
-     
-  --btn-dis-bg: #F3F4F6;
-  --btn-dis-text: #9CA3AF;
-
-  /* Interactive Colors */
-  --border-default: #2F3548;        
-  --focus-outline: #60A5FA;      
-
-  /* Accent & Links */
-  --accent: #2563EB;           
-  --link-color: #60A5FA;             
-  --link-hover-color: #2563EB;       
+   /* Text Colors */
+   --text-body: #94A3B8;
+   --text-heading: #FFFFFF;
+   --text-subheading: #E4E8F0;
+   --text-muted: #64748B;
+   --text-light: #FFFFFF;
+   --text-dark: #1C1C1C;
+   --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+   /* Vivid blue for call-to-actions */
+   
+   /* Background Colors */
+   --bg-body: #0A0E1C;
+   --bg-surface: #121826;
+   --bg-surface-light: #F6F8FB;
+   --bg-surface-dark: #121826;
+   --bg-navbar: #0C111F;
+   --bg-alt: #1A2135;
+   --bg-transparent: rgba(0, 0, 0, 0.3);
+   --bg-overlay: rgba(0, 0, 0, 0.4);
+   
+   /* Button Colors */
+   --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+   --btn-pri-hover: #002B99;
+   --btn-pri-text: #FFFFFF;
+   
+   --btn-sec-bg: #E6ECF5;
+   --btn-sec-hover: #D0D7E2;
+   --btn-sec-text: #002B99;
+   
+   --btn-dis-bg: #F3F4F6;
+   --btn-dis-text: #9CA3AF;
+   
+   /* Interactive Colors */
+   --border-default: #2F3548;
+   --focus-outline: #60A5FA;
+   
+   /* Accent & Links */
+   --accent: #2563EB;
+   --link-color: #60A5FA;
+   --link-hover-color: #2563EB;
 }
 
 
@@ -288,23 +295,23 @@ html {
    4. SPACING SYSTEM (8px scale)
 ============================= */
 :root {
-  --space-xxs: 0.25rem;
-  --space-xs: 0.5rem;
-  --space-sm: 0.75rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
-  --space-xxl: 3rem;
+   --space-xxs: 0.25rem;
+   --space-xs: 0.5rem;
+   --space-sm: 0.75rem;
+   --space-md: 1rem;
+   --space-lg: 1.5rem;
+   --space-xl: 2rem;
+   --space-xxl: 3rem;
 }
 
 /* =============================
    5. RESPONSIVE BREAKPOINTS
 ============================= */
 :root {
-  --break-sm: 480px;
-  --break-md: 768px;
-  --break-lg: 1024px;
-  --break-xl: 1280px;
+   --break-sm: 480px;
+   --break-md: 768px;
+   --break-lg: 1024px;
+   --break-xl: 1280px;
 }
 
 /* Example Usage: 
@@ -315,30 +322,30 @@ html {
    6. Z-INDEX LAYERS
 ============================= */
 :root {
-  --z-base: 1;
-  --z-dropdown: 10;
-  --z-sticky: 50;
-  --z-modal: 100;
-  --z-toast: 200;
+   --z-base: 1;
+   --z-dropdown: 10;
+   --z-sticky: 50;
+   --z-modal: 100;
+   --z-toast: 200;
 }
 
 /* =============================
    7. SHADOWS & BORDER RADIUS
 ============================= */
 :root {
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-rounded: 9999px;
+   /* Border Radius */
+   --radius-sm: 4px;
+   --radius-md: 8px;
+   --radius-lg: 12px;
+   --radius-rounded: 9999px;
    
-  /* Shadows & Effects */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.05);
-  --shadow-elevation: 0 4px 12px rgba(0, 0, 0, 0.05);
-
-  /* Add inner shadow or glassmorphism effects if needed */
-  --shadow-inner: inset 0 1px 2px rgba(0, 0, 0, 0.06);
-  --blur-glass: backdrop-filter: blur(10px);
+   /* Shadows & Effects */
+   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+   --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.05);
+   --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.05);
+   --shadow-elevation: 0 4px 12px rgba(0, 0, 0, 0.05);
+   
+   /* Add inner shadow or glassmorphism effects if needed */
+   --shadow-inner: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+   --blur-glass: backdrop-filter: blur(12px);
 }
