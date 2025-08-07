@@ -201,9 +201,9 @@ html {
    --logo-hover: grayscale(0%) brightness(100%);
 }
 
+/*
 @media (prefers-color-scheme: dark) {
    :root {
-      /* Text Colors */
       --text-body: #94A3B8;
       --text-heading: #FFFFFF;
       --text-subheading: #E4E8F0;
@@ -211,9 +211,7 @@ html {
       --text-light: #FFFFFF;
       --text-dark: #1C1C1C;
       --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
-      /* Vivid blue for call-to-actions */
       
-      /* Background Colors */
       --bg-body: #0A0E1C;
       --bg-surface: #121826;
       --bg-surface-light: #F6F8FB;
@@ -223,7 +221,6 @@ html {
       --bg-transparent: rgba(0, 0, 0, 0.3);
       --bg-overlay: rgba(0, 0, 0, 0.4);
       
-      /* Button Colors */
       --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
       --btn-pri-hover: #002B99;
       --btn-pri-text: #FFFFFF;
@@ -235,16 +232,15 @@ html {
       --btn-dis-bg: #F3F4F6;
       --btn-dis-text: #9CA3AF;
       
-      /* Interactive Colors */
       --border-default: #2F3548;
       --focus-outline: #60A5FA;
       
-      /* Accent & Links */
       --accent: #2563EB;
       --link-color: #60A5FA;
       --link-hover-color: #2563EB;
    }
 }
+*/
 
 /* Dark Theme */
 [data-theme="dark"] {
