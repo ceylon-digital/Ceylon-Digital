@@ -108,13 +108,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preload" href="./assets/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <!-- <link rel="preload" href="./assets/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
   
   <!-- 11. External CSS Stylesheets -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- AOS Scroll Animation Library -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> <!-- Swiper (For sliders) -->
+  <!-- Swiper JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
+  <!-- Bootstrap Icons -->
   
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+
   <link rel="stylesheet" href="../assets/fontawesome-free-6.7.2-web/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../assets/package/swiper-bundle.min.css">
@@ -124,6 +130,7 @@
   <link rel="stylesheet" href="../assets/css/utils.css">
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/sidebar.css">
   <link rel="stylesheet" href="../assets/css/preloader.css">
   <link rel="stylesheet" href="../assets/css/footer.css">
   <link rel="stylesheet" href="../assets/css/services.css">
@@ -262,7 +269,6 @@
     </div>
   </div>
   
-  
   <!-- Navbar -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="navbar-container">
@@ -273,7 +279,7 @@
       <ul class="nav-links">
         <li><a href="../index.html" title="Go to homepage">Home</a></li>
         <li class="dropdown">
-          <a href="./index.html" class="active" title="Explore our services">Services</a>
+          <a href="./index.html" class="active" title="Explore our services">Services <i class="fas fa-chevron-down"></i></a>
           <ul class="dropdown-menu">
             <li><a href="./digital-strategy-consulting/index.html" class="submenu-toggle">Strategy & Consulting</a></li>
             <li><a href="./web-development/index.html" class="submenu-toggle">Web Development</a></li>
@@ -289,7 +295,7 @@
         </li>
         <li><a href="../portfolio/index.html" title="See our work">Portfolio</a></li>
         <li class="dropdown">
-          <a href="/resources" title="Access our resources">Resources</a>
+          <a href="javascript:void(0)" title="Access our resources">Resources <i class="fas fa-chevron-down"></i></a>
           <ul class="dropdown-menu">
             <li><a href="../blog/index.html">Blog</a></li>
             <li><a href="../case-studies/index.html">Case Studies</a></li>
@@ -298,15 +304,77 @@
           </ul>
         </li>
         <li><a href="../about/index.html" title="Learn about us">About</a></li>
-        <li><button id="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button></li>
       </ul>
       
       <div class="action">
-        <a href="../contact/index.html" class="cta-button">Start a Project</a>
-        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <button id="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <a href="../contact/index.html" class="btn btn-primary-pill">Start a Project</a>
+        <button id="menu-toggle" class="hamburger" aria-label="Open Menu" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </div>
   </nav>
+  
+  
+  
+  <!-- OVERLAY -->
+  <div id="overlay"></div>
+  
+  <!-- SIDEBAR -->
+  <aside class="sidebar" role="navigation" aria-label="Mobile Navigation">
+    <button id="close-sidebar" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    
+    <a href="../index.html" class="logo">
+      <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      
+      <li class="dropdown">
+        <a href="javascript:void(0)">Services <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="../services/digital-strategy-consulting/index.html">Strategy & Consulting</a></li>
+          <li><a href="../services/web-development/index.html">Web Development</a></li>
+          <li><a href="../services/app-development/index.html">App Development</a></li>
+          <li><a href="../services/digital-marketing/index.html">Marketing</a></li>
+          <li><a href="../services/branding-and-creative-services/index.html">Branding & Creative</a></li>
+          <li><a href="../services/ui-ux-design/index.html">UI/UX Design</a></li>
+          <li><a href="../services/software-and-product-development/index.html">Software Development</a></li>
+          <li><a href="../services/e-commerce-solutions/index.html">E-Commerce</a></li>
+          <li><a href="../services/analytics-and-data-services/index.html">Analytics</a></li>
+          <li><a href="../services/support-and-maintenance/index.html">Support & Maintenance</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="../portfolio/index.html">Portfolio</a></li>
+      
+      <li class="dropdown">
+        <a href="javascript:void(0)">Resources <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../case-studies/index.html">Case Studies</a></li>
+          <li><a href="../tools/index.html">Free Tools</a></li>
+          <li><a href="../promotions/index.html">Promotions</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="../about/index.html">About</a></li>
+      
+      <!-- Theme Selector -->
+      <li class="theme-selector">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select" aria-label="Theme Selector">
+          <option value="auto">Auto</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </li>
+    </ul>
+  </aside>
+  
+  
   
   
   <header>
@@ -474,7 +542,7 @@
     <section data-aos="fade-in" class="cta-section">
       <h2 data-aos="fade-up">Need a custom strategy?</h2>
       <p data-aos="fade-up" data-aos-delay="250">Let’s chat about how we can help you scale your business with the right digital services.</p>
-      <a data-aos="fade-up" data-aos-delay="250" href="../contact/index.html" class="cta cta-primary-light">Book a Free Consultation</a>
+      <a data-aos="fade-up" data-aos-delay="250" href="../contact/index.html" class="btn btn-secondary-pill">Book a Free Consultation</a>
     </section>
   </main>
   
@@ -498,7 +566,7 @@
           <p>Subscribe to our newsletter to receive the latest news and insights.</p>
           <form class="newsletter-form">
             <input type="email" placeholder="Your email" required />
-            <button type="submit" class="cta cta-primary">Subscribe</button>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
           </form>
         </div>
       </div>
@@ -576,7 +644,7 @@
           <a href="../terms-of-service/index.html">Terms of Service</a> |
           <a href="../privacy-policy/index.html">Privacy Policy</a>
         </div>
-        <button onclick="scrollToTop()" class="back-to-top cta cta-primary"><i class="bi bi-arrow-up"></i> Back to Top</button>
+        <button onclick="scrollToTop()" class="back-to-top btn btn-primary"><i class="bi bi-arrow-up"></i> Back to Top</button>
       </div>
     </div>
   </footer>
