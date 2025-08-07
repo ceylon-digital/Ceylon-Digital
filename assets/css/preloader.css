@@ -1,4 +1,4 @@
-.preloader {
+/* .preloader {
    width: 100%;
    height: 100vh;
    position: fixed;
@@ -12,4 +12,67 @@
 
 .preloader .brand-logo img {
    height: 70px;
+}
+ */
+
+
+
+
+
+.preloader {
+   width: 100%;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background: var(--bg-body, #0e0e0e);
+   display: grid;
+   place-content: center;
+   z-index: 10000;
+   color: var(--bg-body);
+   padding: 0 clamp(1.5rem, 5vw, 3rem);
+}
+
+.loader {
+   text-align: center;
+}
+
+.brand-logo img {
+   height: 50px;
+   margin-bottom: 20px;
+}
+
+.greeting-text {
+   font-size: var(--h4-size);
+   margin-bottom: 20px;
+   color: var(--accent);
+   animation: fadeIn 2s ease-in-out;
+}
+
+.spinner {
+   width: 40px;
+   height: 40px;
+   border: 4px solid var(--border-default);
+   border-top: 4px solid var(--accent);
+   border-radius: 50%;
+   animation: spin 1s linear infinite;
+   margin: 0 auto;
+}
+
+@keyframes spin {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: translateY(10px);
+   }
+   
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
 }
