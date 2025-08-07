@@ -8,7 +8,7 @@
 
 .accent-text {
   font-family: var(--font-accent);
-  color: var(--color-accent);
+  color: var(--accent);
 }
 
 .display-text {
@@ -19,7 +19,7 @@
 .code-text {
   font-family: var(--font-mono);
   color: var(--text-light);
-  background-color: var(--text-primary);
+  background-color: var(--text-body);
   padding: var(--space-xs);
   border-radius: var(--radius-sm);
 }
@@ -31,7 +31,7 @@
 .cta-text {
   font-family: var(--font-accent);
   color: var(--text-light);
-  background-color: var(--btn-primary-bg);
+  background-color: var(--btn-pri-bg);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-sm);
   font-weight: 600;
@@ -153,7 +153,7 @@
    BUTTON BASE
 ============================= */
 .btn {
-  background-color: var(--btn-primary-bg);
+  background-color: var(--btn-pri-bg);
   color: var(--text-light);
   padding: var(--space-sm) var(--space-md);
   border: none;
@@ -165,7 +165,7 @@
 }
 
 .btn:hover {
-  background-color: var(--btn-hover-bg);
+  background-color: var(--btn-pri-hover);
 }
 
 
