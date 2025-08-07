@@ -7,7 +7,7 @@ AOS.init({
 });
 
 
-onload = () => {
+function loadWhatsAppBtn() {
    var url = 'https://cdn.waplus.io/waplus-crm/settings/ossembed.js';
    var s = document.createElement('script');
    s.type = 'text/javascript';
@@ -49,7 +49,7 @@ onload = () => {
    };
    var x = document.getElementsByTagName('script')[0];
    x.parentNode.insertBefore(s, x);
-};
+}
 
 
 function getGreeting() {
@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
    setTimeout(() => {
       document.querySelector(".preloader").style.display = "none";
+      loadWhatsAppBtn();
    }, 1500); // adjust timing if needed
 });
 
