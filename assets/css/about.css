@@ -1,7 +1,7 @@
 .hero {
    margin-top: 97px;
    padding: 100px clamp(1.5rem, 5vw, 3rem);
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
 }
 
 .hero .container {
@@ -117,12 +117,12 @@ main {
 .values .container ul li h3 {
    font-size: var(--h5-size);
    font-weight: normal;
-   color: var(--color-accent);
+   color: var(--accent);
 }
 
 .values .container ul li::before {
    content: '✓';
-   color: var(--color-accent);
+   color: var(--accent);
    position: absolute;
    left: 0;
 }
@@ -176,7 +176,7 @@ main {
    text-align: center;
    max-width: 700px;
    margin: 0 auto 2rem;
-   color: var(--text-primary);
+   color: var(--text-body);
 }
 
 /* Grid Layout */
@@ -248,7 +248,7 @@ main {
    text-align: center;
    max-width: 700px;
    margin: 0 auto;
-   color: var(--text-primary);
+   color: var(--text-body);
 }
 
 /* Responsive tweaks */
