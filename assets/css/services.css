@@ -1,5 +1,5 @@
 header {
-  background: var(--btn-primary-bg);
+  background: var(--btn-pri-bg);
   color: var(--text-light);
   margin-top: 97px;
   padding: 150px clamp(1.5rem, 5vw, 3rem);
@@ -70,7 +70,7 @@ main {
 }
 
 .service-card p {
-  color: var(--text-primary);
+  color: var(--text-body);
   margin-bottom: 0.75rem;
 }
 
@@ -86,7 +86,7 @@ main {
 }
 
 .service-card a {
-  color: var(--color-accent);
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -96,7 +96,7 @@ main {
 .cta-section {
   text-align: center;
   padding: 50px clamp(1.5rem, 5vw, 3rem);
-  background: var(--btn-primary-bg);
+  background: var(--btn-pri-bg);
   color: var(--text-light);
 }
 
