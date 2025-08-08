@@ -96,7 +96,7 @@ const closeSidebar = document.getElementById('close-sidebar');
 const sidebar = document.querySelector('.sidebar');
 const overlay = document.getElementById('overlay');
 const dropdowns = document.querySelectorAll('.dropdown > a');
-const themeSelect = document.getElementById('theme-select');
+const themeSelects = document.querySelectorAll('.theme-select');
 
 // === SIDEBAR TOGGLE ===
 menuToggle.addEventListener('click', () => {
@@ -118,6 +118,9 @@ overlay.addEventListener('click', () => {
    overlay.classList.remove('active');
 });
 
+
+
+
 // === DROPDOWN TOGGLES ===
 dropdowns.forEach(link => {
    link.addEventListener('click', () => {
@@ -125,6 +128,9 @@ dropdowns.forEach(link => {
       submenu.classList.toggle('open');
    });
 });
+
+
+
 
 // === THEME MANAGEMENT ===
 
@@ -147,32 +153,31 @@ const saveThemePreference = (mode) => {
 const loadThemePreference = () => {
    const saved = localStorage.getItem('theme');
    const theme = saved || 'auto';
-   themeSelect.value = theme;
+   themeSelects.forEach(select => {
+      select.value = theme;
+   });
    setTheme(theme);
-};
+   
+   // Apply theme when user changes it
+   themeSelects.forEach(select => {
+      select.addEventListener('change', (e) => {
+         const selected = e.target.value;
+         saveThemePreference(selected);
+         setTheme(selected);
+      });
+   })
+}
 
-// Apply theme when user changes it
-themeSelect.addEventListener('change', (e) => {
-   const selected = e.target.value;
-   saveThemePreference(selected);
-   setTheme(selected);
-});
 
 // System theme changes (only applies when in Auto mode)
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-   if (themeSelect.value === 'auto') {
+   if (themeSelect.forEach(select => select.value === 'auto')) {
       setTheme('auto');
    }
 });
 
 // Init on page load
 loadThemePreference();
-
-
-
-
-
-
 
 
 
@@ -196,6 +201,7 @@ onscroll = () => {
 
 
 // Theme changing
+/*
 const themeToggle = document.getElementById('theme-toggle');
 const toggleIcon = themeToggle.querySelector('i');
 const currentTheme = localStorage.getItem('theme');
@@ -223,6 +229,11 @@ function changeIcon(theme) {
 }
 
 changeIcon(currentTheme);
+*/
+
+
+
+
 
 
 // Link delay navigation
@@ -294,7 +305,6 @@ function addRippleEffect(selector) {
 addRippleEffect('.cta, .btn, .card, .quote');
 
 
-// Scrollspy
 // const sections = document.querySelectorAll('.main-section');
 // const navLinks = document.querySelectorAll('.nav-item>a');
 
@@ -328,8 +338,6 @@ window.onload = () => {
    _waEmbed(wa_btnSetting, wa_widgetSetting);
 };
 */
-
-
 
 
 
