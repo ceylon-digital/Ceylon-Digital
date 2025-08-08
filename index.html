@@ -265,7 +265,7 @@
                "name": "How much does a website cost?",
                "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Prices start from $1,500 for basic websites. We’ll provide a custom quote based on your needs."
+                  "text": "Prices start from $200-$400 for basic websites depending on features. We’ll provide a custom quote based on your needs. Feel free to contact us."
                }
             },
             {
@@ -517,14 +517,6 @@
 <body>
    <div id="tsparticles"></div>
    
-   <!-- <div class="preloader">
-      <div class="loader">
-         <a href="index.html" class="brand-logo">
-            <img src="./assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
-         </a>
-      </div>
-   </div> -->
-   
    <div class="preloader">
       <div class="loader">
          <div class="brand-logo">
@@ -536,9 +528,9 @@
    </div>
    
    
-   <!-- Hero Section -->
+   <!-- Header Section -->
    <header id="header" class="header header-section main-section">
-      <!-- Navbar -->
+      <!-- Top Navbar (For Desktop) -->
       <nav class="navbar" role="navigation" aria-label="Main navigation">
          <div class="navbar-container">
             <a href="./index.html" class="logo">
@@ -576,7 +568,11 @@
             </ul>
             
             <div class="action">
-               <button id="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+               <select class="theme-select" aria-label="Theme Selector">
+                  <option value="auto">Auto</option>
+                  <option value="light">Light</option>
+                  <option value="dark">Dark</option>
+               </select>
                <a href="./contact/index.html" class="btn btn-primary-pill">Start a Project</a>
                <button id="menu-toggle" class="hamburger" aria-label="Open Menu" aria-expanded="false">
                   <i class="fas fa-bars"></i>
@@ -586,11 +582,10 @@
       </nav>
       
       
-      
-      <!-- OVERLAY -->
+      <!-- Sidebar Overlay -->
       <div id="overlay"></div>
       
-      <!-- SIDEBAR -->
+      <!-- Sidebar (For Mobile) -->
       <aside class="sidebar" role="navigation" aria-label="Mobile Navigation">
          <button id="close-sidebar" aria-label="Close Menu"><i class="fas fa-times"></i></button>
          
@@ -634,7 +629,7 @@
             <!-- Theme Selector -->
             <li class="theme-selector">
                <label for="theme-select">Theme</label>
-               <select id="theme-select" aria-label="Theme Selector">
+               <select id="theme-select" class="theme-select" aria-label="Theme Selector">
                   <option value="auto">Auto</option>
                   <option value="light">Light</option>
                   <option value="dark">Dark</option>
@@ -852,7 +847,7 @@
       <section id="process" id="our-process" class="process-section main-section">
          <div class="container">
             <h2 class="section-title">Our process</h2>
-            <p class="section-creative-title">Lasting impact through smart moves</p>
+            <p class="section-creative-title">Smart moves for lasting impact</p>
             <p class="section-subtitle">Our process is guided by data, driven by creativity, and focused on delivering lasting digital impact.</p>
             
             <div class="horizontal-timeline">
@@ -895,7 +890,7 @@
       <section id="services" class="services-section main-section">
          <div class="container">
             <h2 data-aos="fade-up" class="section-title">Our services</h2>
-            <p data-aos="fade-up" class="section-creative-title">Design. Strategy. Growth-ready digital solutions.</p>
+            <p data-aos="fade-up" class="section-creative-title">What We Bring to the Table</p>
             <p data-aos="fade-up" class="section-subtitle">From branding and websites to performance marketing, we create strategies that scale and deliver measurable results.</p>
             <!-- <img data-aos="fade-up" src="./assets/img/team.jpg" alt=""> -->
             
@@ -997,8 +992,8 @@
       <section id="portfolio" class="portfolio-section main-section">
          <div class="container">
             <h2 data-aos="fade-in" class="section-title">Our portfolio</h2>
-            <p data-aos="fade-in" class="section-creative-title">Real solutions. Real results. Real impact.</p>
-            <p data-aos="fade-in" class="section-subtitle">Take a look at the brands we’ve helped grow — from bold startups to established enterprises. Each project is a reflection of our strategic thinking and creative execution.</p>
+            <p data-aos="fade-in" class="section-creative-title">Our Work in Action</p>
+            <p data-aos="fade-in" class="section-subtitle">Our portfolio features creative digital work for growing businesses and enterprises.</p>
             
             <div data-aos="fade-up" class="actionBar">
                <div id="searchBar" class="searchBar">
@@ -1022,8 +1017,8 @@
          <div class="container">
             <header class="pricing__header">
                <h2 data-aos="fade-up" class="section-title">Pricing Plans</h2>
-               <p data-aos="fade-up" class="pricing__title section-creative-title">Flexible solutions for every stage of growth.</p>
-               <p data-aos="fade-up" class="pricing__subtitle section-subtitle">From startups to enterprises, our pricing is designed to scale with your needs—no surprises, just results.</p>
+               <p data-aos="fade-up" class="pricing__title section-creative-title">Flexible, Transparent Pricing</p>
+               <p data-aos="fade-up" class="pricing__subtitle section-subtitle">Designed for startups to enterprises—scalable solutions with no hidden fees.</p>
                <div data-aos="fade-up" class="currency-toggle">
                   <label for="currencySwitch">Show prices in</label>
                   <select id="currencySwitch">
@@ -1268,7 +1263,7 @@
                      <h4>How much does a website cost?</h4><i class="fas fa-chevron-down"></i>
                   </button>
                   <div class="faq-body" hidden>
-                     <p>Prices start from $1,500 for basic websites. We’ll provide a custom quote based on your needs.</p>
+                     <p>Prices start from $200-$400 for basic websites depending on features. We’ll provide a custom quote based on your needs. Feel free to <a href="./contact/index.html">contact us</a>.</p>
                   </div>
                </div>
                <div class="faq"><button class="faq-header" aria-expanded="false">
@@ -1480,8 +1475,8 @@
       <section id="contact" class="contact-section main-section">
          <div class="container">
             <h2 data-aos="fade-up" class="section-title">Contact us</h2>
-            <p data-aos="fade-up" class="section-creative-title">Ready to grow smarter? We’d love to hear from you.</p>
-            <p data-aos="fade-up" class="section-subtitle">Whether you have a specific project in mind or just want to explore possibilities, our team is here to start the conversation.</p>
+            <p data-aos="fade-up" class="section-creative-title">Contact Our Digital Agency</p>
+            <p data-aos="fade-up" class="section-subtitle">Tell us about your idea. We’ll help you bring it to life.</p>
             <div>
                <div class="contact-left" data-aos="fade-right">
                   <img loading="lazy" src="./assets/img/contact.png" alt="Contact illustration" />
@@ -1489,7 +1484,7 @@
                
                <div class="contact-right" data-aos="fade-left">
                   <h3>Request a Free Consultation</h3>
-                  <p>Our team will review your message and get back to you within 24 hours.</p>
+                  <p>We will review your message and get back to you within 24 hours.</p>
                   
                   <form id="contactForm" action="https://formspree.io/f/xgvzypnw" method="POST">
                      <div class="form-group">
