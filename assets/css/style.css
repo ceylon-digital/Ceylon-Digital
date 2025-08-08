@@ -1,5 +1,4 @@
-/* Convert to normal CSS before deployment 
-in order to ensure older browser support as well */
+/* Convert to normal CSS before deployment in order to ensure older browser support as well */
 .header {
    position: relative;
    transition: 0.3s ease;
@@ -208,13 +207,13 @@ section {
 .container {
    width: 100%;
    max-width: 1200px;
-   margin: 0 auto;
+   margin: auto;
 }
 
 .container .section-title {
    color: var(--accent);
    font-size: var(--h6-size);
-   margin: 0 auto;
+   margin: auto;
    font-weight: bold;
    font-family: var(--font-secondary);
    text-align: center;
