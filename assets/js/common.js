@@ -153,9 +153,7 @@ const saveThemePreference = (mode) => {
 const loadThemePreference = () => {
    const saved = localStorage.getItem('theme');
    const theme = saved || 'auto';
-   themeSelects.forEach(select => {
-      select.value = theme;
-   });
+   
    setTheme(theme);
    
    // Apply theme when user changes it
@@ -165,7 +163,11 @@ const loadThemePreference = () => {
          saveThemePreference(selected);
          setTheme(selected);
       });
-   })
+   });
+   
+   themeSelects.forEach(select => {
+      select.value = theme;
+   });
 }
 
 
