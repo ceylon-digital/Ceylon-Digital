@@ -104,14 +104,12 @@
 }
 
 .navbar .theme-select {
-  padding: 0;
   margin-right: 20px;
-  background: none;
   color: var(--link-color);
+  font-weight: bold;
 }
 
 .navbar .theme-select:hover {
-  background: none;
   color: var(--accent);
 }
 
