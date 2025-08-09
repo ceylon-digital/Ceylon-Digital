@@ -378,45 +378,45 @@ section {
 
 
 .why-choose-us {
-   padding: 80px clamp(1.5rem, 5vw, 3rem);
+   background: var(--bg-surface);
    padding-block: clamp(2rem, 8vw, 4rem);
    padding-block: clamp(4rem, 10vw, 7rem);
    padding-inline: clamp(1.5rem, 5vw, 3rem);
-   background: var(--bg-surface);
+   scroll-margin-top: 97px;
 }
 
-.container {
+.why-choose-us .container {
    max-width: 1200px;
    margin: auto;
 }
 
-.section-header {
+.why-choose-us .section-header {
    text-align: center;
    margin-bottom: 60px;
    opacity: 0;
    transform: translateY(40px);
 }
 
-.section-header h2 {
+.why-choose-us .section-header h2 {
    font-weight: bold;
    color: var(--text-heading);
    margin-bottom: 12px;
 }
 
-.section-header p {
+.why-choose-us .section-header p {
    font-size: 1.1rem;
    color: var(--text-body);
    max-width: 600px;
    margin: 0 auto;
 }
 
-.features-grid {
+.why-choose-us .features-grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
    gap: 30px;
 }
 
-.feature-item {
+.why-choose-us .feature-item {
    background: var(--bg-body);
    padding: 40px 30px;
    border-radius: 12px;
@@ -430,12 +430,12 @@ section {
    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.feature-item:hover {
+.why-choose-us .feature-item:hover {
    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
    box-shadow: var(--shadow-elevation);
 }
 
-.feature-icon {
+.why-choose-us .feature-icon {
    font-size: 2rem;
    color: var(--accent);
    margin-bottom: 16px;
@@ -445,7 +445,7 @@ section {
    transition: transform 0.3s ease;
 }
 
-.feature-number {
+.why-choose-us .feature-number {
    position: absolute;
    top: -20px;
    left: 20px;
@@ -456,7 +456,7 @@ section {
    z-index: 0;
 }
 
-.feature-item h3 {
+.why-choose-us .feature-item h3 {
    font-size: 1.3rem;
    font-weight: 600;
    color: var(--text-subheading);
@@ -465,20 +465,20 @@ section {
    z-index: 1;
 }
 
-.feature-item p {
+.why-choose-us .feature-item p {
    color: var(--text-muted);
    line-height: 1.6;
    position: relative;
    z-index: 1;
 }
 
-.feature-item.wide {
+.why-choose-us .feature-item.wide {
    grid-column: span 2;
    background: var(--bg-alt);
 }
 
 @media (max-width: 768px) {
-   .feature-item.wide {
+   .why-choose-us .feature-item.wide {
       grid-column: span 1;
    }
 }
