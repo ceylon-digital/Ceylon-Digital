@@ -952,6 +952,7 @@ section {
    scroll-margin-top: 97px;
    
    .container {
+      max-width: 1200px;
       text-align: center;
    }
    
@@ -1228,17 +1229,17 @@ section {
    margin-bottom: 3rem;
 }
 
-.pricing__title {
+/* .pricing__title {
    color: var(--text-heading);
    margin-bottom: 0.5rem;
-}
+} */
 
-.pricing__subtitle {
+/* .pricing__subtitle {
    font-size: var(--h5-size);
    color: var(--text-secondary);
    margin: auto;
    margin-bottom: 1rem !important;
-}
+} */
 
 .currency-toggle {
    display: flex;
