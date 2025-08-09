@@ -18,7 +18,7 @@
    /* Apply blur effect */
    -webkit-backdrop-filter: blur(20px);
    /* For Safari */
-   background-color: var(--bg-transparent);
+   background-color: var(--bg-overlay-light);
    /* Optional semi-transparent bg */
 }
 
@@ -54,12 +54,12 @@ canvas.blob-canvas {
 
 .hero .social-links a {
    font-size: 1.1rem;
-   color: var(--link-color);
+   color: var(--link-default);
    transition: 0.3s ease;
 }
 
 .hero .social-links a:hover {
-   color: var(--link-hover-color);
+   color: var(--link-hover);
 }
 
 .hero .hero-left {
@@ -113,7 +113,7 @@ canvas.blob-canvas {
    /* Apply blur effect */
    -webkit-backdrop-filter: blur(20px);
    /* For Safari */
-   background-color: var(--bg-transparent);
+   background-color: var(--bg-overlay-light);
    /* Optional semi-transparent bg */
 }
 
@@ -134,7 +134,7 @@ canvas.blob-canvas {
    /* Apply blur effect */
    /* -webkit-backdrop-filter: blur(5px); */
    /* For Safari */
-   /* background-color: var(--bg-transparent); */
+   /* background-color: var(--bg-overlay-light); */
    /* Optional semi-transparent bg */
    min-width: 200px;
    font-weight: 600;
@@ -222,12 +222,13 @@ section {
 }
 
 .container .section-creative-title {
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    font-family: var(--font-secondary);
    text-align: center;
    font-size: var(--h2-size);
    font-weight: bold;
    letter-spacing: 1px;
+   text-transform: capitalize;
    margin: 0 auto 10px;
 }
 
@@ -283,7 +284,7 @@ section {
 }
 
 .about-intro a {
-   color: var(--link-color);
+   color: var(--link-default);
    text-decoration: underline;
 }
 
@@ -402,18 +403,18 @@ section {
    transform: translateY(40px);
 }
 
-.why-choose-us .section-header h2 {
+/* .why-choose-us .section-header h2 {
    font-weight: bold;
    color: var(--text-heading);
    margin-bottom: 12px;
-}
+} */
 
-.why-choose-us .section-header p {
+/* .why-choose-us .section-header p {
    font-size: 1.1rem;
    color: var(--text-body);
    max-width: 600px;
    margin: 0 auto;
-}
+} */
 
 .why-choose-us .features-grid {
    display: grid;
@@ -464,7 +465,7 @@ section {
 .why-choose-us .feature-item h3 {
    font-size: 1.3rem;
    font-weight: 600;
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    margin-bottom: 12px;
    position: relative;
    z-index: 1;
@@ -498,7 +499,7 @@ section {
 }
 
 .founder-section h2 {
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    margin-bottom: 20px;
 }
 
@@ -610,7 +611,7 @@ section {
 .timeline-title {
    font-size: 1.2em;
    font-weight: bold;
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    margin-bottom: 10px;
 }
 
@@ -718,7 +719,7 @@ section {
    .service-card h3 {
       font-size: 1.4em;
       font-weight: bold;
-      color: var(--text-subheading);
+      color: var(--text-secondary);
       margin-bottom: 10px;
    }
    
@@ -729,7 +730,7 @@ section {
    }
    
    .service-card .fake-link {
-      color: var(--link-color);
+      color: var(--link-default);
       font-weight: 600;
       transition: 0.3s ease-in-out;
    }
@@ -1042,7 +1043,7 @@ section {
    .project-title {
       font-size: 1.4em;
       font-weight: bold;
-      color: var(--text-subheading);
+      color: var(--text-secondary);
       margin-bottom: 10px;
    }
    
@@ -1234,7 +1235,7 @@ section {
 
 .pricing__subtitle {
    font-size: var(--h5-size);
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    margin: auto;
    margin-bottom: 1rem !important;
 }
@@ -1319,7 +1320,7 @@ section {
 
 .pricing__plan {
    font-size: 1.4em;
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    margin: 1rem 0 0.25rem 0;
 }
 
@@ -1348,7 +1349,7 @@ section {
 .pricing__discounted {
    font-size: 1.7em;
    font-weight: bold;
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    margin-bottom: 1rem;
 }
 
@@ -1396,17 +1397,17 @@ section {
    text-align: center;
    margin: auto;
    margin-top: 3rem;
-   color: var(--text-subheading);
+   color: var(--text-secondary);
 }
 
 .pricing__link {
-   color: var(--link-color);
+   color: var(--link-default);
    text-decoration: underline;
    transition: color 0.3s ease;
 }
 
 .pricing__link:hover {
-   color: var(--link-hover-color);
+   color: var(--link-hover);
 }
 
 
@@ -1508,7 +1509,7 @@ section {
    }
    
    .section-creative-title {
-      color: var(--text-subheading);
+      color: var(--text-secondary);
       text-align: start;
       margin: 0;
       margin-bottom: 10px;
@@ -1669,7 +1670,7 @@ section {
    }
    
    .contact-right h3 {
-      color: var(--text-subheading);
+      color: var(--text-secondary);
       margin-bottom: 12px;
    }
    
@@ -1762,7 +1763,7 @@ section {
    
    .form-msg {
       margin-top: 20px;
-      color: var(--link-color);
+      color: var(--link-default);
       display: none;
    }
    
