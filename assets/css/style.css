@@ -279,8 +279,13 @@ section {
 
 .about-intro .about {
    color: var(--text-body);
+   margin-bottom: 10px;
 }
 
+.about-intro a {
+   color: var(--link-color);
+   text-decoration: underline;
+}
 
 
 
@@ -482,11 +487,6 @@ section {
       grid-column: span 1;
    }
 }
-
-
-
-
-
 
 
 
