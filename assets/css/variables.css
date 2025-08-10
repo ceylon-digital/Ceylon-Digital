@@ -105,6 +105,34 @@ html {
    --h5-size: clamp(1.05rem, 1.5vw, 1.3rem);
    --h6-size: clamp(1rem, 1.2vw, 1.2rem);
    --p-size: 1rem;
+   
+   
+   --display-size: clamp(2.5rem, 2rem + 1vw, 3rem);
+   --h1-size: clamp(2rem, 1.5rem + 1.5vw, 2.7rem);
+   --h2-size: clamp(1.8rem, 1.3rem + 1.2vw, 2.2rem);
+   --h3-size: clamp(1.5rem, 1.1rem + 1vw, 1.8rem);
+   --h4-size: clamp(1.3rem, 1rem + 0.8vw, 1.6rem);
+   --h5-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.3rem);
+   --h6-size: clamp(1rem, 0.8rem + 0.5vw, 1.2rem);
+   --p-size: clamp(1rem, 0.9rem + 0.3vw, 1.1rem);
+   
+   
+   --display-size: clamp(2.5rem, 2rem + 1.5vw, 3.8rem);
+   /* ~3.815rem */
+   --h1-size: clamp(2.2rem, 1.8rem + 1.2vw, 3.05rem);
+   /* ~3.052rem */
+   --h2-size: clamp(1.8rem, 1.5rem + 1vw, 2.44rem);
+   /* ~2.441rem */
+   --h3-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.95rem);
+   /* ~1.953rem */
+   --h4-size: clamp(1.3rem, 1.1rem + 0.6vw, 1.56rem);
+   /* ~1.563rem */
+   --h5-size: clamp(1.1rem, 0.95rem + 0.4vw, 1.25rem);
+   /* ~1.25rem */
+   --h6-size: clamp(1rem, 0.85rem + 0.3vw, 1.1rem);
+   /* ~1.1rem */
+   --p-size: clamp(1rem, 0.85rem + 0.25vw, 1.05rem);
+   /* base */
 }
 
 /* MAJOR THIRD SCALE (Recommended for content-heavy sites, blogs, dashboards) */
