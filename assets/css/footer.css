@@ -41,7 +41,7 @@
 }
 
 .footer-branding a:hover {
-   color: var(--link-hover-color);
+   color: var(--link-hover);
 }
 
 .footer-branding p {
@@ -54,7 +54,7 @@
 }
 
 .footer-newsletter h4 {
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    margin-bottom: 10px;
 }
 
@@ -93,7 +93,7 @@
 }
 
 .footer-col h5 {
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    text-transform: capitalize;
    margin-bottom: 10px;
 }
@@ -118,7 +118,7 @@
 }
 
 .footer-col a:hover {
-   color: var(--link-hover-color);
+   color: var(--link-hover);
 }
 
 .footer-bottom {
