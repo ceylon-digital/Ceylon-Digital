@@ -5,13 +5,7 @@
   left: 0;
   padding: 1.3rem clamp(1.5rem, 5vw, 3rem);
   z-index: 1000;
-  transition: background 0.3s ease;
-}
-
-.navbar.fixed,
-.navbar:hover {
-  background: var(--bg-navbar);
-  box-shadow: var(--shadow-elevation);
+  transition: 0.3s ease;
 }
 
 .navbar-container {
@@ -20,6 +14,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.navbar-container>div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar.fixed {
+  background: var(--bg-navbar);
+  box-shadow: var(--shadow-elevation);
 }
 
 .navbar .action {
@@ -57,12 +63,12 @@
 .navbar .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.9rem;
+  gap: 3rem;
 }
 
 .navbar .nav-links a {
-  color: var(--link-color);
-  font-weight: 500;
+  color: var(--text-muted);
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
@@ -95,7 +101,7 @@
 .navbar .dropdown-menu a {
   display: block;
   padding: 0.6rem 1.5rem;
-  color: var(--link-color);
+  color: var(--link-default);
 }
 
 .navbar .dropdown-menu a:hover {
@@ -104,13 +110,22 @@
 }
 
 .navbar .theme-select {
-  margin-right: 20px;
-  color: var(--link-color);
+  font-size: var(--p-size);
+  color: var(--link-default);
   font-weight: bold;
 }
 
 .navbar .theme-select:hover {
   color: var(--accent);
+}
+
+.navbar .btn {
+  background: none;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  text-transform: none;
+  font-size: .8rem;
+  padding: 10px 15px;
 }
 
 @media (max-width: 1100px) {
