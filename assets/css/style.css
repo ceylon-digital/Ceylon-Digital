@@ -163,10 +163,13 @@ canvas.blob-canvas {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
    .hero {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      min-height: 100vh;
+      display: grid;
+      place-content: center;
+      padding-top: 8rem;
+      padding-bottom: 7rem;
       flex-direction: column-reverse;
       text-align: center;
    }
@@ -365,7 +368,7 @@ section {
    align-items: center;
    min-height: 100vh;
    background: var(--bg-body);
-display:none;
+   display: none;
 }
 
 .neon h1 {
