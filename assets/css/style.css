@@ -365,6 +365,7 @@ section {
    align-items: center;
    min-height: 100vh;
    background: var(--bg-body);
+display:none;
 }
 
 .neon h1 {
