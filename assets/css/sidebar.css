@@ -22,7 +22,7 @@
    left: 0;
    width: 100vw;
    height: 100vh;
-   background: var(--bg-overlay);
+   background: var(--bg-overlay-dark);
    z-index: 1001;
    display: none;
 }
