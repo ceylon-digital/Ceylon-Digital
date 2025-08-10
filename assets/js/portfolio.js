@@ -22,7 +22,7 @@ function renderProjects(projects) {
                         <li>Node.js</li>
                         <li>UI/UX</li>
                      </ul>
-                     <a href="${project.detailsPage}" class="view-case">View case study <i class="fas fa-external-link-alt"></i></a>
+                     <a href="${project.detailsPage}" class="view-case">View case study <i class="fas fa-arrow-right"></i></a>
                   </div>
                </div>`;
             container.appendChild(card);
