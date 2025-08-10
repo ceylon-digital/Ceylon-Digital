@@ -69,7 +69,7 @@ window.addEventListener("load", () => {
    setTimeout(() => {
       document.querySelector(".preloader").style.display = "none";
       loadWhatsAppBtn();
-   }, 1500); // adjust timing if needed
+   }); // adjust timing if needed
 });
 
 
