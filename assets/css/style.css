@@ -148,7 +148,7 @@ canvas.blob-canvas {
 }
 
 .marquee-item:hover {
-   transform: translateY(-10px);
+   transform: scale(1.02);
    color: var(--accent);
    box-shadow: var(--shadow-elevation);
 }
@@ -330,13 +330,12 @@ section {
 }
 
 .feature-card h4 {
-   font-size: 1.2em;
+   font-size: 1.3em;
    margin-bottom: 10px;
    color: var(--text-body);
 }
 
 .feature-card p {
-   font-size: 0.9em;
    color: var(--text-muted);
 }
 
@@ -529,6 +528,7 @@ section {
 }
 
 .why-choose-us .feature-item {
+   font-size: var(--p-size);
    background: var(--bg-body);
    padding: 40px 30px;
    border-radius: 12px;
@@ -569,8 +569,8 @@ section {
 }
 
 .why-choose-us .feature-item h3 {
-   font-size: 1.3rem;
-   font-weight: 600;
+   font-size: 1.3em;
+   font-weight: bold;
    color: var(--text-secondary);
    margin-bottom: 12px;
    position: relative;
@@ -710,6 +710,7 @@ section {
 }
 
 .timeline-content {
+   font-size: var(--p-size);
    background: var(--bg-body);
    padding: 20px;
    border-radius: var(--radius-lg);
@@ -717,7 +718,7 @@ section {
 }
 
 .timeline-title {
-   font-size: 1.2em;
+   font-size: 1.3em;
    font-weight: bold;
    color: var(--text-secondary);
    margin-bottom: 10px;
@@ -803,7 +804,7 @@ section {
    }
    
    .service-card:hover {
-      transform: translateY(-10px);
+      transform: scale(1.02);
       box-shadow: var(--shadow-elevation);
    }
    
@@ -825,14 +826,13 @@ section {
    }
    
    .service-card h3 {
-      font-size: 1.4em;
+      font-size: 1.3em;
       font-weight: bold;
       color: var(--text-secondary);
       margin-bottom: 10px;
    }
    
    .service-card p {
-      font-size: 1em;
       color: var(--text-muted);
       margin-bottom: 20px;
    }
@@ -1130,7 +1130,7 @@ section {
    }
    
    .portfolio-card:hover {
-      transform: translateY(-10px);
+      transform: scale(1.02);
       box-shadow: var(--shadow-elevation);
    }
    
@@ -1255,7 +1255,7 @@ section {
 }
 
 .portfolio-card:hover {
-   transform: translateY(-10px);
+   transform: scale(1.02);
    box-shadow: var(--shadow-elevation);
 }
 
@@ -1269,12 +1269,12 @@ section {
 }
 
 .card-content h3 {
-   font-size: 1.4em;
+   font-size: 1.3em;
+   font-weight: bold;
    margin-bottom: 10px;
 }
 
 .card-content p {
-   font-size: 1em;
    color: var(--text-muted);
    margin-bottom: 15px;
 }
@@ -1297,8 +1297,10 @@ section {
 .view-case {
    color: var(--accent);
    font-weight: 600;
-   font-size: 1em;
-   text-transform: capitalize;
+}
+
+.view-case i {
+   margin-left: 5px;
 }
 
 .view-case:hover {
@@ -1405,7 +1407,7 @@ section {
 }
 
 .pricing__card:hover {
-   transform: translateY(-10px);
+   transform: scale(1.02);
    box-shadow: var(--shadow-elevation);
 }
 
@@ -1607,7 +1609,7 @@ section {
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 97px;
    overflow-x: hidden;
-
+   
    .container {
       max-width: 1200px;
       margin: auto;
