@@ -88,7 +88,7 @@ a,
 ins {
    text-decoration: none;
    /* Remove default link underlines */
-   color: var(--link-color);
+   color: var(--link-default);
    /* Optional link color */
    transition: 0.3s ease;
    /* Smooth color transition */
@@ -101,7 +101,7 @@ a {
 
 a:hover,
 a:focus {
-   color: var(--link-hover-color);
+   color: var(--link-hover);
 }
 
 del {
@@ -209,7 +209,7 @@ select:hover {
 blockquote {
    border-left: 4px solid var(--border-default);
    padding-left: var(--space-md);
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    font-style: italic;
    font-family: var(--font-primary);
 }
