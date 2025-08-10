@@ -52,7 +52,7 @@ html {
 ============================= */
 :root {
    /* Base font stacks */
-   --font-sans: 'Inter', sans-serif;
+   --font-sans: 'DM Sans', sans-serif;
    --font-serif: 'Montserrat', serif;
    
    /* Semantic font roles in logical order with descriptions */
@@ -160,10 +160,14 @@ html {
    /* Text Colors */
    --text-body: #1C1C1C;
    --text-heading: #000000;
-   --text-subheading: #1A1A1A;
+   --text-secondary: #1A1A1A;
    --text-muted: #6B7280;
    --text-light: #FFFFFF;
    --text-dark: #1C1C1C;
+   --text-disabled: #9CA3AF;
+   --text-on-light: #1C1C1C;
+   --text-on-dark: #FFFFFF;
+   --text-inverse: #FFFFFF;
    --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
    
    /* Background Colors */
@@ -173,8 +177,9 @@ html {
    --bg-surface-dark: #121826;
    --bg-navbar: #FFFFFF;
    --bg-alt: #E6ECF5;
-   --bg-transparent: rgba(255, 255, 255, 0.3);
-   --bg-overlay: rgba(0, 0, 0, 0.4);
+   --bg-disabled: #F3F4F6;
+   --bg-overlay-light: rgba(255, 255, 255, 0.3);
+   --bg-overlay-dark: rgba(0, 0, 0, 0.4);
    
    /* Button Colors */
    --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
@@ -192,10 +197,10 @@ html {
    --border-default: #D0D7E2;
    --focus-outline: #60A5FA;
    
-   /* Accent & Links */
+   /* Link & Accent Colors */
+   --link-default: #003ACC;
+   --link-hover: #002B99;
    --accent: #002B99;
-   --link-color: #003ACC;
-   --link-hover-color: #002B99;
    
    --logo-default: grayscale(100%) brightness(60%);
    --logo-hover: grayscale(0%) brightness(100%);
@@ -206,10 +211,14 @@ html {
    :root {
       --text-body: #94A3B8;
       --text-heading: #FFFFFF;
-      --text-subheading: #E4E8F0;
+      --text-secondary: #E4E8F0;
       --text-muted: #64748B;
       --text-light: #FFFFFF;
       --text-dark: #1C1C1C;
+      --text-disabled: #6B7280;
+      --text-on-light: #1C1C1C;
+      --text-on-dark: #FFFFFF;
+      --text-inverse: #000000;
       --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
       
       --bg-body: #0A0E1C;
@@ -218,8 +227,9 @@ html {
       --bg-surface-dark: #121826;
       --bg-navbar: #0C111F;
       --bg-alt: #1A2135;
-      --bg-transparent: rgba(0, 0, 0, 0.3);
-      --bg-overlay: rgba(0, 0, 0, 0.4);
+      --bg-disabled: #2F2F2F;
+      --bg-overlay-light: rgba(0, 0, 0, 0.3);
+      --bg-overlay-dark: rgba(0, 0, 0, 0.4);
       
       --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
       --btn-pri-hover: #002B99;
@@ -235,9 +245,9 @@ html {
       --border-default: #2F3548;
       --focus-outline: #60A5FA;
       
+      --link-default: #60A5FA;
+      --link-hover: #2563EB;
       --accent: #2563EB;
-      --link-color: #60A5FA;
-      --link-hover-color: #2563EB;
    }
 }
 */
@@ -247,10 +257,14 @@ html {
    /* Text Colors */
    --text-body: #94A3B8;
    --text-heading: #FFFFFF;
-   --text-subheading: #E4E8F0;
+   --text-secondary: #E4E8F0;
    --text-muted: #64748B;
    --text-light: #FFFFFF;
    --text-dark: #1C1C1C;
+   --text-disabled: #6B7280;
+   --text-on-light: #1C1C1C;
+   --text-on-dark: #FFFFFF;
+   --text-inverse: #000000;
    --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
    /* Vivid blue for call-to-actions */
    
@@ -261,8 +275,9 @@ html {
    --bg-surface-dark: #121826;
    --bg-navbar: #0C111F;
    --bg-alt: #1A2135;
-   --bg-transparent: rgba(0, 0, 0, 0.3);
-   --bg-overlay: rgba(0, 0, 0, 0.4);
+   --bg-disabled: #2F2F2F;
+   --bg-overlay-light: rgba(0, 0, 0, 0.3);
+   --bg-overlay-dark: rgba(0, 0, 0, 0.4);
    
    /* Button Colors */
    --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
@@ -280,12 +295,11 @@ html {
    --border-default: #2F3548;
    --focus-outline: #60A5FA;
    
-   /* Accent & Links */
+   /* Link & Accent Colors */
+   --link-default: #60A5FA;
+   --link-hover: #2563EB;
    --accent: #2563EB;
-   --link-color: #60A5FA;
-   --link-hover-color: #2563EB;
 }
-
 
 /* =============================
    4. SPACING SYSTEM (8px scale)
