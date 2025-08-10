@@ -3,7 +3,7 @@
 ============================= */
 .secondary-text {
   font-family: var(--font-secondary);
-  color: var(--text-subheading);
+  color: var(--text-secondary);
 }
 
 .accent-text {
