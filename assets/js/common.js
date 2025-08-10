@@ -1,7 +1,7 @@
 // Initialize AOS
 AOS.init({
    easing: 'ease-in-out-sine',
-   // offset: 100, // Adjust trigger point
+   offset: 20, // Adjust trigger point
    duration: 500, // Animation duration
    once: true, // Animation happens only once
 });
