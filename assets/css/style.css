@@ -8,14 +8,13 @@
 .header::before {
    content: "";
    position: absolute;
-   width: 100%;
-   height: 100%;
    top: 0;
    left: 0;
+   width: 100%;
+   height: 100%;
    z-index: -1;
    
    backdrop-filter: blur(20px);
-   /* Apply blur effect */
    -webkit-backdrop-filter: blur(20px);
    /* For Safari */
    background-color: var(--bg-overlay-light);
@@ -26,16 +25,17 @@ canvas.blob-canvas {
    position: absolute;
    top: 0;
    left: 0;
-   z-index: -2;
    width: 100%;
    height: 100%;
    pointer-events: none;
+   z-index: -2;
 }
 
 .hero {
    max-width: 1440px;
-   margin: 0 auto;
+   margin: auto;
    padding: 10rem clamp(1.5rem, 5vw, 3rem);
+   padding-top: 13rem;
    display: flex;
    gap: 20px;
    flex-wrap: wrap-reverse;
@@ -54,7 +54,7 @@ canvas.blob-canvas {
 
 .hero .social-links a {
    font-size: 1.1rem;
-   color: var(--link-default);
+   color: var(--accent);
    transition: 0.3s ease;
 }
 
@@ -83,10 +83,10 @@ canvas.blob-canvas {
 }
 
 .hero .hero-left .headline {
+   max-width: 900px;
    font-weight: bold;
    margin-bottom: 20px;
    color: var(--text-heading);
-   letter-spacing: 0;
 }
 
 .hero .hero-left .headline span {}
@@ -94,6 +94,7 @@ canvas.blob-canvas {
 .hero .hero-left .subheading {
    color: var(--text-muted);
    font-size: var(--h6-size);
+   max-width: 900px;
    margin-bottom: 30px;
 }
 
@@ -212,23 +213,21 @@ section {
 
 .container .section-title {
    color: var(--accent);
-   font-size: var(--h6-size);
-   margin: auto;
-   font-weight: bold;
    font-family: var(--font-secondary);
+   font-size: var(--p-size);
+   font-weight: bold;
    text-align: center;
    text-transform: uppercase;
+   margin: auto;
    margin-bottom: 10px;
 }
 
 .container .section-creative-title {
    color: var(--text-secondary);
    font-family: var(--font-secondary);
-   text-align: center;
    font-size: var(--h2-size);
    font-weight: bold;
-   letter-spacing: 1px;
-   text-transform: capitalize;
+   text-align: center;
    margin: 0 auto 10px;
 }
 
@@ -237,9 +236,9 @@ section {
 }
 
 .container .section-subtitle {
+   max-width: 600px;
    color: var(--text-body);
    text-align: center;
-   max-width: 600px;
    margin: auto;
    margin-bottom: 50px;
 }
@@ -284,9 +283,20 @@ section {
 }
 
 .about-intro a {
-   color: var(--link-default);
+   color: var(--accent);
+   font-weight: 600;
+   letter-spacing: 1px;
+   text-transform: capitalize;
+}
+
+.about-intro a:hover {
    text-decoration: underline;
 }
+
+.about-intro a i {
+   margin-left: 5px;
+}
+
 
 
 
@@ -349,10 +359,72 @@ section {
 
 
 
+
+.neon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: var(--bg-body);
+}
+
+.neon h1 {
+   position: relative;
+   font-size: 6em;
+   letter-spacing: 15px;
+   color: #0e3742;
+   text-transform: uppercase;
+   width: 100%;
+   text-align: center;
+   -webkit-box-reflect: below 5px linear-gradient(transparent, #0008);
+   line-height: 0.70em;
+   outline: none;
+   animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+   
+   0%,
+   18%,
+   20%,
+   50.1%,
+   60%,
+   65.1%,
+   80%,
+   90.1%,
+   92% {
+      color: #0e3742;
+      text-shadow: none;
+   }
+   
+   18.1%,
+   20.1%,
+   30%,
+   50%,
+   60.1%,
+   65%,
+   80.1%,
+   90%,
+   92.1%,
+   100% {
+      color: #fff;
+      text-shadow: 0 0 10px #03bcf4,
+         0 0 20px #03bcf4,
+         0 0 40px #03bcf4,
+         0 0 80px #03bcf4,
+         0 0 160px #03bcf4;
+   }
+}
+
+
+
+
+
 .insight {
    background: var(--btn-pri-bg);
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
+   overflow-x: hidden;
 }
 
 .insight .container {
@@ -384,12 +456,46 @@ section {
 
 
 .why-choose-us {
+   position: relative;
    background: var(--bg-surface);
    padding-block: clamp(2rem, 8vw, 4rem);
    padding-block: clamp(4rem, 10vw, 7rem);
    padding-inline: clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 97px;
 }
+
+.why-choose-us>i {
+   position: absolute;
+   color: var(--text-on-light);
+   opacity: .1;
+   font-size: clamp(2rem, 10vw, 10rem);
+}
+
+.why-choose-us i.one {
+   top: 10%;
+   left: 20%;
+   transform: rotateZ(15deg);
+}
+
+.why-choose-us i.two {
+   top: 40%;
+   left: 50%;
+   transform: rotateZ(35deg);
+}
+
+.why-choose-us i.three {
+   top: 50%;
+   left: 20%;
+   transform: rotateZ(-45deg);
+}
+
+.why-choose-us i.four {
+   top: 70%;
+   left: 30%;
+   transform: rotateZ(-25deg);
+}
+
+
 
 .why-choose-us .container {
    max-width: 1200px;
@@ -496,6 +602,7 @@ section {
    background: var(--bg-body);
    padding: 80px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
+   overflow-x: hidden;
 }
 
 .founder-section h2 {
@@ -539,6 +646,7 @@ section {
    background: var(--bg-surface);
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 97px;
+   overflow: hidden;
 }
 
 .process-section .container {
@@ -1478,6 +1586,7 @@ section {
    padding: 15px clamp(1.5rem, 5vw, 3rem);
    z-index: 999;
    transition: background 0.3s ease;
+   display: none;
 }
 
 .sticky-cta .btn {
@@ -1497,7 +1606,8 @@ section {
 .faq-section {
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 97px;
-   
+   overflow-x: hidden;
+
    .container {
       max-width: 1200px;
       margin: auto;
@@ -1591,7 +1701,13 @@ section {
       transition: transform 0.3s ease;
    }
    
-   .faq.open .faq-header i {
+   .faq:hover {
+      background: var(--bg-body);
+      transition: background 0.3s ease;
+   }
+   
+   .faq.open .faq-header i,
+   .faq.open .faq-header i.rotated {
       transform: rotate(180deg);
    }
    
