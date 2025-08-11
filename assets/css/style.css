@@ -723,12 +723,17 @@ section {
    position: relative;
    font-style: italic;
    font-size: var(--h6-size);
+   font-weight: bold;
    color: var(--accent);
    padding: 0;
    max-width: 1200px;
    margin: 0 auto 30px;
    overflow: hidden;
    border: none;
+}
+
+.founder-quote i {
+   font-size: var(--h4-size);
 }
 
 .founder-quote .autoripple {
