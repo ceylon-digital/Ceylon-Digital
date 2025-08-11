@@ -95,6 +95,38 @@ canvas.blob-canvas {
    animation: shine 4s linear infinite;
 }
 
+/* .hero .hero-left .headline  {
+   color: #fff;
+   text-shadow: 1px 1px 0 #000, 2px 2px 0 #333;
+} */
+
+/* .hero .hero-left .headline  {
+   color: #0ff;
+   text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+} */
+
+@keyframes typing {
+   from {
+      width: 0
+   }
+   
+   to {
+      width: 100%
+   }
+}
+
+/* .hero .hero-left .headline {
+   font-family: monospace;
+   white-space: wrap;
+   overflow: hidden;
+   border-right: 2px solid;
+   width: 0;
+   animation: typing 3s steps(20) forwards;
+} */
+
+
+
+
 .hero .hero-left .headline span {}
 
 .hero .hero-left .subheading {
@@ -265,9 +297,6 @@ section {
       background-position: -200% center;
    }
 }
-
-
-
 
 .container .section-subtitle {
    max-width: 600px;
@@ -622,6 +651,41 @@ section {
    animation: shine 6s linear infinite;
 }
 
+
+.why-choose-us .feature-item:first-child h3 {
+   animation: shine 6s linear infinite;
+}
+
+.why-choose-us .feature-item:nth-child(2) h3 {
+   animation: shine 6s 1s linear infinite;
+}
+
+.why-choose-us .feature-item:nth-child(3)h3 {
+   animation: shine 6s 2s linear infinite;
+}
+
+.why-choose-us .feature-item:nth-child(4)h3 {
+   animation: shine 6s 3s linear infinite;
+}
+
+.why-choose-us .feature-item:nth-child(5) h3 {
+   animation: shine 6s 4s linear infinite;
+}
+
+.why-choose-us .feature-item:nth-child(6) h3 {
+   animation: shine 6s 5s linear infinite;
+}
+
+.why-choose-us .feature-item:last-child h3 {
+   animation: shine 6s 6s linear infinite;
+}
+
+
+
+
+
+
+
 .why-choose-us .feature-item p {
    color: var(--text-muted);
    line-height: 1.6;
@@ -659,11 +723,12 @@ section {
    position: relative;
    font-style: italic;
    font-size: var(--h6-size);
-   color: var(--text-muted);
+   color: var(--accent);
    padding: 0;
    max-width: 1200px;
    margin: 0 auto 30px;
    overflow: hidden;
+   border: none;
 }
 
 .founder-quote .autoripple {
@@ -678,6 +743,7 @@ section {
    width: 200%;
    height: 200%;
    background: rgba(0, 150, 255, 0.5);
+   display: none;
 }
 
 .founder-name {
@@ -757,7 +823,7 @@ section {
 .timeline-content {
    font-size: var(--p-size);
    background: var(--bg-body);
-   padding: 20px;
+   padding: 40px 30px;
    border-radius: var(--radius-lg);
    box-shadow: var(--shadow-md);
 }
@@ -1818,7 +1884,7 @@ section {
       text-align: left;
    }
    
-   .contact-right h3 {
+   .contact-right h4 {
       color: var(--text-secondary);
       margin-bottom: 12px;
    }
