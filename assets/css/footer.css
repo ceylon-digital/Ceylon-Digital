@@ -2,23 +2,21 @@
    background: var(--bg-body);
    color: var(--text-muted);
    padding: 100px clamp(1.5rem, 5vw, 3rem);
-   padding-bottom: 150px;
    transition: background 0.3s ease;
 }
 
 .footer-container {
    width: 100%;
    max-width: 1440px;
-   margin: 0 auto;
+   margin: auto;
 }
 
 .footer-top {
    display: flex;
+   gap: 30px;
    flex-wrap: wrap;
    justify-content: space-between;
-   max-width: 1440px;
-   margin: 0 auto 50px;
-   gap: 30px;
+   margin-bottom: 50px;
 }
 
 .footer-branding {
@@ -81,11 +79,10 @@
 
 .footer-middle {
    display: flex;
+   gap: 30px;
    flex-wrap: wrap;
    justify-content: space-between;
-   max-width: 1440px;
-   margin: 0 auto 40px;
-   gap: 30px;
+   margin-bottom: 40px;
 }
 
 .footer-col {
