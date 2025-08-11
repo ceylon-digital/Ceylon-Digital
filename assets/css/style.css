@@ -724,7 +724,7 @@ section {
    font-style: italic;
    font-size: var(--h6-size);
    font-weight: bold;
-   color: var(--accent);
+   color: var(--text-muted);
    padding: 0;
    max-width: 1200px;
    margin: 0 auto 30px;
