@@ -7,10 +7,11 @@
 }
 
 .hero .title {
+   font-size: var(--display-size);
+   color: var(--text-light);
    max-width: 650px;
    margin: auto;
    margin-bottom: 20px;
-   color: var(--text-light);
 }
 
 /* .hero .tagline {
@@ -67,7 +68,7 @@
 }
 
 .offer-card h3 {
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    margin-bottom: 10px;
 }
 
@@ -122,7 +123,7 @@
 .bundle-deals .section-description {
    max-width: 700px;
    margin: 0 auto;
-   color: var(--text-subheading);
+   color: var(--text-secondary);
 }
 
 /* ==== Benefits Section ==== */
@@ -160,12 +161,12 @@
 }
 
 .benefit-item .title {
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    margin-bottom: 10px;
 }
 
 .benefit-item .body {
-   color: var(--text-subheading);
+   color: var(--text-secondary);
 }
 
 /* ==== Responsive Layout Fixes ==== */
@@ -256,7 +257,7 @@
 .term-item h3.body {
    margin: 0;
    font-size: 1rem;
-   color: var(--text-subheading);
+   color: var(--text-secondary);
 }
 
 
