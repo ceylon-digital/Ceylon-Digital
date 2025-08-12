@@ -2,16 +2,49 @@ body {
    background: var(--bg-surface);
 }
 
+.breadcrumb {
+   background: var(--bg-body);
+   padding: 30px clamp(1.5rem, 5vw, 3rem);
+}
+
+.breadcrumb ol {
+   list-style: none;
+   max-width: 1200px;
+   margin: auto;
+   padding: 0;
+   display: flex;
+   gap: 0.5rem;
+   overflow-x: auto;
+   white-space: nowrap;
+}
+
+.breadcrumb li::after {
+   content: ">";
+   margin-left: 0.5rem;
+   color: var(--text-muted);
+}
+
+.breadcrumb li:last-child::after {
+   content: "";
+}
+
+.breadcrumb li a {
+   color: var(--link-default);
+}
+
+
+
+
 .header {
-   background: var(--btn-primary-bg);
+   position: relative;
+   background: linear-gradient(#0009, #0009), url('../../assets/img/e-commerce banner.jpg') no-repeat center / cover;
    margin-top: 97px;
    padding: 150px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
-   border-bottom: 1px solid var(--border-default);
 }
 
 .header .container {
-   max-width: 1440px;
+   max-width: 1200px;
    margin: auto;
 }
 
@@ -22,109 +55,163 @@ body {
 
 .header p {
    color: var(--text-light);
-   font-size: var(--h4-size);
+   font-size: var(--h5-size);
 }
+
+.social-links {
+   position: absolute;
+   bottom: 2rem;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+
+.social-links a {
+   color: var(--text-light);
+}
+
+
+
 
 
 
 .intro {
+   background: var(--bg-body);
    padding: 60px clamp(1.5rem, 5vw, 3rem);
-   padding-bottom: 0;
+   padding-top: 20px;
+   margin: 0;
 }
 
 .intro .container {
-   max-width: 1440px;
+   max-width: 1200px;
    margin: auto;
 }
 
-.intro p {
-   color: var(--text-primary);
+.intro h2 {
+   margin-bottom: 1.5rem;
 }
+
+.intro h2 span {
+   color: var(--accent);
+}
+
+.intro p {
+   color: var(--text-body);
+   font-size: var(--h6-size);
+}
+
 
 
 
 .services h2,
 .why-us h2,
 .cta h2 {
-   color: var(--text-subheading);
+   color: var(--text-secondary);
    margin-bottom: 1.5rem;
 }
 
 
 .services {
-   padding: 60px clamp(1.5rem, 5vw, 3rem);
-   padding-bottom: 0;
+   padding: 100px clamp(1.5rem, 5vw, 3rem);
 }
 
 .services .container {
-   max-width: 1440px;
+   max-width: 1200px;
    margin: auto;
 }
 
 .cards {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-   gap: 1.5rem;
+   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   gap: 2rem;
 }
 
 .card {
+   font-size: var(--p-size);
    background-color: var(--bg-body);
-   padding: 1.5rem;
+   padding: 2rem;
    border-radius: var(--radius-md);
-   color: var(--text-primary);
+   color: var(--text-body);
    box-shadow: var(--shadow-elevation);
-   border: 1px solid var(--color-accent);
-   transition: transform 0.2s ease, box-shadow 0.2s ease;
+   border: 1px solid var(--border-default);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
    overflow: hidden;
+   border-left: 4px solid var(--accent);
 }
 
 .card:hover {
-   transform: translateY(-10px);
+   transform: scale(1.05);
    box-shadow: var(--shadow-elevation);
 }
 
 .card h3 {
-   color: var(--text-subheading);
-   margin-bottom: 0.5rem;
+   font-size: 1.2em;
+   color: var(--text-secondary);
+   margin-bottom: 1rem;
 }
 
 .card h3 i {
+   color: var(--accent);
    margin-right: 10px;
 }
 
 .card p {
+   font-size: 1em;
    color: var(--text-muted);
+}
+
+
+
+.card__features li {
+   margin-bottom: 1rem;
+}
+
+.card__features li::before {
+   content: "✓";
+   color: var(--accent);
+   margin-right: 0.5em;
+}
+
+.highlight {
+   background: var(--bg-surface);
+   border-left: 4px solid var(--accent);
+   padding: 10px 20px;
+   font-size: 0.8em;
+   font-weight: 500;
+   border-radius: var(--radius-sm);
 }
 
 
 
 
 .why-us {
-   padding: 60px clamp(1.5rem, 5vw, 3rem);
+   background: var(--bg-body);
+   padding: 100px clamp(1.5rem, 5vw, 3rem);
 }
 
 .why-us .container {
-   max-width: 1440px;
+   max-width: 1200px;
    margin: auto;
 }
 
 .why-us li {
    margin-bottom: 1rem;
-   color: var(--text-primary);
+   color: var(--text-body);
 }
-
 
 
 
 
 .cta-section {
-   background: var(--btn-primary-bg);
+   background: var(--btn-pri-bg);
    text-align: center;
    padding: 60px clamp(1.5rem, 5vw, 3rem);
 }
 
 .cta-section .container {
-   max-width: 1440px;
+   max-width: 1200px;
    margin: auto;
 }
 
@@ -141,24 +228,4 @@ body {
 .cta-section .btn {
    display: inline-block;
    margin: 0.5rem;
-   padding: 0.75rem 1.5rem;
-   border-radius: 5px;
-   background: var(--text-light);
-   color: var(--color-accent);
-   text-decoration: none;
-   font-weight: 600;
-   transition: background-color 0.3s ease;
-}
-
-.cta-section .btn:hover {}
-
-.cta-section .btn.secondary {
-   background: transparent;
-   border: 2px solid var(--text-light);
-   color: var(--text-light);
-}
-
-.cta-section .btn.secondary:hover {
-   background-color: var(--text-light);
-   color: var(--color-accent);
 }
