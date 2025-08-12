@@ -119,8 +119,8 @@
    <!-- Bootstrap Icons -->
    
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
-
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap">
+   
    <link rel="stylesheet" href="../assets/fontawesome-free-6.7.2-web/css/all.min.css">
    <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
    <link rel="stylesheet" href="../assets/package/swiper-bundle.min.css">
@@ -151,7 +151,8 @@
    <!-- VanillaTilt JS -->
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
    
-   <script defer src="../gsap.min.js"></script>
+   <script src="../assets/js/libraries/gsap/gsap.min.js"></script>
+   <script src="../assets/js/libraries/gsap/ScrollTrigger.min.js"></script>
    <script defer src="../assets/fontawesome-free-6.7.2-web/js/all.min.js"></script>
    <script src="../assets/package/swiper-bundle.min.js"></script>
    <script defer src="../assets/aos-master/dist/aos.js"></script>
@@ -159,15 +160,20 @@
 </head>
 
 <body>
+   <div id="tsparticles"></div>
+   
    <div class="preloader">
       <div class="loader">
-         <a href="index.html" class="brand-logo">
+         <div class="brand-logo">
             <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
-         </a>
+         </div>
+         <div class="greeting-text" id="greeting">Loading...</div>
+         <div class="spinner"></div>
       </div>
    </div>
    
-   <!-- Navbar -->
+   
+   <!-- Top Navbar (For Desktop) -->
    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="navbar-container">
          <a href="../index.html" class="logo">
@@ -205,7 +211,11 @@
          </ul>
          
          <div class="action">
-            <button id="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+            <select class="theme-select" aria-label="Theme Selector">
+               <option value="auto">Auto</option>
+               <option value="light">Light</option>
+               <option value="dark">Dark</option>
+            </select>
             <a href="../contact/index.html" class="btn btn-primary-pill">Start a Project</a>
             <button id="menu-toggle" class="hamburger" aria-label="Open Menu" aria-expanded="false">
                <i class="fas fa-bars"></i>
@@ -214,11 +224,10 @@
       </div>
    </nav>
    
-   
-   <!-- OVERLAY -->
+   <!-- Sidebar Overlay -->
    <div id="overlay"></div>
    
-   <!-- SIDEBAR -->
+   <!-- Sidebar (For Mobile) -->
    <aside class="sidebar" role="navigation" aria-label="Mobile Navigation">
       <button id="close-sidebar" aria-label="Close Menu"><i class="fas fa-times"></i></button>
       
@@ -262,7 +271,7 @@
          <!-- Theme Selector -->
          <li class="theme-selector">
             <label for="theme-select">Theme</label>
-            <select id="theme-select" aria-label="Theme Selector">
+            <select id="theme-select" class="theme-select" aria-label="Theme Selector">
                <option value="auto">Auto</option>
                <option value="light">Light</option>
                <option value="dark">Dark</option>
@@ -272,135 +281,132 @@
    </aside>
    
    
-   
-   <!-- Hero Section -->
+   <!-- Header Section -->
    <header class="hero" id="hero">
       <div class="container">
          <h1 data-aos="fade-up" class="title">Exclusive Promotions & Discounts</h1>
-         <!-- <p data-aos="fade-up" data-aos-delay="250" class="tagline">Stay ahead of the competition with our limited-time offers!</p> -->
-         <p data-aos="fade-up" data-aos-delay="250" class="subtitle">Stay ahead of the competition with our limited-time offers & deals on professional digital services—web development, SEO, branding, and more—to grow your online presence</p>
+         <p data-aos="fade-up" data-aos-delay="250" class="subtitle">Stay Ahead of the Competition with Our Limited-Time Offers & Deals on Professional Digital Services — Web Development, SEO, Branding, and More — to Grow Your Online Presence.</p>
       </div>
    </header>
    
    
-   <!-- Discounted Packages Section -->
-   <section class="current-offers" id="services">
-      <div class="container">
-         <h2 class="section-title">Discounted Packages</h2>
-         <p class="section-subtitle">Get 60% off our popular service packages for a limited time.</p>
-         
-         <div class="offers-grid">
-            <div class="offer-card">
-               <h3>Website Design</h3>
-               <p>Modern, responsive websites built for conversions and brand impact.</p>
-               <span class="price">$480 <del>$1200</del></span>
-               <a class="cta-btn small" href="#contact">Claim Offer</a>
-            </div>
-            <div class="offer-card">
-               <h3>SEO Boost</h3>
-               <p>Rank faster on Google with optimized content, backlinks, and audits.</p>
-               <span class="price">$240 <del>$600</del></span>
-               <a class="cta-btn small" href="#contact">Claim Offer</a>
-            </div>
-            <div class="offer-card">
-               <h3>Branding Kit</h3>
-               <p>Professional logo, color palette, and visual identity to stand out.</p>
-               <span class="price">$400 <del>$1000</del></span>
-               <a class="cta-btn small" href="#contact">Claim Offer</a>
+   <main>
+      <!-- Discounted Packages Section -->
+      <section class="current-offers" id="services">
+         <div class="container">
+            <h2 class="section-title">Discounted Packages</h2>
+            <p class="section-subtitle">Get 60% off our popular service packages for a limited time.</p>
+            
+            <div class="offers-grid">
+               <div class="offer-card">
+                  <h3>Website Design</h3>
+                  <p>Modern, responsive websites built for conversions and brand impact.</p>
+                  <span class="price">$480 <del>$1200</del></span>
+                  <a class="cta-btn small" href="#contact">Claim Offer</a>
+               </div>
+               <div class="offer-card">
+                  <h3>SEO Boost</h3>
+                  <p>Rank faster on Google with optimized content, backlinks, and audits.</p>
+                  <span class="price">$240 <del>$600</del></span>
+                  <a class="cta-btn small" href="#contact">Claim Offer</a>
+               </div>
+               <div class="offer-card">
+                  <h3>Branding Kit</h3>
+                  <p>Professional logo, color palette, and visual identity to stand out.</p>
+                  <span class="price">$400 <del>$1000</del></span>
+                  <a class="cta-btn small" href="#contact">Claim Offer</a>
+               </div>
             </div>
          </div>
-      </div>
-   </section>
-   
-   
-   <!-- Free Consultation Section -->
-   <section class="consultation-banner">
-      <div class="container">
-         <h2 class="section-title">Free Consultation</h2>
-         <p class="section-description">Schedule a complimentary consultation with our experts to discuss your project and receive personalized recommendations.</p>
-      </div>
-   </section>
-   
-   
-   <!-- Bundle Deals Section -->
-   <section class="bundle-deals">
-      <div class="container">
-         <h2 class="section-title">Bundle Deals</h2>
-         <p class="section-description">Combine multiple services and receive a discounted rate.</p>
-      </div>
-   </section>
-   
-   <section class="benefits">
-      <div class="container">
-         <h2 class="section-title">Benefits</h2>
-         
-         <ul class="benefits-list">
-            <li class="benefit-item">
-               <h3 class="title">Save Money</h3>
-               <p class="body">Take advantage of our limited-time offers to reduce costs and maximize your budget.</p>
-            </li>
-            <li class="benefit-item">
-               <h3 class="title">Boost Your Online Presence</h3>
-               <p class="body">Enhance your website, social media, or marketing efforts with our expert digital services.</p>
-            </li>
-            <li class="benefit-item">
-               <h3 class="title">Expert Guidance</h3>
-               <p class="body">Work with our experienced team to ensure your project is completed on time and exceeds your expectations.</p>
-            </li>
-         </ul>
-      </div>
-   </section>
-   
-   
-   
-   <!-- Testimonials -->
-   <section class="testimonials">
-      <div class="section-container">
-         <h2 class="section-title">Testimonials</h2>
-         <p class="section-description">Behind every project is a partnership — and these testimonials reflect the value we’ve created together</p>
-         
-         <div class="testimonial-box" id="testimonial-box">
-            <p>"This agency built our dream website in under two weeks! Highly recommended."</p>
-            <h4>– Sarah M., Startup Founder</h4>
+      </section>
+      
+      
+      <!-- Free Consultation Section -->
+      <section class="consultation-banner">
+         <div class="container">
+            <h2 class="section-title">Free Consultation</h2>
+            <p class="section-description">Schedule a complimentary consultation with our experts to discuss your project and receive personalized recommendations.</p>
          </div>
-      </div>
-   </section>
-   
-   
-   
-   <!-- Terms & Conditions Section -->
-   <section class="terms-section">
-      <div class="container">
-         <h2 class="section-title">Terms & Conditions</h2>
-         
-         <ul class="terms-list">
-            <li class="term-item">
-               <h3 class="body">Offers are limited-time only and subject to change.</h3>
-            </li>
-            <li class="term-item">
-               <h3 class="body">Discounts apply to specific services or packages.</h3>
-            </li>
-            <li class="term-item">
-               <h3 class="body">Contact us for more information and to redeem your offer.</h3>
-            </li>
-         </ul>
-      </div>
-   </section>
-   
-   
-   
-   <!-- Contact Form -->
-   <section class="contact-section" id="contact">
-      <div class="container">
-         <h2>Claim Your Discount Now</h2>
-         <form class="discount-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Tell us about your project..." required></textarea>
-            <button type="submit" class="btn btn-primary">Submit Inquiry</button>
-         </form>
-      </div>
-   </section>
+      </section>
+      
+      
+      <!-- Bundle Deals Section -->
+      <section class="bundle-deals">
+         <div class="container">
+            <h2 class="section-title">Bundle Deals</h2>
+            <p class="section-description">Combine multiple services and receive a discounted rate.</p>
+         </div>
+      </section>
+      
+      <section class="benefits">
+         <div class="container">
+            <h2 class="section-title">Benefits</h2>
+            
+            <ul class="benefits-list">
+               <li class="benefit-item">
+                  <h3 class="title">Save Money</h3>
+                  <p class="body">Take advantage of our limited-time offers to reduce costs and maximize your budget.</p>
+               </li>
+               <li class="benefit-item">
+                  <h3 class="title">Boost Your Online Presence</h3>
+                  <p class="body">Enhance your website, social media, or marketing efforts with our expert digital services.</p>
+               </li>
+               <li class="benefit-item">
+                  <h3 class="title">Expert Guidance</h3>
+                  <p class="body">Work with our experienced team to ensure your project is completed on time and exceeds your expectations.</p>
+               </li>
+            </ul>
+         </div>
+      </section>
+      
+      
+      <!-- Testimonials -->
+      <section class="testimonials">
+         <div class="section-container">
+            <h2 class="section-title">Testimonials</h2>
+            <p class="section-description">Behind every project is a partnership — and these testimonials reflect the value we’ve created together</p>
+            
+            <div class="testimonial-box" id="testimonial-box">
+               <p>"This agency built our dream website in under two weeks! Highly recommended."</p>
+               <h4>– Sarah M., Startup Founder</h4>
+            </div>
+         </div>
+      </section>
+      
+      
+      <!-- Terms & Conditions Section -->
+      <section class="terms-section">
+         <div class="container">
+            <h2 class="section-title">Terms & Conditions</h2>
+            
+            <ul class="terms-list">
+               <li class="term-item">
+                  <h3 class="body">Offers are limited-time only and subject to change.</h3>
+               </li>
+               <li class="term-item">
+                  <h3 class="body">Discounts apply to specific services or packages.</h3>
+               </li>
+               <li class="term-item">
+                  <h3 class="body">Contact us for more information and to redeem your offer.</h3>
+               </li>
+            </ul>
+         </div>
+      </section>
+      
+      
+      <!-- Contact Form -->
+      <section class="contact-section" id="contact">
+         <div class="container">
+            <h2>Claim Your Discount Now</h2>
+            <form class="discount-form">
+               <input type="text" placeholder="Your Name" required>
+               <input type="email" placeholder="Your Email" required>
+               <textarea rows="5" placeholder="Tell us about your project..." required></textarea>
+               <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+            </form>
+         </div>
+      </section>
+   </main>
    
    
    <!-- Footer -->
