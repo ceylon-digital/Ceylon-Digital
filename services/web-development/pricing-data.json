@@ -1,0 +1,112 @@
+{
+   "development": [
+   {
+      "name": "Starter Site",
+      "price": "LKR 39,000 one-time",
+      "badge": "",
+      "features": [
+         "Up to 3 pages",
+         "Basic UI/UX design",
+         "Mobile responsive",
+         "Contact form setup",
+         "Launch-ready in 7 days"
+      ],
+      "description": "Perfect for individuals or startups looking to establish an online presence quickly and affordably."
+   },
+   {
+      "name": "Professional Site",
+      "price": "LKR 89,000 one-time",
+      "badge": "Best Value",
+      "features": [
+         "All features from Starter Site",
+         "Up to 7 pages",
+         "Custom UI/UX design",
+         "WordPress or custom CMS integration",
+         "Speed & SEO optimization",
+         "1 revision round included"
+      ],
+      "description": "Great for small businesses needing a custom, fast, and scalable solution."
+   },
+   {
+      "name": "Advanced Business Site",
+      "price": "LKR 149,000 one-time",
+      "badge": "",
+      "features": [
+         "All features from Professional Site",
+         "Up to 12 pages",
+         "Blog setup or product catalog",
+         "Custom animations",
+         "Advanced forms or third-party integrations",
+         "2 rounds of revisions"
+      ],
+      "description": "Ideal for growing brands or service providers who need more functionality and customization."
+   },
+   {
+      "name": "Enterprise Solution",
+      "price": "Custom Quote (Starting from LKR 250,000)",
+      "badge": "",
+      "features": [
+         "All features from Advanced Business Site",
+         "Unlimited pages",
+         "Full-stack development",
+         "Web apps or complex systems",
+         "Custom dashboards or APIs",
+         "Dedicated project management"
+      ],
+      "description": "Tailored solutions for large-scale platforms, marketplaces, or SaaS products."
+   }],
+   "maintenance": [
+   {
+      "name": "Basic Maintenance",
+      "price": "LKR 3,900/month",
+      "badge": "",
+      "features": [
+         "Monthly backups",
+         "Core/plugin updates (WordPress)",
+         "Security scans",
+         "Up to 30 mins minor updates",
+         "Email support"
+      ],
+      "description": "Essential care for keeping your site secure and updated with minimal intervention."
+   },
+   {
+      "name": "Growth Support",
+      "price": "LKR 8,900/month",
+      "badge": "Most Popular",
+      "features": [
+         "All features from Basic Maintenance",
+         "Weekly backups & updates",
+         "Performance monitoring",
+         "Up to 3 hours content updates",
+         "SEO health checks",
+         "Priority email + chat support"
+      ],
+      "description": "Designed for active businesses that regularly need updates, content changes, and performance tweaks."
+   },
+   {
+      "name": "Premium Maintenance + Support",
+      "price": "LKR 14,900/month",
+      "badge": "",
+      "features": [
+         "All features from Growth Support",
+         "Daily backups & uptime monitoring",
+         "Unlimited content edits (fair use)",
+         "Custom feature tweaks",
+         "Staging site for safe testing",
+         "Dedicated support manager"
+      ],
+      "description": "For businesses that need responsive, hands-on support and rapid content or tech changes."
+   },
+   {
+      "name": "One-Time Fix or Update",
+      "price": "Starting at LKR 9,900",
+      "badge": "",
+      "features": [
+         "Bug fixing or quick edits",
+         "1–2 day turnaround",
+         "Single-use task request",
+         "No subscription needed"
+      ],
+      "description": "Quick help when you need it — perfect for fixing errors or making small updates without ongoing commitment."
+   }]
+}
