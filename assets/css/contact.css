@@ -1,0 +1,169 @@
+body {
+   background: #f9f9fb;
+   color: #333;
+}
+
+.contact-page {
+   max-width: 1200px;
+   padding: 60px clamp(1.5rem, 5vw, 3rem);
+   margin: auto;
+   overflow-x: hidden;
+}
+
+.contact-hero {
+   text-align: center;
+   margin-top: 97px;
+   margin-bottom: 50px;
+}
+
+.contact-hero h1 {
+   font-size: var(--display-size);
+   color: #111;
+   margin-bottom: 10px;
+}
+
+.contact-hero p {
+   color: #666;
+   font-size: 1.2rem;
+}
+
+.contact-grid {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+   flex: 1 1 400px;
+   background: #fff;
+   padding: 30px;
+   border-radius: 12px;
+   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h2,
+.contact-form h2 {
+   font-size: var(--h2-size);
+   margin-bottom: 20px;
+   color: var(--accent);
+}
+
+.contact-info p,
+.contact-info a {
+   margin: 10px 0;
+   color: #333;
+}
+
+.contact-form label {
+   display: block;
+   margin-bottom: 6px;
+   font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+   width: 100%;
+   padding: 12px;
+   margin-bottom: 20px;
+   border: 1px solid #ddd;
+   border-radius: 6px;
+   resize: none;
+   transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+   border-color: var(--accent);
+   outline: none;
+}
+
+.contact-form .form-agree {
+   display: flex;
+   align-items: start;
+   justify-content: start;
+   margin-bottom: 10px;
+}
+
+.contact-form .form-agree input {
+   width: max-content;
+   margin: 0;
+   margin-top: 7px;
+   margin-right: 10px;
+   appearance: auto;
+}
+
+/* .contact-form button {
+   background: var(--accent);
+   color: #fff;
+   padding: 14px 24px;
+   border: none;
+   border-radius: 6px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background 0.3s;
+} */
+
+/* .contact-form button:hover {
+   background: #0056b3;
+} */
+
+.social {
+   margin-top: 60px;
+   text-align: center;
+}
+
+.social h2 {
+   color: var(--accent);
+   margin-bottom: 20px;
+}
+
+.social ul {
+   list-style: none;
+   padding: 0;
+}
+
+.social ul li {
+   display: inline-block;
+   margin: 0 12px;
+}
+
+.social a {
+   text-decoration: none;
+   color: var(--accent);
+   font-weight: 600;
+   transition: color 0.3s;
+}
+
+.social a:hover {
+   color: #0056b3;
+}
+
+.faqs {
+   margin-top: 60px;
+}
+
+.faqs h2 {
+   text-align: center;
+   color: var(--accent);
+   margin-bottom: 30px;
+}
+
+details {
+   margin-bottom: 15px;
+   background: #fff;
+   padding: 15px 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+summary {
+   font-weight: bold;
+   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+   .contact-grid {
+      flex-direction: column;
+   }
+}
