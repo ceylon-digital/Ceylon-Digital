@@ -398,6 +398,13 @@ section {
    font-size: 1.3em;
    margin-bottom: 10px;
    color: var(--text-body);
+   
+   background: linear-gradient(120deg, #000 20%, #00ffff 40%, #000 60%);
+   background-size: 200% auto;
+   color: transparent;
+   background-clip: text;
+   -webkit-background-clip: text;
+   animation: shine 6s linear infinite;
 }
 
 .feature-card p {
@@ -1721,6 +1728,7 @@ section {
    display: flex;
    align-items: center;
    justify-content: space-between;
+   display: none;
 }
 
 .sticky-cta .btn {
