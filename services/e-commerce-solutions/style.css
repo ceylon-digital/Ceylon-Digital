@@ -142,7 +142,7 @@ body {
 }
 
 .card:hover {
-   transform: scale(1.05);
+   transform: scale(1.02);
    box-shadow: var(--shadow-elevation);
 }
 
@@ -267,7 +267,7 @@ body {
 }
 
 .package-cards .card:hover {
-   transform: scale(1.05);
+   transform: scale(1.02);
 }
 
 .package-cards .card h3 {
@@ -433,6 +433,24 @@ body {
 
 .platforms ul li a img {
    height: 80px;
+}
+
+
+
+
+.cta {
+   background: var(--btn-pri-bg);
+   padding: 80px clamp(1.5rem, 5vw, 3rem);
+   text-align: center;
+}
+
+.cta div {
+   display: flex;
+   gap: 20px;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   margin-top: 20px;
 }
 
 /*
