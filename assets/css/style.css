@@ -1,8 +1,12 @@
 /* Convert to normal CSS before deployment in order to ensure older browser support as well */
+html,
+body {
+   overflow-x: hidden;
+}
+
 .header {
    position: relative;
    transition: 0.3s ease;
-   overflow-x: hidden;
 }
 
 .header::before {
@@ -317,7 +321,6 @@ section {
    justify-content: center;
    scroll-margin-top: 97px;
    transition: background 0.3s ease;
-   overflow: hidden;
 }
 
 .about-wrapper {
@@ -486,7 +489,6 @@ section {
    background: var(--btn-pri-bg);
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
-   overflow-x: hidden;
 }
 
 .insight .container {
@@ -709,7 +711,6 @@ section {
    background: var(--bg-body);
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
-   overflow-x: hidden;
 }
 
 .founder-section .wrapper {
@@ -790,7 +791,6 @@ section {
    background: var(--bg-surface);
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 97px;
-   overflow: hidden;
 }
 
 .process-section .container {
@@ -1744,7 +1744,6 @@ section {
 .faq-section {
    padding: 100px clamp(1.5rem, 5vw, 3rem);
    scroll-margin-top: 97px;
-   overflow-x: hidden;
    
    .container {
       max-width: 1200px;
