@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLQVBB63YS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    
+    gtag('config', 'G-VLQVBB63YS');
+  </script>
+  
+  <!-- 1. Character Encoding & Viewport (Always First) -->
+  <meta charset="UTF-8"> <!-- Defines character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Improves IE compatibility -->
+  
+  <!-- 2. SEO Meta Tags -->
+  <title>Contact Ceylon Digital | Let’s Work Together</title> <!-- Page title (Shown in browser tab & search results) -->
+  <meta name="description" content="Ready to grow your business? Get in touch with Ceylon Digital — experts in web development, SEO, branding, and marketing services in Sri Lanka."> <!-- Important for SEO -->
+  <meta name="keywords" content="keyword1, keyword2, keyword3"> <!-- Optional for SEO -->
+  <meta name="author" content="your name or brand"> <!-- Author information -->
+  <meta name="robots" content="index, follow"> <!-- Controls search engine crawling -->
+  <meta name="googlebot" content="index, follow"> <!-- Google-specific crawling instructions -->
+  <meta name="bingbot" content="index, follow"> <!-- Bing-specific crawling instructions -->
+  <meta name="yandexbot" content="index, follow"> <!-- Yandex-specific crawling instructions -->
+  <meta name="baiduspider" content="index, follow"> <!-- Baidu-specific crawling instructions -->
+  <meta name="duckduckbot" content="index, follow"> <!-- DuckDuckGo-specific crawling instructions -->
+  <meta name="naverbot" content="index, follow"> <!-- Naver-specific crawling instructions -->
+  <link rel="canonical" href="https://ceylon-digital.github.io/Ceylon-Digital/services/"> <!-- Helps prevent duplicate content issues -->
+  
+  <!-- 3. Verification Meta Tags (For Google, Bing, Yandex, etc.) -->
+  
+  <!-- 4. Social Media Meta Tags (Open Graph & Twitter Cards) -->
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="your page title">
+  <meta property="og:description" content="your meta description">
+  <meta property="og:image" content="https://yourwebsite.com/your-og-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com/your-page-url">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="your website name">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="your page title">
+  <meta name="twitter:description" content="your meta description">
+  <meta name="twitter:image" content="https://yourwebsite.com/your-twitter-image.jpg">
+  <meta name="twitter:site" content="@your_twitter_handle">
+  
+  <!-- 5. Performance Optimization Meta Tags -->
+  <!-- Sets theme color for mobile browsers -->
+  <meta name="theme-color" content="#222222"> <!-- Default (dark mode) -->
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> <!-- Light mode -->
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"> <!-- Dark mode -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- iOS Safari styling -->
+  <!-- Prevents iOS from linking phone numbers automatically -->
+  <meta name="format-detection" content="telephone=no">
+  
+  <!-- 6. Favicon & Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/favicon-192x192.png">
+  <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+  
+  <!-- SVG Favicon (for modern browsers) -->
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+  
+  <!-- Apple Touch Icons (for iOS home screen shortcut) -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon-180x180.png">
+  
+  <!-- Android Chrome Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/icons/android-chrome-512x512.png">
+  
+  <!-- Alternative favicon (optional, for legacy browsers) -->
+  <link rel="shortcut icon" href="./assets/icons/favicon.ico">
+  
+  <!-- Microsoft Tiles (For Windows 10/Edge) -->
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./assets/icons/mstile-144x144.png">
+  
+  <!-- 7. Mobile App Indexing (Google Play & Apple App Store) -->
+  <meta name="google-play-app" content="app-id=com.example.app">
+  <meta name="apple-itunes-app" content="app-id=123456789">
+  
+  <!-- 8. Security & Privacy Meta Tags -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;"> -->
+  <meta name="referrer" content="strict-origin-when-cross-origin"> <!-- More balanced referrer policy -->
+  
+  <!-- 9. HTTP-Equiv Meta Tags -->
+  <!-- <meta http-equiv="refresh" content="5; url=https://yourwebsite.com"> -->
+  <!-- <meta http-equiv="cache-control" content="no-cache"> -->
+  <!-- <meta http-equiv="pragma" content="no-cache"> -->
+  <!-- <meta http-equiv="expires" content="Wed, 21 Oct 2025 07:28:00 GMT"> -->
+  
+  <!-- 10. Preconnect for Faster External Resource Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <!-- <link rel="preload" href="../assets/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+  
+  <!-- 11. External CSS Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- AOS Scroll Animation Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> <!-- Swiper (For sliders) -->
+  <!-- Swiper JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
+  <!-- Bootstrap Icons -->
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap">
+  
+  <link rel="stylesheet" href="../assets/fontawesome-free-6.7.2-web/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/package/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../assets/aos-master/dist/aos.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/utils.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/sidebar.css">
+  <link rel="stylesheet" href="../assets/css/preloader.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <link rel="stylesheet" href="../assets/css/contact.css">
+  
+  <!-- 12. Critical Inline CSS -->
+  <style>
+    /* Add critical inline CSS here */
+  </style>
+  
+  <!-- 13. JavaScript Files (Use async or defer) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- GSAP -->
+  <!-- Pin to minor version (3.x) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <!-- Or pin to exact 3.13.0 -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  
+  <!-- VanillaTilt JS -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
+  
+  <!-- reCAPTCHA -->
+  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+  
+  <script src="../assets/js/libraries/gsap/gsap.min.js"></script>
+  <script src="../assets/js/libraries/gsap/ScrollTrigger.min.js"></script>
+  <script defer src="../assets/package/swiper-bundle.min.js"></script>
+  <script defer src="../assets/aos-master/dist/aos.js"></script>
+  <script defer src="../assets/js/common.js"></script>
+  <script defer src="../assets/js/contact.js"></script>
+</head>
+
+<body itemscope itemtype="https://schema.org/LocalBusiness">
+  <div id="tsparticles"></div>
+  
+  <div class="preloader">
+    <div class="loader">
+      <div class="brand-logo">
+        <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
+      </div>
+      <div class="greeting-text" id="greeting">Loading...</div>
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  
+  <!-- Top Navbar (For Desktop) -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+      <a href="../index.html" class="logo">
+        <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="../index.html" title="Go to homepage">Home</a></li>
+        <li class="dropdown">
+          <a href="../services/index.html" title="Explore our services">Services <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="../services/digital-strategy-consulting/index.html" class="submenu-toggle">Strategy & Consulting</a></li>
+            <li><a href="../services/web-development/index.html" class="submenu-toggle">Web Development</a></li>
+            <li><a href="../services/app-development/index.html" class="submenu-toggle">App Development</a></li>
+            <li><a href="../services/digital-marketing/index.html" class="submenu-toggle">Marketing</a></li>
+            <li><a href="../services/branding-and-creative-services/index.html" class="submenu-toggle">Branding & Creative</a></li>
+            <li><a href="../services/ui-ux-design/index.html" class="submenu-toggle">UI/UX Design</a></li>
+            <li><a href="../services/software-and-product-development/index.html" class="submenu-toggle">Software Development</a></li>
+            <li><a href="../services/e-commerce-solutions/index.html" class="submenu-toggle">E-Commerce</a></li>
+            <li><a href="../services/analytics-and-data-services/index.html" class="submenu-toggle">Analytics</a></li>
+            <li><a href="../services/support-and-maintenance/index.html" class="submenu-toggle">Support & Maintenance</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html" title="See our work">Portfolio</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" title="Access our resources">Resources <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="../blog/index.html">Blog</a></li>
+            <li><a href="../case-studies/index.html">Case Studies</a></li>
+            <li><a href="../tools/index.html">Free Tools</a></li>
+            <li><a href="../promotions/index.html">Promotions</a></li>
+          </ul>
+        </li>
+        <li><a href="../about/index.html" title="Learn about us">About</a></li>
+      </ul>
+      
+      <div class="action">
+        <select class="theme-select" aria-label="Theme Selector">
+          <option value="auto">Auto</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+        <a href="./index.html" class="btn btn-primary-pill">Start a Project</a>
+        <button id="menu-toggle" class="hamburger" aria-label="Open Menu" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Sidebar Overlay -->
+  <div id="overlay"></div>
+  
+  <!-- Sidebar (For Mobile) -->
+  <aside class="sidebar" role="navigation" aria-label="Mobile Navigation">
+    <button id="close-sidebar" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    
+    <a href="../index.html" class="logo">
+      <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      
+      <li class="dropdown">
+        <a href="javascript:void(0)">Services <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="../services/digital-strategy-consulting/index.html">Strategy & Consulting</a></li>
+          <li><a href="../services/web-development/index.html">Web Development</a></li>
+          <li><a href="../services/app-development/index.html">App Development</a></li>
+          <li><a href="../services/digital-marketing/index.html">Marketing</a></li>
+          <li><a href="../services/branding-and-creative-services/index.html">Branding & Creative</a></li>
+          <li><a href="../services/ui-ux-design/index.html">UI/UX Design</a></li>
+          <li><a href="../services/software-and-product-development/index.html">Software Development</a></li>
+          <li><a href="../services/e-commerce-solutions/index.html">E-Commerce</a></li>
+          <li><a href="../services/analytics-and-data-services/index.html">Analytics</a></li>
+          <li><a href="../services/support-and-maintenance/index.html">Support & Maintenance</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="../portfolio/index.html">Portfolio</a></li>
+      
+      <li class="dropdown">
+        <a href="javascript:void(0)">Resources <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../case-studies/index.html">Case Studies</a></li>
+          <li><a href="../tools/index.html">Free Tools</a></li>
+          <li><a href="../promotions/index.html">Promotions</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="../about/index.html">About</a></li>
+      
+      <!-- Theme Selector -->
+      <li class="theme-selector">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select" class="theme-select" aria-label="Theme Selector">
+          <option value="auto">Auto</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </li>
+    </ul>
+  </aside>
+  
+  
+  <!-- Main Content -->
+  <main class="contact-page">
+    <section class="contact-hero">
+      <h1>Let’s Talk</h1>
+      <p>We're here to help with your digital transformation. Reach out to start a conversation.</p>
+    </section>
+    
+    <section class="contact-grid">
+      <div class="contact-info" id="contact-info" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <h2>Contact Info</h2>
+        <p><strong>Email:</strong> <a href="mailto:hello@ceylondigital.com" itemprop="email">hello@ceylondigital.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+94767855906" itemprop="telephone">+94 76 785 5906</a></p>
+        <p><strong>WhatsApp:</strong> <a href="" itemprop="telephone">+94 76 785 5906</a></p>
+        <p><strong>Hours:</strong><br>
+          <time itemprop="openingHours" datetime="Mo-Su 07:00-09:00">
+            Mon–Sun, 7AM–9AM (SLT, UTC+5:30)
+          </time><br>
+          <span id="local-time"></span>
+        </p>
+      </div>
+      
+      <div class="contact-form" id="contact-form">
+        <h2>Send a Message</h2>
+        <form id="contactForm" action="https://formspree.io/f/xgvzypnw" method="POST">
+          <label for="fullname">Full Name*</label>
+          <input type="text" id="fullname" name="fullname" required />
+          
+          <label for="e-mail">Email*</label>
+          <input type="email" id="e-mail" name="e-mail" required />
+          
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" />
+          
+          <label for="user-message">Message*</label>
+          <textarea id="user-message" name="user-message" rows="5" required></textarea>
+          
+          <!-- <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div> -->
+          
+          <div class="form-agree">
+            <input type="checkbox" name="agree-terms" id="agree" required />
+            <label for="agree">You agree to our <a href="../terms-privacy-policy/index.html">terms & privacy policy</a>.</label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary"><i class="fas fa-envelope"></i> Send Message</button>
+        </form>
+        <p id="formStatus"></p>
+      </div>
+    </section>
+    
+    <section class="social" id="social">
+      <h2>Follow Us</h2>
+      <ul>
+        <li><a href="https://linkedin.com/in/youragency" target="_blank">LinkedIn</a></li>
+        <li><a href="https://twitter.com/youragency" target="_blank">Twitter</a></li>
+        <li><a href="https://facebook.com/youragency" target="_blank">Facebook</a></li>
+        <li><a href="https://instagram.com/youragency" target="_blank">Instagram</a></li>
+      </ul>
+    </section>
+    
+    <section class="faqs" id="faqs">
+      <h2>FAQs</h2>
+      <details>
+        <summary>What services do you provide?</summary>
+        <p>We offer web development, e-commerce solutions, marketing, branding, UI/UX design and more, check out our <a href="../services/index.html">services</a> page for more details.</p>
+      </details>
+      <details>
+        <summary>How soon can I expect a response?</summary>
+        <p>We usually reply within 24 business hours.</p>
+      </details>
+      <details>
+        <summary>Do you offer packages for startups?</summary>
+        <p>Yes, we have custom solutions for startups and small businesses.</p>
+      </details>
+    </section>
+  </main>
+  
+  
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div data-aos="fade-in" class="footer-top">
+        <!-- Branding -->
+        <div class="footer-branding">
+          <a href="../index.html">
+            <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
+          </a>
+          <p>We design, develop, and deliver digital solutions that drive business growth and excellence in Sri Lanka and beyond.</p>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe to our newsletter to receive the latest news and insights.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-middle">
+        <!-- Services -->
+        <div data-aos="fade-in" class="footer-col">
+          <h5>Our services</h5>
+          <ul>
+            <li><a href="../services/digital-strategy-consulting/index.html">Strategy & Consulting</a></li>
+            <li><a href="../services/web-development/index.html">Web Development</a></li>
+            <li><a href="../services/app-development/index.html">App Development</a></li>
+            <li><a href="../services/digital-marketing/index.html">Marketing</a></li>
+            <li><a href="../services/branding-and-creative-services/index.html">Branding & Creative</a></li>
+            <li><a href="../services/ui-ux-design/index.html">UI/UX Design</a></li>
+            <li><a href="../services/software-and-product-development/index.html">Software Development</a></li>
+            <li><a href="../services/e-commerce-solutions/index.html">E-Commerce</a></li>
+            <li><a href="../services/analytics-and-data-services/index.html">Analytics</a></li>
+            <li><a href="../services/support-and-maintenance/index.html">Support & Maintenance</a></li>
+          </ul>
+        </div>
+        
+        <!-- Quick Links -->
+        <div data-aos="fade-in" class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="../services/index.html">Services</a></li>
+            <li><a href="../portfolio/index.html">Portfolio</a></li>
+            <li><a href="../promotions/index.html">Promotions</a></li>
+            <li><a href="../blog/index.html">Blog</a></li>
+            <li><a href="../index.html?#faqs">FAQs</a></li>
+            <li><a href="../index.html?#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Page Sections -->
+        <div data-aos="fade-in" class="footer-col">
+          <h5>On This Page</h5>
+          <ul>
+            <li><a href="#">Who we are</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div data-aos="fade-in" class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:hello@ceylondigital.com">hello@ceylondigital.com</a></li>
+            <li><a href="tel:+94767855906">+94 76 785 5906</a></li>
+            <li><span>123 Innovation St,<br>New York, NY 10001</span></li>
+          </ul>
+        </div>
+        
+        <!-- Social -->
+        <div data-aos="fade-in" class="footer-col">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter/X</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Dribbble</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div data-aos="fade-in" class="footer-bottom">
+        <p>&copy; <script>
+            document.write(new Date().getFullYear());
+          </script> Ceylon Digital. All rights reserved. <br>
+          Designed with strategy, creativity & code.
+        </p>
+        <div class="legal-links">
+          <a href="./terms-of-service/index.html">Terms of Service</a> |
+          <a href="./privacy-policy/index.html">Privacy Policy</a>
+        </div>
+        <button onclick="scrollToTop()" class="back-to-top btn btn-primary"><i class="bi bi-arrow-up"></i> Back to Top</button>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  <!-- Local time conversion -->
+  <script>
+    function convertToLocalTimeRange(sltStartHour, sltEndHour) {
+      const options = { hour: 'numeric', minute: '2-digit', hour12: true };
+      const timeZoneSL = 'Asia/Colombo';
+      
+      const today = new Date();
+      const start = new Date(today.toLocaleString("en-US", { timeZone: timeZoneSL }));
+      start.setHours(sltStartHour, 0, 0);
+      
+      const end = new Date(today.toLocaleString("en-US", { timeZone: timeZoneSL }));
+      end.setHours(sltEndHour, 0, 0);
+      
+      const localStart = start.toLocaleTimeString([], options);
+      const localEnd = end.toLocaleTimeString([], options);
+      
+      return `Your local time: ${localStart} – ${localEnd}`;
+    }
+    
+    document.getElementById('local-time').textContent = convertToLocalTimeRange(7, 9);
+  </script>
+  
+  <!-- Form submission -->
+  <!--
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      
+      const recaptchaToken = grecaptcha.getResponse();
+      if (!recaptchaToken) {
+        document.getElementById('formStatus').textContent = "Please complete the reCAPTCHA.";
+        return;
+      }
+      formData.append('g-recaptcha-response', recaptchaToken);
+      
+      try {
+        const res = await fetch('./send-message', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await res.json();
+        document.getElementById('formStatus').textContent = result.success ?
+          "Thank you! We'll be in touch soon." :
+          "Something went wrong. Please try again.";
+        if (result.success) form.reset();
+        grecaptcha.reset();
+      } catch (error) {
+        console.error(error);
+        document.getElementById('formStatus').textContent = "Submission failed.";
+      }
+    });
+  </script>
+  -->
+  <!-- GSAP Animations -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.from(".contact-hero h1", {
+      opacity: 0,
+      y: -50,
+      duration: 1,
+      ease: "power3.out"
+    });
+    
+    gsap.from(".contact-hero p", {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      delay: 0.3,
+      ease: "power2.out"
+    });
+    
+    gsap.from("#contact-info", {
+      scrollTrigger: {
+        trigger: "#contact-info",
+        start: "top 80%",
+      },
+      opacity: 0,
+      x: -100,
+      duration: 1
+    });
+    
+    gsap.from("#contact-form", {
+      scrollTrigger: {
+        trigger: "#contact-form",
+        start: "top 80%",
+      },
+      opacity: 0,
+      x: 100,
+      duration: 1
+    });
+    
+    gsap.from("#social", {
+      scrollTrigger: {
+        trigger: "#social",
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1
+    });
+    
+    gsap.from("#faqs details", {
+      scrollTrigger: {
+        trigger: "#faqs",
+        start: "top 90%",
+      },
+      opacity: 0,
+      y: 40,
+      stagger: 0.2,
+      duration: 0.8
+    });
+  </script>
+</body>
+
+</html>
