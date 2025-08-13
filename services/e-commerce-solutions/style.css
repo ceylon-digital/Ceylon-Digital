@@ -36,36 +36,35 @@ body {
 
 
 .header {
-   position: relative;
    background: linear-gradient(#0009, #0009), url('../../assets/img/e-commerce banner.jpg') no-repeat center / cover;
-   margin-top: 97px;
    padding: 150px clamp(1.5rem, 5vw, 3rem);
-   text-align: center;
+   margin-top: 97px;
 }
 
 .header .container {
    max-width: 1200px;
    margin: auto;
+   display: grid;
+   place-content: center;
+   text-align: center;
 }
 
 .header h1 {
    color: var(--text-light);
-   margin-bottom: 0.5rem;
+   margin-bottom: 1rem;
 }
 
 .header p {
    color: var(--text-light);
    font-size: var(--h5-size);
+   margin-bottom: 1rem;
 }
 
 .social-links {
-   position: absolute;
-   bottom: 2rem;
-   left: 50%;
-   transform: translateX(-50%);
    display: flex;
-   align-items: center;
    gap: 20px;
+   align-items: center;
+   justify-content: center;
 }
 
 .social-links a {
@@ -108,7 +107,6 @@ body {
 .services h2,
 .why-us h2,
 .cta h2 {
-   color: var(--text-secondary);
    margin-bottom: 1.5rem;
 }
 
@@ -206,8 +204,8 @@ body {
 
 .cta-section {
    background: var(--btn-pri-bg);
+   padding: 80px clamp(1.5rem, 5vw, 3rem);
    text-align: center;
-   padding: 60px clamp(1.5rem, 5vw, 3rem);
 }
 
 .cta-section .container {
@@ -221,8 +219,8 @@ body {
 }
 
 .cta-section p {
-   margin-bottom: 20px;
    color: var(--text-light);
+   margin-bottom: 20px;
 }
 
 .cta-section .btn {
@@ -259,6 +257,7 @@ body {
 }
 
 .package-cards .card {
+   font-size: var(--p-size);
    background: var(--bg-body);
    border-radius: var(--radius-md);
    box-shadow: var(--shadow-md) padding: 30px;
@@ -271,24 +270,32 @@ body {
 }
 
 .package-cards .card h3 {
-   margin-top: 0;
    color: var(--accent);
+   font-size: 1.3em;
+   margin-bottom: 10px;
+}
+
+.package-cards .card p {
+   margin-bottom: 10px;
 }
 
 .package-cards .price {
+   color: var(--text-secondary);
    font-weight: 600;
-   font-size: var(--h3-size);
-   color: var(--text-body);
-   margin: 10px 0 20px;
+   font-size: 1.5em;
+   margin-bottom: 10px;
 }
 
-.package-cards .card ul {
-   list-style-type: disc;
-   padding-left: 20px;
-}
+.package-cards .card ul {}
 
 .package-cards .card ul li {
    margin-bottom: 10px;
+}
+
+.package-cards .card ul li::before {
+   content: "✓";
+   color: var(--accent);
+   margin-right: 0.5em;
 }
 
 @media (max-width: 1000px) {
@@ -437,21 +444,6 @@ body {
 
 
 
-
-.cta {
-   background: var(--btn-pri-bg);
-   padding: 80px clamp(1.5rem, 5vw, 3rem);
-   text-align: center;
-}
-
-.cta div {
-   display: flex;
-   gap: 20px;
-   flex-wrap: wrap;
-   align-items: center;
-   justify-content: center;
-   margin-top: 20px;
-}
 
 /*
 .package,
