@@ -520,19 +520,79 @@
    <div id="tsparticles"></div>
    
    <div class="preloader">
-      <div class="loader">
-         <div class="brand-logo">
+      <div class="preloader__loader">
+         <div class="preloader__logo">
             <img src="./assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
          </div>
-         <div class="greeting-text" id="greeting">Loading...</div>
-         <div class="spinner"></div>
+         <div class="preloader__greeting" id="greeting">Loading...</div>
+         <div class="preloader__spinner"></div>
       </div>
    </div>
+   
    
    
    <!-- Header Section -->
    <header id="header" class="header header-section">
       <!-- Top Navbar (For Desktop) -->
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+         <div class="navbar__container">
+            <a href="./index.html" class="navbar__logo">
+               <img src="./assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
+            </a>
+            
+            <ul class="navbar__links">
+               <li><a href="./index.html" class="navbar__link navbar__link--active" title="Go to homepage">Home</a></li>
+               
+               <li class="navbar__dropdown">
+                  <a href="./services/index.html" class="navbar__link" title="Explore our services">
+                     Services <i class="fas fa-chevron-down"></i>
+                  </a>
+                  <ul class="navbar__dropdown-menu">
+                     <li><a href="./services/digital-strategy-consulting/index.html" class="navbar__dropdown-item">Strategy & Consulting</a></li>
+                     <li><a href="./services/web-development/index.html" class="navbar__dropdown-item">Web Development</a></li>
+                     <li><a href="./services/app-development/index.html" class="navbar__dropdown-item">App Development</a></li>
+                     <li><a href="./services/digital-marketing/index.html" class="navbar__dropdown-item">Marketing</a></li>
+                     <li><a href="./services/branding-and-creative-services/index.html" class="navbar__dropdown-item">Branding & Creative</a></li>
+                     <li><a href="./services/ui-ux-design/index.html" class="navbar__dropdown-item">UI/UX Design</a></li>
+                     <li><a href="./services/software-and-product-development/index.html" class="navbar__dropdown-item">Software Development</a></li>
+                     <li><a href="./services/e-commerce-solutions/index.html" class="navbar__dropdown-item">E-Commerce</a></li>
+                     <li><a href="./services/analytics-and-data-services/index.html" class="navbar__dropdown-item">Analytics</a></li>
+                     <li><a href="./services/support-and-maintenance/index.html" class="navbar__dropdown-item">Support & Maintenance</a></li>
+                  </ul>
+               </li>
+               
+               <li><a href="./portfolio/index.html" class="navbar__link" title="See our work">Portfolio</a></li>
+               
+               <li class="navbar__dropdown">
+                  <a href="javascript:void(0)" class="navbar__link" title="Access our resources">
+                     Resources <i class="fas fa-chevron-down"></i>
+                  </a>
+                  <ul class="navbar__dropdown-menu">
+                     <li><a href="./blog/index.html" class="navbar__dropdown-item">Blog</a></li>
+                     <li><a href="./case-studies/index.html" class="navbar__dropdown-item">Case Studies</a></li>
+                     <li><a href="./tools/index.html" class="navbar__dropdown-item">Free Tools</a></li>
+                     <li><a href="./promotions/index.html" class="navbar__dropdown-item">Promotions</a></li>
+                  </ul>
+               </li>
+               
+               <li><a href="./about/index.html" class="navbar__link" title="Learn about us">About</a></li>
+            </ul>
+            
+            <div class="navbar__action">
+               <select class="navbar__theme-select theme-select" aria-label="Theme Selector">
+                  <option value="auto">Auto</option>
+                  <option value="light">Light</option>
+                  <option value="dark">Dark</option>
+               </select>
+               <a href="./contact/index.html" class="navbar__btn btn btn-primary-pill">Start a Project</a>
+               <button id="menu-toggle" class="navbar__hamburger" aria-label="Open Menu" aria-expanded="false">
+                  <i class="fas fa-bars"></i>
+               </button>
+            </div>
+         </div>
+      </nav>
+      
+      <!--
       <nav class="navbar" role="navigation" aria-label="Main navigation">
          <div class="navbar-container">
             <a href="./index.html" class="logo">
@@ -583,12 +643,12 @@
             </div>
          </div>
       </nav>
-      
+      -->
       <!-- Sidebar Overlay -->
       <div id="overlay"></div>
       
       <!-- Sidebar (For Mobile) -->
-      <aside class="sidebar" role="navigation" aria-label="Mobile Navigation">
+      <nav class="sidebar" role="navigation" aria-label="Mobile Navigation">
          <button id="close-sidebar" aria-label="Close Menu"><i class="fas fa-times"></i></button>
          
          <a href="./index.html" class="logo">
@@ -638,137 +698,128 @@
                </select>
             </li>
          </ul>
-      </aside>
-      
-      
-      <div class="hero">
-         <div class="hero-left">
-            <div class="social-links">
-               <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-               <a href="https://twitter.com" target="_blank" aria-label="X-Twitter"><i class="fab fa-x-twitter"></i></a>
-               <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-               <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-               <!-- <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a> -->
-               <!-- <a href="https://dribbble.com" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a> -->
-            </div>
-            
-            <p class="tagline">Building Digital Success, Globally</p>
-            <h1 class="headline">Web Development, Digital Marketing in Sri Lanka</h1>
-            <!-- <p class="subheading">We build custom websites, eCommerce stores, digital brands, and offer a full suite of SEO and digital solutions to grow your business. Trusted by clients worldwide.</p> -->
-            <!-- <p class="subheading">Websites, apps, eCommerce, SEO, branding & digital marketing—everything you need to grow your business online worldwide.</p> -->
-            <p class="subheading">Websites, apps, eCommerce, SEO, branding & marketing—everything you need to grow your business online, anywhere in the world.</p>
-            
-            <div class="cta-buttons">
-               <a href="./services/web-development/index.html" class="btn btn-primary icon-left" title="Start Your Web Development Project">
-                  <i class="bi bi-code"></i> Build Your Website Today
-               </a>
-               <a href="./contact/index.html" class="btn btn-outline-primary icon-left" title="Request a Free Digital Consultation">
-                  <i class="bi bi-chat"></i> Free Digital Consultation
-               </a>
-            </div>
-         </div>
-         
-         <div class="hero-right">
-            <img class="illustration" src="./assets/img/hero.png" alt="Digital Agency Illustration" />
-         </div>
-      </div>
-      
-      <!-- <div class="wave-container">
-         <svg viewBox="0 0 1000 200" preserveAspectRatio="none" style="width: 100%; height: 100%;">
-            <path d="M0,200 L0.0,100.0 C 6.3,101.0 18.8,103.0 25.0,104.0 C 31.3,104.9 43.8,106.8 50.0,107.7 C 56.3,108.5 68.8,110.1 75.0,110.9 C 81.3,111.6 93.8,112.8 100.0,113.5 C 106.3,113.9 118.8,114.8 125.0,115.2 C 131.3,115.4 143.8,115.8 150.0,116.0 C 156.3,115.9 168.8,115.8 175.0,115.7 C 181.3,115.4 193.8,114.8 200.0,114.5 C 206.3,114.0 218.8,112.9 225.0,112.4 C 231.3,111.7 243.8,110.3 250.0,109.6 C 256.3,108.7 268.8,107.0 275.0,106.1 C 281.3,105.1 293.8,103.3 300.0,102.3 C 306.3,101.3 318.8,99.3 325.0,98.3 C 331.3,97.3 343.8,95.4 350.0,94.4 C 356.3,93.5 368.8,91.8 375.0,90.9 C 381.3,90.2 393.8,88.7 400.0,87.9 C 406.3,87.4 418.8,86.3 425.0,85.7 C 431.3,85.4 443.8,84.7 450.0,84.4 C 456.3,84.3 468.8,84.1 475.0,84.0 C 481.3,84.2 493.8,84.5 500.0,84.7 C 506.3,85.1 518.8,85.9 525.0,86.3 C 531.3,86.9 543.8,88.1 550.0,88.7 C 556.3,89.5 568.8,91.1 575.0,91.9 C 581.3,92.8 593.8,94.6 600.0,95.5 C 606.3,96.5 618.8,98.5 625.0,99.5 C 631.3,100.5 643.8,102.4 650.0,103.4 C 656.3,104.4 668.8,106.3 675.0,107.2 C 681.3,108.0 693.8,109.7 700.0,110.5 C 706.3,111.2 718.8,112.5 725.0,113.2 C 731.3,113.7 743.8,114.5 750.0,115.0 C 756.3,115.2 768.8,115.7 775.0,115.9 C 781.3,115.9 793.8,115.8 800.0,115.8 C 806.3,115.5 818.8,115.0 825.0,114.8 C 831.3,114.3 843.8,113.3 850.0,112.8 C 856.3,112.1 868.8,110.7 875.0,110.0 C 881.3,109.2 893.8,107.4 900.0,106.6 C 906.3,105.6 918.8,103.8 925.0,102.8 C 931.3,101.8 943.8,99.8 950.0,98.8 C 956.3,97.8 968.8,95.9 975.0,94.9 C 981.3,94.0 993.8,92.2 1000.0,91.3 C 1006.3,90.5 1018.8,89.0 1025.0,88.2 L1000.0,200.0 L0,200.0Z" fill="#003ACC">
-               <animate attributeName="d" dur="4.0s" repeatCount="indefinite" values="M0,200 L0.0,100.0 C 6.3,101.0 18.8,103.0 25.0,104.0 C 31.3,104.9 43.8,106.8 50.0,107.7 C 56.3,108.5 68.8,110.1 75.0,110.9 C 81.3,111.6 93.8,112.8 100.0,113.5 C 106.3,113.9 118.8,114.8 125.0,115.2 C 131.3,115.4 143.8,115.8 150.0,116.0 C 156.3,115.9 168.8,115.8 175.0,115.7 C 181.3,115.4 193.8,114.8 200.0,114.5 C 206.3,114.0 218.8,112.9 225.0,112.4 C 231.3,111.7 243.8,110.3 250.0,109.6 C 256.3,108.7 268.8,107.0 275.0,106.1 C 281.3,105.1 293.8,103.3 300.0,102.3 C 306.3,101.3 318.8,99.3 325.0,98.3 C 331.3,97.3 343.8,95.4 350.0,94.4 C 356.3,93.5 368.8,91.8 375.0,90.9 C 381.3,90.2 393.8,88.7 400.0,87.9 C 406.3,87.4 418.8,86.3 425.0,85.7 C 431.3,85.4 443.8,84.7 450.0,84.4 C 456.3,84.3 468.8,84.1 475.0,84.0 C 481.3,84.2 493.8,84.5 500.0,84.7 C 506.3,85.1 518.8,85.9 525.0,86.3 C 531.3,86.9 543.8,88.1 550.0,88.7 C 556.3,89.5 568.8,91.1 575.0,91.9 C 581.3,92.8 593.8,94.6 600.0,95.5 C 606.3,96.5 618.8,98.5 625.0,99.5 C 631.3,100.5 643.8,102.4 650.0,103.4 C 656.3,104.4 668.8,106.3 675.0,107.2 C 681.3,108.0 693.8,109.7 700.0,110.5 C 706.3,111.2 718.8,112.5 725.0,113.2 C 731.3,113.7 743.8,114.5 750.0,115.0 C 756.3,115.2 768.8,115.7 775.0,115.9 C 781.3,115.9 793.8,115.8 800.0,115.8 C 806.3,115.5 818.8,115.0 825.0,114.8 C 831.3,114.3 843.8,113.3 850.0,112.8 C 856.3,112.1 868.8,110.7 875.0,110.0 C 881.3,109.2 893.8,107.4 900.0,106.6 C 906.3,105.6 918.8,103.8 925.0,102.8 C 931.3,101.8 943.8,99.8 950.0,98.8 C 956.3,97.8 968.8,95.9 975.0,94.9 C 981.3,94.0 993.8,92.2 1000.0,91.3 C 1006.3,90.5 1018.8,89.0 1025.0,88.2 L1000.0,200.0 L0,200.0Z;
-       M0,200 L0.0,100.0 C 6.3,99.0 18.8,97.0 25.0,96.0 C 31.3,95.1 43.8,93.2 50.0,92.3 C 56.3,91.5 68.8,89.9 75.0,89.1 C 81.3,88.4 93.8,87.2 100.0,86.5 C 106.3,86.1 118.8,85.2 125.0,84.8 C 131.3,84.6 143.8,84.2 150.0,84.0 C 156.3,84.1 168.8,84.2 175.0,84.3 C 181.3,84.6 193.8,85.2 200.0,85.5 C 206.3,86.0 218.8,87.1 225.0,87.6 C 231.3,88.3 243.8,89.7 250.0,90.4 C 256.3,91.3 268.8,93.0 275.0,93.9 C 281.3,94.9 293.8,96.8 300.0,97.7 C 306.3,98.7 318.8,100.7 325.0,101.7 C 331.3,102.7 343.8,104.6 350.0,105.6 C 356.3,106.5 368.8,108.2 375.0,109.1 C 381.3,109.8 393.8,111.3 400.0,112.1 C 406.3,112.6 418.8,113.8 425.0,114.3 C 431.3,114.6 443.8,115.3 450.0,115.6 C 456.3,115.7 468.8,115.9 475.0,116.0 C 481.3,115.8 493.8,115.5 500.0,115.3 C 506.3,114.9 518.8,114.1 525.0,113.7 C 531.3,113.1 543.8,111.9 550.0,111.3 C 556.3,110.5 568.8,108.9 575.0,108.1 C 581.3,107.2 593.8,105.4 600.0,104.5 C 606.3,103.5 618.8,101.5 625.0,100.5 C 631.3,99.5 643.8,97.6 650.0,96.6 C 656.3,95.6 668.8,93.8 675.0,92.8 C 681.3,92.0 693.8,90.3 700.0,89.5 C 706.3,88.8 718.8,87.5 725.0,86.8 C 731.3,86.3 743.8,85.5 750.0,85.0 C 756.3,84.8 768.8,84.3 775.0,84.1 C 781.3,84.1 793.8,84.2 800.0,84.2 C 806.3,84.5 818.8,85.0 825.0,85.2 C 831.3,85.7 843.8,86.7 850.0,87.2 C 856.3,87.9 868.8,89.3 875.0,90.0 C 881.3,90.8 893.8,92.6 900.0,93.4 C 906.3,94.4 918.8,96.3 925.0,97.2 C 931.3,98.2 943.8,100.2 950.0,101.2 C 956.3,102.2 968.8,104.1 975.0,105.1 C 981.3,106.0 993.8,107.8 1000.0,108.7 C 1006.3,109.5 1018.8,111.0 1025.0,111.8 L1000.0,200.0 L0,200.0Z;
-       M0,200 L0.0,100.0 C 6.3,101.0 18.8,103.0 25.0,104.0 C 31.3,104.9 43.8,106.8 50.0,107.7 C 56.3,108.5 68.8,110.1 75.0,110.9 C 81.3,111.6 93.8,112.8 100.0,113.5 C 106.3,113.9 118.8,114.8 125.0,115.2 C 131.3,115.4 143.8,115.8 150.0,116.0 C 156.3,115.9 168.8,115.8 175.0,115.7 C 181.3,115.4 193.8,114.8 200.0,114.5 C 206.3,114.0 218.8,112.9 225.0,112.4 C 231.3,111.7 243.8,110.3 250.0,109.6 C 256.3,108.7 268.8,107.0 275.0,106.1 C 281.3,105.1 293.8,103.3 300.0,102.3 C 306.3,101.3 318.8,99.3 325.0,98.3 C 331.3,97.3 343.8,95.4 350.0,94.4 C 356.3,93.5 368.8,91.8 375.0,90.9 C 381.3,90.2 393.8,88.7 400.0,87.9 C 406.3,87.4 418.8,86.3 425.0,85.7 C 431.3,85.4 443.8,84.7 450.0,84.4 C 456.3,84.3 468.8,84.1 475.0,84.0 C 481.3,84.2 493.8,84.5 500.0,84.7 C 506.3,85.1 518.8,85.9 525.0,86.3 C 531.3,86.9 543.8,88.1 550.0,88.7 C 556.3,89.5 568.8,91.1 575.0,91.9 C 581.3,92.8 593.8,94.6 600.0,95.5 C 606.3,96.5 618.8,98.5 625.0,99.5 C 631.3,100.5 643.8,102.4 650.0,103.4 C 656.3,104.4 668.8,106.3 675.0,107.2 C 681.3,108.0 693.8,109.7 700.0,110.5 C 706.3,111.2 718.8,112.5 725.0,113.2 C 731.3,113.7 743.8,114.5 750.0,115.0 C 756.3,115.2 768.8,115.7 775.0,115.9 C 781.3,115.9 793.8,115.8 800.0,115.8 C 806.3,115.5 818.8,115.0 825.0,114.8 C 831.3,114.3 843.8,113.3 850.0,112.8 C 856.3,112.1 868.8,110.7 875.0,110.0 C 881.3,109.2 893.8,107.4 900.0,106.6 C 906.3,105.6 918.8,103.8 925.0,102.8 C 931.3,101.8 943.8,99.8 950.0,98.8 C 956.3,97.8 968.8,95.9 975.0,94.9 C 981.3,94.0 993.8,92.2 1000.0,91.3 C 1006.3,90.5 1018.8,89.0 1025.0,88.2 L1000.0,200.0 L0,200.0Z" />
-            </path>
-         </svg>
-      </div> -->
-      
-      
-      <!-- Marquee: Scrollable Cards -->
-      <section class="marquee-section">
-         <div class="marquee-content" id="marquee-content">
-            <div data-aos="fade-up" class="marquee-item">
-               <i class="fas fa-pencil-ruler  icon"></i>
-               <div class="label">Branding & Design</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="100" class="marquee-item">
-               <i class="fas fa-code  icon"></i>
-               <div class="label">Web Development</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="200" class="marquee-item">
-               <i class="fas fa-mobile-alt  icon"></i>
-               <div class="label">Mobile Optimization</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="300" class="marquee-item">
-               <i class="fas fa-shopping-cart  icon"></i>
-               <div class="label">eCommerce Solutions</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="400" class="marquee-item">
-               <i class="fas fa-bullhorn  icon"></i>
-               <div class="label">Digital Marketing</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="500" class="marquee-item">
-               <i class="fas fa-search  icon"></i>
-               <div class="label">SEO Services</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="600" class="marquee-item">
-               <i class="fas fa-paint-brush icon"></i>
-               <div class="label">UI/UX Strategy</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="700" class="marquee-item">
-               <i class="fas fa-server  icon"></i>
-               <div class="label">Secure Hosting</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="800" class="marquee-item">
-               <i class="fas fa-chart-line  icon"></i>
-               <div class="label">Analytics & Reporting</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="900" class="marquee-item">
-               <i class="fas fa-file-alt icon"></i>
-               <div class="label">Content Strategy</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="1000" class="marquee-item">
-               <i class="fas fa-tools  icon"></i>
-               <div class="label">Ongoing Maintenance</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="1100" class="marquee-item">
-               <i class="fas fa-lightbulb  icon"></i>
-               <div class="label">Digital Strategy</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="1200" class="marquee-item">
-               <i class="fas fa-cloud-upload-alt  icon"></i>
-               <div class="label">Cloud Deployment</div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-delay="1300" class="marquee-item">
-               <i class="fas fa-rocket icon"></i>
-               <div class="label">Performance Tuning</div>
-            </div>
-         </div>
-      </section>
-      <canvas class="blob-canvas"></canvas>
+      </nav>
    </header>
    
    <main>
-      <section id="about" class="about-ceylon main-section">
-         <div class="about-wrapper container">
+      <section class="hero">
+         <div class="top">
+            <div class="hero-left">
+               <div class="social-links">
+                  <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://twitter.com" target="_blank" aria-label="X-Twitter"><i class="fab fa-x-twitter"></i></a>
+                  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <!-- <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a> -->
+                  <!-- <a href="https://dribbble.com" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a> -->
+               </div>
+               
+               <p class="tagline">Building Digital Success, Globally</p>
+               <h1 class="headline">Web Development & Digital Marketing in Sri Lanka</h1>
+               <p class="subheading">Websites, apps, eCommerce, SEO, branding & marketing—everything you need to grow your business online, anywhere in the world.</p>
+               
+               <div class="cta-buttons">
+                  <a href="./services/web-development/index.html" class="btn btn-primary icon-left" title="Start Your Web Development Project">
+                     <i class="bi bi-code"></i> Build Your Website Today
+                  </a>
+                  <a href="./contact/index.html" class="btn btn-outline-primary icon-left" title="Request a Free Digital Consultation">
+                     <i class="bi bi-chat"></i> Free Digital Consultation
+                  </a>
+               </div>
+            </div>
+            
+            <div class="hero-right">
+               <img class="illustration" src="./assets/img/hero.png" alt="Digital Agency Illustration" />
+            </div>
+         </div>
+         
+         
+         
+         <!-- Marquee: Scrollable Cards -->
+         <section class="marquee-section">
+            <div class="marquee-content" id="marquee-content">
+               <div data-aos="fade-up" class="marquee-item">
+                  <i class="fas fa-pencil-ruler  icon"></i>
+                  <div class="label">Branding & Design</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="100" class="marquee-item">
+                  <i class="fas fa-code  icon"></i>
+                  <div class="label">Web Development</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="200" class="marquee-item">
+                  <i class="fas fa-mobile-alt  icon"></i>
+                  <div class="label">Mobile Optimization</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="300" class="marquee-item">
+                  <i class="fas fa-shopping-cart  icon"></i>
+                  <div class="label">eCommerce Solutions</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="400" class="marquee-item">
+                  <i class="fas fa-bullhorn  icon"></i>
+                  <div class="label">Digital Marketing</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="500" class="marquee-item">
+                  <i class="fas fa-search  icon"></i>
+                  <div class="label">SEO Services</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="600" class="marquee-item">
+                  <i class="fas fa-paint-brush icon"></i>
+                  <div class="label">UI/UX Strategy</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="700" class="marquee-item">
+                  <i class="fas fa-server  icon"></i>
+                  <div class="label">Secure Hosting</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="800" class="marquee-item">
+                  <i class="fas fa-chart-line  icon"></i>
+                  <div class="label">Analytics & Reporting</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="900" class="marquee-item">
+                  <i class="fas fa-file-alt icon"></i>
+                  <div class="label">Content Strategy</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="1000" class="marquee-item">
+                  <i class="fas fa-tools  icon"></i>
+                  <div class="label">Ongoing Maintenance</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="1100" class="marquee-item">
+                  <i class="fas fa-lightbulb  icon"></i>
+                  <div class="label">Digital Strategy</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="1200" class="marquee-item">
+                  <i class="fas fa-cloud-upload-alt  icon"></i>
+                  <div class="label">Cloud Deployment</div>
+               </div>
+               
+               <div data-aos="fade-up" data-aos-delay="1300" class="marquee-item">
+                  <i class="fas fa-rocket icon"></i>
+                  <div class="label">Performance Tuning</div>
+               </div>
+            </div>
+         </section>
+         <canvas class="blob-canvas"></canvas>
+      </section>
+      
+      
+      <section id="about" class="about main-section">
+         <div class="container">
             <div class="about-intro">
                <h2 data-aos="fade-up" class="section-title">About us</h2>
                <p data-aos="fade-right" class="section-creative-title">We Build <span>Digital Impact</span></p>
-               <p data-aos="fade-left" class="about">At <strong>Ceylon Digital</strong>, we build brands, craft experiences, and engineer strategies that move businesses forward — with a bold, minimalistic approach rooted in purpose and results.</p>
-               <a data-aos="fade-up" href="./about/index.html">Learn more <i class="fas fa-link"></i></a>
+               <p data-aos="fade-left" class="intro">At <strong>Ceylon Digital</strong>, we build brands, craft experiences, and engineer strategies that move businesses forward — with a bold, minimalistic approach rooted in purpose and results.</p>
+               <a data-aos="fade-up" href="./about/index.html">Learn more <i class="fas fa-external-link"></i></a>
             </div>
             
             <div class="about-features">
@@ -1222,7 +1273,7 @@
                </article> -->
             </div>
             
-            <a data-aos="fade-up" href="./services/index.html" data-ripple-color="rgba(0, 150, 255, 0.5)" class="btn btn-primary">Explore All Services <i class="bi bi-compass"></i></a>
+            <a data-aos="fade-up" href="./services/index.html" data-ripple-color="rgba(0, 150, 255, 0.5)" class="btn btn-primary icon-right">Explore All Services <i class="bi bi-compass"></i></a>
          </div>
       </section>
       
