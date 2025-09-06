@@ -13,6 +13,34 @@ function renderProjects(projects) {
             card.className = 'portfolio-card';
             card.setAttribute('data-aos', 'fade-up');
             card.innerHTML = `<div class="portfolio-card">
+   <div class="monitor">
+      <div class="bezel">
+         <div class="screen">
+            <img src="${project.thumbnailSrc}" alt="Project 1 Screenshot" />
+         </div>
+      </div>
+      <div class="stand"></div>
+      <div class="foot"></div>
+   </div>
+   <div class="project-info">
+      <h3 class="project-title">${project.title}</h3>
+      <p class="project-desc">${project.description}</p>
+      
+      <ul class="tags">
+         <li>React</li>
+         <li>Node.js</li>
+         <li>UI/UX</li>
+      </ul>
+      <div class="project-links">
+         <a href="https://example.com" target="_blank">Live Preview</a>
+         <a href="${project.detailsPage}" class="view-case">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+   </div>
+</div>
+
+            
+            <!--
+            <div class="portfolio-card">
                   <img src="${project.thumbnailSrc}" alt="Project 1" class="project-image" />
                   <div class="card-content">
                      <h3>${project.title}</h3>
@@ -24,7 +52,9 @@ function renderProjects(projects) {
                      </ul>
                      <a href="${project.detailsPage}" class="view-case">View case study <i class="fas fa-arrow-right"></i></a>
                   </div>
-               </div>`;
+               </div>
+-->
+`;
             container.appendChild(card);
       });
 }
