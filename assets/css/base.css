@@ -392,9 +392,9 @@ section {
 
 
 .icon-left i {
-   margin-right: 10px;
+   margin-right: .5rem;
 }
 
 .icon-right i {
-   margin-left: 10px;
+   margin-left: .5rem;
 }
