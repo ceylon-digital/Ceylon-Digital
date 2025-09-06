@@ -11,6 +11,7 @@
 }
 
 .hero h1 {
+   font-size: var(--display-size);
    color: var(--text-light);
    margin-bottom: 20px;
 }
@@ -50,7 +51,7 @@ main {
 }
 
 .about-section .container p strong {
-   color: var(--text-heading);
+   color: var(--text-body);
 }
 
 
