@@ -139,3 +139,149 @@
     display: none;
   }
 }
+
+
+
+
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.3rem clamp(1.5rem, 5vw, 3rem);
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+.navbar--fixed {
+  background: var(--bg-navbar);
+  box-shadow: var(--shadow-elevation);
+}
+
+.navbar__container {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__group {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__action {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navbar__logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.navbar__logo img {
+  height: 55px;
+}
+
+.navbar__hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.navbar__hamburger:hover {
+  background: none;
+  padding: 0;
+  color: var(--accent);
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar__link {
+  color: var(--text-muted);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar__link--active,
+.navbar__link:hover {
+  color: var(--accent);
+}
+
+.navbar__dropdown {
+  position: relative;
+}
+
+.navbar__dropdown-menu {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background: var(--bg-navbar);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-elevation);
+  display: none;
+  flex-direction: column;
+  width: max-content;
+  z-index: 999;
+}
+
+.navbar__dropdown:hover .navbar__dropdown-menu {
+  display: flex;
+}
+
+.navbar__dropdown-item {
+  display: block;
+  padding: 0.6rem 1.5rem;
+  color: var(--link-default);
+}
+
+.navbar__dropdown-item:hover {
+  background: var(--bg-surface);
+  color: var(--accent);
+}
+
+.navbar__theme-select {
+  font-size: var(--p-size);
+  color: var(--link-default);
+  font-weight: bold;
+}
+
+.navbar__theme-select:hover {
+  color: var(--accent);
+}
+
+.navbar__btn {
+  background: none;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  text-transform: none;
+  font-size: 0.8rem;
+  padding: 10px 15px;
+}
+
+@media (max-width: 1200px) {
+  .navbar__hamburger {
+    display: block;
+  }
+  
+  .navbar__links,
+  .navbar__theme-select {
+    display: none;
+  }
+}
