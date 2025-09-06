@@ -9,7 +9,6 @@
 .hero .title {
    font-size: var(--display-size);
    color: var(--text-light);
-   max-width: 650px;
    margin: auto;
    margin-bottom: 20px;
 }
