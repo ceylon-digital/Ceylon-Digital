@@ -191,10 +191,12 @@ const navbar = document.querySelector('.navbar');
 
 onscroll = () => {
    if (pageYOffset > 0) {
-      navbar.classList.add('fixed');
+      // navbar.classList.add('fixed');
+      navbar.classList.add('navbar--fixed');
    }
    else if (pageYOffset === 0) {
-      navbar.classList.remove('fixed');
+      // navbar.classList.remove('fixed');
+      navbar.classList.remove('navbar--fixed');
    }
 };
 
