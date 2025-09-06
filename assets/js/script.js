@@ -318,6 +318,11 @@ function startCountdown() {
 startCountdown();
 
 
+const stickyCtaClose = document.querySelector('.sticky-cta-close');
+
+stickyCtaClose.onclick = () => {
+   stickyCtaClose.parentElement.style.display = 'none';
+}
 
 
 const tabButtons = document.querySelectorAll('.tab-btn');
