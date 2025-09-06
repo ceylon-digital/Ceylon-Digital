@@ -209,20 +209,20 @@
    
    <!-- 13. JavaScript Files (Use async or defer) -->
    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-   <script defer src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   <script src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
    <!-- Pin to minor version (3.x) -->
-   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
    <!-- Or pin to exact 3.13.0 -->
-   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
    <!-- VanillaTilt JS -->
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
    
    <script src="../assets/js/libraries/gsap/gsap.min.js"></script>
    <script src="../assets/js/libraries/gsap/ScrollTrigger.min.js"></script>
-   <script defer src="../assets/fontawesome-free-6.7.2-web/js/all.min.js"></script>
+   <script src="../assets/fontawesome-free-6.7.2-web/js/all.min.js"></script>
    <script src="../assets/package/swiper-bundle.min.js"></script>
-   <script defer src="../assets/aos-master/dist/aos.js"></script>
+   <script src="../assets/aos-master/dist/aos.js"></script>
    <script defer src="../assets/js/common.js"></script>
 </head>
 
@@ -230,18 +230,74 @@
    <div id="tsparticles"></div>
    
    <div class="preloader">
-      <div class="loader">
-         <div class="brand-logo">
-            <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
+      <div class="preloader__loader">
+         <div class="preloader__logo">
+            <img src="./assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
          </div>
-         <div class="greeting-text" id="greeting">Loading...</div>
-         <div class="spinner"></div>
+         <div class="preloader__greeting" id="greeting">Loading...</div>
+         <div class="preloader__spinner"></div>
       </div>
    </div>
    
    
-   <!-- Top Navbar (For Desktop) -->
-   <nav class="navbar" role="navigation" aria-label="Main navigation">
+   <header>
+      <!-- Top Navbar (For Desktop) -->
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+         <div class="navbar__container">
+            <a href="../index.html" class="navbar__logo">
+               <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
+            </a>
+            
+            <ul class="navbar__links">
+               <li><a href="../index.html" class="navbar__link">Home</a></li>
+               
+               <li class="navbar__dropdown">
+                  <a href="../services/index.html" class="navbar__link">Services <i class="fas fa-chevron-down"></i></a>
+                  <ul class="navbar__dropdown-menu">
+                     <li><a href="../services/digital-strategy-consulting/index.html" class="navbar__dropdown-item">Strategy & Consulting</a></li>
+                     <li><a href="../services/web-development/index.html" class="navbar__dropdown-item">Web Development</a></li>
+                     <li><a href="../services/app-development/index.html" class="navbar__dropdown-item">App Development</a></li>
+                     <li><a href="../services/digital-marketing/index.html" class="navbar__dropdown-item">Marketing</a></li>
+                     <li><a href="../services/branding-and-creative-services/index.html" class="navbar__dropdown-item">Branding & Creative</a></li>
+                     <li><a href="../services/ui-ux-design/index.html" class="navbar__dropdown-item">UI/UX Design</a></li>
+                     <li><a href="../services/software-and-product-development/index.html" class="navbar__dropdown-item">Software Development</a></li>
+                     <li><a href="../services/e-commerce-solutions/index.html" class="navbar__dropdown-item">E-Commerce</a></li>
+                     <li><a href="../services/analytics-and-data-services/index.html" class="navbar__dropdown-item">Analytics</a></li>
+                     <li><a href="../services/support-and-maintenance/index.html" class="navbar__dropdown-item">Support & Maintenance</a></li>
+                  </ul>
+               </li>
+               
+               <li><a href="../portfolio/index.html" class="navbar__link">Portfolio</a></li>
+               
+               <li class="navbar__dropdown">
+                  <a href="javascript:void(0)" class="navbar__link">Resources <i class="fas fa-chevron-down"></i></a>
+                  <ul class="navbar__dropdown-menu">
+                     <li><a href="../blog/index.html" class="navbar__dropdown-item">Blog</a></li>
+                     <li><a href="../case-studies/index.html" class="navbar__dropdown-item">Case Studies</a></li>
+                     <li><a href="../tools/index.html" class="navbar__dropdown-item">Free Tools</a></li>
+                     <li><a href="../promotions/index.html" class="navbar__dropdown-item">Promotions</a></li>
+                  </ul>
+               </li>
+               
+               <li><a href="./index.html" class="navbar__link navbar__link--active">About</a></li>
+            </ul>
+            
+            <div class="navbar__action">
+               <select class="navbar__theme-select theme-select" aria-label="Theme Selector">
+                  <option value="auto">Auto</option>
+                  <option value="light">Light</option>
+                  <option value="dark">Dark</option>
+               </select>
+               <a href="../contact/index.html" class="navbar__btn btn btn-primary-pill">Start a Project</a>
+               <button id="menu-toggle" class="navbar__hamburger" aria-label="Open Menu" aria-expanded="false">
+                  <i class="fas fa-bars"></i>
+               </button>
+            </div>
+         </div>
+      </nav>
+      
+      
+      <!-- <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="navbar-container">
          <a href="../index.html" class="logo">
             <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
@@ -289,77 +345,77 @@
             </button>
          </div>
       </div>
-   </nav>
-   
-   <!-- Sidebar Overlay -->
-   <div id="overlay"></div>
-   
-   <!-- Sidebar (For Mobile) -->
-   <aside class="sidebar" role="navigation" aria-label="Mobile Navigation">
-      <button id="close-sidebar" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+   </nav> -->
       
-      <a href="../index.html" class="logo">
-         <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
-      </a>
+      <!-- Sidebar Overlay -->
+      <div id="overlay"></div>
       
-      <ul class="nav-links">
-         <li><a href="../index.html">Home</a></li>
+      <!-- Sidebar (For Mobile) -->
+      <nav class="sidebar" role="navigation" aria-label="Mobile Navigation">
+         <button id="close-sidebar" aria-label="Close Menu"><i class="fas fa-times"></i></button>
          
-         <li class="dropdown">
-            <a href="javascript:void(0)">Services <i class="fas fa-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-               <li><a href="../services/digital-strategy-consulting/index.html">Strategy & Consulting</a></li>
-               <li><a href="../services/web-development/index.html">Web Development</a></li>
-               <li><a href="../services/app-development/index.html">App Development</a></li>
-               <li><a href="../services/digital-marketing/index.html">Marketing</a></li>
-               <li><a href="../services/branding-and-creative-services/index.html">Branding & Creative</a></li>
-               <li><a href="../services/ui-ux-design/index.html">UI/UX Design</a></li>
-               <li><a href="../services/software-and-product-development/index.html">Software Development</a></li>
-               <li><a href="../services/e-commerce-solutions/index.html">E-Commerce</a></li>
-               <li><a href="../services/analytics-and-data-services/index.html">Analytics</a></li>
-               <li><a href="../services/support-and-maintenance/index.html">Support & Maintenance</a></li>
-            </ul>
-         </li>
+         <a href="../index.html" class="logo">
+            <img src="../assets/icons/logo.png" alt="Ceylon Digital Brand Logo">
+         </a>
          
-         <li><a href="../portfolio/index.html">Portfolio</a></li>
-         
-         <li class="dropdown">
-            <a href="javascript:void(0)">Resources <i class="fas fa-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-               <li><a href="../blog/index.html">Blog</a></li>
-               <li><a href="../case-studies/index.html">Case Studies</a></li>
-               <li><a href="../tools/index.html">Free Tools</a></li>
-               <li><a href="../promotions/index.html">Promotions</a></li>
-            </ul>
-         </li>
-         
-         <li><a href="../about/index.html">About</a></li>
-         
-         <!-- Theme Selector -->
-         <li class="theme-selector">
-            <label for="theme-select">Theme</label>
-            <select id="theme-select" class="theme-select" aria-label="Theme Selector">
-               <option value="auto">Auto</option>
-               <option value="light">Light</option>
-               <option value="dark">Dark</option>
-            </select>
-         </li>
-      </ul>
-   </aside>
-   
-   
-   <!-- Header Section -->
-   <header id="hero" class="hero">
-      <div class="container">
-         <h1 data-aos="fade-up">About Ceylon Digital</h1>
-         <p data-aos="fade-up">Driving Digital Innovation with Strategy, Creativity, and Technology</p>
-         <!-- <h1>Your Full-Service Digital Growth Partner</h1> -->
-      </div>
+         <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            
+            <li class="dropdown">
+               <a href="javascript:void(0)">Services <i class="fas fa-chevron-down"></i></a>
+               <ul class="dropdown-menu">
+                  <li><a href="../services/digital-strategy-consulting/index.html">Strategy & Consulting</a></li>
+                  <li><a href="../services/web-development/index.html">Web Development</a></li>
+                  <li><a href="../services/app-development/index.html">App Development</a></li>
+                  <li><a href="../services/digital-marketing/index.html">Marketing</a></li>
+                  <li><a href="../services/branding-and-creative-services/index.html">Branding & Creative</a></li>
+                  <li><a href="../services/ui-ux-design/index.html">UI/UX Design</a></li>
+                  <li><a href="../services/software-and-product-development/index.html">Software Development</a></li>
+                  <li><a href="../services/e-commerce-solutions/index.html">E-Commerce</a></li>
+                  <li><a href="../services/analytics-and-data-services/index.html">Analytics</a></li>
+                  <li><a href="../services/support-and-maintenance/index.html">Support & Maintenance</a></li>
+               </ul>
+            </li>
+            
+            <li><a href="../portfolio/index.html">Portfolio</a></li>
+            
+            <li class="dropdown">
+               <a href="javascript:void(0)">Resources <i class="fas fa-chevron-down"></i></a>
+               <ul class="dropdown-menu">
+                  <li><a href="../blog/index.html">Blog</a></li>
+                  <li><a href="../case-studies/index.html">Case Studies</a></li>
+                  <li><a href="../tools/index.html">Free Tools</a></li>
+                  <li><a href="../promotions/index.html">Promotions</a></li>
+               </ul>
+            </li>
+            
+            <li><a href="../about/index.html">About</a></li>
+            
+            <!-- Theme Selector -->
+            <li class="theme-selector">
+               <label for="theme-select">Theme</label>
+               <select id="theme-select" class="theme-select" aria-label="Theme Selector">
+                  <option value="auto">Auto</option>
+                  <option value="light">Light</option>
+                  <option value="dark">Dark</option>
+               </select>
+            </li>
+         </ul>
+      </nav>
    </header>
    
    
    <!-- Main Content -->
    <main>
+      <section role="banner" class="hero">
+         <div class="container">
+            <h1 data-aos="fade-up">About Ceylon Digital</h1>
+            <p data-aos="fade-up">Driving Digital Innovation with Strategy, Creativity, and Technology</p>
+            <!-- <h1>Your Full-Service Digital Growth Partner</h1> -->
+         </div>
+      </section>
+      
+      
       <section id="about" class="about-section">
          <div class="container">
             <p>
@@ -588,9 +644,17 @@
       <section id="contact" class="contact">
          <div class="container">
             <h2 data-aos="fade-up">Ready to Grow with Us?</h2>
-            <p data-aos="fade-up">
-               Let's build something great together. <a href="../index.html?#contact">Contact us</a> for a free consultation or to learn more about our services.
-            </p>
+            <p data-aos="fade-up">Let's build something great together. <a href="../contact/index.html">Contact us</a> for a free consultation or to learn more about our services.</p>
+         </div>
+      </section>
+      
+      
+      <section class="cta-section">
+         <h2>Let’s Build Something Great Together</h2>
+         <p>Looking for a digital partner who understands your goals and grows with you?</p>
+         <div class="cta-buttons">
+            <a href="../contact/index.html">Contact Us</a>
+            <a href="../services/index.html">View Our Services</a>
          </div>
       </section>
    </main>
