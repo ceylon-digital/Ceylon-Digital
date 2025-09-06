@@ -1,7 +1,7 @@
 .footer {
    background: var(--bg-body);
    color: var(--text-muted);
-   padding: 100px clamp(1.5rem, 5vw, 3rem);
+   padding: clamp(3.75rem, 2rem + 2vw, 6.25rem) clamp(1.5rem, 5vw, 3rem);
    transition: background 0.3s ease;
 }
 
