@@ -242,6 +242,148 @@
     }
   </script>
   -->
+  
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Ceylon Digital",
+      "url": "https://ceylon-digital.github.io/Ceylon-Digital",
+      "image": "https://ceylon-digital.github.io/Ceylon-Digital/logo.png",
+      "description": "Ceylon Digital provides worldwide digital services including web design, app development, digital marketing, branding, and strategy consulting.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "offers": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Digital Strategy & Consulting",
+          "description": "Digital transformation consulting, customer journey mapping, competitor analysis, technology stack consulting, brand strategy, and KPI definition."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Web Design & Development",
+          "description": "UI/UX design, front-end and back-end development, CMS integration including WordPress and Webflow, e-commerce development, maintenance, and optimization."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobile App Development",
+          "description": "Native and cross-platform app development, mobile UI/UX design, testing and QA, app store deployment, and updates."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Digital Marketing",
+          "description": "SEO, PPC advertising, social media marketing, content marketing, email marketing, and conversion rate optimization."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Branding & Creative Services",
+          "description": "Logo and identity design, brand guidelines, video production and animation, graphic design, and illustration."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "UI/UX Design",
+          "description": "User research, personas, wireframing, prototyping, usability testing, interaction design, design systems, and accessibility compliance."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Software & Product Development",
+          "description": "SaaS development, API development, CRM and ERP solutions, DevOps and cloud services, and quality assurance."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "E-Commerce Solutions",
+          "description": "Custom storefront design, shopping cart integration, payment gateways, inventory management, subscriptions, and memberships."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Analytics & Data Services",
+          "description": "Analytics setup, data visualization and dashboards, A/B testing, customer segmentation, and attribution modeling."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Support & Maintenance",
+          "description": "Monitoring and uptime checks, security and bug fixes, backups and recovery, technical support, hosting, and domain services."
+        }
+      }],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ceylon-digital.github.io/Ceylon-Digital"
+      }
+    }
+  </script>
+  
+  <!-- FAQ Schema for Rich Results -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does Ceylon Digital provide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide digital strategy, web design and development, mobile app development, digital marketing, branding, UI/UX design, software development, e-commerce solutions, analytics, and ongoing support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you serve clients worldwide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Ceylon Digital provides services globally, with clients from various industries around the world."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help with e-commerce development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we specialize in building custom e-commerce solutions including storefront design, payment gateway integration, shopping cart systems, inventory management, and subscription models."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer ongoing support and maintenance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We provide continuous monitoring, security updates, bug fixes, backups, recovery, and technical support for all our clients."
+        }
+      }]
+    }
+  </script>
   <!-- 13. JavaScript Files (Use async or defer) -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
@@ -447,8 +589,10 @@
   <!-- Main Content -->
   <main>
     <section role="banner" class="hero">
-      <h1 class="title">Our Services</h1>
-      <p class="tagline">From Strategy to Execution, We Provide 360° Digital Solutions to Help You Grow and Scale.</p>
+      <div class="container">
+        <h1 data-aos="fade-up" class="title">Our Services</h1>
+        <p data-aos="fade-up" data-aos-delay="100" class="tagline">From Strategy to Execution, We Provide 360° Digital Solutions to Help You Grow and Scale.</p>
+      </div>
     </section>
     
     
@@ -702,9 +846,9 @@
   <script>
     // Optional: fade in each .service-card when it comes into view
     document.addEventListener('DOMContentLoaded', () => {
+      // const title = document.querySelector('.title');
+      // const tagline = document.querySelector('.tagline');
       const cards = document.querySelectorAll('.service-card');
-      const title = document.querySelector('.title');
-      const tagline = document.querySelector('.tagline');
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -714,9 +858,9 @@
         });
       }, { threshold: 0.1 });
       
+      // observer.observe(title);
+      // observer.observe(tagline);
       cards.forEach(card => observer.observe(card));
-      observer.observe(title);
-      observer.observe(tagline);
     });
   </script>
 </body>
