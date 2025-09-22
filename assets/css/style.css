@@ -6,9 +6,11 @@ body {
 
 .header {}
 
+.hero {
+   position: relative;
+}
 
 .hero .top {
-   position: relative;
    transition: 0.3s ease;
    max-width: 1440px;
    margin: auto;
@@ -79,6 +81,7 @@ canvas.blob-canvas {
 
 .hero .hero-left .tagline {
    font-family: var(--font-accent);
+   font-size: var(--h5-size);
    color: var(--text-muted);
    margin-bottom: 20px;
 }
@@ -133,7 +136,7 @@ canvas.blob-canvas {
 
 .hero .hero-left .subheading {
    color: var(--text-muted);
-   font-size: var(--h6-size);
+   font-size: var(--h5-size);
    max-width: 900px;
    margin-bottom: 30px;
 }
@@ -144,6 +147,7 @@ canvas.blob-canvas {
    gap: 10px;
 }
 
+.hero .cta-buttons .btn {}
 
 
 .marquee-section {
@@ -257,9 +261,9 @@ section {
 .container .section-title {
    color: var(--accent);
    font-size: var(--p-size);
-   font-weight: 600;
+   font-weight: bold;
    text-align: center;
-   text-transform: capitalize;
+   text-transform: uppercase;
    margin: auto;
    margin-bottom: 10px;
 }
@@ -316,8 +320,6 @@ section {
 .about {
    background: var(--bg-surface);
    padding: 100px clamp(1.5rem, 5vw, 3rem);
-   display: flex;
-   justify-content: center;
    scroll-margin-top: 97px;
    transition: background 0.3s ease;
 }
@@ -328,12 +330,12 @@ section {
    display: grid;
    grid-template-columns: 1fr 1.5fr;
    gap: 60px;
-   align-items: start;
 }
 
 .about-intro {
    position: sticky;
    top: 35%;
+   height: max-content;
 }
 
 .about-intro .section-title,
@@ -391,6 +393,7 @@ section {
    font-size: 2em;
    color: var(--accent);
    margin-bottom: 15px;
+   -webkit-box-reflect: left -15px linear-gradient(to bottom left, transparent, #0008);
 }
 
 .feature-card h4 {
@@ -988,7 +991,7 @@ section {
 
 .services-cards .service-card .fake-link {
    color: var(--link-default);
-   font-weight: 500;
+   font-weight: bold;
    transition: 0.3s ease-in-out;
 }
 
@@ -1439,6 +1442,7 @@ section {
 
 /* Monitor Card */
 .portfolio-card {
+   font-size: var(--p-size);
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -1447,7 +1451,7 @@ section {
 
 .monitor {
    width: 100%;
-   filter: drop-shadow(var(--shadow));
+   /* filter: drop-shadow(var(--shadow)); */
    display: grid;
    justify-items: center;
    gap: 5px;
@@ -1503,13 +1507,13 @@ section {
 }
 
 .project-title {
-   font-size: 1.1rem;
+   font-size: 1.3em;
    font-weight: 600;
    margin: 6px 0;
 }
 
 .project-desc {
-   font-size: 0.9rem;
+   font-size: 1em;
    color: var(--text-muted);
    margin-bottom: 12px;
 }
@@ -1541,9 +1545,9 @@ section {
    text-decoration: none;
    background: var(--btn-pri-bg);
    color: var(--text-light);
-   padding: 6px 12px;
+   padding: 8px 15px;
    border-radius: 6px;
-   font-size: 0.85rem;
+   font-size: 1em;
    transition: background 0.2s;
 }
 
