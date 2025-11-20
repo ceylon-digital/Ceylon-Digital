@@ -1,36 +1,37 @@
-header {
-  background: var(--btn-pri-bg);
-  color: var(--text-light);
-  margin-top: 97px;
+main {
+  background: var(--bg-surface);
+}
+
+.hero {
+  background: linear-gradient(#0009, #0009), url('../../assets/img/services-banner.jpg') no-repeat center / cover;
   padding: 150px clamp(1.5rem, 5vw, 3rem);
+  margin-top: 97px;
   text-align: center;
 }
 
-header h1 {
+.hero .title {
   font-size: var(--display-size);
   color: var(--text-light);
   margin-bottom: 0.5rem;
   
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  /* opacity: 0; */
+  /* transform: translateY(30px); */
+  /* transition: opacity 0.6s ease, transform 0.6s ease; */
 }
 
-header p {
+.hero .tagline {
   color: var(--text-light);
   font-size: var(--h4-size);
   max-width: 800px;
   margin: 0 auto;
   
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
+  /* opacity: 0; */
+  /* transform: translateY(30px); */
+  /* transition: opacity 1s ease, transform 1s ease; */
 }
 
 
-main {
-  background: var(--bg-surface);
-}
+
 
 .services-section {
   padding: 50px clamp(1.5rem, 5vw, 3rem);
@@ -78,8 +79,6 @@ main {
 }
 
 .service-card ul {
-  list-style: disc;
-  padding-left: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -88,11 +87,20 @@ main {
   margin-bottom: 1rem;
 }
 
+.service-card ul li::before {
+  content: "✓";
+  color: var(--accent);
+  margin-right: 0.5em;
+}
+
 .service-card a {
   color: var(--accent);
   font-weight: 600;
 }
 
+.service-card a i{
+  margin-left: 10px;
+}
 
 
 
