@@ -1,0 +1,378 @@
+/* =============================
+   Utility classes for semantic font usage
+============================= */
+.secondary-text {
+  font-family: var(--font-secondary);
+  color: var(--text-secondary);
+}
+
+.accent-text {
+  font-family: var(--font-accent);
+  color: var(--accent);
+}
+
+.display-text {
+  font-family: var(--font-display);
+  color: var(--text-heading);
+}
+
+.code-text {
+  font-family: var(--font-mono);
+  color: var(--text-light);
+  background-color: var(--text-body);
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
+}
+
+
+/* =============================
+   Optional CTA utility
+   ============================= */
+.cta-text {
+  font-family: var(--font-accent);
+  color: var(--text-light);
+  background-color: var(--btn-pri-bg);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+
+/* =============================
+   LAYOUT UTILITIES
+============================= */
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* =============================
+   SPACING UTILITIES
+============================= */
+.mt-sm {
+  margin-top: var(--space-sm);
+}
+
+.mt-md {
+  margin-top: var(--space-md);
+}
+
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+
+.mb-sm {
+  margin-bottom: var(--space-sm);
+}
+
+.mb-md {
+  margin-bottom: var(--space-md);
+}
+
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}
+
+.p-sm {
+  padding: var(--space-sm);
+}
+
+.p-md {
+  padding: var(--space-md);
+}
+
+.p-lg {
+  padding: var(--space-lg);
+}
+
+
+/* =============================
+   BORDER & SHADOW UTILITIES
+============================= */
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+
+/* =============================
+   BUTTON BASE
+============================= */
+.btn {
+  background-color: var(--btn-pri-bg);
+  color: var(--text-light);
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--font-accent);
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: var(--btn-pri-hover);
+}
+
+
+/* =============================
+   ANIMATIONS
+============================= */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bounce {
+  animation: bounce 0.5s ease infinite;
+}
+
+@keyframes bounce {
+  
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.beat {
+  animation: beat 0.5s ease infinite;
+}
+
+@keyframes beat {
+  
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.8s ease-out;
+  pointer-events: none;
+  opacity: 0.75;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  /* Add subtle glow to ripple */
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+/* Blob Animations */
+.blob {
+  animation: blob-turn var(--time, 30s) linear infinite;
+  fill: var(--fill, #7600f8);
+  position: relative;
+  transform-origin: center;
+}
+
+.blob svg {
+  animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
+  transform-origin: center;
+}
+
+.blob svg path {
+  animation: blob-scale calc(var(--time, 30s) * 0.5) ease-in-out 0s infinite;
+  transform-origin: center;
+}
+
+@keyframes blob-turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blob-skew {
+  0% {
+    transform: skewY(0deg);
+  }
+  
+  13% {
+    transform: skewY(calc((1.8deg) * var(--amount, 2)));
+  }
+  
+  18% {
+    transform: skewY(calc((2.2deg) * var(--amount, 2)));
+  }
+  
+  24% {
+    transform: skewY(calc((2.48deg) * var(--amount, 2)));
+  }
+  
+  25% {
+    transform: skewY(calc((2.5deg) * var(--amount, 2)));
+  }
+  
+  26% {
+    transform: skewY(calc((2.48deg) * var(--amount, 2)));
+  }
+  
+  32% {
+    transform: skewY(calc((2.2deg) * var(--amount, 2)));
+  }
+  
+  37% {
+    transform: skewY(calc((1.8deg) * var(--amount, 2)));
+  }
+  
+  50% {
+    transform: skewY(0deg);
+  }
+  
+  63% {
+    transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+  }
+  
+  68% {
+    transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+  }
+  
+  74% {
+    transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+  }
+  
+  75% {
+    transform: skewY(calc((-2.5deg) * var(--amount, 2)));
+  }
+  
+  76% {
+    transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+  }
+  
+  82% {
+    transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+  }
+  
+  87% {
+    transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+  }
+  
+  100% {
+    transform: skewY(0deg);
+  }
+}
+
+@keyframes blob-scale {
+  0% {
+    transform: scaleX(.9) scaleY(1);
+  }
+  
+  25% {
+    transform: scaleX(.9) scaleY(.9);
+  }
+  
+  50% {
+    transform: scaleX(1) scaleY(.9);
+  }
+  
+  75% {
+    transform: scaleX(.9) scaleY(.9);
+  }
+  
+  100% {
+    transform: scaleX(.9) scaleY(1);
+  }
+}

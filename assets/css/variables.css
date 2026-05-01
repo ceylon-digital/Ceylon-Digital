@@ -1,0 +1,393 @@
+/* ========================================================
+   DESIGN SYSTEM - CSS Boilerplate
+   Includes: Typography, Colors, Spacing, Layouts, Utilities, Responsive, Animations
+======================================================== */
+
+/* =============================
+   USAGE NOTES:
+   - Font usage:
+     - --font-primary: General body text, paragraphs, and UI elements
+     - --font-secondary: Headings, blockquotes, featured sections
+     - --font-display: Large banners, hero sections, standout headlines
+     - --font-accent: For buttons, CTAs, badges, and emphasis elements
+     - --font-mono: For <pre>, <code>, and inline code requiring monospace
+   - Major Third scale: Best for content-heavy sites, blogs, dashboards
+   - Perfect Fourth scale: Best for landing pages, portfolios, storytelling
+   - Color system auto-supports dark mode (media query based)
+   - Color variables use descriptive names: text, backgrounds, buttons, links
+   - Spacing based on 8px scale for consistent rhythm
+   - Utility classes: flex, grid, spacing, shadows, border-radius
+   - Customize primary color, extend grid as needed
+   - Add `.dark` class or use JS toggle for manual dark mode
+   - Pre-built z-index layers and simple animation utilities
+   - Optimize performance: minify CSS, defer JS, lazy load images
+============================= */
+
+
+/* ===============================
+   GLOBAL RESET, BOX-SIZING AND BASE HTML STYLING
+================================= */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   line-height: 1.6;
+   letter-spacing: 0.01em;
+}
+
+html {
+   font-size: 16px;
+   /* Base font size for rem scaling */
+   scroll-behavior: smooth;
+   /* Smooth scrolling */
+   text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+
+/* =============================
+   1. FONT FAMILY SYSTEM
+============================= */
+:root {
+   /* Base font stacks */
+   --font-sans: 'DM Sans', sans-serif;
+   --font-serif: 'Montserrat', serif;
+
+   /* Semantic font roles in logical order with descriptions */
+   --font-primary: var(--font-sans);
+   /* For body text and general UI */
+   --font-secondary: var(--font-serif);
+   /* For headings, blockquotes, featured sections */
+   --font-display: 'Prompt', sans-serif;
+   /* For large banners, hero sections, standout headlines */
+   --font-accent: 'Prompt', sans-serif;
+   /* For buttons, CTAs, and emphasis elements */
+   --font-mono: 'Fira Code', monospace;
+   /* For <pre>, <code> blocks and inline code */
+}
+
+
+
+/* =============================
+   TYPOGRAPHY SCALE OPTIONS
+   - Default: Major Third (1.25)
+   - Optional: Perfect Fourth (1.333)
+   - New Smaller Scale: Minor Second (1.118)
+============================= */
+
+:root {
+   --h1-size: clamp(1.7rem, 3vw, 2.7rem);
+   --h2-size: clamp(1.6rem, 2.5vw, 2.2rem);
+   --h3-size: clamp(1.3rem, 2vw, 1.8rem);
+   --h4-size: clamp(1.2rem, 1.8vw, 1.6rem);
+   --h5-size: clamp(1.05rem, 1.5vw, 1.3rem);
+   --h6-size: clamp(1rem, 1.2vw, 1.2rem);
+   --p-size: 1rem;
+
+
+   --display-size: clamp(2.5rem, 2rem + 1vw, 3rem);
+   --h1-size: clamp(2rem, 1.5rem + 1.5vw, 2.7rem);
+   --h2-size: clamp(1.8rem, 1.3rem + 1.2vw, 2.2rem);
+   --h3-size: clamp(1.5rem, 1.1rem + 1vw, 1.8rem);
+   --h4-size: clamp(1.3rem, 1rem + 0.8vw, 1.6rem);
+   --h5-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.3rem);
+   --h6-size: clamp(1rem, 0.8rem + 0.5vw, 1.2rem);
+   --p-size: clamp(1rem, 0.9rem + 0.3vw, 1.1rem);
+
+
+   --display-size: clamp(2.5rem, 2rem + 1.5vw, 3.8rem);
+   /* ~3.815rem */
+   --h1-size: clamp(2.2rem, 1.8rem + 1.2vw, 3.05rem);
+   /* ~3.052rem */
+   --h2-size: clamp(1.8rem, 1.5rem + 1vw, 2.44rem);
+   /* ~2.441rem */
+   --h3-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.95rem);
+   /* ~1.953rem */
+   --h4-size: clamp(1.3rem, 1.1rem + 0.6vw, 1.56rem);
+   /* ~1.563rem */
+   --h5-size: clamp(1.1rem, 0.95rem + 0.4vw, 1.25rem);
+   /* ~1.25rem */
+   --h6-size: clamp(1rem, 0.85rem + 0.3vw, 1.1rem);
+   /* ~1.1rem */
+   --p-size: clamp(1rem, 0.85rem + 0.25vw, 1.05rem);
+   /* base */
+   --p-size: 1rem;
+}
+
+/* MINOR SECOND SCALE (Recommended for very subtle, understated designs) */
+/* :root {
+   --h1-size: clamp(1.125rem, 3vw, 1.75rem);
+   --h2-size: clamp(1rem, 2.8vw, 1.5rem);
+   --h3-size: clamp(0.875rem, 2.5vw, 1.25rem);
+   --h4-size: clamp(0.75rem, 2vw, 1rem);
+   --h5-size: clamp(0.625rem, 1.8vw, 0.875rem);
+   --h6-size: clamp(0.5rem, 1.5vw, 0.75rem);
+   --p-size: clamp(0.625rem, 1.8vw, 0.875rem);
+} */
+
+/* MINOR THIRD SCALE (Recommended for more subtle, restrained designs) */
+/* :root {
+   --h1-size: clamp(1.25rem, 4vw, 2rem);
+   --h2-size: clamp(1.125rem, 3.5vw, 1.75rem);
+   --h3-size: clamp(1rem, 3vw, 1.5rem);
+   --h4-size: clamp(0.875rem, 2.5vw, 1.25rem);
+   --h5-size: clamp(0.75rem, 2vw, 1rem);
+   --h6-size: clamp(0.625rem, 1.5vw, 0.875rem);
+   --p-size: clamp(0.75rem, 2vw, 1rem);
+} */
+
+/* MAJOR THIRD SCALE (Recommended for content-heavy sites, blogs, dashboards) */
+/* :root {
+   --h1-size: clamp(1.5rem, 4vw, 2.5rem);
+   --h2-size: clamp(1.25rem, 3.5vw, 2rem);
+   --h3-size: clamp(1.125rem, 3vw, 1.5rem);
+   --h4-size: clamp(1rem, 2.5vw, 1.25rem);
+   --h5-size: clamp(0.875rem, 2vw, 1.125rem);
+   --h6-size: clamp(0.75rem, 1.5vw, 1rem);
+   --p-size: clamp(0.875rem, 2vw, 1rem);
+} */
+
+/* PERFECT FOURTH SCALE (Recommended for landing pages, portfolios, storytelling) */
+/* :root {
+   --h1-size: clamp(2rem, 5vw, 3rem);
+   --h2-size: clamp(1.75rem, 4.5vw, 2.5rem);
+   --h3-size: clamp(1.5rem, 4vw, 2rem);
+   --h4-size: clamp(1.25rem, 3.5vw, 1.5rem);
+   --h5-size: clamp(1rem, 3vw, 1.25rem);
+   --h6-size: clamp(0.875rem, 2.5vw, 1rem);
+   --p-size: clamp(1rem, 2.5vw, 1.125rem);
+} */
+
+/* BOOTSTRAP SCALE (Recommended for general-purpose websites) */
+/* :root {
+   --h1-size: clamp(2.25rem, 5vw, 3.5rem);
+   --h2-size: clamp(1.75rem, 4.5vw, 2.5rem);
+   --h3-size: clamp(1.5rem, 4vw, 2rem);
+   --h4-size: clamp(1.25rem, 3.5vw, 1.5rem);
+   --h5-size: clamp(1rem, 3vw, 1.25rem);
+   --h6-size: clamp(0.875rem, 2.5vw, 1rem);
+   --p-size: clamp(1rem, 2.5vw, 1.125rem);
+} */
+
+/* PERFECT FIFTH SCALE (Recommended for bold typographic statements, creative sites) */
+/* :root {
+   --h1-size: clamp(2.25rem, 5.5vw, 3.5rem);
+   --h2-size: clamp(1.75rem, 4.5vw, 2.5rem);
+   --h3-size: clamp(1.5rem, 4vw, 2rem);
+   --h4-size: clamp(1.25rem, 3.5vw, 1.5rem);
+   --h5-size: clamp(1rem, 3vw, 1.25rem);
+   --h6-size: clamp(0.875rem, 2.5vw, 1rem);
+   --p-size: clamp(1rem, 2.5vw, 1.125rem);
+} */
+
+
+
+/* =============================
+   3. COLOR SYSTEM + DARK MODE
+============================= */
+:root {
+   /* Text Colors */
+   --text-body: #1C1C1C;
+   --text-heading: #061A78;
+   --text-secondary: #1A1A1A;
+   --text-muted: #6B7280;
+   --text-light: #FFFFFF;
+   --text-dark: #1C1C1C;
+   --text-disabled: #9CA3AF;
+   --text-on-light: #1C1C1C;
+   --text-on-dark: #FFFFFF;
+   --text-inverse: #FFFFFF;
+   --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+
+   /* Background Colors */
+   --bg-body: #FFFFFF;
+   --bg-surface: #F1F4F8;
+   --bg-surface-light: #F6F8FB;
+   --bg-surface-dark: #121826;
+   --bg-navbar: #FFFFFF;
+   --bg-alt: #E6ECF5;
+   --bg-disabled: #F3F4F6;
+   --bg-overlay-light: rgba(255, 255, 255, 0.3);
+   --bg-overlay-dark: rgba(0, 0, 0, 0.4);
+
+   /* Button Colors */
+   --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+   --btn-pri-bg: #3B82F6;
+   --btn-pri-hover: #002B99;
+   --btn-pri-text: #FFFFFF;
+
+   --btn-sec-bg: #E6ECF5;
+   --btn-sec-hover: #D0D7E2;
+   --btn-sec-text: #002B99;
+
+   --btn-dis-bg: #F3F4F6;
+   --btn-dis-text: #9CA3AF;
+
+   /* Interactive Colors */
+   --border-default: #D0D7E2;
+   --focus-outline: #60A5FA;
+
+   /* Link & Accent Colors */
+   --link-default: #003ACC;
+   --link-hover: #002B99;
+   --accent: #002B99;
+
+   --logo-default: grayscale(100%) brightness(60%);
+   --logo-hover: grayscale(0%) brightness(100%);
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+   :root {
+      --text-body: #94A3B8;
+      --text-heading: #FFFFFF;
+      --text-secondary: #E4E8F0;
+      --text-muted: #64748B;
+      --text-light: #FFFFFF;
+      --text-dark: #1C1C1C;
+      --text-disabled: #6B7280;
+      --text-on-light: #1C1C1C;
+      --text-on-dark: #FFFFFF;
+      --text-inverse: #000000;
+      --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+      
+      --bg-body: #0A0E1C;
+      --bg-surface: #121826;
+      --bg-surface-light: #F6F8FB;
+      --bg-surface-dark: #121826;
+      --bg-navbar: #0C111F;
+      --bg-alt: #1A2135;
+      --bg-disabled: #2F2F2F;
+      --bg-overlay-light: rgba(0, 0, 0, 0.3);
+      --bg-overlay-dark: rgba(0, 0, 0, 0.4);
+      
+      --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+      --btn-pri-hover: #002B99;
+      --btn-pri-text: #FFFFFF;
+      
+      --btn-sec-bg: #E6ECF5;
+      --btn-sec-hover: #D0D7E2;
+      --btn-sec-text: #002B99;
+      
+      --btn-dis-bg: #F3F4F6;
+      --btn-dis-text: #9CA3AF;
+      
+      --border-default: #2F3548;
+      --focus-outline: #60A5FA;
+      
+      --link-default: #60A5FA;
+      --link-hover: #2563EB;
+      --accent: #2563EB;
+   }
+}
+*/
+
+/* Dark Theme */
+[data-theme="dark"] {
+   /* Text Colors */
+   --text-body: #94A3B8;
+   --text-heading: #FFFFFF;
+   --text-secondary: #E4E8F0;
+   --text-muted: #64748B;
+   --text-light: #FFFFFF;
+   --text-dark: #1C1C1C;
+   --text-disabled: #6B7280;
+   --text-on-light: #1C1C1C;
+   --text-on-dark: #FFFFFF;
+   --text-inverse: #000000;
+   --text-gradient: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+   /* Vivid blue for call-to-actions */
+
+   /* Background Colors */
+   --bg-body: #0A0E1C;
+   --bg-surface: #121826;
+   --bg-surface-light: #F6F8FB;
+   --bg-surface-dark: #121826;
+   --bg-navbar: #0C111F;
+   --bg-alt: #1A2135;
+   --bg-disabled: #2F2F2F;
+   --bg-overlay-light: rgba(0, 0, 0, 0.3);
+   --bg-overlay-dark: rgba(0, 0, 0, 0.4);
+
+   /* Button Colors */
+   --btn-pri-bg: linear-gradient(135deg, #002B99, #003ACC, #3b82f6);
+   --btn-pri-hover: #002B99;
+   --btn-pri-text: #FFFFFF;
+
+   --btn-sec-bg: #E6ECF5;
+   --btn-sec-hover: #D0D7E2;
+   --btn-sec-text: #002B99;
+
+   --btn-dis-bg: #F3F4F6;
+   --btn-dis-text: #9CA3AF;
+
+   /* Interactive Colors */
+   --border-default: #2F3548;
+   --focus-outline: #60A5FA;
+
+   /* Link & Accent Colors */
+   --link-default: #60A5FA;
+   --link-hover: #2563EB;
+   --accent: #2563EB;
+}
+
+/* =============================
+   4. SPACING SYSTEM (8px scale)
+============================= */
+:root {
+   --space-xxs: 0.25rem;
+   --space-xs: 0.5rem;
+   --space-sm: 0.75rem;
+   --space-md: 1rem;
+   --space-lg: 1.5rem;
+   --space-xl: 2rem;
+   --space-xxl: 3rem;
+}
+
+/* =============================
+   5. RESPONSIVE BREAKPOINTS
+============================= */
+:root {
+   --break-sm: 480px;
+   --break-md: 768px;
+   --break-lg: 1024px;
+   --break-xl: 1280px;
+}
+
+/* Example Usage: 
+@media (min-width: var(--break-md)) { ... }
+*/
+
+/* =============================
+   6. Z-INDEX LAYERS
+============================= */
+:root {
+   --z-base: 1;
+   --z-dropdown: 10;
+   --z-sticky: 50;
+   --z-modal: 100;
+   --z-toast: 200;
+}
+
+/* =============================
+   7. SHADOWS & BORDER RADIUS
+============================= */
+:root {
+   /* Border Radius */
+   --radius-sm: 4px;
+   --radius-md: 8px;
+   --radius-lg: 12px;
+   --radius-rounded: 9999px;
+
+   /* Shadows & Effects */
+   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+   --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.05);
+   --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.05);
+   --shadow-elevation: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+   /* Add inner shadow or glassmorphism effects if needed */
+   --shadow-inner: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+   --blur-glass: backdrop-filter: blur(12px);
+}
