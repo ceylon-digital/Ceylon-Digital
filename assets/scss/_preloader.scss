@@ -1,0 +1,79 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: #050505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    overflow: hidden;
+
+    .loader-content {
+        text-align: center;
+        z-index: 2;
+
+        .logo {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            font-weight: 700;
+            opacity: .9;
+            margin-bottom: 20px;
+        }
+
+        .loading-text {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #9d7cff;
+            text-shadow: 0 0 30px rgba(157, 124, 255, .4);
+        }
+
+        .bar {
+            width: 260px;
+            height: 2px;
+            background: rgba(255, 255, 255, .1);
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .progress {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #9d7cff, #2563eb);
+            box-shadow: 0 0 20px rgba(157, 124, 255, .5);
+        }
+
+        .sub {
+            font-size: .85rem;
+            opacity: .5;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+    }
+
+    /* ORBS */
+    .loader-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(120px);
+    }
+
+    .loader-orb.orb1 {
+        width: 500px;
+        height: 500px;
+        background: #7c3aed;
+        top: -120px;
+        right: -120px;
+        opacity: .3;
+    }
+
+    .loader-orb.orb2 {
+        width: 450px;
+        height: 450px;
+        background: #2563eb;
+        bottom: -120px;
+        left: -120px;
+        opacity: .2;
+    }
+}

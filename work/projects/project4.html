@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 4 - Ceylon Digital</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+
+        {
+        
+         "@context":"https://schema.org",
+        
+         "@type":"CreativeWork",
+        
+         "name":"Restaurant Website Redesign",
+        
+         "creator":{
+        
+         "@type":"Organization",
+        
+         "name":"Ceylon Digital"
+        
+         },
+        
+         "description":"Modern redesign with SEO optimization."
+        
+        }
+        
+        </script>
+
+
+
+    <script type="application/ld+json">
+
+        {
+        
+         "@context":"https://schema.org",
+        
+         "@type":"BreadcrumbList",
+        
+         "itemListElement":[
+        
+         {
+        
+         "@type":"ListItem",
+        
+         "position":1,
+        
+         "name":"Home",
+        
+         "item":"https://ceylondigital.com"
+        
+         },
+        
+         {
+        
+         "@type":"ListItem",
+        
+         "position":2,
+        
+         "name":"Services",
+        
+         "item":"https://ceylondigital.com/services"
+        
+         },
+        
+         {
+        
+         "@type":"ListItem",
+        
+         "position":3,
+        
+         "name":"Web Development",
+        
+         "item":"https://ceylondigital.com/web-development"
+        
+         }
+        
+         ]
+        
+        }
+        
+        </script>
+    <style>
+        .project-hero {
+            padding: 250px 8vw 120px;
+        }
+
+        .project-meta {
+            color: #9d7cff;
+            letter-spacing: 2px;
+        }
+
+        .project-hero h1 {
+            margin-top: 30px;
+
+            font-size: clamp(80px, 10vw, 180px);
+
+            line-height: .9;
+        }
+
+        .project-hero p {
+            margin-top: 40px;
+
+            max-width: 650px;
+
+            color: rgba(255, 255, 255, .55);
+
+            line-height: 1.9;
+        }
+
+
+
+        .showcase-image {
+            padding: 0 8vw;
+        }
+
+        .showcase-image img {
+            width: 100%;
+            display: block;
+
+            border-radius: 40px;
+        }
+
+
+
+        .overview {
+            padding: 150px 8vw;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+            gap: 80px;
+        }
+
+
+
+        .challenge {
+            padding: 0 8vw 150px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+        }
+
+
+
+        .design-system {
+            padding: 150px 8vw;
+        }
+
+        .colors {
+            margin-top: 60px;
+
+            display: flex;
+            gap: 30px;
+        }
+
+        .color {
+            width: 180px;
+            height: 180px;
+
+            border-radius: 24px;
+        }
+
+        .black {
+            background: #050505;
+        }
+
+        .white {
+            background: #ffffff;
+        }
+
+        .purple {
+            background: #9d7cff;
+        }
+
+
+
+
+        .gallery {
+            padding: 0 8vw 150px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 30px;
+        }
+
+        .gallery img:first-child {
+            grid-column: span 2;
+        }
+
+
+
+        .results {
+            padding: 150px 8vw;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .results h3 {
+            font-size: clamp(50px, 6vw, 100px);
+
+            color: #9d7cff;
+        }
+
+
+
+        .next-project {
+            padding: 200px 8vw;
+
+            text-align: center;
+        }
+
+        .next-project a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .next-project h2 {
+            margin-top: 30px;
+
+            font-size: clamp(60px, 8vw, 140px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="preloader" id="preloader">
+
+        <div class="loader-orb orb1"></div>
+        <div class="loader-orb orb2"></div>
+
+        <div class="loader-content">
+            <div class="logo">CEYLON DIGITAL</div>
+            <div class="loading-text">
+                <span id="percent">0</span>%
+            </div>
+
+            <div class="bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="sub">Crafting digital experiences</div>
+        </div>
+
+    </div>
+
+
+    <!-- BACKGROUND -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid"></div>
+    <div class="noise"></div>
+    <div class="glow-line"></div>
+
+
+
+    <div class="social-rail">
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">IN</a>
+        <a href="#" aria-label="GitHub">GH</a>
+    </div>
+
+
+
+    <nav class="navbar">
+
+        <!-- LEFT -->
+        <a href="../../index.html" class="logo" aria-label="Ceylon Digital homepage">
+            CEYLON DIGITAL
+        </a>
+
+        <!-- CENTER LINKS -->
+        <div class="nav-links">
+
+            <a href="../../index.html" class="nav-link" aria-label="Ceylon Digital Homepage">
+                Home
+                <span class="tooltip">Homepage</span>
+            </a>
+
+            <a href="../../work/index.html" class="nav-link" aria-label="View Ceylon Digital portfolio work">
+                Work
+                <span class="tooltip">Selected projects & case studies</span>
+            </a>
+
+            <a href="../../services/index.html" class="nav-link" aria-label="Explore Ceylon Digital services">
+                Services
+                <span class="tooltip">Full range of digital services</span>
+            </a>
+
+            <a href="../../about/index.html" class="nav-link" aria-label="Learn about Ceylon Digital">
+                About
+                <span class="tooltip">Who we are & how we work</span>
+            </a>
+
+            <a href="../../blog/index.html" class="nav-link" aria-label="Read Ceylon Digital blog articles">
+                Blog
+                <span class="tooltip">Insights, updates & thinking</span>
+            </a>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+
+            <a href="tel:+94767855906" class="nav-phone" aria-label="Call Ceylon Digital at +94 76 785 5906">
+                <span class="dot"></span>
+                +94 76 785 5906
+                <span class="tooltip">Speak directly with our team</span>
+            </a>
+
+            <a href="../../contact/index.html" class="nav-btn" aria-label="Start a project with Ceylon Digital">
+                Let's Talk
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+    PROJECT 4 - FOOD DELIVERY PLATFORM
+    ========================= -->
+
+    <section class="project-hero">
+
+        <div class="project-meta">
+            Branding • UI/UX Design • Development
+        </div>
+
+        <h1>
+            Food Delivery Platform
+        </h1>
+
+        <p>
+            A fast and intuitive food delivery system designed to connect users with local restaurants,
+            enabling seamless ordering, tracking, and delivery experiences.
+        </p>
+
+    </section>
+
+    <section class="showcase-image">
+
+        <img src="../../assets/img/project4.jpg" alt="Food Delivery Platform Preview">
+
+    </section>
+
+    <section class="overview">
+
+        <div class="overview-title">
+            Overview
+        </div>
+
+        <div class="overview-content">
+
+            <p>
+                This project focuses on building a modern food delivery platform that allows users to browse
+                restaurants, order meals, and track deliveries in real time.
+            </p>
+
+            <p style="margin-top:30px;">
+                The system is designed to improve speed, reduce ordering friction, and create a smooth experience
+                from restaurant selection to doorstep delivery.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="challenge">
+
+        <div>
+            <h3>Challenge</h3>
+
+            <p>
+                Existing food delivery platforms often suffer from slow navigation, overloaded interfaces,
+                and poor tracking visibility for users.
+            </p>
+        </div>
+
+        <div>
+            <h3>Solution</h3>
+
+            <p>
+                A simplified interface was designed with clear restaurant categories, fast checkout flow,
+                and real-time order tracking to improve usability and satisfaction.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="design-system">
+
+        <h2>Design System</h2>
+
+        <p style="max-width:700px; margin-top:30px; color:rgba(255,255,255,.6); line-height:1.9;">
+            The design uses warm accent colors to reflect appetite-driven UI, combined with clean layouts,
+            soft shadows, and bold typography to enhance readability and speed.
+        </p>
+
+        <div class="colors">
+
+            <div class="color black"></div>
+            <div class="color white"></div>
+            <div class="color purple"></div>
+
+        </div>
+
+    </section>
+
+    <section class="gallery">
+
+        <img src="../../assets/img/food1.jpg" alt="">
+        <img src="../../assets/img/food2.jpg" alt="">
+        <img src="../../assets/img/food3.jpg" alt="">
+
+    </section>
+
+    <section class="results">
+
+        <div>
+            <h3>+175%</h3>
+            <p>Order Volume</p>
+        </div>
+
+        <div>
+            <h3>+110%</h3>
+            <p>User Engagement</p>
+        </div>
+
+        <div>
+            <h3>+95%</h3>
+            <p>Repeat Orders</p>
+        </div>
+
+    </section>
+
+    <section class="next-project">
+
+        <a href="./project5.html" class="cta-secondary">
+            <span>NEXT PROJECT →</span>
+        </a>
+
+        <h2>
+            Smart Transport Booking System
+        </h2>
+
+        <p style="margin-top:30px; max-width:700px; margin-inline:auto; color:rgba(255,255,255,.55); line-height:1.9;">
+            A modern transport booking platform designed for ride scheduling, route optimization,
+            and seamless passenger experience.
+        </p>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-watermark">
+            CEYLON<br>
+            DIGITAL
+        </div>
+
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="section-tag">
+                    LET'S CONNECT
+                </div>
+
+                <h2>
+                    hello@ceylondigital.com
+                </h2>
+
+                <p>
+                    Building premium websites, brands and digital
+                    experiences for ambitious businesses.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <span>Navigation</span>
+
+                    <a href="./index.html">Home</a>
+                    <a href="../index.html">Work</a>
+                    <a href="../../services/index.html">Services</a>
+                    <a href="../../about/index.html">About</a>
+                    <a href="../../contact/index.html">Contact</a>
+                </div>
+
+                <div class="footer-column">
+                    <span>Social</span>
+
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Behance</a>
+                    <a href="#">Dribbble</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>
+                © 2026 Ceylon Digital. All rights reserved.
+            </span>
+
+            <span>
+                <a href="../../privacy/index.html">Privacy Policy</a>
+                <span class="footer-separator">•</span>
+                <a href="../../terms/index.html">Terms of Service</a>
+            </span>
+
+            <span>
+                Built by Ceylon Digital · Sri Lanka
+            </span>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+
+    <script>
+
+        // ====================================
+        // MAGNETIC BUTTON
+        // ====================================
+
+        // const buttons = document.querySelectorAll(".cta");
+
+        // buttons.forEach((button) => {
+        //     button.addEventListener("mousemove", (e) => {
+        //         const rect = button.getBoundingClientRect();
+        //         const x = e.clientX - rect.left - rect.width / 2;
+        //         const y = e.clientY - rect.top - rect.height / 2;
+
+        //         gsap.to(button, {
+        //             x: x * 0.25,
+        //             y: y * 0.25,
+        //             duration: .4,
+        //             ease: "power3.out"
+        //         });
+        //     });
+
+        //     button.addEventListener("mouseleave", () => {
+        //         gsap.to(button, {
+        //             x: 0,
+        //             y: 0,
+        //             duration: .6,
+        //             ease: "elastic.out(1, 0.4)"
+        //         });
+        //     });
+        // });
+
+
+
+        const buttons = document.querySelectorAll(".cta, .secondary-btn");
+
+        buttons.forEach((button) => {
+            let bounds;
+
+            function move(x, y) {
+                gsap.to(button, {
+                    x,
+                    y,
+                    duration: 0.6,
+                    ease: "power3.out"
+                });
+            }
+
+            function onMouseMove(e) {
+                bounds = button.getBoundingClientRect();
+
+                const relX = e.clientX - bounds.left - bounds.width / 2;
+                const relY = e.clientY - bounds.top - bounds.height / 2;
+
+                // magnetic strength (higher = stronger pull)
+                const strength = 0.35;
+
+                move(relX * strength, relY * strength);
+
+                // optional glow follow effect
+                button.style.boxShadow = `
+            0 10px 30px rgba(157,124,255,0.25),
+            ${relX * 0.05}px ${relY * 0.05}px 40px rgba(157,124,255,0.15)
+        `;
+            }
+
+            function onMouseLeave() {
+                gsap.to(button, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "elastic.out(1, 0.5)"
+                });
+
+                button.style.boxShadow = "none";
+            }
+
+            button.addEventListener("mousemove", onMouseMove);
+            button.addEventListener("mouseleave", onMouseLeave);
+        });
+
+
+        // ====================================
+        // ORB FOLLOW
+        // ====================================
+
+        const orb = document.querySelector(".orb-1");
+
+        window.addEventListener("mousemove", (e) => {
+
+            gsap.to(orb, {
+                x: e.clientX * 0.15,
+                y: e.clientY * 0.15,
+                duration: 2,
+                ease: "power4.out"
+            });
+
+        });
+    </script>
+</body>
+
+</html>

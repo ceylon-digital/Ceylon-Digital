@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work - Ceylon Digital</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+
+
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"CreativeWork",
+            "name":"Restaurant Website Redesign",
+            "creator":{
+            "@type":"Organization",
+            "name":"Ceylon Digital"
+            },
+            "description":"Modern redesign with SEO optimization."
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"BreadcrumbList",
+            "itemListElement":[
+            {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"https://ceylondigital.com"
+            },
+            {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Services",
+            "item":"https://ceylondigital.com/services"
+            },
+            {
+            "@type":"ListItem",
+            "position":3,
+            "name":"Web Development",
+            "item":"https://ceylondigital.com/web-development"
+            }
+            ]
+        }
+    </script>
+    <style>
+        .work-hero {
+            padding: 250px 8vw 120px;
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        .work-hero .section-tag {
+            color: #9d7cff;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+        }
+
+        .work-hero h1 {
+            max-width: 1200px;
+            font-size: clamp(70px, 8vw, 160px);
+            line-height: .9;
+            margin-top: 30px;
+        }
+
+        .work-hero p {
+            margin-top: 40px;
+            max-width: 650px;
+            color: rgba(255, 255, 255, .55);
+            line-height: 1.9;
+            font-size: 1.1rem;
+        }
+
+        .work-grid {
+            padding: 0 8vw 150px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .large {
+            grid-column: span 2;
+        }
+
+
+        .work-grid {
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 32px;
+            cursor: pointer;
+        }
+
+        .project-card img {
+            width: 100%;
+            display: block;
+            transition: .8s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .project-overlay {
+            position: absolute;
+            left: 40px;
+            bottom: 40px;
+        }
+
+        .project-overlay span {
+            color: #9d7cff;
+        }
+
+        .project-overlay h3 {
+            margin-top: 15px;
+            font-size: clamp(30px, 3vw, 60px);
+        }
+
+
+
+
+
+
+
+
+        .categories {
+            padding: 0 8vw 150px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .categories div {
+            padding: 18px 28px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, .03);
+        }
+
+        .clients {
+            padding: 0 8vw 150px;
+        }
+
+        .clients-row {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .clients-row span {
+            font-size: clamp(30px, 3vw, 60px);
+            opacity: .25;
+        }
+
+        .cta-section {
+            position: relative;
+            padding: 220px 8vw;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(70px, 9vw, 150px);
+            line-height: .9;
+            margin: 30px 0;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, .55);
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+        }
+
+        .cta-content .cta {
+            margin-top: 45px;
+            width: max-content;
+            padding: 18px 34px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(255, 255, 255, .04);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: .35s ease;
+        }
+
+        .cta-content .cta:hover {
+            transform: translateY(-4px);
+            background: rgba(157, 124, 255, .12);
+            border-color: rgba(157, 124, 255, .45);
+            box-shadow: 0 10px 40px rgba(157, 124, 255, .15);
+        }
+
+        .cta-content .cta {
+            will-change: transform;
+            transition: box-shadow 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader" id="preloader">
+        <div class="loader-orb orb1"></div>
+        <div class="loader-orb orb2"></div>
+
+        <div class="loader-content">
+            <div class="logo">CEYLON DIGITAL</div>
+            <div class="loading-text">
+                <span id="percent">0</span>%
+            </div>
+
+            <div class="bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="sub">Crafting digital experiences</div>
+        </div>
+    </div>
+
+
+    <!-- BACKGROUND -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid"></div>
+    <div class="noise"></div>
+    <div class="glow-line"></div>
+
+
+    <div class="social-rail">
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">IN</a>
+        <a href="#" aria-label="GitHub">GH</a>
+    </div>
+
+
+
+    <nav class="navbar">
+        <!-- LEFT -->
+        <a href="../index.html" class="logo" aria-label="Ceylon Digital homepage">
+            CEYLON DIGITAL
+        </a>
+
+        <!-- CENTER LINKS -->
+        <div class="nav-links">
+
+            <a href="../index.html" class="nav-link" aria-label="Ceylon Digital Homepage">
+                Home
+                <span class="tooltip">Homepage</span>
+            </a>
+
+            <a href="./index.html" class="nav-link active" aria-label="View Ceylon Digital portfolio work">
+                Work
+                <span class="tooltip">Selected projects & case studies</span>
+            </a>
+
+            <a href="../services/index.html" class="nav-link" aria-label="Explore Ceylon Digital services">
+                Services
+                <span class="tooltip">Full range of digital services</span>
+            </a>
+
+            <a href="../about/index.html" class="nav-link" aria-label="Learn about Ceylon Digital">
+                About
+                <span class="tooltip">Who we are & how we work</span>
+            </a>
+
+            <a href="../blog/index.html" class="nav-link" aria-label="Read Ceylon Digital blog articles">
+                Blog
+                <span class="tooltip">Insights, updates & thinking</span>
+            </a>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+
+            <a href="tel:+94767855906" class="nav-phone" aria-label="Call Ceylon Digital at +94 76 785 5906">
+
+                <span class="dot"></span>
+                +94 76 785 5906
+                <span class="tooltip">Speak directly with our team</span>
+
+            </a>
+
+            <a href="../contact/index.html" class="nav-btn" aria-label="Start a project with Ceylon Digital">
+                Let's Talk
+            </a>
+
+        </div>
+    </nav>
+
+
+
+
+    <section class="work-hero">
+        <div class="section-tag">
+            FEATURED WORK
+        </div>
+
+        <h1>
+            We create digital experiences
+            that deliver results.
+        </h1>
+
+        <p>
+            A collection of websites, brands and products
+            crafted for ambitious companies.
+        </p>
+    </section>
+
+
+
+    <section class="work-grid">
+        <div class="project-card large">
+            <img src="../assets/img/project1.jpg">
+            <div class="project-overlay">
+                <span>Branding • Web Design</span>
+                <h3>Luxury Real Estate</h3>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="../assets/img/project2.jpg">
+            <div class="project-overlay">
+                <span>UI/UX</span>
+                <h3>Restaurant Platform</h3>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="../assets/img/project6.jpg">
+            <div class="project-overlay">
+                <span>Development</span>
+                <h3>Fintech Dashboard</h3>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="categories">
+        <div>Web Design</div>
+        <div>Development</div>
+        <div>Branding</div>
+        <div>Motion</div>
+    </section>
+
+
+
+    <section class="clients">
+        <div class="section-tag">
+            TRUSTED BY
+        </div>
+
+        <div class="clients-row">
+            <span>SLT</span>
+            <span>Dialog</span>
+            <span>MAS</span>
+            <span>Brandix</span>
+            <span>Singer</span>
+        </div>
+    </section>
+
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="section-tag">
+                START A PROJECT
+            </div>
+
+            <h2>
+                Let's Build
+                Something Amazing.
+            </h2>
+
+            <p>
+                Ready to create a digital experience that stands out?
+            </p>
+
+            <button class="cta">
+                Start a Project
+            </button>
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-watermark">
+            CEYLON<br>
+            DIGITAL
+        </div>
+
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="section-tag">
+                    LET'S CONNECT
+                </div>
+
+                <h2>
+                    hello@ceylondigital.com
+                </h2>
+
+                <p>
+                    Building premium websites, brands and digital
+                    experiences for ambitious businesses.
+                </p>
+
+                <a href="./contact/index.html" class="footer-btn">
+                    Start a Project →
+                </a>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <span>Navigation</span>
+
+                    <a href="../index.html">Home</a>
+                    <a href="./index.html">Work</a>
+                    <a href="../services/index.html">Services</a>
+                    <a href="../about/index.html">About</a>
+                    <a href="../contact/index.html">Contact</a>
+                </div>
+
+                <div class="footer-column">
+                    <span>Social</span>
+
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Behance</a>
+                    <a href="#">Dribbble</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>
+                © 2026 Ceylon Digital. All rights reserved.
+            </span>
+
+            <span>
+                <a href="./privacy.html">Privacy Policy</a>
+                <span class="footer-separator">•</span>
+                <a href="./terms.html">Terms of Service</a>
+            </span>
+
+            <span>
+                Built by Ceylon Digital · Sri Lanka
+            </span>
+        </div>
+    </footer>
+
+
+
+    <script src="../assets/js/script.js"></script>
+
+
+    <script>
+
+        // ====================================
+        // MAGNETIC BUTTON
+        // ====================================
+
+        // const buttons = document.querySelectorAll(".cta");
+
+        // buttons.forEach((button) => {
+        //     button.addEventListener("mousemove", (e) => {
+        //         const rect = button.getBoundingClientRect();
+        //         const x = e.clientX - rect.left - rect.width / 2;
+        //         const y = e.clientY - rect.top - rect.height / 2;
+
+        //         gsap.to(button, {
+        //             x: x * 0.25,
+        //             y: y * 0.25,
+        //             duration: .4,
+        //             ease: "power3.out"
+        //         });
+        //     });
+
+        //     button.addEventListener("mouseleave", () => {
+        //         gsap.to(button, {
+        //             x: 0,
+        //             y: 0,
+        //             duration: .6,
+        //             ease: "elastic.out(1, 0.4)"
+        //         });
+        //     });
+        // });
+
+
+
+        const buttons = document.querySelectorAll(".cta, .secondary-btn");
+
+        buttons.forEach((button) => {
+            let bounds;
+
+            function move(x, y) {
+                gsap.to(button, {
+                    x,
+                    y,
+                    duration: 0.6,
+                    ease: "power3.out"
+                });
+            }
+
+            function onMouseMove(e) {
+                bounds = button.getBoundingClientRect();
+
+                const relX = e.clientX - bounds.left - bounds.width / 2;
+                const relY = e.clientY - bounds.top - bounds.height / 2;
+
+                // magnetic strength (higher = stronger pull)
+                const strength = 0.35;
+
+                move(relX * strength, relY * strength);
+
+                // optional glow follow effect
+                button.style.boxShadow = `
+            0 10px 30px rgba(157,124,255,0.25),
+            ${relX * 0.05}px ${relY * 0.05}px 40px rgba(157,124,255,0.15)
+        `;
+            }
+
+            function onMouseLeave() {
+                gsap.to(button, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "elastic.out(1, 0.5)"
+                });
+
+                button.style.boxShadow = "none";
+            }
+
+            button.addEventListener("mousemove", onMouseMove);
+            button.addEventListener("mouseleave", onMouseLeave);
+        });
+
+
+        // ====================================
+        // ORB FOLLOW
+        // ====================================
+
+        const orb = document.querySelector(".orb-1");
+
+        window.addEventListener("mousemove", (e) => {
+
+            gsap.to(orb, {
+                x: e.clientX * 0.15,
+                y: e.clientY * 0.15,
+                duration: 2,
+                ease: "power4.out"
+            });
+
+        });
+    </script>
+</body>
+
+</html>

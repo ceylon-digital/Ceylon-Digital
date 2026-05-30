@@ -1,0 +1,12 @@
+# Normalize ALL text files to LF in repo + working tree
+* text=auto eol=lf
+
+# Git LFS files (keep as-is)
+assets/img/*.png filter=lfs diff=lfs merge=lfs -text
+assets/img/*.jpg filter=lfs diff=lfs merge=lfs -text
+assets/img/*.jpeg filter=lfs diff=lfs merge=lfs -text
+assets/img/*.webp filter=lfs diff=lfs merge=lfs -text
+
+# Force LF for scripts & patches
+*.sh text eol=lf
+*.patch text eol=lf
